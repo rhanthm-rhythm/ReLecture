@@ -1,0 +1,65 @@
+{
+  "video": "data/videos/82466.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 115.0,
+  "chunks": 1,
+  "raw_text": "00:00:00 --> 00:00:10\nHi, my name is Caitlin and I'll be presenting our project, the purpose of which was to quantify the prevalence of depression and anxiety following MPFLR.\n\n00:00:10 --> 00:00:19\nIn this retrospective study, we identified patients between 12 and 65 years of age who underwent MPFLR between April 2020 and December 2021.\n\n00:00:19 --> 00:00:27\nWe used ICD-10 codes to screen patients for a psychological diagnosis up to 3 months prior to and 1 year following surgery.\n\n00:00:27 --> 00:00:35\nA total of 5,109 patients underwent MPFLR, of which 58.9% were female.\n\n00:00:35 --> 00:00:43\nA new diagnosis of depression or anxiety was seen more frequently among females in both the pre-operative and the post-operative phases.\n\n00:00:43 --> 00:00:56\nFollowing MPFLR, prescribed opioid use was higher among females than males, and it was also higher among the post-operative depression and anxiety cohort compared to those with no diagnosis.\n\n00:00:56 --> 00:01:08\nThe median cost of care for males and females was very similar during the 3-month pre-operative phase, however, for 1 year following surgery, the cost of care for females was notably larger.\n\n00:01:08 --> 00:01:18\nPatients with a new post-operative psychological diagnosis saw an estimated mean cost of care that was 47% higher than for patients with no diagnosis.\n\n00:01:18 --> 00:01:31\nAcross the study population, the overall MPFLR revision rate was 8.4%, and revision surgery was higher among females and also patients with a new post-operative psychological diagnosis.\n\n00:01:31 --> 00:01:39\nOverall, we found that females and patients with depression or anxiety have poorer outcomes following MPFL reconstruction.\n\n00:01:39 --> 00:01:52\nOur findings are clinically relevant because the addition of targeted psychiatric rehabilitation for these vulnerable cohorts may prevent opioid use disorders, promote MPFL healing, and also allow greater return to activity.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:10.00",
+      "text": "Hi, my name is Caitlin and I'll be presenting our project, the purpose of which was to quantify the prevalence of depression and anxiety following MPFLR."
+    },
+    {
+      "start": "00:00:10.00",
+      "end": "00:00:19.00",
+      "text": "In this retrospective study, we identified patients between 12 and 65 years of age who underwent MPFLR between April 2020 and December 2021."
+    },
+    {
+      "start": "00:00:19.00",
+      "end": "00:00:27.00",
+      "text": "We used ICD-10 codes to screen patients for a psychological diagnosis up to 3 months prior to and 1 year following surgery."
+    },
+    {
+      "start": "00:00:27.00",
+      "end": "00:00:35.00",
+      "text": "A total of 5,109 patients underwent MPFLR, of which 58.9% were female."
+    },
+    {
+      "start": "00:00:35.00",
+      "end": "00:00:43.00",
+      "text": "A new diagnosis of depression or anxiety was seen more frequently among females in both the pre-operative and the post-operative phases."
+    },
+    {
+      "start": "00:00:43.00",
+      "end": "00:00:56.00",
+      "text": "Following MPFLR, prescribed opioid use was higher among females than males, and it was also higher among the post-operative depression and anxiety cohort compared to those with no diagnosis."
+    },
+    {
+      "start": "00:00:56.00",
+      "end": "00:01:08.00",
+      "text": "The median cost of care for males and females was very similar during the 3-month pre-operative phase, however, for 1 year following surgery, the cost of care for females was notably larger."
+    },
+    {
+      "start": "00:01:08.00",
+      "end": "00:01:18.00",
+      "text": "Patients with a new post-operative psychological diagnosis saw an estimated mean cost of care that was 47% higher than for patients with no diagnosis."
+    },
+    {
+      "start": "00:01:18.00",
+      "end": "00:01:31.00",
+      "text": "Across the study population, the overall MPFLR revision rate was 8.4%, and revision surgery was higher among females and also patients with a new post-operative psychological diagnosis."
+    },
+    {
+      "start": "00:01:31.00",
+      "end": "00:01:39.00",
+      "text": "Overall, we found that females and patients with depression or anxiety have poorer outcomes following MPFL reconstruction."
+    },
+    {
+      "start": "00:01:39.00",
+      "end": "00:01:52.00",
+      "text": "Our findings are clinically relevant because the addition of targeted psychiatric rehabilitation for these vulnerable cohorts may prevent opioid use disorders, promote MPFL healing, and also allow greater return to activity."
+    }
+  ]
+}

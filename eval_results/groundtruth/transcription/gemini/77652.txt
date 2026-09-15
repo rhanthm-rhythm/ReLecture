@@ -1,0 +1,134 @@
+00:00:00.00 --> 00:00:03.00  position under extreme rainfall conditions.
+00:00:05.00 --> 00:00:09.00  To provide a clear picture of our approach, I'll start by outlining the background,
+00:00:09.00 --> 00:00:11.00  followed by the methodology and results.
+00:00:15.00 --> 00:00:18.00  Okay, so let's begin with background.
+00:00:18.00 --> 00:00:23.00  In an era where climate change is reshaping weather patterns globally,
+00:00:23.00 --> 00:00:28.00  the escalating frequency and the intensity of extreme weather events have amplified
+00:00:28.00 --> 00:00:31.00  the safety imperative for autonomous driving system.
+00:00:31.00 --> 00:00:36.00  Consequently, developing robust vision models that can withstand extreme
+00:00:36.00 --> 00:00:39.00  weather conditions has become a critical priority.
+00:00:39.00 --> 00:00:44.00  Violent rainfall is actually becoming increasingly prevalent in regions historically
+00:00:44.00 --> 00:00:47.00  unaccustomed to such extreme precipitation.
+00:00:47.00 --> 00:00:52.00  For instance, during the 7.20 violent rainfall event in Zhengzhou, China,
+00:00:52.00 --> 00:00:57.00  hourly precipitation exceeded 201.9 millimeter per hour,
+00:00:57.00 --> 00:01:01.00  over four times the threshold for violent rain. Under such conditions,
+00:01:01.00 --> 00:01:05.00  visual degradation can significantly increase, distorts and impairs
+00:01:05.00 --> 00:01:08.00  visual appearance, posing a significant challenge to existing
+00:01:08.00 --> 00:01:13.00  computer vision models. Despite the demonstrated efficacy of current
+00:01:13.00 --> 00:01:17.00  computer vision models on existing datasets, their performance
+00:01:17.00 --> 00:01:21.00  under violent rain conditions remains untested and uncertain.
+00:01:21.00 --> 00:01:25.00  This gap poses substantial risks. Can our computer vision models
+00:01:25.00 --> 00:01:29.00  be trusted to function under violent rain conditions?
+00:01:29.00 --> 00:01:33.00  Will widely adopted foundation models sustain their effectiveness
+00:01:33.00 --> 00:01:37.00  in a world where violent rain events become more frequent?
+00:01:37.00 --> 00:01:42.00  The World Meteorological Organization categorizes rainfall
+00:01:42.00 --> 00:01:47.00  intensity based on hourly precipitation rates into light rain,
+00:01:47.00 --> 00:01:52.00  moderate rain, heavy rain, and violent rain. Under different rainfall
+00:01:52.00 --> 00:01:57.00  conditions, visual description - visual degradation can vary differently,
+00:01:57.00 --> 00:02:00.00  as illustrated in the image. We can observe that
+00:02:00.00 --> 00:02:04.00  when the rain intensity is light, the visual degradation is minimal.
+00:02:04.00 --> 00:02:09.00  As the rain intensity increases, the level of degradation also arises.
+00:02:09.00 --> 00:02:14.00  Under heavy rain conditions, we can observe some large raindrops
+00:02:14.00 --> 00:02:18.00  and rain veiling effect on the distant areas, presenting challenges
+00:02:18.00 --> 00:02:23.00  to existing computer vision models. However, violent rain is
+00:02:23.00 --> 00:02:28.00  considered an extreme weather event, and due to its rarity,
+00:02:28.00 --> 00:02:32.00  current datasets lack sufficient data on such occurrences.
+00:02:32.00 --> 00:02:36.00  To address - to address this critical gap, we follow the
+00:02:36.00 --> 00:02:40.00  example of prior datasets for semantic segmentation task,
+00:02:40.00 --> 00:02:44.00  and propose the first real-world urban scene dataset captured
+00:02:44.00 --> 00:02:49.00  under violent rain conditions, tailored for both image and video tasks.
+00:02:49.00 --> 00:02:54.00  By evaluating existing models against this dataset, we aim to
+00:02:54.00 --> 00:02:58.00  uncover their performance under extreme weather conditions,
+00:02:58.00 --> 00:03:03.00  thereby enhancing the safety and reliability of autonomous
+00:03:03.00 --> 00:03:06.00  driving system in an increasingly unpredictable climate.
+00:03:09.00 --> 00:03:12.00  In methodology part, I will explain our proposed dataset in detail.
+00:03:16.00 --> 00:03:20.00  Okay, so our goal is to collect an urban scene dataset under
+00:03:20.00 --> 00:03:24.00  violent rain conditions. We chose Singapore for collecting the dataset,
+00:03:24.00 --> 00:03:27.00  mainly due to two reasons. First,
+00:03:27.00 --> 00:03:31.00  accounting to the last - the late - according to the latest
+00:03:31.00 --> 00:03:36.00  World Bank data, Singapore ranks as the 14th country globally
+00:03:36.00 --> 00:03:41.00  in terms of average precipitation depths, and violent rain is
+00:03:41.00 --> 00:03:44.00  frequent in this country. And secondly,
+00:03:44.00 --> 00:03:49.00  Singapore as a relatively small country with only a total land
+00:03:49.00 --> 00:03:54.00  area approximately 750 square kilometers, has a network of
+00:03:54.00 --> 00:03:59.00  over 60 weather stations that record rainfall intensity across
+00:03:59.00 --> 00:04:04.00  various regions. By checking the recorded intensity from the
+00:04:04.00 --> 00:04:09.00  nearest weather station to our data collection area, we can
+00:04:09.00 --> 00:04:12.00  accurately identify the corresponding rainfall level.
+00:04:12.00 --> 00:04:16.00  While the primary reason for choosing Singapore is its frequent
+00:04:16.00 --> 00:04:21.00  violent rain, and it is also a developed nation with the
+00:04:21.00 --> 00:04:26.00  potential for widespread adoption of autonomous driving and
+00:04:26.00 --> 00:04:31.00  diverse traffic scenarios, further enhancing the relevance of our dataset.
+00:04:31.00 --> 00:04:36.00  To capture the necessary data, we actively respond to rain
+00:05:00.00 --> 00:05:05.00  for event. When a significant rainfall event begins in Singapore, we drive to the
+00:05:05.00 --> 00:05:08.00  affected region to collect video footage.
+00:05:08.00 --> 00:05:11.00  We mount an OAK-D camera inside the car,
+00:05:11.00 --> 00:05:15.00  positioned on the roof and behind the windshield.
+00:05:15.00 --> 00:05:18.00  This camera system includes a main color camera
+00:05:18.00 --> 00:05:21.00  and a pair of stereo lenses.
+00:05:21.00 --> 00:05:27.00  The main color captures video at 15 frames per second,
+00:05:27.00 --> 00:05:32.00  while the stereo lenses simultaneously collect video from different views,
+00:05:32.00 --> 00:05:37.00  generating a corresponding disparity map for each frame to describe the scene's depth description,
+00:05:37.00 --> 00:05:40.00  uh the distribution.
+00:05:40.00 --> 00:05:44.00  We compare different parameters of our dataset with other rainy datasets,
+00:05:44.00 --> 00:05:48.00  as shown in the table.
+00:05:48.00 --> 00:05:51.00  Our dataset has a relatively high resolution,
+00:05:51.00 --> 00:05:57.00  enabling models to learn more fine-grained semantic segmentation predictions.
+00:05:57.00 --> 00:06:00.00  With a total of 14,857 frames,
+00:06:00.00 --> 00:06:06.00  it ranks as the third largest rainfall dataset available.
+00:06:06.00 --> 00:06:13.00  Annotating under severe weather degradation is both challenging and costly,
+00:06:13.00 --> 00:06:15.00  even for human annotators.
+00:06:15.00 --> 00:06:21.00  But we have successfully provided a comparable number of labeled frames.
+00:06:21.00 --> 00:06:25.00  Our dataset features real-world urban scenes
+00:06:25.00 --> 00:06:30.00  and is one of the only three datasets that support video-based methods.
+00:06:30.00 --> 00:06:36.00  Additionally, it is the only real-world raining dataset that includes disparity information.
+00:06:36.00 --> 00:06:42.00  Most notably, our dataset uniquely captures violent rain conditions,
+00:06:42.00 --> 00:06:46.00  distinguishing it from existing datasets.
+00:06:46.00 --> 00:06:51.00  Although all raining images are affected by degradation,
+00:06:51.00 --> 00:06:56.00  the types and severity of these degradations can vary
+00:06:56.00 --> 00:07:00.00  with different rainfall intensities. Under light raining conditions,
+00:07:00.00 --> 00:07:04.00  the degradation are marginal. As shown in figure A,
+00:07:04.00 --> 00:07:09.00  we can observe only white floors and sparse raindrops on the windshield.
+00:07:09.00 --> 00:07:13.00  As rainfall intensity escalates to heavy rain,
+00:07:13.00 --> 00:07:18.00  both raindrop and rain veiling effect become markedly evident.
+00:07:18.00 --> 00:07:22.00  Firstly, raindrops increase in size and density,
+00:07:22.00 --> 00:07:26.00  and secondly, a fog-like rain veiling effect emerges
+00:07:26.00 --> 00:07:30.00  due to the accumulation of rain streaks,
+00:07:30.00 --> 00:07:34.00  as evidenced by the far away building in figure C and D.
+00:07:34.00 --> 00:07:38.00  Additionally, under heavy rain conditions,
+00:07:38.00 --> 00:07:43.00  the use of wipers introduces further visual obstructions.
+00:07:43.00 --> 00:07:47.00  The wipers cannot completely eliminate the raindrops,
+00:07:47.00 --> 00:07:52.00  leaving a thin layer of water residual
+00:07:52.00 --> 00:07:56.00  that blurs the wiped areas, as depicted in figure D.
+00:07:56.00 --> 00:08:00.00  Under violent rain conditions,
+00:08:00.00 --> 00:08:05.00  excessive large raindrops easily form water flows
+00:08:05.00 --> 00:08:08.00  as illustrated in figure E.
+00:08:08.00 --> 00:08:13.00  The uneven distribution of water flow can cause extensive refraction and distortion.
+00:08:13.00 --> 00:08:16.00  Secondly, the increased intensity of rain streaks
+00:08:16.00 --> 00:08:20.00  intensify the rain veiling effect,
+00:08:20.00 --> 00:08:24.00  as observed on the trees and buildings in figure F.
+00:08:24.00 --> 00:08:27.00  Additionally,
+00:08:27.00 --> 00:08:32.00  the increased rainfall intensity necessitated more frequent use of wipers,
+00:08:32.00 --> 00:08:36.00  amplifying the corresponding visual degradation in figure G and H.
+00:08:36.00 --> 00:08:41.00  Okay, so in the result section, we will discuss and compare the performance
+00:08:41.00 --> 00:08:46.00  of different methods against our proposed dataset.
+00:08:46.00 --> 00:08:51.00  We benchmark four common models or methods
+00:08:51.00 --> 00:08:56.00  to evaluate their robustness under violent rain conditions.
+00:08:56.00 --> 00:09:00.00  The first method is image-based foundation models,
+00:09:00.00 --> 00:09:04.00  which are large-scale neural networks trained on vast datasets of images
+00:09:04.00 --> 00:09:08.00  to understand and generate visual content.
+00:09:08.00 --> 00:09:13.00  These models offer significant advantages over traditional methods
+00:09:13.00 --> 00:09:16.00  due to their extensive pre-training on diverse datasets,
+00:09:16.00 --> 00:09:21.00  which enable them to capture complex visual patterns and generalize well
+00:09:21.00 --> 00:09:25.00  across various tasks and conditions.
+00:09:25.00 --> 00:09:29.00  The second method is domain generalization methods.
+00:09:29.00 --> 00:09:34.00  This method enhance model robustness by learning domain-invariant features,
+00:09:34.00 --> 00:09:38.00  enabling model to perform well on unseen domains without need
+00:09:38.00 --> 00:09:42.00  target domain data for fine-tuning.
+00:09:42.00 --> 00:09:46.00  The third method is domain adaptation method.
+00:09:46.00 --> 00:09:51.00  When there is a discrepancy between training source data and the test target data,
+00:09:51.00 --> 00:09:54.00  domain adaptation
+00:15:00.00 --> 00:15:01.00  Thank you.
+00:15:01.00 --> 00:15:03.00  Okay, thank you.
+00:15:03.00 --> 00:15:04.00  Then, um...
+00:15:04.00 --> 00:15:07.00  let's move to the next presentation.

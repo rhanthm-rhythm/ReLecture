@@ -1,0 +1,134 @@
+00:00:00.00 --> 00:00:09.00  Hey, thank you very much, Mr. Chairman, and welcome back. And let's get started for the rest of the afternoon.
+00:00:09.00 --> 00:00:16.00  Um, I kindly kind of change my title here and I, I did that on purpose, um, for two reasons.
+00:00:16.00 --> 00:00:26.00  First of all, we are in Hollywood here, and as you will see in just a minute, I will take you to the stars with my presentation, at least I'll try.
+00:00:26.00 --> 00:00:44.00  And the second reason is, um, since you're all digesting, as I am, I guess, after lunch, I thought it would be much nicer to have something nice to look at than more fundamental and fundamental research presentation. So please bear with me. Hope you find it interesting.
+00:00:44.00 --> 00:01:00.00  Um, so yeah, I'm speaking on behalf of my colleagues, of course, since I'm the director. I'm not doing the research myself, but I'm representing it. Um, and I'm representing a lab that is called AMCD. You see the logo in the back here or in the bottom.
+00:01:00.00 --> 00:01:14.00  Now, let me see, this is kind of tricky with the pointer. Um, here we go. Um, and this is called AMCD, Additive Manufacturing Center Dresden. And this is basically a lab in collaboration between Fraunhofer IWS, which does a lot of applied research together with industry and for industry...
+00:01:14.00 --> 00:01:31.00  ...and the Technical University of Dresden. So we currently have, uh, roughly 45 engineers and technicians working on various aspects of additive manufacturing, plus around 40 students working on theses and as research assistants. So it's a major activity in our lab.
+00:01:31.00 --> 00:01:41.00  Now, just in order to give you a flavor of the processes that we are doing in our lab, and I will then dwell on direct energy deposition today...
+00:01:41.00 --> 00:02:02.00  ...this is showing what we do. So we have laser metal deposition with powder and wire. Uh, we do laser bed fusion, powder bed fusion, and we do electron beam powder bed fusion, as well as more, well, how should I do, how should I say, more unusual technologies such as binder jetting...
+00:02:02.00 --> 00:02:18.00  ...aerosol jet printing, fused filament deposition or fabrication, and dispenser printing on the bottom here. So on the top line, those are the more common technologies for metal printing, I would say.
+00:02:18.00 --> 00:02:33.00  Now, within my presentation, I will talk about a fascinating project, as I find it fascinating, hope you find it fascinating too. And we've been working on that for a couple of years now.
+00:02:33.00 --> 00:02:54.00  And this work is sponsored by the European Space Agency, and this is really to take you to the stars, and you can read the names on the bottom here. This is to acknowledge my colleagues, as I say, I'm just presenting, they've done all the work. And we've been working on this project for over seven years, I believe.
+00:02:54.00 --> 00:03:07.00  And the reason for that will be quite clear when you, uh, when we go through the presentation, because it's a very complex and very challenging project.
+00:03:07.00 --> 00:03:26.00  Now, um, the project behind is what ESA calls the New Athena Mission. Athena stands for Advanced Telescope for High Energy Astrophysics. And it's an ESA flagship mission to explore the hot and energetic universe with advanced X-ray technology.
+00:03:26.00 --> 00:04:00.00  So I guess none of us is an astronomer, but what they try to do is to better understand how and why ordinary matter assembled into the galaxies and the galactic clusters, and how do black holes grow and influence their surroundings. So very sophisticated physics, astrophysics behind it.
+00:04:00.00 --> 00:04:14.00  And, um, this mission is supposed to be launched in 2037. So this is actually two years after my retirement. So I'm pretty much looking forward to it.
+00:04:14.00 --> 00:04:27.00  And the key payload that this mission is carrying is the largest X-ray mirror and detector in history of astronomy that's ever been shot into orbit, and we are building it.
+00:04:27.00 --> 00:05:01.00  And so this is why we're so proud of it and, uh, I will show you how this big part looks like. And it's really a big part. So we are talking about a part dimension...
+00:05:00.00 --> 00:05:11.00  and you see a sketch of it on the right hand side here of 2.7 meters and this is a sketch of the assembly. I'll talk about that in more detail in just a minute.
+00:05:11.00 --> 00:05:16.00  And the part itself is made out of titanium.
+00:05:16.00 --> 00:05:28.00  And just as a spoiler, we're using 2.2 tons of titanium powder to make this part. So it's a major, major part, right?
+00:05:28.00 --> 00:05:33.00  Why titanium, you might ask? It's in orbit, so the forces are not that bad.
+00:05:33.00 --> 00:05:54.00  Well, this is an optical bench and this optical bench carries modules, X-ray modules made out of silica, and they should best match with regards to coefficient of thermal expansion.
+00:05:54.00 --> 00:06:13.00  And rather than taking aluminum, which would be fully sufficient for mechanical purposes, we need the low coefficient of thermal expansion of titanium. And this is the number you see here that is required for this type of component.
+00:06:13.00 --> 00:06:31.00  Now, if you look at some of the details, and I will go into more details later on, one of the aspects here, it's not even - not only has a large diameter, but it has a substantial height. This is 300 mm in height at the largest part.
+00:06:31.00 --> 00:07:08.00  And then it has a kind of an hourglass shape and you see all these pockets here. And this is a magnification of one of these pockets. And the minimum wall thickness of such a pocket is only 2 mm. So we're talking about a part, 2.7 meters in diameter, 600-plus pockets, and the minimum wall thickness of these pockets is 2 mm.
+00:07:08.00 --> 00:07:37.00  Okay? And this is for an optical bench. So accuracy of the part, geometrical accuracy of the part is very, very challenging. All right. So having this said, you might ask yourself, "Okay, that's easy. It's an easy task. Just take a billet, 3 meters of titanium, something like 30 centimeters in height or 35 centimeters, and just machine it."
+00:07:37.00 --> 00:08:08.00  Okay? Well, the problem is, can you find a supplier that supplies you with such a billet of titanium? No. Nobody in the world can do that. So that's no option. And so therefore ESA is looking after additive manufacturing. And they asked us to do that. And this is the third part of the project phase in which we are now in.
+00:08:08.00 --> 00:09:30.00  And I will show you where we are. Now, if you're looking at making such a part, powder bed fusion is excluded, okay? You don't have such a big coater. It doesn't make sense to build such a big coater. So we're looking at DED and there are certainly a number of challenges. It's kind of hard to see for me here from this position anyway, but you can see all the challenges that are included here. It's the sheer size and weight of the component that is challenging. The process duration is challenging. We're talking about kilograms per hour deposition rate. So if we're talking about 2.2 tons, it takes not only hours, days, weeks - it takes months, many months, to do that. We have to have it first-time right because you're not going to do it again if you fail, because it's so costly. You need a lot of material as I said. You have to get the microstructures right in order to make sure that it complies with all the specifications that ESA has. And well, you have to have the process right to do it in a first-time-right manner. Now, what is striking here? And maybe you can just stop the video? Okay, here it's starting.
+00:09:30.00 --> 00:10:00.00  Oh, now you can probably see it. Well, the process itself is very challenging in a way, and this is one of the failures we had initially when we were doing this 24/7 with a laboratory equipment, it just burned the cladding head. So it's not only about processing, but it's also about equipment and hardware. So the first step we did within this project was, since we are talking about titanium, which is prone to oxygen, you very much...
+00:10:00.00 --> 00:10:07.00  Which have to control, tightly control the oxygen content during the deposition process, we designed a nozzle...
+00:10:07.00 --> 00:10:15.00  ...that was capable of doing the whole production of the part in the open atmosphere.
+00:10:15.00 --> 00:10:23.00  Rather than doing it in a closed chamber, using inert gas, we're locally using shielding gas...
+00:10:23.00 --> 00:10:30.00  ...and you can see that in the sketch of this nozzle here. This is a very complex nozzle...
+00:10:30.00 --> 00:10:38.00  ...that guarantees a constant flow of shielding gas around the melting zone, the melting pool and the solidifying material.
+00:10:38.00 --> 00:10:46.00  You could think it's an easy task. It is easy for flat substrates but as you build up in height...
+00:10:46.00 --> 00:10:54.00  ...the problem is that there is no counterpressure for the inert gas. So the inert gas just goes away and will no longer protect the weld zone.
+00:10:54.00 --> 00:11:03.00  So that was really one of the major challenges we had to cope with and we had to find a solution for...
+00:11:03.00 --> 00:11:12.00  ...and we now have this cladding head, which is by the way this complex inner structure here, which has been designed by computational fluid dynamics.
+00:11:12.00 --> 00:11:21.00  This has been printed in our lab by using laser powder bed fusion. It's made out of copper, and you will see that in more detail later on.
+00:11:21.00 --> 00:11:29.00  So now this cladding head and we started with it, was capable of doing a 5 millimeter spot size, it's using powder, it's a coaxial design...
+00:11:29.00 --> 00:11:38.00  ...it can go up to one meter per minute deposition speed and it can be used on robots or other types of machines.
+00:11:38.00 --> 00:11:46.00  In our case we're using robots, and this year, the first one seeing this official video by ESA, so we're using a double robot system.
+00:11:46.00 --> 00:11:54.00  You can see that. This is one of the cladding heads here. We have this rotating table, this is a titanium billet, a flat one, 2 centimeters in thickness about.
+00:11:54.00 --> 00:12:02.00  You see the complex path planning that we did up front, this was all optimized in terms of thermal stresses and productivity...
+00:12:02.00 --> 00:12:10.00  ...and in order to tightly control this system because we're doing this 24/7, we had quality assurance tools.
+00:12:10.00 --> 00:12:18.00  For example, we measure from time to time the powder flow, we measure the powder focus if it's still in focus.
+00:12:18.00 --> 00:12:26.00  We have a tight process control using an E-MEX camera, which is basically a temperature control.
+00:12:26.00 --> 00:12:34.00  We control the local shielding, and if you look at the tracks, the weld tracks, they are shiny, there is no coloring so the oxygen is kept away from the processing zone.
+00:12:34.00 --> 00:12:42.00  You see a camera, we look at the temperature, temperature distribution, we acquire a lot of data and we're doing that typically simultaneously.
+00:12:42.00 --> 00:12:50.00  In this part of the process, we're just using one robot. Now since generating such a huge part generates a lot of residual stresses...
+00:12:50.00 --> 00:12:58.00  ...we couldn't cope with and I will show you some pictures of our initial trials, we changed the strategy to build the part completely in switching it around...
+00:12:58.00 --> 00:13:06.00  ...and turning it around and then do it on the other side. So I will come back to that later on.
+00:13:06.00 --> 00:13:14.00  So very sophisticated technology involved. So we have our own design of the machine parts and I will come back to this later.
+00:13:14.00 --> 00:13:22.00  Now let's take a closer look to the structure itself. It's not only straight walls to be honest.
+00:13:22.00 --> 00:13:30.00  So we have spokes, we have these pockets, we have an outer rim and we have an inner rim.
+00:13:30.00 --> 00:13:38.00  And if you look at the outer rim, it's a hollow structure, okay? The spokes are hollow structures as well.
+00:13:38.00 --> 00:13:45.00  The rims, the inner rims are solid, but have a non-uniform structure and...
+00:15:00.00 --> 00:15:05.00  The pockets are solid as well and have an nonuniform structure too. So very challenging again.
+00:15:05.00 --> 00:15:10.00  So we tried to avoid as much machining as we could.
+00:15:10.00 --> 00:15:16.00  And if you take a closer look at the structure of the spokes here, you will see it's a hollow structure...
+00:15:16.00 --> 00:15:20.00  ...that is having this type of a shape.
+00:15:20.00 --> 00:15:25.00  So, for the DED process, we had to guarantee that we could produce support-lessly...
+00:15:25.00 --> 00:15:29.00  ...because we didn't want to fiddle around with any support DED overhangs.
+00:15:29.00 --> 00:15:34.00  We had to make sure that the precision is right, and so on and so forth. So, it's been a major engineering challenge.
+00:15:34.00 --> 00:15:39.00  Alright, so this is just a feature of part of the spoke here.
+00:15:39.00 --> 00:15:43.00  As you can see, it's made by DED without any support, right?
+00:15:43.00 --> 00:15:48.00  So you have kind of a rooftop here that's been built while you build it in height...
+00:15:48.00 --> 00:15:53.00  ...without closing the structure where you don't want to have it closed. Okay. So, quite sophisticated.
+00:15:53.00 --> 00:15:58.00  Now, the next problem we tackled was productivity. Because I said 2.2 tons of titanium are to be used here...
+00:15:58.00 --> 00:16:03.00  ...and it would take years if productivity is low.
+00:16:03.00 --> 00:16:08.00  Well, you all probably know this interrelationship between precision and build rate.
+00:16:08.00 --> 00:16:13.00  So, if the required precision is high, the build rate is typically low, and if the build rate is high, the precision is low, right?
+00:16:13.00 --> 00:16:18.00  So we had to find a sweet spot for that. And so part of the development was to increase the build rate...
+00:16:18.00 --> 00:16:23.00  ...and I will tell you about the numbers later on. Increase the material efficiency. That's another point.
+00:16:23.00 --> 00:16:28.00  You don't want to waste material in such a process. And to get a high thermal efficiency.
+00:16:28.00 --> 00:16:33.00  Well, and then there are some drawbacks to be tackled as well.
+00:16:33.00 --> 00:16:38.00  Now, since I'm probably running out of time, I will go a little bit faster here.
+00:16:38.00 --> 00:16:43.00  So what did we achieve? Maybe you can start the video again, please. Is that possible? There should be a video on here.
+00:16:43.00 --> 00:16:48.00  Oh, that was too quick. Okay. Whoops. Should be started. Okay.
+00:16:48.00 --> 00:16:53.00  Well, it doesn't really work. Anyway. So, we were able to apply a closed-loop melt pool control...
+00:16:53.00 --> 00:16:58.00  ...in order to make sure that we have a good control over the thicknesses of the walls that we build.
+00:16:58.00 --> 00:17:03.00  We had to adjust and optimize the gas flow in order to optimize shielding.
+00:17:03.00 --> 00:17:08.00  We were able to increase the spot size and thus increase the amount of material we could put in during the weld process, if you will...
+00:17:08.00 --> 00:17:13.00  ...to 10 millimeters. We started with five.
+00:17:13.00 --> 00:17:18.00  And we looked at that using demonstrator parts, smaller parts as you will see here in a minute...
+00:17:18.00 --> 00:17:23.00  ...like walls and thicker walls, and some of these walls were hollow structures as I showed you earlier.
+00:17:23.00 --> 00:17:28.00  The build rate is now, the current maximum build rate is now up to, the pointer is lost again, 2.25 kilograms per hour.
+00:17:28.00 --> 00:17:33.00  So we doubled the build rate with regards to the beginning.
+00:17:33.00 --> 00:17:38.00  Now, looking at these more complex-shaped structures, it is pretty clear, and this is just a part of it here...
+00:17:38.00 --> 00:17:43.00  ...one of the demonstrator structures, that we had to adjust the processing parameters wherever we were in the part, right?
+00:17:43.00 --> 00:17:48.00  So, the vertical walls were made with 2 kilowatts, for example.
+00:17:48.00 --> 00:17:53.00  Also, the overhanging structures with 2 kilowatts, while the filled parts were made with 10 kilowatts, for example, in order to optimize the speed.
+00:17:53.00 --> 00:17:58.00  And at the same time, of course, always look at the quality of the parts.
+00:17:58.00 --> 00:18:03.00  So, this is just a proof of it that we can do it. We have a very tight control on the process.
+00:18:03.00 --> 00:18:07.00  And on the right-hand side, the part, the demonstrator part has a very good quality.
+00:20:00.00 --> 00:20:11.00  quality. We did all the materials checks, and we checked it with a green box. So, um, everything is is correct and ESA was very much satisfied.
+00:20:11.00 --> 00:20:30.00  Alright. Um, I'll skip that much much faster here. Um, so we did a thorough materials analysis, of course, in order to make sure that there are no surprises regarding the materials quality that we see because when we change the processing parameters, you might expect some changes also in the materials quality.
+00:20:30.00 --> 00:20:46.00  That had to be made sure and everything and I will skip that here and go to the um the final result. So initially we had some some challenges to be addressed but now we're in a situation where we can safely repeatedly and with a high
+00:20:46.00 --> 00:21:03.00  reliability produce these um these structures. Now I talked about distortion. And if you think about a part of this size, if you think about the the differences in in coefficient or the thermal stresses that can be generated for a part of this size, 2.7 meters in diameter,
+00:21:03.00 --> 00:21:21.00  if you put down a titanium layer at 1,630 degrees Celsius, the the maximum shrinkage that you would expect is about 40 millimeters. Okay? And these 40 millimeters they will either lead to shrinkage, um will either lead to deformation,
+00:21:21.00 --> 00:21:38.00  so distortion of the part if you allow distortion or to immense residual stresses if you don't allow distortion. And this is what will happen, okay? So on the left hand side, if you allow distortion, it will just bend and on the right hand side it will crack if you don't allow distortion. So we had to
+00:21:38.00 --> 00:21:54.00  look at the sweet spot here again. And um the question now is how do you deal with the stresses in such a big part? And so this is now the initial state. We start with a flat plate which is the build plate, which is a titanium plate 2.7 meters in diameter and um 2 centimeters in in thickness.
+00:21:54.00 --> 00:22:11.00  Um we put the coatings down, we put the the walls down by DED and then at a certain point um we measure distortion, right? And we look at it. Um we see that it distorts and um when distortion is is too much, if it's if it's okay, we can
+00:22:11.00 --> 00:22:27.00  put down the next layer. If it's getting too great, if it's becoming too too much, um well this is the circle when it's okay, um we have to do a trick. We have to play a trick and we we flip down of we flip around um the build plate and build from the other side,
+00:22:27.00 --> 00:22:44.00  the structure from the other side. So this will again build up stresses, but these stresses will equalize with the already existing stresses. And in order to not break the part, we have to do heat treatment intermittently. And we've planned for 10 heat treatments for the whole part in between the the process.
+00:22:44.00 --> 00:24:04.00  So this is basically how we do it. Um I'm going through very quickly. So it's a um it's a very complex routine of depositing the walls, measuring the distortion, doing intermittent flipping and depositing on the on the back side and doing these intermittent stress-relief heat treatments.
+00:24:04.00 --> 00:24:22.00  Okay. There's some um specimens that that we did with this technology because you you don't start with such an idea without having having it tried. Um we did that, did a lot of materials testing as you can see from this this one here and again there was a green tick in in the box, so we were
+00:24:22.00 --> 00:24:36.00  able to continue with that. Looking at the um materials data without going into detail here, everything was okay. Um so we now have a part that consists of the build plate, which is an integral part of the final part, and the build structures. Okay?
+00:24:36.00 --> 00:24:55.00  So this is the fundamental idea and um everything is okay, so all the materials data is um within specification. Now, in terms of
+00:25:00.00 --> 00:25:06.00  Conclusion. This has been, or this is still a fascinating project.
+00:25:06.00 --> 00:25:12.00  the largest part ever been built, to be shot into into orbit.
+00:25:12.00 --> 00:25:22.00  We've seen major improvements, and we've made major improvements of the direct energy deposition process towards this large scale production of parts.
+00:25:22.00 --> 00:25:30.00  and those parts are highly complex as you've been able to see, I believe.
+00:25:30.00 --> 00:25:36.00  We've done all the demonstration part of the project. We've started with a small mockup of only 1.5 meters in diameter.
+00:25:36.00 --> 00:25:44.00  and we learned a lot from this, and now we are upscaling it.
+00:25:44.00 --> 00:25:54.00  The next steps, and this is my final word, is inline non-destructive testing, using acoustic emission, for example.
+00:25:54.00 --> 00:26:05.00  We're acquiring a lot of data, and we still need to improve the closed loop control of our process.
+00:26:05.00 --> 00:26:14.00  and we need to ramp up the speed of the manufacturing process because otherwise it will take years rather than months.
+00:26:14.00 --> 00:26:21.00  So with that, I'd like to thank you very much for your attention and happy to entertain any questions you might have. Thank you.
+00:26:21.00 --> 00:26:31.00  Thank you, Professor Leyens, you definitely kept us awake with this very interesting talk. So, are there questions to him?
+00:26:31.00 --> 00:26:43.00  Yeah, thank you for this very interesting presentation. maybe you remember from yesterday, when you were my chairman, I'm a friend of wire.
+00:26:43.00 --> 00:26:49.00  So, I'm asking regarding your approach, why do you use powder instead of wire for this task?
+00:26:49.00 --> 00:26:54.00  There's an easy answer to that, ESA wanted us to use powder. And this is the true answer.
+00:26:54.00 --> 00:27:04.00  If I could have decided, I would have said, well, let's use a wire because I mean, look at the labor safety is a problem here, right?
+00:27:04.00 --> 00:27:13.00  So we're working with a lot of powder. So wire would have been much cleaner process, but that was one of the requirements ESA had, saying we wanted to have it in powder. Yeah.
+00:27:13.00 --> 00:27:22.00  Yes, thank you for very interesting talk. sometimes make close loop the process a little bit slower, what's about your process? Do you have an impact on process time?
+00:27:22.00 --> 00:27:30.00  Oh, the closed loop process. Well, yeah, it slows it down. but the problem is with such a big part, you will never scrap it whenever something happens, right?
+00:27:30.00 --> 00:27:40.00  You try to repair it. And this is what we basically do. so whenever something happens, something bad happens, we try to repair it.
+00:27:40.00 --> 00:27:48.00  And this takes time. So if your process is more stable and the quality is better, you don't have to repair it that often.
+00:27:48.00 --> 00:27:54.00  And so you save time. So the answer is, yes, it slows it down, but it improves the quality and the final part will be built faster. The good thing about it is ESA does only need one part.
+00:27:54.00 --> 00:28:00.00  How are you doing the heat treatment for this large part? How we do it? Oh, in just a large furnace. Okay.
+00:28:00.00 --> 00:28:06.00  Yes, so we ship it to a company who does it for us because we don't have such a big furnace. But we have to do it 10 times. ESA is paying for it.
+00:28:06.00 --> 00:28:13.00  Okay, let's thank Professor Leyens again. Okay, thank you very much. Thanks.

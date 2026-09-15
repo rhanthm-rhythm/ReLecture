@@ -1,0 +1,270 @@
+{
+  "video": "data/videos/86900.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 496.332277,
+  "chunks": 2,
+  "raw_text": "Below is the timestamped transcript for the video:\n\n00:02 --> 00:10\nHello everyone. My name is Hamilton Murrah, and I'm one of the authors of \"Bridging the Skills Gap: A Course Model for Modern Generative AI Education.\"\n\n00:10 --> 00:21\nLet me take you back to 2019, if you will. I was taking an upper-level networking course, which, frankly, I had no business taking. And we received a semester-long project to build a messaging application within our CLI.\n\n00:21 --> 00:30\nI spent months, really the entire semester, writing the program, scouring Stack Overflow, attending office hours,\n\n00:30 --> 00:41\njust to submit an, admittedly, fine final product. Now, fast-forward to today: if you were given the exact same assignment, not only could you accomplish it with ease within a day,\n\n00:41 --> 00:58\nbut with tools like Claude Code and Lovable put together, you could build an entire web app in under an hour. The problems we want to solve today are not changing from what they were. It's our methods that have seen such drastic upheaval. And as we continue to expand our capabilities and the lens of impossibility continues to clear,\n\n00:58 --> 01:08\nit's vitally important that people with the right knowledge are building the tools and applications we'll come to rely on every single day. There's a natural dichotomy, though, that occurs when people are utilizing AI.\n\n01:08 --> 01:24\nEither they're very aware of the underlying subject and can quality-control AI output as they go, or they rely on the implicit model trust to fill in their knowledge gaps where they might be trying to develop. That true leverage point occurs in the top right here, when both of these are working in tandem and domain experts can employ AI capabilities to their workflows to maximize their productivity and output.\n\n01:24 --> 01:35\nThe problem we face today, however, is an ideological conflict between industry and education. We're already seeing shifts in companies that are requiring AI experience in any new hires, up to 66% as of 2024,\n\n01:35 --> 01:50\nbut universities are lagging, often putting their heads in the sand in the name of retaining academic integrity and completely ignoring the changes that are already here. Despite most institutions claiming that one of their guiding principles is to prepare students for future career success, they're doing the complete opposite.\n\n01:50 --> 02:00\nTo that end, many instructors fear the massive changes coming to the educational world, and they choose to instead ignore that progress and institute massive penalties for using AI, up to and including suspension and even expulsion.\n\n02:00 --> 02:14\nStudents, however, are recognizing what's ahead of them. They're seeing the tools available to them, and they're desperate to prepare themselves to learn these new skills. Out of necessity, they're doing so in secret, finding the workarounds so as not to get caught, and teach themselves without any sense of real guidance.\n\n02:14 --> 02:27\nThere's an inevitable collision course coming for those that do not adopt the new AI-powered world we're living in. And at Northwestern, we decided to push the boundaries of that disconnect and see just how impactful a true, forward-thinking AI course could be.\n\n02:27 --> 02:40\nWe anchored that course on three guiding principles. Foundations first: we felt it was imperative that students had already learned the foundations, knew how to program, and were proficient in that industry already.\n\n02:40 --> 02:59\nComplement existing knowledge: this course was expressly not focused on teaching new applications of AI development—building LLMs, building neural networks, whatever it may be. It was focused on providing them with a structured environment to experiment and learn the best ways to utilize AI in their existing development workflows.\n\n02:59 --> 03:17\nHuman-owned architecture: despite the massive benefits of AI, it's critical that we do not remove humans from the loop entirely. AI can build you anything you ask for and tell you it's complete, but future successful practitioners will be able to successfully guide these tools and tell them to create exactly what they need with exact specifications for their use case—\n\n03:17 --> 03:25\nfor example, prioritizing reliability and security for a banking app, rather than focusing on scaling and availability for a social media site.\n\n03:25 --> 03:31\nWe split the course into two distinct phases with several different components underneath.\n\n03:31 --> 03:52\nFirst, we wanted to make sure we had a level playing field. Those students that had used generative AI more or less could be on the same knowledge level. So we taught them fundamentals, things like turning pseudo-code into code, debugging, code optimization, test-driven development—things they already knew how to do, but really just showing them how they can work AI into their workflow.\n\n03:52 --> 04:13\nAnd then we moved on to the back-end, front-end, and database development, and eventually the full-stack integration. Each of these steps had specific functionalities expected, but explicitly did not tell them how exactly their code should be built and architected. There was no starter code provided; it was purely blank slate given to them, and there was testing coverage requirements for each.\n\n04:13 --> 04:39\nOne of the most important aspects of the course was those blue triangles here, the assignment debriefs. They occurred at the end of each large assignment, while we were still in class at least, and these were really meant to be architecture design documents. They were one of the most fundamental things. They occurred at the end of each assignment, like I said, and required students to write out their decision-making for any major architectural choices, including why'd you choose it, what'd you choose against, what was your reasoning for and against each of those.\n\n04:39 --> 05:00\nI would then challenge these teams in class to defend their reasoning: why'd you choose X and not Y. I would even find teams that chose the exact opposite options—one team choosing A in favor of B, one team choosing B in favor of A—and encourage some debate between them, explaining to me and defending to each other why their choice was the right one.\n\n00:00:00 --> 00:02:01 Daily stand-ups.\n\n00:02:01 --> 00:07:22 This was the other thing. I wanted to make sure that the course was as real world applicable as it could be.\n\n00:07:22 --> 00:12:28 And part of that is mimicking industry standard agile development team cadences.\n\n00:12:28 --> 00:18:23 Sharing progress, timing, blockers, big decisions, and any challenges they had on those decisions.\n\n00:18:23 --> 00:22:24 Getting them practice of how their life could look in the future.\n\n00:22:24 --> 00:26:22 Guest speakers in these great triangles here.\n\n00:26:22 --> 00:28:28 One of the most impactful areas of the course, truly.\n\n00:28:28 --> 00:35:36 And know, I think it's important to recognize that neither I nor any instructor has all the answers, especially within an industry as nascent as AI.\n\n00:35:36 --> 00:40:40 Students love hearing the outside perspectives of people actually doing the work every day.\n\n00:40:40 --> 00:50:52 And then industry research, layering on to the guest speakers, it really allowed students to see AI applications and views across different types of companies and see where they would like to end up in a perfect world.\n\n00:50:52 --> 00:58:34 So, some of the reviews we got here in the class, on the left is the overall university course evaluation, and on the right is a custom survey we put out in the class.\n\n00:58:34 --> 01:05:07 And I think the results speak for themselves: out of six on the left, out of seven on the right.\n\n01:05:07 --> 01:13:14 Really strongly received by the students, and up to over 96% indicating they left with increased confidence using these generative AI tools.\n\n01:13:14 --> 01:18:03 And I think some of these quotes on the bottom underscore the point well.\n\n01:18:03 --> 01:23:44 The overall reception was incredibly positive. Take this class. Absolutely should be offered again. My favorite course I took.\n\n01:23:44 --> 01:29:33 There were a few themes, though, that did pop up that would lead me to adjust future iterations of the course.\n\n01:29:33 --> 01:37:37 This is not a course on modern AI engineering where you learn to create other things like LLMs.\n\n01:37:37 --> 01:43:30 It's for students with existing backgrounds that want to learn to do their current activities more efficiently. I would clarify that a little more strongly.\n\n01:43:30 --> 01:48:38 The assignments would shift in a few ways. I would allow students to choose their own topic areas,\n\n01:48:38 --> 01:55:56 and as vibe coding and other advances have continued, I would have instituted multiple full stack assignments to approach something closer to rapid prototyping.\n\n01:55:56 --> 02:01:24 And finally, I would ensure a little more breadth of ideas and perspectives with the guest speakers.\n\n02:01:24 --> 02:08:13 I chose to bring in very positive voices on generative AI. I'd potentially bring in some of those who think less positively,\n\n02:08:13 --> 02:13:17 and also more true practitioners who are using generative AI in their roles every single day.\n\n02:13:17 --> 02:22:50 Finally, I would have put maybe a slightly larger emphasis on model comparisons and model benchmarks, and ethics, and the environmental impact of using AI so broadly.\n\n02:22:50 --> 02:30:17 When you strip away all the specifics, though, you're left with the blueprint for applying this type of course in any domain.\n\n02:30:17 --> 02:35:36 Computer science was a natural starting point due to its proximity to AI tools and ease of the applications,\n\n02:35:36 --> 02:42:25 but AI won't stop there. It'll fundamentally alter the way we think and work in every single subject, and we need to prepare students for it.\n\n02:42:25 --> 02:54:19 Building on our original three principles of insisting upon foundational knowledge and expertise, showcasing to students how to improve and expand their current processes,\n\n02:54:19 --> 03:02:17 and emphasizing the need for human-guided architecture and planning, and ensuring this equally important fourth pillar of real world preparation and connection, you can create a true AI course of the future.\n\n03:02:17 --> 03:13:12 We cannot control the effect AI will have on our futures, but we can ensure we're preparing the next generation with the tools and experiences they need so they will use it well and enable the generational impact we all desire.\n\n03:13:12 --> 03:16:00 Thank you very much.",
+  "segments": [
+    {
+      "start": "00:00:02.00",
+      "end": "00:00:10.00",
+      "text": "Hello everyone. My name is Hamilton Murrah, and I'm one of the authors of \"Bridging the Skills Gap: A Course Model for Modern Generative AI Education.\""
+    },
+    {
+      "start": "00:00:10.00",
+      "end": "00:00:21.00",
+      "text": "Let me take you back to 2019, if you will. I was taking an upper-level networking course, which, frankly, I had no business taking. And we received a semester-long project to build a messaging application within our CLI."
+    },
+    {
+      "start": "00:00:21.00",
+      "end": "00:00:30.00",
+      "text": "I spent months, really the entire semester, writing the program, scouring Stack Overflow, attending office hours,"
+    },
+    {
+      "start": "00:00:30.00",
+      "end": "00:00:41.00",
+      "text": "just to submit an, admittedly, fine final product. Now, fast-forward to today: if you were given the exact same assignment, not only could you accomplish it with ease within a day,"
+    },
+    {
+      "start": "00:00:41.00",
+      "end": "00:00:58.00",
+      "text": "but with tools like Claude Code and Lovable put together, you could build an entire web app in under an hour. The problems we want to solve today are not changing from what they were. It's our methods that have seen such drastic upheaval. And as we continue to expand our capabilities and the lens of impossibility continues to clear,"
+    },
+    {
+      "start": "00:00:58.00",
+      "end": "00:01:08.00",
+      "text": "it's vitally important that people with the right knowledge are building the tools and applications we'll come to rely on every single day. There's a natural dichotomy, though, that occurs when people are utilizing AI."
+    },
+    {
+      "start": "00:01:08.00",
+      "end": "00:01:24.00",
+      "text": "Either they're very aware of the underlying subject and can quality-control AI output as they go, or they rely on the implicit model trust to fill in their knowledge gaps where they might be trying to develop. That true leverage point occurs in the top right here, when both of these are working in tandem and domain experts can employ AI capabilities to their workflows to maximize their productivity and output."
+    },
+    {
+      "start": "00:01:24.00",
+      "end": "00:01:35.00",
+      "text": "The problem we face today, however, is an ideological conflict between industry and education. We're already seeing shifts in companies that are requiring AI experience in any new hires, up to 66% as of 2024,"
+    },
+    {
+      "start": "00:01:35.00",
+      "end": "00:01:50.00",
+      "text": "but universities are lagging, often putting their heads in the sand in the name of retaining academic integrity and completely ignoring the changes that are already here. Despite most institutions claiming that one of their guiding principles is to prepare students for future career success, they're doing the complete opposite."
+    },
+    {
+      "start": "00:01:50.00",
+      "end": "00:02:00.00",
+      "text": "To that end, many instructors fear the massive changes coming to the educational world, and they choose to instead ignore that progress and institute massive penalties for using AI, up to and including suspension and even expulsion."
+    },
+    {
+      "start": "00:02:00.00",
+      "end": "00:02:14.00",
+      "text": "Students, however, are recognizing what's ahead of them. They're seeing the tools available to them, and they're desperate to prepare themselves to learn these new skills. Out of necessity, they're doing so in secret, finding the workarounds so as not to get caught, and teach themselves without any sense of real guidance."
+    },
+    {
+      "start": "00:02:14.00",
+      "end": "00:02:27.00",
+      "text": "There's an inevitable collision course coming for those that do not adopt the new AI-powered world we're living in. And at Northwestern, we decided to push the boundaries of that disconnect and see just how impactful a true, forward-thinking AI course could be."
+    },
+    {
+      "start": "00:02:27.00",
+      "end": "00:02:40.00",
+      "text": "We anchored that course on three guiding principles. Foundations first: we felt it was imperative that students had already learned the foundations, knew how to program, and were proficient in that industry already."
+    },
+    {
+      "start": "00:02:40.00",
+      "end": "00:02:59.00",
+      "text": "Complement existing knowledge: this course was expressly not focused on teaching new applications of AI development—building LLMs, building neural networks, whatever it may be. It was focused on providing them with a structured environment to experiment and learn the best ways to utilize AI in their existing development workflows."
+    },
+    {
+      "start": "00:02:59.00",
+      "end": "00:03:17.00",
+      "text": "Human-owned architecture: despite the massive benefits of AI, it's critical that we do not remove humans from the loop entirely. AI can build you anything you ask for and tell you it's complete, but future successful practitioners will be able to successfully guide these tools and tell them to create exactly what they need with exact specifications for their use case—"
+    },
+    {
+      "start": "00:03:17.00",
+      "end": "00:03:25.00",
+      "text": "for example, prioritizing reliability and security for a banking app, rather than focusing on scaling and availability for a social media site."
+    },
+    {
+      "start": "00:03:25.00",
+      "end": "00:03:31.00",
+      "text": "We split the course into two distinct phases with several different components underneath."
+    },
+    {
+      "start": "00:03:31.00",
+      "end": "00:03:52.00",
+      "text": "First, we wanted to make sure we had a level playing field. Those students that had used generative AI more or less could be on the same knowledge level. So we taught them fundamentals, things like turning pseudo-code into code, debugging, code optimization, test-driven development—things they already knew how to do, but really just showing them how they can work AI into their workflow."
+    },
+    {
+      "start": "00:03:52.00",
+      "end": "00:04:13.00",
+      "text": "And then we moved on to the back-end, front-end, and database development, and eventually the full-stack integration. Each of these steps had specific functionalities expected, but explicitly did not tell them how exactly their code should be built and architected. There was no starter code provided; it was purely blank slate given to them, and there was testing coverage requirements for each."
+    },
+    {
+      "start": "00:04:13.00",
+      "end": "00:04:39.00",
+      "text": "One of the most important aspects of the course was those blue triangles here, the assignment debriefs. They occurred at the end of each large assignment, while we were still in class at least, and these were really meant to be architecture design documents. They were one of the most fundamental things. They occurred at the end of each assignment, like I said, and required students to write out their decision-making for any major architectural choices, including why'd you choose it, what'd you choose against, what was your reasoning for and against each of those."
+    },
+    {
+      "start": "00:04:39.00",
+      "end": "00:05:00.00",
+      "text": "I would then challenge these teams in class to defend their reasoning: why'd you choose X and not Y. I would even find teams that chose the exact opposite options—one team choosing A in favor of B, one team choosing B in favor of A—and encourage some debate between them, explaining to me and defending to each other why their choice was the right one."
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:07:01.00",
+      "text": "Daily stand-ups."
+    },
+    {
+      "start": "00:07:01.00",
+      "end": "00:12:22.00",
+      "text": "This was the other thing. I wanted to make sure that the course was as real world applicable as it could be."
+    },
+    {
+      "start": "00:12:22.00",
+      "end": "00:17:28.00",
+      "text": "And part of that is mimicking industry standard agile development team cadences."
+    },
+    {
+      "start": "00:07:28.00",
+      "end": "00:23:23.00",
+      "text": "Sharing progress, timing, blockers, big decisions, and any challenges they had on those decisions."
+    },
+    {
+      "start": "00:13:23.00",
+      "end": "00:27:24.00",
+      "text": "Getting them practice of how their life could look in the future."
+    },
+    {
+      "start": "00:07:24.00",
+      "end": "00:31:22.00",
+      "text": "Guest speakers in these great triangles here."
+    },
+    {
+      "start": "00:11:22.00",
+      "end": "00:33:28.00",
+      "text": "One of the most impactful areas of the course, truly."
+    },
+    {
+      "start": "00:13:28.00",
+      "end": "00:40:36.00",
+      "text": "And know, I think it's important to recognize that neither I nor any instructor has all the answers, especially within an industry as nascent as AI."
+    },
+    {
+      "start": "00:10:36.00",
+      "end": "00:45:40.00",
+      "text": "Students love hearing the outside perspectives of people actually doing the work every day."
+    },
+    {
+      "start": "00:05:40.00",
+      "end": "00:55:52.00",
+      "text": "And then industry research, layering on to the guest speakers, it really allowed students to see AI applications and views across different types of companies and see where they would like to end up in a perfect world."
+    },
+    {
+      "start": "00:05:52.00",
+      "end": "01:03:34.00",
+      "text": "So, some of the reviews we got here in the class, on the left is the overall university course evaluation, and on the right is a custom survey we put out in the class."
+    },
+    {
+      "start": "00:13:34.00",
+      "end": "01:10:07.00",
+      "text": "And I think the results speak for themselves: out of six on the left, out of seven on the right."
+    },
+    {
+      "start": "00:10:07.00",
+      "end": "01:18:14.00",
+      "text": "Really strongly received by the students, and up to over 96% indicating they left with increased confidence using these generative AI tools."
+    },
+    {
+      "start": "00:08:14.00",
+      "end": "01:23:03.00",
+      "text": "And I think some of these quotes on the bottom underscore the point well."
+    },
+    {
+      "start": "00:13:03.00",
+      "end": "01:28:44.00",
+      "text": "The overall reception was incredibly positive. Take this class. Absolutely should be offered again. My favorite course I took."
+    },
+    {
+      "start": "00:08:44.00",
+      "end": "01:34:33.00",
+      "text": "There were a few themes, though, that did pop up that would lead me to adjust future iterations of the course."
+    },
+    {
+      "start": "00:14:33.00",
+      "end": "01:42:37.00",
+      "text": "This is not a course on modern AI engineering where you learn to create other things like LLMs."
+    },
+    {
+      "start": "00:12:37.00",
+      "end": "01:48:30.00",
+      "text": "It's for students with existing backgrounds that want to learn to do their current activities more efficiently. I would clarify that a little more strongly."
+    },
+    {
+      "start": "00:08:30.00",
+      "end": "01:53:38.00",
+      "text": "The assignments would shift in a few ways. I would allow students to choose their own topic areas,"
+    },
+    {
+      "start": "00:13:38.00",
+      "end": "02:00:56.00",
+      "text": "and as vibe coding and other advances have continued, I would have instituted multiple full stack assignments to approach something closer to rapid prototyping."
+    },
+    {
+      "start": "00:10:56.00",
+      "end": "02:06:24.00",
+      "text": "And finally, I would ensure a little more breadth of ideas and perspectives with the guest speakers."
+    },
+    {
+      "start": "00:06:24.00",
+      "end": "02:13:13.00",
+      "text": "I chose to bring in very positive voices on generative AI. I'd potentially bring in some of those who think less positively,"
+    },
+    {
+      "start": "00:13:13.00",
+      "end": "02:18:17.00",
+      "text": "and also more true practitioners who are using generative AI in their roles every single day."
+    },
+    {
+      "start": "00:08:17.00",
+      "end": "02:27:50.00",
+      "text": "Finally, I would have put maybe a slightly larger emphasis on model comparisons and model benchmarks, and ethics, and the environmental impact of using AI so broadly."
+    },
+    {
+      "start": "00:07:50.00",
+      "end": "02:35:17.00",
+      "text": "When you strip away all the specifics, though, you're left with the blueprint for applying this type of course in any domain."
+    },
+    {
+      "start": "00:05:17.00",
+      "end": "02:40:36.00",
+      "text": "Computer science was a natural starting point due to its proximity to AI tools and ease of the applications,"
+    },
+    {
+      "start": "00:10:36.00",
+      "end": "02:47:25.00",
+      "text": "but AI won't stop there. It'll fundamentally alter the way we think and work in every single subject, and we need to prepare students for it."
+    },
+    {
+      "start": "00:07:25.00",
+      "end": "02:59:19.00",
+      "text": "Building on our original three principles of insisting upon foundational knowledge and expertise, showcasing to students how to improve and expand their current processes,"
+    },
+    {
+      "start": "00:09:19.00",
+      "end": "03:07:17.00",
+      "text": "and emphasizing the need for human-guided architecture and planning, and ensuring this equally important fourth pillar of real world preparation and connection, you can create a true AI course of the future."
+    },
+    {
+      "start": "00:07:17.00",
+      "end": "03:18:12.00",
+      "text": "We cannot control the effect AI will have on our futures, but we can ensure we're preparing the next generation with the tools and experiences they need so they will use it well and enable the generational impact we all desire."
+    },
+    {
+      "start": "00:08:12.00",
+      "end": "03:21:00.00",
+      "text": "Thank you very much."
+    }
+  ]
+}

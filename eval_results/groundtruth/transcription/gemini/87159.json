@@ -1,0 +1,220 @@
+{
+  "video": "data/videos/87159.mp4",
+  "model": "gemini-3-flash-preview",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 584.653844,
+  "chunks": 2,
+  "raw_text": "00:00:00 --> 00:00:15 Hello everyone, I'm Yeojin Kim from North Carolina State University. Today I'm presenting our paper titled \"A Dialogue-Based Learning Analytics Framework for Collaborative Game-Based Learning.\"\n\n00:00:18 --> 00:00:30 Collaboration is central to effective learning, yet many students struggle to engage in meaningful dialogue during group work. Analyzing student dialogue in collaborative problem solving can help \n\n00:00:30 --> 00:00:45 teachers understand how students share ideas, reason, and regulate their work. However, collaborative problem solving, shortly CPS, is complex and difficult to monitor in real-time. \n\n00:00:45 --> 00:01:00 Moreover, low-level analytics often increase teachers' cognitive load rather than support facilitation. So in this work, we introduce a dialogue-based learning analytics framework that predicts group learning outcomes \n\n00:01:00 --> 00:01:15 and provides prioritized dialogue interpretation for teacher facilitation. Despite challenges in practical use of CPS analytics, prior work on CPS analysis has largely focused on low-level features \n\n00:01:15 --> 00:01:30 such as dialogue acts or short-term CPS event transitions. While machine learning models like deep learning and clustering are commonly used, they often function as black boxes with limited interpretability. \n\n00:01:30 --> 00:01:45 On the other hand, large language models generate more human-readable dialogue interpretation but lack CPS-specific knowledge. And LLMs also face challenges for real-time use due to cost \n\n00:01:45 --> 00:02:00 and privacy concerns, particularly in educational settings. Importantly, language understanding alone does not reveal which interaction features drive learning outcomes, \n\n00:02:00 --> 00:02:15 motivating the need for explicit behavior-outcome analysis. In this work, we move beyond interpreting students' dialogue to identify collaborative problem-solving behavior patterns \n\n00:02:15 --> 00:02:30 that are most strongly associated with learning outcomes. Our dialogue-based learning analytics framework weights these patterns to support more accurate learning outcome prediction \n\n00:02:30 --> 00:02:45 and provide prioritized dialogue interpretation for pedagogically actionable insight. We formalize the problem into two complementary tasks. The first task is early prediction of group learning outcomes, \n\n00:02:45 --> 00:03:00 where dialogue utterances within increasing time windows are used to predict whether a group is higher or lower performing, evaluated by accuracy. The second task focuses on CPS dialogue interpretation, \n\n00:03:00 --> 00:03:15 generating natural language summaries that describe key collaborative behaviors over time and evaluated through expert judgment. Together, these tasks capture both predictive performance and interpretability.\n\n00:03:15 --> 00:03:30 In our approach, the base model is to capture CPS patterns by clustering students' dialogue sequences and interpreting each cluster with an LLM. These cluster interpretations are then used \n\n00:03:30 --> 00:03:45 to estimate dialogue quality, predict group learning outcomes, and provide CPS behavior-level dialogue interpretation. Technically, we embed dialogue utterances using a sentence transformer \n\n00:03:45 --> 00:04:00 and apply dynamic time warping-based clustering to capture temporal patterns. At design time, each cluster is interpreted using an LLM. At runtime, the framework reuses the trained clustering model \n\n00:04:00 --> 00:04:15 and pre-generated interpretations, enabling efficient prediction and interpretation while reducing LLM cost and data privacy concerns. \n\n00:04:15 --> 00:04:30 The core idea of our proposed method is that it extends the prior method by adding data-driven weighting mechanism that reflect how strongly each dialogue cluster relate to learning outcomes. \n\n00:04:30 --> 00:04:45 This approach improves learning outcome early prediction and provide more focused behavioral interpretation. In the weighting mechanism, first we compute a weight for each cluster based \n\n00:04:45 --> 00:05:00 on how frequently it appears in higher versus lower performing groups. So these weights amplify clusters that are more relevant to learning. For learning outcome prediction, \n\n00:05:00 --> 00:05:15 dialogue segment performance is calculated as a weighted average of cluster scores. Then for more focused interpretation, we rank...\n\n00:00 --> 00:12 dialogue clusters by cluster importance, which is defined the multiplication of the cluster frequency in a given dialogue sequence and the corresponding cluster weights.\n\n00:13 --> 00:23 We use only the top p percent of the observed clusters to summarize key CPS patterns, highlighting the most pedagogically meaningful behavior.\n\n00:24 --> 00:42 For experiments, we used a game-based collaborative learning environment, EcoJourneys, designed to support middle school students' life science learning. Teams of three to four students investigate the cause of fish illness, collaborating through in-game chat or in-person discussion.\n\n00:43 --> 00:52 In this game, students collect and analyze data, share ideas, negotiate understanding, and reach consensus to submit their response.\n\n00:53 --> 01:10 Our data set consists of over 7000 dialogue utterances from 17 student groups. We compared our Dila framework against several baselines, including LSTMs, zero-shot LLMs, and prior CPS clustering models, and evaluated multiple Dila variants with different prompting strategies and a weighting approach.\n\n01:11 --> 01:21 All models were evaluated using five-fold cross-validation with a total of 50 dialogue clusters learned across folds.\n\n01:22 --> 01:31 We evaluated early prediction performance across different dialogue window sizes. While LSTM and zero-shot LLM baselines showed limited accuracy,\n\n01:31 --> 01:40 prior CPS models improved performance when expert knowledge was incorporated.\n\n01:41 --> 01:53 Across all window sizes, our proposed method Dila consistently achieved the highest accuracy, with Dila Expert achieving 83% overall and performing well even with only the first 10 utterances.\n\n01:54 --> 02:08 This analysis highlights which collaborative behaviors are most predictive of learning outcomes. High-performing groups show stronger evidence-based negotiation and shared regulation, whereas low-performing groups are characterized by low participation and weak negotiation.\n\n02:09 --> 02:30 These weighted behaviors explain why certain dialogue patterns are more informative for learning outcome prediction.\n\n02:31 --> 02:44 To see actual CPS dialogue interpretation cases, we generated three types of dialogue summaries: unweighted, weighted, and combined, from each group's dialogue clusters.\n\n02:45 --> 02:59 Two researchers evaluated these summaries using a CPS framework. The weighted and combined summaries were found to be more accurate and more useful for teachers, as weighting reduces noise and highlights high-impact behaviors.\n\n03:00 --> 03:12 One key strength of our approach is that weighting helps surface the behaviors most predictive of learning, which supports earlier and more targeted intervention.\n\n03:13 --> 03:22 At the same time, a limitation is that over-focusing on certain behaviors may bias interpretation if weighting is not carefully balanced.\n\n03:23 --> 03:36 This highlights an important implication: weighted analytics should be used to support, not replace, human judgment, ensuring that interpretation and feedback remains pedagogically meaningful and context-aware.\n\n03:37 --> 03:52 To summarize, we introduced a dialogue-based learning analytics framework that combines weighted temporal clustering with LLM-based interpretation to analyze CPS dialogue.\n\n03:53 --> 04:06 This approach enables both early and accurate learning outcome prediction, as well as actionable and pedagogically meaningful dialogue interpretation.\n\n04:07 --> 04:22 A key insight from our work is that weighting effectively surfaces high-impact behaviors, but it must be applied carefully to avoid over-emphasizing specific patterns.\n\n04:23 --> 04:39 Moving forward, it would be worthwhile to explore more flexible weighting schemes, involve educators more directly in the interpretation process, and extend this approach to broader adaptive scaffolding applications.\n\n04:40 --> 04:44 Thank you for listening.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:15.00",
+      "text": "Hello everyone, I'm Yeojin Kim from North Carolina State University. Today I'm presenting our paper titled \"A Dialogue-Based Learning Analytics Framework for Collaborative Game-Based Learning.\""
+    },
+    {
+      "start": "00:00:18.00",
+      "end": "00:00:30.00",
+      "text": "Collaboration is central to effective learning, yet many students struggle to engage in meaningful dialogue during group work. Analyzing student dialogue in collaborative problem solving can help"
+    },
+    {
+      "start": "00:00:30.00",
+      "end": "00:00:45.00",
+      "text": "teachers understand how students share ideas, reason, and regulate their work. However, collaborative problem solving, shortly CPS, is complex and difficult to monitor in real-time."
+    },
+    {
+      "start": "00:00:45.00",
+      "end": "00:01:00.00",
+      "text": "Moreover, low-level analytics often increase teachers' cognitive load rather than support facilitation. So in this work, we introduce a dialogue-based learning analytics framework that predicts group learning outcomes"
+    },
+    {
+      "start": "00:01:00.00",
+      "end": "00:01:15.00",
+      "text": "and provides prioritized dialogue interpretation for teacher facilitation. Despite challenges in practical use of CPS analytics, prior work on CPS analysis has largely focused on low-level features"
+    },
+    {
+      "start": "00:01:15.00",
+      "end": "00:01:30.00",
+      "text": "such as dialogue acts or short-term CPS event transitions. While machine learning models like deep learning and clustering are commonly used, they often function as black boxes with limited interpretability."
+    },
+    {
+      "start": "00:01:30.00",
+      "end": "00:01:45.00",
+      "text": "On the other hand, large language models generate more human-readable dialogue interpretation but lack CPS-specific knowledge. And LLMs also face challenges for real-time use due to cost"
+    },
+    {
+      "start": "00:01:45.00",
+      "end": "00:02:00.00",
+      "text": "and privacy concerns, particularly in educational settings. Importantly, language understanding alone does not reveal which interaction features drive learning outcomes,"
+    },
+    {
+      "start": "00:02:00.00",
+      "end": "00:02:15.00",
+      "text": "motivating the need for explicit behavior-outcome analysis. In this work, we move beyond interpreting students' dialogue to identify collaborative problem-solving behavior patterns"
+    },
+    {
+      "start": "00:02:15.00",
+      "end": "00:02:30.00",
+      "text": "that are most strongly associated with learning outcomes. Our dialogue-based learning analytics framework weights these patterns to support more accurate learning outcome prediction"
+    },
+    {
+      "start": "00:02:30.00",
+      "end": "00:02:45.00",
+      "text": "and provide prioritized dialogue interpretation for pedagogically actionable insight. We formalize the problem into two complementary tasks. The first task is early prediction of group learning outcomes,"
+    },
+    {
+      "start": "00:02:45.00",
+      "end": "00:03:00.00",
+      "text": "where dialogue utterances within increasing time windows are used to predict whether a group is higher or lower performing, evaluated by accuracy. The second task focuses on CPS dialogue interpretation,"
+    },
+    {
+      "start": "00:03:00.00",
+      "end": "00:03:15.00",
+      "text": "generating natural language summaries that describe key collaborative behaviors over time and evaluated through expert judgment. Together, these tasks capture both predictive performance and interpretability."
+    },
+    {
+      "start": "00:03:15.00",
+      "end": "00:03:30.00",
+      "text": "In our approach, the base model is to capture CPS patterns by clustering students' dialogue sequences and interpreting each cluster with an LLM. These cluster interpretations are then used"
+    },
+    {
+      "start": "00:03:30.00",
+      "end": "00:03:45.00",
+      "text": "to estimate dialogue quality, predict group learning outcomes, and provide CPS behavior-level dialogue interpretation. Technically, we embed dialogue utterances using a sentence transformer"
+    },
+    {
+      "start": "00:03:45.00",
+      "end": "00:04:00.00",
+      "text": "and apply dynamic time warping-based clustering to capture temporal patterns. At design time, each cluster is interpreted using an LLM. At runtime, the framework reuses the trained clustering model"
+    },
+    {
+      "start": "00:04:00.00",
+      "end": "00:04:15.00",
+      "text": "and pre-generated interpretations, enabling efficient prediction and interpretation while reducing LLM cost and data privacy concerns."
+    },
+    {
+      "start": "00:04:15.00",
+      "end": "00:04:30.00",
+      "text": "The core idea of our proposed method is that it extends the prior method by adding data-driven weighting mechanism that reflect how strongly each dialogue cluster relate to learning outcomes."
+    },
+    {
+      "start": "00:04:30.00",
+      "end": "00:04:45.00",
+      "text": "This approach improves learning outcome early prediction and provide more focused behavioral interpretation. In the weighting mechanism, first we compute a weight for each cluster based"
+    },
+    {
+      "start": "00:04:45.00",
+      "end": "00:05:00.00",
+      "text": "on how frequently it appears in higher versus lower performing groups. So these weights amplify clusters that are more relevant to learning. For learning outcome prediction,"
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:15.00",
+      "text": "dialogue segment performance is calculated as a weighted average of cluster scores. Then for more focused interpretation, we rank..."
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:12.00",
+      "text": "dialogue clusters by cluster importance, which is defined the multiplication of the cluster frequency in a given dialogue sequence and the corresponding cluster weights."
+    },
+    {
+      "start": "00:05:13.00",
+      "end": "00:05:23.00",
+      "text": "We use only the top p percent of the observed clusters to summarize key CPS patterns, highlighting the most pedagogically meaningful behavior."
+    },
+    {
+      "start": "00:05:24.00",
+      "end": "00:05:42.00",
+      "text": "For experiments, we used a game-based collaborative learning environment, EcoJourneys, designed to support middle school students' life science learning. Teams of three to four students investigate the cause of fish illness, collaborating through in-game chat or in-person discussion."
+    },
+    {
+      "start": "00:05:43.00",
+      "end": "00:05:52.00",
+      "text": "In this game, students collect and analyze data, share ideas, negotiate understanding, and reach consensus to submit their response."
+    },
+    {
+      "start": "00:05:53.00",
+      "end": "00:06:10.00",
+      "text": "Our data set consists of over 7000 dialogue utterances from 17 student groups. We compared our Dila framework against several baselines, including LSTMs, zero-shot LLMs, and prior CPS clustering models, and evaluated multiple Dila variants with different prompting strategies and a weighting approach."
+    },
+    {
+      "start": "00:06:11.00",
+      "end": "00:06:21.00",
+      "text": "All models were evaluated using five-fold cross-validation with a total of 50 dialogue clusters learned across folds."
+    },
+    {
+      "start": "00:06:22.00",
+      "end": "00:06:31.00",
+      "text": "We evaluated early prediction performance across different dialogue window sizes. While LSTM and zero-shot LLM baselines showed limited accuracy,"
+    },
+    {
+      "start": "00:06:31.00",
+      "end": "00:06:40.00",
+      "text": "prior CPS models improved performance when expert knowledge was incorporated."
+    },
+    {
+      "start": "00:06:41.00",
+      "end": "00:06:53.00",
+      "text": "Across all window sizes, our proposed method Dila consistently achieved the highest accuracy, with Dila Expert achieving 83% overall and performing well even with only the first 10 utterances."
+    },
+    {
+      "start": "00:06:54.00",
+      "end": "00:07:08.00",
+      "text": "This analysis highlights which collaborative behaviors are most predictive of learning outcomes. High-performing groups show stronger evidence-based negotiation and shared regulation, whereas low-performing groups are characterized by low participation and weak negotiation."
+    },
+    {
+      "start": "00:07:09.00",
+      "end": "00:07:30.00",
+      "text": "These weighted behaviors explain why certain dialogue patterns are more informative for learning outcome prediction."
+    },
+    {
+      "start": "00:07:31.00",
+      "end": "00:07:44.00",
+      "text": "To see actual CPS dialogue interpretation cases, we generated three types of dialogue summaries: unweighted, weighted, and combined, from each group's dialogue clusters."
+    },
+    {
+      "start": "00:07:45.00",
+      "end": "00:07:59.00",
+      "text": "Two researchers evaluated these summaries using a CPS framework. The weighted and combined summaries were found to be more accurate and more useful for teachers, as weighting reduces noise and highlights high-impact behaviors."
+    },
+    {
+      "start": "00:08:00.00",
+      "end": "00:08:12.00",
+      "text": "One key strength of our approach is that weighting helps surface the behaviors most predictive of learning, which supports earlier and more targeted intervention."
+    },
+    {
+      "start": "00:08:13.00",
+      "end": "00:08:22.00",
+      "text": "At the same time, a limitation is that over-focusing on certain behaviors may bias interpretation if weighting is not carefully balanced."
+    },
+    {
+      "start": "00:08:23.00",
+      "end": "00:08:36.00",
+      "text": "This highlights an important implication: weighted analytics should be used to support, not replace, human judgment, ensuring that interpretation and feedback remains pedagogically meaningful and context-aware."
+    },
+    {
+      "start": "00:08:37.00",
+      "end": "00:08:52.00",
+      "text": "To summarize, we introduced a dialogue-based learning analytics framework that combines weighted temporal clustering with LLM-based interpretation to analyze CPS dialogue."
+    },
+    {
+      "start": "00:08:53.00",
+      "end": "00:09:06.00",
+      "text": "This approach enables both early and accurate learning outcome prediction, as well as actionable and pedagogically meaningful dialogue interpretation."
+    },
+    {
+      "start": "00:09:07.00",
+      "end": "00:09:22.00",
+      "text": "A key insight from our work is that weighting effectively surfaces high-impact behaviors, but it must be applied carefully to avoid over-emphasizing specific patterns."
+    },
+    {
+      "start": "00:09:23.00",
+      "end": "00:09:39.00",
+      "text": "Moving forward, it would be worthwhile to explore more flexible weighting schemes, involve educators more directly in the interpretation process, and extend this approach to broader adaptive scaffolding applications."
+    },
+    {
+      "start": "00:09:40.00",
+      "end": "00:09:44.00",
+      "text": "Thank you for listening."
+    }
+  ]
+}

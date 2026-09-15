@@ -1,0 +1,10 @@
+{
+  "backend": "qwen3",
+  "endpoint": "http://localhost:5000",
+  "model": "qwen3-tts",
+  "speed": 1.0,
+  "temperature": 0.9,
+  "top_p": 1.0,
+  "repetition_penalty": 1.05,
+  "mode": "full"
+}

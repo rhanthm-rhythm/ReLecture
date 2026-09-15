@@ -1,0 +1,9 @@
+# Normalize line endings to LF in the repo; let git handle checkout conversions.
+* text=auto eol=lf
+
+# Binary files — never touch their bytes.
+*.wav binary
+*.mp4 binary
+*.png binary
+*.jpg binary
+*.jpeg binary

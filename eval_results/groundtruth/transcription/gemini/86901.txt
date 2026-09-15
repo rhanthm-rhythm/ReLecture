@@ -1,0 +1,28 @@
+00:05:00.00 --> 00:05:04.00  These are examples of the system responses.
+00:05:04.00 --> 00:05:11.00  On the left, the assistant demonstrates how it supports debugging by explaining why an approach may fail.
+00:05:11.00 --> 00:05:17.00  For example, when negative numbers can break an implicit constraint.
+00:05:17.00 --> 00:05:23.00  On the right, it shows how the assistant responds when a user requests a complete function
+00:05:23.00 --> 00:05:27.00  by refusing to provide a full solution.
+00:05:27.00 --> 00:05:39.00  We conducted a within-subjects pilot study of 19 participants divided into novice and advanced groups based on prior data structures and algorithms experience.
+00:05:39.00 --> 00:05:51.00  Participants completed a pre-test without AI, an AI-assisted intervention task using LeetCoach, and a post-test without AI.
+00:05:51.00 --> 00:06:03.00  This design allows for us to examine not just users' performance with AI, but what learning persists once that AI support is removed.
+00:06:03.00 --> 00:06:08.00  To evaluate, we distinguish between two kinds of improvement.
+00:06:08.00 --> 00:06:13.00  Immediate gain refers to the difference between pre-test and intervention performance.
+00:06:13.00 --> 00:06:21.00  Learning gain refers to the difference between pre-test and post-test performance when AI is no longer available.
+00:06:21.00 --> 00:06:28.00  So this distinction helps us separate short-term assistant effects from real learning transfer.
+00:06:28.00 --> 00:06:30.00  3. Result
+00:06:30.00 --> 00:06:35.00  For novice learners, performance improves modestly during the intervention,
+00:06:35.00 --> 00:06:40.00  but increases substantially in the post-test when no AI is available.
+00:06:40.00 --> 00:06:48.00  This result suggests that AI support promoted learning that transferred to later problem-solving.
+00:06:48.00 --> 00:06:57.00  At the same time, both novice and advanced learners make more debugging attempts during the intervention stage, which we
+00:06:57.00 --> 00:07:01.00  interpret as important cognitive friction.
+00:07:01.00 --> 00:07:12.00  In the post-test, both groups require fewer debugging attempts, indicating an improved efficiency and understanding, especially for novices.
+00:07:12.00 --> 00:07:16.00  These results lead to two main findings.
+00:07:16.00 --> 00:07:25.00  First, reasoning-first AI support produces delayed, but enduring learning gains, particularly for novices.
+00:07:25.00 --> 00:07:34.00  Second, increased effort during AI use is not a signal of failure,
+00:07:34.00 --> 00:07:40.00  rather it reflects deeper engagement that later translates into more efficient and independent problem-solving.
+00:07:40.00 --> 00:07:42.00  4. Conclusion
+00:07:42.00 --> 00:07:50.00  Our findings suggest that reasoning-first and explanation-based AI assistance can support learning, rather than just task completion.
+00:07:50.00 --> 00:08:01.00  Although cognitive forcing increases effort during AI use, that effort results in meaningful gains when learners work independently.
+00:08:01.00 --> 00:08:11.00  And while this study is exploratory and certainly limited in scale, it offers early evidence that AI does not have to replace thinking to be helpful.
+00:08:11.00 --> 00:08:17.00  Thank you very much for listening, and we look forward to your questions and discussion.

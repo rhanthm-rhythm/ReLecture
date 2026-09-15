@@ -1,0 +1,50 @@
+{
+  "video": "data/videos/85891.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 100.0,
+  "chunks": 1,
+  "raw_text": "00:00:01 --> 00:00:12\nHi, I'm Jakub, University of Amsterdam, and in our poster, we took DeepSeek-R1 and we are focused on selective classification task, so we want to reject samples where the model is uncertain, right?\n\n00:00:12 --> 00:00:26\nSo, how to get uncertainty scores? We used two methods: one of them was verbalized confidence, so just asking the model how confident it is, and the other one was semantic entropy or consistency-based method, basically sampling in different flavors, let's say.\n\n00:00:26 --> 00:00:40\nUm, and what we discovered is that that verbalized confidence was really, really bad compared to the sampling, and we think that this is because in sampling, we are exploring all the different alternatives and we are approximating the generation space or generation tree of the model...\n\n00:00:40 --> 00:00:48\n...whereas in verbalized confidence, the model doesn't know all the alternatives, it does not remember the, um, all the possible options.\n\n00:00:48 --> 00:00:58\nThat's our hypothesis, and how to help the model do that? We can force the model to reason for, I don't know, few thousand tokens before it states it's verbalized confidence.\n\n00:00:58 --> 00:01:17\nAnd our results show that indeed, the more tokens you grant the model to reason for before it states its verbalized confidence, the better the effectiveness of the verbalized confidence, and what's cool is that ultimately it approaches the effectiveness of the sampling-based methods.\n\n00:01:17 --> 00:01:32\nSo, um, it's quite interesting, and I would like to discuss also with you if it is possible to, um, for the model, for an LLM to actually know its confidence without this exploration, right? Or how to do it cheaper than 4,000 tokens, let's say.\n\n00:01:32 --> 00:01:37\nSo, um, thanks a lot and see you at the poster.",
+  "segments": [
+    {
+      "start": "00:00:01.00",
+      "end": "00:00:12.00",
+      "text": "Hi, I'm Jakub, University of Amsterdam, and in our poster, we took DeepSeek-R1 and we are focused on selective classification task, so we want to reject samples where the model is uncertain, right?"
+    },
+    {
+      "start": "00:00:12.00",
+      "end": "00:00:26.00",
+      "text": "So, how to get uncertainty scores? We used two methods: one of them was verbalized confidence, so just asking the model how confident it is, and the other one was semantic entropy or consistency-based method, basically sampling in different flavors, let's say."
+    },
+    {
+      "start": "00:00:26.00",
+      "end": "00:00:40.00",
+      "text": "Um, and what we discovered is that that verbalized confidence was really, really bad compared to the sampling, and we think that this is because in sampling, we are exploring all the different alternatives and we are approximating the generation space or generation tree of the model..."
+    },
+    {
+      "start": "00:00:40.00",
+      "end": "00:00:48.00",
+      "text": "...whereas in verbalized confidence, the model doesn't know all the alternatives, it does not remember the, um, all the possible options."
+    },
+    {
+      "start": "00:00:48.00",
+      "end": "00:00:58.00",
+      "text": "That's our hypothesis, and how to help the model do that? We can force the model to reason for, I don't know, few thousand tokens before it states it's verbalized confidence."
+    },
+    {
+      "start": "00:00:58.00",
+      "end": "00:01:17.00",
+      "text": "And our results show that indeed, the more tokens you grant the model to reason for before it states its verbalized confidence, the better the effectiveness of the verbalized confidence, and what's cool is that ultimately it approaches the effectiveness of the sampling-based methods."
+    },
+    {
+      "start": "00:01:17.00",
+      "end": "00:01:32.00",
+      "text": "So, um, it's quite interesting, and I would like to discuss also with you if it is possible to, um, for the model, for an LLM to actually know its confidence without this exploration, right? Or how to do it cheaper than 4,000 tokens, let's say."
+    },
+    {
+      "start": "00:01:32.00",
+      "end": "00:01:37.00",
+      "text": "So, um, thanks a lot and see you at the poster."
+    }
+  ]
+}

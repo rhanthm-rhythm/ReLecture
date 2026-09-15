@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+.venv-*/
+venv/
+env/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# TLS certificates (machine-specific)
+.certs/
+
+# Pipeline artifacts and generated media
+artifacts/
+manifests/
+output/
+eval_result/
+*.mp4
+*.wav
+!assets/narrator_voice.wav
+
+# Data (downloaded videos)
+data/videos/
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Logs
+*.log

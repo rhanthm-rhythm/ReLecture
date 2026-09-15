@@ -1,0 +1,680 @@
+{
+  "video": "data/videos/77652.mp4",
+  "model": "gemini-3-flash-preview",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 908.010211,
+  "chunks": 4,
+  "raw_text": "00:00:00 --> 00:00:03 position under extreme rainfall conditions.\n00:00:05 --> 00:00:09 To provide a clear picture of our approach, I'll start by outlining the background,\n00:00:09 --> 00:00:11 followed by the methodology and results.\n00:00:15 --> 00:00:18 Okay, so let's begin with background.\n00:00:18 --> 00:00:23 In an era where climate change is reshaping weather patterns globally,\n00:00:23 --> 00:00:28 the escalating frequency and the intensity of extreme weather events have amplified\n00:00:28 --> 00:00:31 the safety imperative for autonomous driving system.\n00:00:31 --> 00:00:36 Consequently, developing robust vision models that can withstand extreme\n00:00:36 --> 00:00:39 weather conditions has become a critical priority.\n00:00:39 --> 00:00:44 Violent rainfall is actually becoming increasingly prevalent in regions historically\n00:00:44 --> 00:00:47 unaccustomed to such extreme precipitation.\n00:00:47 --> 00:00:52 For instance, during the 7.20 violent rainfall event in Zhengzhou, China,\n00:00:52 --> 00:00:57 hourly precipitation exceeded 201.9 millimeter per hour,\n00:00:57 --> 00:01:01 over four times the threshold for violent rain. Under such conditions,\n00:01:01 --> 00:01:05 visual degradation can significantly increase, distorts and impairs\n00:01:05 --> 00:01:08 visual appearance, posing a significant challenge to existing\n00:01:08 --> 00:01:13 computer vision models. Despite the demonstrated efficacy of current\n00:01:13 --> 00:01:17 computer vision models on existing datasets, their performance\n00:01:17 --> 00:01:21 under violent rain conditions remains untested and uncertain.\n00:01:21 --> 00:01:25 This gap poses substantial risks. Can our computer vision models\n00:01:25 --> 00:01:29 be trusted to function under violent rain conditions?\n00:01:29 --> 00:01:33 Will widely adopted foundation models sustain their effectiveness\n00:01:33 --> 00:01:37 in a world where violent rain events become more frequent?\n00:01:37 --> 00:01:42 The World Meteorological Organization categorizes rainfall\n00:01:42 --> 00:01:47 intensity based on hourly precipitation rates into light rain,\n00:01:47 --> 00:01:52 moderate rain, heavy rain, and violent rain. Under different rainfall\n00:01:52 --> 00:01:57 conditions, visual description - visual degradation can vary differently,\n00:01:57 --> 00:02:00 as illustrated in the image. We can observe that\n00:02:00 --> 00:02:04 when the rain intensity is light, the visual degradation is minimal.\n00:02:04 --> 00:02:09 As the rain intensity increases, the level of degradation also arises.\n00:02:09 --> 00:02:14 Under heavy rain conditions, we can observe some large raindrops\n00:02:14 --> 00:02:18 and rain veiling effect on the distant areas, presenting challenges\n00:02:18 --> 00:02:23 to existing computer vision models. However, violent rain is\n00:02:23 --> 00:02:28 considered an extreme weather event, and due to its rarity,\n00:02:28 --> 00:02:32 current datasets lack sufficient data on such occurrences.\n00:02:32 --> 00:02:36 To address - to address this critical gap, we follow the\n00:02:36 --> 00:02:40 example of prior datasets for semantic segmentation task,\n00:02:40 --> 00:02:44 and propose the first real-world urban scene dataset captured\n00:02:44 --> 00:02:49 under violent rain conditions, tailored for both image and video tasks.\n00:02:49 --> 00:02:54 By evaluating existing models against this dataset, we aim to\n00:02:54 --> 00:02:58 uncover their performance under extreme weather conditions,\n00:02:58 --> 00:03:03 thereby enhancing the safety and reliability of autonomous\n00:03:03 --> 00:03:06 driving system in an increasingly unpredictable climate.\n00:03:09 --> 00:03:12 In methodology part, I will explain our proposed dataset in detail.\n00:03:16 --> 00:03:20 Okay, so our goal is to collect an urban scene dataset under\n00:03:20 --> 00:03:24 violent rain conditions. We chose Singapore for collecting the dataset,\n00:03:24 --> 00:03:27 mainly due to two reasons. First,\n00:03:27 --> 00:03:31 accounting to the last - the late - according to the latest\n00:03:31 --> 00:03:36 World Bank data, Singapore ranks as the 14th country globally\n00:03:36 --> 00:03:41 in terms of average precipitation depths, and violent rain is\n00:03:41 --> 00:03:44 frequent in this country. And secondly,\n00:03:44 --> 00:03:49 Singapore as a relatively small country with only a total land\n00:03:49 --> 00:03:54 area approximately 750 square kilometers, has a network of\n00:03:54 --> 00:03:59 over 60 weather stations that record rainfall intensity across\n00:03:59 --> 00:04:04 various regions. By checking the recorded intensity from the\n00:04:04 --> 00:04:09 nearest weather station to our data collection area, we can\n00:04:09 --> 00:04:12 accurately identify the corresponding rainfall level.\n00:04:12 --> 00:04:16 While the primary reason for choosing Singapore is its frequent\n00:04:16 --> 00:04:21 violent rain, and it is also a developed nation with the\n00:04:21 --> 00:04:26 potential for widespread adoption of autonomous driving and\n00:04:26 --> 00:04:31 diverse traffic scenarios, further enhancing the relevance of our dataset.\n00:04:31 --> 00:04:36 To capture the necessary data, we actively respond to rain\n\n00:00:00 --> 00:00:05 for event. When a significant rainfall event begins in Singapore, we drive to the\n00:00:05 --> 00:00:08 affected region to collect video footage.\n00:00:08 --> 00:00:11 We mount an OAK-D camera inside the car,\n00:00:11 --> 00:00:15 positioned on the roof and behind the windshield.\n00:00:15 --> 00:00:18 This camera system includes a main color camera\n00:00:18 --> 00:00:21 and a pair of stereo lenses.\n00:00:21 --> 00:00:27 The main color captures video at 15 frames per second,\n00:00:27 --> 00:00:32 while the stereo lenses simultaneously collect video from different views,\n00:00:32 --> 00:00:37 generating a corresponding disparity map for each frame to describe the scene's depth description,\n00:00:37 --> 00:00:40 uh the distribution.\n00:00:40 --> 00:00:44 We compare different parameters of our dataset with other rainy datasets,\n00:00:44 --> 00:00:48 as shown in the table.\n00:00:48 --> 00:00:51 Our dataset has a relatively high resolution,\n00:00:51 --> 00:00:57 enabling models to learn more fine-grained semantic segmentation predictions.\n00:00:57 --> 00:01:00 With a total of 14,857 frames,\n00:01:00 --> 00:01:06 it ranks as the third largest rainfall dataset available.\n00:01:06 --> 00:01:13 Annotating under severe weather degradation is both challenging and costly,\n00:01:13 --> 00:01:15 even for human annotators.\n00:01:15 --> 00:01:21 But we have successfully provided a comparable number of labeled frames.\n00:01:21 --> 00:01:25 Our dataset features real-world urban scenes\n00:01:25 --> 00:01:30 and is one of the only three datasets that support video-based methods.\n00:01:30 --> 00:01:36 Additionally, it is the only real-world raining dataset that includes disparity information.\n00:01:36 --> 00:01:42 Most notably, our dataset uniquely captures violent rain conditions,\n00:01:42 --> 00:01:46 distinguishing it from existing datasets.\n00:01:46 --> 00:01:51 Although all raining images are affected by degradation,\n00:01:51 --> 00:01:56 the types and severity of these degradations can vary\n00:01:56 --> 00:02:00 with different rainfall intensities. Under light raining conditions,\n00:02:00 --> 00:02:04 the degradation are marginal. As shown in figure A,\n00:02:04 --> 00:02:09 we can observe only white floors and sparse raindrops on the windshield.\n00:02:09 --> 00:02:13 As rainfall intensity escalates to heavy rain,\n00:02:13 --> 00:02:18 both raindrop and rain veiling effect become markedly evident.\n00:02:18 --> 00:02:22 Firstly, raindrops increase in size and density,\n00:02:22 --> 00:02:26 and secondly, a fog-like rain veiling effect emerges\n00:02:26 --> 00:02:30 due to the accumulation of rain streaks,\n00:02:30 --> 00:02:34 as evidenced by the far away building in figure C and D.\n00:02:34 --> 00:02:38 Additionally, under heavy rain conditions,\n00:02:38 --> 00:02:43 the use of wipers introduces further visual obstructions.\n00:02:43 --> 00:02:47 The wipers cannot completely eliminate the raindrops,\n00:02:47 --> 00:02:52 leaving a thin layer of water residual\n00:02:52 --> 00:02:56 that blurs the wiped areas, as depicted in figure D.\n00:02:56 --> 00:03:00 Under violent rain conditions,\n00:03:00 --> 00:03:05 excessive large raindrops easily form water flows\n00:03:05 --> 00:03:08 as illustrated in figure E.\n00:03:08 --> 00:03:13 The uneven distribution of water flow can cause extensive refraction and distortion.\n00:03:13 --> 00:03:16 Secondly, the increased intensity of rain streaks\n00:03:16 --> 00:03:20 intensify the rain veiling effect,\n00:03:20 --> 00:03:24 as observed on the trees and buildings in figure F.\n00:03:24 --> 00:03:27 Additionally,\n00:03:27 --> 00:03:32 the increased rainfall intensity necessitated more frequent use of wipers,\n00:03:32 --> 00:03:36 amplifying the corresponding visual degradation in figure G and H.\n00:03:36 --> 00:03:41 Okay, so in the result section, we will discuss and compare the performance\n00:03:41 --> 00:03:46 of different methods against our proposed dataset.\n00:03:46 --> 00:03:51 We benchmark four common models or methods\n00:03:51 --> 00:03:56 to evaluate their robustness under violent rain conditions.\n00:03:56 --> 00:04:00 The first method is image-based foundation models,\n00:04:00 --> 00:04:04 which are large-scale neural networks trained on vast datasets of images\n00:04:04 --> 00:04:08 to understand and generate visual content.\n00:04:08 --> 00:04:13 These models offer significant advantages over traditional methods\n00:04:13 --> 00:04:16 due to their extensive pre-training on diverse datasets,\n00:04:16 --> 00:04:21 which enable them to capture complex visual patterns and generalize well\n00:04:21 --> 00:04:25 across various tasks and conditions.\n00:04:25 --> 00:04:29 The second method is domain generalization methods.\n00:04:29 --> 00:04:34 This method enhance model robustness by learning domain-invariant features,\n00:04:34 --> 00:04:38 enabling model to perform well on unseen domains without need\n00:04:38 --> 00:04:42 target domain data for fine-tuning.\n00:04:42 --> 00:04:46 The third method is domain adaptation method.\n00:04:46 --> 00:04:51 When there is a discrepancy between training source data and the test target data,\n00:04:51 --> 00:04:54 domain adaptation\n\nThis is the transcript of the video:\n\n00:00:00 --> 00:00:05: Adaptation methods can be applied to learn to minimize the discrepancy and enhance the performance of machine learning models.\n\n00:00:05 --> 00:00:12: Lastly, we evaluate video-based methods. These methods extend principles of image-based methods to the temporal domain,\n\n00:00:12 --> 00:00:22: making prediction model, making prediction based on video sequences. Unlike image-based methods, which focus on single frame,\n\n00:00:22 --> 00:00:30: video-based adaptation leverage temporal information and motion cues across consecutive frames.\n\n00:00:30 --> 00:00:34: For foundation model, we observe that DINOv2 achieves the best performance,\n\n00:00:34 --> 00:00:46: possibly due to its larger- larger pre-training dataset and model size compared to the other model.\n\n00:00:46 --> 00:00:54: Additionally, their augmented and curated data pre-processing stage likely enhance the model's robustness to unseen domains.\n\n00:00:54 --> 00:01:04: For domain generalization methods, we observe that the foundation model-based method, PASTE and Rain,\n\n00:01:04 --> 00:01:13: significantly outperform the other methods, highlighting the importance of incorporating foundation models for handling images under adverse weather conditions.\n\n00:01:13 --> 00:01:21: As for domain adaptation method, we observe that HRDA demonstrate the best performance.\n\n00:01:21 --> 00:01:31: However, compared to foundation modeled and domain generalization method, domain adaptation method are less effective under violent rainfall conditions,\n\n00:01:31 --> 00:01:42: mainly due to the large domain gap and they have not yet integrated with foundation models.\n\n00:01:42 --> 00:01:50: And for video-based methods, we observe a significant drop in performance compared to image-based models and methods.\n\n00:01:50 --> 00:01:57: Despite the incorporation of additional temporal information, this suggest there is a potential for improving the current backbone\n\n00:01:57 --> 00:02:05: to achieve more resilient and accurate performance in the challenging environment of violent rainfall.\n\n00:02:15 --> 00:02:21: We present the qualitative results of DINOv2, Rain, and HRDA for domain adaptation in the figure.\n\n00:02:21 --> 00:02:27: These models were chosen for their top performance within their respective categories.\n\n00:02:27 --> 00:02:35: Video-based method are not included in the comparison due to their comparably lower performance.\n\n00:02:35 --> 00:02:40: In the first row, we demonstrate how waterflow degradation can affect these models.\n\n00:02:40 --> 00:02:48: In this row, the car in the white box is blocked by waterflow, completely blurred and corrupted by the refraction information from the surrounding environment.\n\n00:02:48 --> 00:02:54: And all models fail- failed to segment this car precisely.\n\n00:02:54 --> 00:03:00: In the second row, the distant bus and car in the white box are affected by the both rain veiling and waterflow.\n\n00:03:14 --> 00:03:19: In the last two rows, we showcase how the wipers can degrade the scene and mislead the models.\n\n00:03:19 --> 00:03:25: This two rows are from same image, where the fourth row shows the part before wiper,\n\n00:03:25 --> 00:03:32: and the fifth row shows the part after the wiper.\n\n00:03:32 --> 00:03:40: Before the wiper passes, we see severe waterflow degradation causing all models to fail in identifying the pole.\n\n00:03:40 --> 00:03:50: After wiper passes, although the waterflow degradation is significantly reduced, there is still blurriness from a thin layer of water residual and small raindrops in the white box area.\n\n00:03:50 --> 00:03:57: As a result, all the models misclassified the road as either sidewalk or terrain.\n\n00:03:57 --> 00:04:04: From the result, we can come up with these following conclusions.\n\n00:04:04 --> 00:04:13: First, the model integrate with foundation models demonstrate a clear advantage over other models under violent rain conditions.\n\n00:04:13 --> 00:04:22: Second, the domain generalization method further improve the performance of DINOv2, indicating that domain generalization methods remain effective under these conditions.\n\n00:04:22 --> 00:04:33: Third, by comparing HRDA in both domain generalization and domain adaptation settings, we observe that despite the significant domain gap,\n\n00:04:33 --> 00:04:41: involving the unlabeled target dataset can enhance the model's robustness.\n\n00:04:41 --> 00:04:52: Thus, developing a fundamental model- foundation model based on domain adaptation method might be a promising solution for extreme rainfall events.\n\n00:04:52 --> 00:04:58: Finally, for video-based method, their current performance does not match that of image-based method.\n\n00:04:58 --> 00:05:04: Further research is needed to improve their performance.\n\n00:05:04 --> 00:05:15: And thank- thank you for your attention. And if you have any question, please contact the author and his in- contact information is show in the screen. Thank you.\n\n00:00:00 --> 00:00:01 Thank you.\n00:00:01 --> 00:00:03 Okay, thank you.\n00:00:03 --> 00:00:04 Then, um...\n00:00:04 --> 00:00:07 let's move to the next presentation.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:03.00",
+      "text": "position under extreme rainfall conditions."
+    },
+    {
+      "start": "00:00:05.00",
+      "end": "00:00:09.00",
+      "text": "To provide a clear picture of our approach, I'll start by outlining the background,"
+    },
+    {
+      "start": "00:00:09.00",
+      "end": "00:00:11.00",
+      "text": "followed by the methodology and results."
+    },
+    {
+      "start": "00:00:15.00",
+      "end": "00:00:18.00",
+      "text": "Okay, so let's begin with background."
+    },
+    {
+      "start": "00:00:18.00",
+      "end": "00:00:23.00",
+      "text": "In an era where climate change is reshaping weather patterns globally,"
+    },
+    {
+      "start": "00:00:23.00",
+      "end": "00:00:28.00",
+      "text": "the escalating frequency and the intensity of extreme weather events have amplified"
+    },
+    {
+      "start": "00:00:28.00",
+      "end": "00:00:31.00",
+      "text": "the safety imperative for autonomous driving system."
+    },
+    {
+      "start": "00:00:31.00",
+      "end": "00:00:36.00",
+      "text": "Consequently, developing robust vision models that can withstand extreme"
+    },
+    {
+      "start": "00:00:36.00",
+      "end": "00:00:39.00",
+      "text": "weather conditions has become a critical priority."
+    },
+    {
+      "start": "00:00:39.00",
+      "end": "00:00:44.00",
+      "text": "Violent rainfall is actually becoming increasingly prevalent in regions historically"
+    },
+    {
+      "start": "00:00:44.00",
+      "end": "00:00:47.00",
+      "text": "unaccustomed to such extreme precipitation."
+    },
+    {
+      "start": "00:00:47.00",
+      "end": "00:00:52.00",
+      "text": "For instance, during the 7.20 violent rainfall event in Zhengzhou, China,"
+    },
+    {
+      "start": "00:00:52.00",
+      "end": "00:00:57.00",
+      "text": "hourly precipitation exceeded 201.9 millimeter per hour,"
+    },
+    {
+      "start": "00:00:57.00",
+      "end": "00:01:01.00",
+      "text": "over four times the threshold for violent rain. Under such conditions,"
+    },
+    {
+      "start": "00:01:01.00",
+      "end": "00:01:05.00",
+      "text": "visual degradation can significantly increase, distorts and impairs"
+    },
+    {
+      "start": "00:01:05.00",
+      "end": "00:01:08.00",
+      "text": "visual appearance, posing a significant challenge to existing"
+    },
+    {
+      "start": "00:01:08.00",
+      "end": "00:01:13.00",
+      "text": "computer vision models. Despite the demonstrated efficacy of current"
+    },
+    {
+      "start": "00:01:13.00",
+      "end": "00:01:17.00",
+      "text": "computer vision models on existing datasets, their performance"
+    },
+    {
+      "start": "00:01:17.00",
+      "end": "00:01:21.00",
+      "text": "under violent rain conditions remains untested and uncertain."
+    },
+    {
+      "start": "00:01:21.00",
+      "end": "00:01:25.00",
+      "text": "This gap poses substantial risks. Can our computer vision models"
+    },
+    {
+      "start": "00:01:25.00",
+      "end": "00:01:29.00",
+      "text": "be trusted to function under violent rain conditions?"
+    },
+    {
+      "start": "00:01:29.00",
+      "end": "00:01:33.00",
+      "text": "Will widely adopted foundation models sustain their effectiveness"
+    },
+    {
+      "start": "00:01:33.00",
+      "end": "00:01:37.00",
+      "text": "in a world where violent rain events become more frequent?"
+    },
+    {
+      "start": "00:01:37.00",
+      "end": "00:01:42.00",
+      "text": "The World Meteorological Organization categorizes rainfall"
+    },
+    {
+      "start": "00:01:42.00",
+      "end": "00:01:47.00",
+      "text": "intensity based on hourly precipitation rates into light rain,"
+    },
+    {
+      "start": "00:01:47.00",
+      "end": "00:01:52.00",
+      "text": "moderate rain, heavy rain, and violent rain. Under different rainfall"
+    },
+    {
+      "start": "00:01:52.00",
+      "end": "00:01:57.00",
+      "text": "conditions, visual description - visual degradation can vary differently,"
+    },
+    {
+      "start": "00:01:57.00",
+      "end": "00:02:00.00",
+      "text": "as illustrated in the image. We can observe that"
+    },
+    {
+      "start": "00:02:00.00",
+      "end": "00:02:04.00",
+      "text": "when the rain intensity is light, the visual degradation is minimal."
+    },
+    {
+      "start": "00:02:04.00",
+      "end": "00:02:09.00",
+      "text": "As the rain intensity increases, the level of degradation also arises."
+    },
+    {
+      "start": "00:02:09.00",
+      "end": "00:02:14.00",
+      "text": "Under heavy rain conditions, we can observe some large raindrops"
+    },
+    {
+      "start": "00:02:14.00",
+      "end": "00:02:18.00",
+      "text": "and rain veiling effect on the distant areas, presenting challenges"
+    },
+    {
+      "start": "00:02:18.00",
+      "end": "00:02:23.00",
+      "text": "to existing computer vision models. However, violent rain is"
+    },
+    {
+      "start": "00:02:23.00",
+      "end": "00:02:28.00",
+      "text": "considered an extreme weather event, and due to its rarity,"
+    },
+    {
+      "start": "00:02:28.00",
+      "end": "00:02:32.00",
+      "text": "current datasets lack sufficient data on such occurrences."
+    },
+    {
+      "start": "00:02:32.00",
+      "end": "00:02:36.00",
+      "text": "To address - to address this critical gap, we follow the"
+    },
+    {
+      "start": "00:02:36.00",
+      "end": "00:02:40.00",
+      "text": "example of prior datasets for semantic segmentation task,"
+    },
+    {
+      "start": "00:02:40.00",
+      "end": "00:02:44.00",
+      "text": "and propose the first real-world urban scene dataset captured"
+    },
+    {
+      "start": "00:02:44.00",
+      "end": "00:02:49.00",
+      "text": "under violent rain conditions, tailored for both image and video tasks."
+    },
+    {
+      "start": "00:02:49.00",
+      "end": "00:02:54.00",
+      "text": "By evaluating existing models against this dataset, we aim to"
+    },
+    {
+      "start": "00:02:54.00",
+      "end": "00:02:58.00",
+      "text": "uncover their performance under extreme weather conditions,"
+    },
+    {
+      "start": "00:02:58.00",
+      "end": "00:03:03.00",
+      "text": "thereby enhancing the safety and reliability of autonomous"
+    },
+    {
+      "start": "00:03:03.00",
+      "end": "00:03:06.00",
+      "text": "driving system in an increasingly unpredictable climate."
+    },
+    {
+      "start": "00:03:09.00",
+      "end": "00:03:12.00",
+      "text": "In methodology part, I will explain our proposed dataset in detail."
+    },
+    {
+      "start": "00:03:16.00",
+      "end": "00:03:20.00",
+      "text": "Okay, so our goal is to collect an urban scene dataset under"
+    },
+    {
+      "start": "00:03:20.00",
+      "end": "00:03:24.00",
+      "text": "violent rain conditions. We chose Singapore for collecting the dataset,"
+    },
+    {
+      "start": "00:03:24.00",
+      "end": "00:03:27.00",
+      "text": "mainly due to two reasons. First,"
+    },
+    {
+      "start": "00:03:27.00",
+      "end": "00:03:31.00",
+      "text": "accounting to the last - the late - according to the latest"
+    },
+    {
+      "start": "00:03:31.00",
+      "end": "00:03:36.00",
+      "text": "World Bank data, Singapore ranks as the 14th country globally"
+    },
+    {
+      "start": "00:03:36.00",
+      "end": "00:03:41.00",
+      "text": "in terms of average precipitation depths, and violent rain is"
+    },
+    {
+      "start": "00:03:41.00",
+      "end": "00:03:44.00",
+      "text": "frequent in this country. And secondly,"
+    },
+    {
+      "start": "00:03:44.00",
+      "end": "00:03:49.00",
+      "text": "Singapore as a relatively small country with only a total land"
+    },
+    {
+      "start": "00:03:49.00",
+      "end": "00:03:54.00",
+      "text": "area approximately 750 square kilometers, has a network of"
+    },
+    {
+      "start": "00:03:54.00",
+      "end": "00:03:59.00",
+      "text": "over 60 weather stations that record rainfall intensity across"
+    },
+    {
+      "start": "00:03:59.00",
+      "end": "00:04:04.00",
+      "text": "various regions. By checking the recorded intensity from the"
+    },
+    {
+      "start": "00:04:04.00",
+      "end": "00:04:09.00",
+      "text": "nearest weather station to our data collection area, we can"
+    },
+    {
+      "start": "00:04:09.00",
+      "end": "00:04:12.00",
+      "text": "accurately identify the corresponding rainfall level."
+    },
+    {
+      "start": "00:04:12.00",
+      "end": "00:04:16.00",
+      "text": "While the primary reason for choosing Singapore is its frequent"
+    },
+    {
+      "start": "00:04:16.00",
+      "end": "00:04:21.00",
+      "text": "violent rain, and it is also a developed nation with the"
+    },
+    {
+      "start": "00:04:21.00",
+      "end": "00:04:26.00",
+      "text": "potential for widespread adoption of autonomous driving and"
+    },
+    {
+      "start": "00:04:26.00",
+      "end": "00:04:31.00",
+      "text": "diverse traffic scenarios, further enhancing the relevance of our dataset."
+    },
+    {
+      "start": "00:04:31.00",
+      "end": "00:04:36.00",
+      "text": "To capture the necessary data, we actively respond to rain"
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:05.00",
+      "text": "for event. When a significant rainfall event begins in Singapore, we drive to the"
+    },
+    {
+      "start": "00:05:05.00",
+      "end": "00:05:08.00",
+      "text": "affected region to collect video footage."
+    },
+    {
+      "start": "00:05:08.00",
+      "end": "00:05:11.00",
+      "text": "We mount an OAK-D camera inside the car,"
+    },
+    {
+      "start": "00:05:11.00",
+      "end": "00:05:15.00",
+      "text": "positioned on the roof and behind the windshield."
+    },
+    {
+      "start": "00:05:15.00",
+      "end": "00:05:18.00",
+      "text": "This camera system includes a main color camera"
+    },
+    {
+      "start": "00:05:18.00",
+      "end": "00:05:21.00",
+      "text": "and a pair of stereo lenses."
+    },
+    {
+      "start": "00:05:21.00",
+      "end": "00:05:27.00",
+      "text": "The main color captures video at 15 frames per second,"
+    },
+    {
+      "start": "00:05:27.00",
+      "end": "00:05:32.00",
+      "text": "while the stereo lenses simultaneously collect video from different views,"
+    },
+    {
+      "start": "00:05:32.00",
+      "end": "00:05:37.00",
+      "text": "generating a corresponding disparity map for each frame to describe the scene's depth description,"
+    },
+    {
+      "start": "00:05:37.00",
+      "end": "00:05:40.00",
+      "text": "uh the distribution."
+    },
+    {
+      "start": "00:05:40.00",
+      "end": "00:05:44.00",
+      "text": "We compare different parameters of our dataset with other rainy datasets,"
+    },
+    {
+      "start": "00:05:44.00",
+      "end": "00:05:48.00",
+      "text": "as shown in the table."
+    },
+    {
+      "start": "00:05:48.00",
+      "end": "00:05:51.00",
+      "text": "Our dataset has a relatively high resolution,"
+    },
+    {
+      "start": "00:05:51.00",
+      "end": "00:05:57.00",
+      "text": "enabling models to learn more fine-grained semantic segmentation predictions."
+    },
+    {
+      "start": "00:05:57.00",
+      "end": "00:06:00.00",
+      "text": "With a total of 14,857 frames,"
+    },
+    {
+      "start": "00:06:00.00",
+      "end": "00:06:06.00",
+      "text": "it ranks as the third largest rainfall dataset available."
+    },
+    {
+      "start": "00:06:06.00",
+      "end": "00:06:13.00",
+      "text": "Annotating under severe weather degradation is both challenging and costly,"
+    },
+    {
+      "start": "00:06:13.00",
+      "end": "00:06:15.00",
+      "text": "even for human annotators."
+    },
+    {
+      "start": "00:06:15.00",
+      "end": "00:06:21.00",
+      "text": "But we have successfully provided a comparable number of labeled frames."
+    },
+    {
+      "start": "00:06:21.00",
+      "end": "00:06:25.00",
+      "text": "Our dataset features real-world urban scenes"
+    },
+    {
+      "start": "00:06:25.00",
+      "end": "00:06:30.00",
+      "text": "and is one of the only three datasets that support video-based methods."
+    },
+    {
+      "start": "00:06:30.00",
+      "end": "00:06:36.00",
+      "text": "Additionally, it is the only real-world raining dataset that includes disparity information."
+    },
+    {
+      "start": "00:06:36.00",
+      "end": "00:06:42.00",
+      "text": "Most notably, our dataset uniquely captures violent rain conditions,"
+    },
+    {
+      "start": "00:06:42.00",
+      "end": "00:06:46.00",
+      "text": "distinguishing it from existing datasets."
+    },
+    {
+      "start": "00:06:46.00",
+      "end": "00:06:51.00",
+      "text": "Although all raining images are affected by degradation,"
+    },
+    {
+      "start": "00:06:51.00",
+      "end": "00:06:56.00",
+      "text": "the types and severity of these degradations can vary"
+    },
+    {
+      "start": "00:06:56.00",
+      "end": "00:07:00.00",
+      "text": "with different rainfall intensities. Under light raining conditions,"
+    },
+    {
+      "start": "00:07:00.00",
+      "end": "00:07:04.00",
+      "text": "the degradation are marginal. As shown in figure A,"
+    },
+    {
+      "start": "00:07:04.00",
+      "end": "00:07:09.00",
+      "text": "we can observe only white floors and sparse raindrops on the windshield."
+    },
+    {
+      "start": "00:07:09.00",
+      "end": "00:07:13.00",
+      "text": "As rainfall intensity escalates to heavy rain,"
+    },
+    {
+      "start": "00:07:13.00",
+      "end": "00:07:18.00",
+      "text": "both raindrop and rain veiling effect become markedly evident."
+    },
+    {
+      "start": "00:07:18.00",
+      "end": "00:07:22.00",
+      "text": "Firstly, raindrops increase in size and density,"
+    },
+    {
+      "start": "00:07:22.00",
+      "end": "00:07:26.00",
+      "text": "and secondly, a fog-like rain veiling effect emerges"
+    },
+    {
+      "start": "00:07:26.00",
+      "end": "00:07:30.00",
+      "text": "due to the accumulation of rain streaks,"
+    },
+    {
+      "start": "00:07:30.00",
+      "end": "00:07:34.00",
+      "text": "as evidenced by the far away building in figure C and D."
+    },
+    {
+      "start": "00:07:34.00",
+      "end": "00:07:38.00",
+      "text": "Additionally, under heavy rain conditions,"
+    },
+    {
+      "start": "00:07:38.00",
+      "end": "00:07:43.00",
+      "text": "the use of wipers introduces further visual obstructions."
+    },
+    {
+      "start": "00:07:43.00",
+      "end": "00:07:47.00",
+      "text": "The wipers cannot completely eliminate the raindrops,"
+    },
+    {
+      "start": "00:07:47.00",
+      "end": "00:07:52.00",
+      "text": "leaving a thin layer of water residual"
+    },
+    {
+      "start": "00:07:52.00",
+      "end": "00:07:56.00",
+      "text": "that blurs the wiped areas, as depicted in figure D."
+    },
+    {
+      "start": "00:07:56.00",
+      "end": "00:08:00.00",
+      "text": "Under violent rain conditions,"
+    },
+    {
+      "start": "00:08:00.00",
+      "end": "00:08:05.00",
+      "text": "excessive large raindrops easily form water flows"
+    },
+    {
+      "start": "00:08:05.00",
+      "end": "00:08:08.00",
+      "text": "as illustrated in figure E."
+    },
+    {
+      "start": "00:08:08.00",
+      "end": "00:08:13.00",
+      "text": "The uneven distribution of water flow can cause extensive refraction and distortion."
+    },
+    {
+      "start": "00:08:13.00",
+      "end": "00:08:16.00",
+      "text": "Secondly, the increased intensity of rain streaks"
+    },
+    {
+      "start": "00:08:16.00",
+      "end": "00:08:20.00",
+      "text": "intensify the rain veiling effect,"
+    },
+    {
+      "start": "00:08:20.00",
+      "end": "00:08:24.00",
+      "text": "as observed on the trees and buildings in figure F."
+    },
+    {
+      "start": "00:08:24.00",
+      "end": "00:08:27.00",
+      "text": "Additionally,"
+    },
+    {
+      "start": "00:08:27.00",
+      "end": "00:08:32.00",
+      "text": "the increased rainfall intensity necessitated more frequent use of wipers,"
+    },
+    {
+      "start": "00:08:32.00",
+      "end": "00:08:36.00",
+      "text": "amplifying the corresponding visual degradation in figure G and H."
+    },
+    {
+      "start": "00:08:36.00",
+      "end": "00:08:41.00",
+      "text": "Okay, so in the result section, we will discuss and compare the performance"
+    },
+    {
+      "start": "00:08:41.00",
+      "end": "00:08:46.00",
+      "text": "of different methods against our proposed dataset."
+    },
+    {
+      "start": "00:08:46.00",
+      "end": "00:08:51.00",
+      "text": "We benchmark four common models or methods"
+    },
+    {
+      "start": "00:08:51.00",
+      "end": "00:08:56.00",
+      "text": "to evaluate their robustness under violent rain conditions."
+    },
+    {
+      "start": "00:08:56.00",
+      "end": "00:09:00.00",
+      "text": "The first method is image-based foundation models,"
+    },
+    {
+      "start": "00:09:00.00",
+      "end": "00:09:04.00",
+      "text": "which are large-scale neural networks trained on vast datasets of images"
+    },
+    {
+      "start": "00:09:04.00",
+      "end": "00:09:08.00",
+      "text": "to understand and generate visual content."
+    },
+    {
+      "start": "00:09:08.00",
+      "end": "00:09:13.00",
+      "text": "These models offer significant advantages over traditional methods"
+    },
+    {
+      "start": "00:09:13.00",
+      "end": "00:09:16.00",
+      "text": "due to their extensive pre-training on diverse datasets,"
+    },
+    {
+      "start": "00:09:16.00",
+      "end": "00:09:21.00",
+      "text": "which enable them to capture complex visual patterns and generalize well"
+    },
+    {
+      "start": "00:09:21.00",
+      "end": "00:09:25.00",
+      "text": "across various tasks and conditions."
+    },
+    {
+      "start": "00:09:25.00",
+      "end": "00:09:29.00",
+      "text": "The second method is domain generalization methods."
+    },
+    {
+      "start": "00:09:29.00",
+      "end": "00:09:34.00",
+      "text": "This method enhance model robustness by learning domain-invariant features,"
+    },
+    {
+      "start": "00:09:34.00",
+      "end": "00:09:38.00",
+      "text": "enabling model to perform well on unseen domains without need"
+    },
+    {
+      "start": "00:09:38.00",
+      "end": "00:09:42.00",
+      "text": "target domain data for fine-tuning."
+    },
+    {
+      "start": "00:09:42.00",
+      "end": "00:09:46.00",
+      "text": "The third method is domain adaptation method."
+    },
+    {
+      "start": "00:09:46.00",
+      "end": "00:09:51.00",
+      "text": "When there is a discrepancy between training source data and the test target data,"
+    },
+    {
+      "start": "00:09:51.00",
+      "end": "00:09:54.00",
+      "text": "domain adaptation"
+    },
+    {
+      "start": "00:15:00.00",
+      "end": "00:15:01.00",
+      "text": "Thank you."
+    },
+    {
+      "start": "00:15:01.00",
+      "end": "00:15:03.00",
+      "text": "Okay, thank you."
+    },
+    {
+      "start": "00:15:03.00",
+      "end": "00:15:04.00",
+      "text": "Then, um..."
+    },
+    {
+      "start": "00:15:04.00",
+      "end": "00:15:07.00",
+      "text": "let's move to the next presentation."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+00:00 - 00:08 Hi, this is Surangika presenting our paper, Shoulders of Giants: A Look at the Degree and Utility of Openness in NLP Research.
+
+00:08 - 00:19 How many times did you get excited after reading a research paper, just to find out that the authors have not released the data, code, or models? I'm pretty sure we have faced this problem more than once.
+
+00:19 - 00:27 This indeed is a problem for our field because the advancement of our field depends on the publicly available artifacts.
+
+00:27 - 00:41 As far as we know, there is no research that quantifies the degree of openness in the NLP community or the benefit of openness to the community. In this paper, we try to quantify both these aspects.
+
+00:41 - 01:04 So we downloaded a set of papers from ACL Anthology and then we categorized the papers according to languages and further group the papers by language classes. We use the language category definition used by Joshi and the language categorization given by Ranathunga and de Silva.
+
+01:04 - 01:31 The first analysis we conducted was to identify the degree of artifact reuse in NLP research. So we got a paper set of 355 and separated them into three different categories based on publication venue. So main ACL conferences, LREC conferences, and everything else. And we read the papers manually to identify how the artifacts were reused.
+
+01:31 - 01:43 So as you can see here, these are the possible ways of reusing the data artifact. The other artifact reuse statuses were more or less similar.
+
+01:43 - 02:53 So this graph shows the three different types of artifacts we analyzed, data, code, and language models across the three different publication venues. So as you can see, there are different patterns in reuse. For example, in LREC, there's more emphasis on releasing new datasets rather than reusing. In contrast, in the ACL conferences and journals, there's equal emphasis on releasing data as well as reusing existing data. In contrast, if you look at the code reuse, in LREC, there's minimal release of new artifact compared to the amount of code released in main conferences. And also as you can see, the main conferences try to improve on existing data rather than simply reusing the existing data as done in LREC papers. Overall, about 98% of the papers we analyzed reused at least one of the artifacts that we have analyzed.
+
+02:53 - 03:07 The second analysis we did was to identify the percentage of papers that promise to share the newly artifacts. So we used a semi-automated manner to analyze the papers.
+
+03:07 - 03:35 So this is what we have found out, and as you can see, based on the publication venue, the promise to release artifact varies. So in LREC, only 36 out of 108 papers have not promised to release artifacts. But in the other category, majority of the artifacts have no promise to be released. However, this does not give us an indication whether these promised artifacts have been released.
+
+03:35 - 04:04 So we carried out a further analysis to identify whether the artifact has actually been released. And this analysis we conducted considering language class as well. As you can see, there is a difference with respect to the language category. So class 5, the most high resource languages release more artifacts compared to class 0, that means very low resource languages.
+
+04:04 - 04:13 So if research papers release their artifact, they should be in public repositories. So there should be some relationship between that.
+
+04:13 - 04:38 So in order to analyze, we looked at the datasets and the language model models available in Hugging Face and analyze it with respect to the language category. As you can see, most of the high resource languages have very high counts for the dataset and language models. Comparatively very low results came up for very low resource languages.
+
+04:38 - 04:52 So we hope our findings would help the community to better appreciate the benefit of openness, and hopefully this will enable ACL to make informed decisions. Thank you.

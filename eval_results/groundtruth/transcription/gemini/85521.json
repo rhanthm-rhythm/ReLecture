@@ -1,0 +1,50 @@
+{
+  "video": "data/videos/85521.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 269.0,
+  "chunks": 1,
+  "raw_text": "00:00:00 --> 00:00:18\nHello everyone, I'm Yukito Minari from Nagoya Institute of Technology. Today, I'll present our research on using large language models as game masters for tabletop role-playing games through a multi-agent approach.\n\n00:00:18 --> 00:00:51\nFirst, let me explain what TRPGs are. Tabletop role-playing games create stories through conversation between players and the game master. Player can perform flexible actions with a high degree of freedom. In Japan, TRPGs emphasize narrative-driven experiences, making it important to ensure the game progresses in accordance with the story and to avoid giving spoilers.\n\n00:00:51 --> 00:01:17\nThe game master serve as the facilitator, describing situation, presenting challenges, judging outcome based on rules, and maintaining narrative consistency. Our goal is to implement an automated GM system using large language models, which can handle open-ended session and interpret complex player input.\n\n00:01:17 --> 00:01:53\nWe conducted a preliminary experiment where GPT-4o acted as the GM using single LLM with a simple prompting. We identified three major issues: First, misunderstanding rules, incorrect application of procedures. Second, deviating story, allowing too many flexible action that lead to the game in an unintent directions. Third, giving spoilers, disclosing information that shouldn't be revealed.\n\n00:01:53 --> 00:02:43\nTo address these issues, we proposed a multi-agent approach. As shown in this system architecture, one GM agent generates proposal response and then revises them by incorporating feedback from specialized agent. The rule agent focus only on rules, and correct rule misunderstanding based on the rulebook. The scenario agent prevents story problem and spoilers by correcting deviation from the scenario. By dividing these responsibilities, each agent handle a smaller portion of context. The system iterates that GM proposes, agent review, and if any disapprove, GM revises.\n\n00:02:43 --> 00:03:13\nWe evaluate with 56 experienced TRPG players. The multi-agent approach lead to increase in rule violation and spoilers. However, the number of scene reached also increased, showing user progressed further in the scenario. In the questionnaire, only one item showed significantly improvement: played with the proper manners.\n\n00:03:13 --> 00:04:00\nAnalysis revealed several limitation of our multi-agent approach. Inappropriate feedback from agent caused problem. The scenario agent mistakenly give feedback on rule that it shouldn't have handle, causing correct response to become incorrect. Conflicting feedback between agents caused the system to get stuck generating answer. Communication smoothness also declined significantly. The response time per utterance become much slower as nearly half of the response required revisions. These feedback iteration negatively impacted conversation flow.\n\n00:04:00 --> 00:04:26\nIn conclusion, the LLM-based GM system shows sufficient capability for simple scenario. However, the multi-agent approach shows limited effectiveness due to inappropriate feedback and slower response times. Please visit my poster for more details. Thank you.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:18.00",
+      "text": "Hello everyone, I'm Yukito Minari from Nagoya Institute of Technology. Today, I'll present our research on using large language models as game masters for tabletop role-playing games through a multi-agent approach."
+    },
+    {
+      "start": "00:00:18.00",
+      "end": "00:00:51.00",
+      "text": "First, let me explain what TRPGs are. Tabletop role-playing games create stories through conversation between players and the game master. Player can perform flexible actions with a high degree of freedom. In Japan, TRPGs emphasize narrative-driven experiences, making it important to ensure the game progresses in accordance with the story and to avoid giving spoilers."
+    },
+    {
+      "start": "00:00:51.00",
+      "end": "00:01:17.00",
+      "text": "The game master serve as the facilitator, describing situation, presenting challenges, judging outcome based on rules, and maintaining narrative consistency. Our goal is to implement an automated GM system using large language models, which can handle open-ended session and interpret complex player input."
+    },
+    {
+      "start": "00:01:17.00",
+      "end": "00:01:53.00",
+      "text": "We conducted a preliminary experiment where GPT-4o acted as the GM using single LLM with a simple prompting. We identified three major issues: First, misunderstanding rules, incorrect application of procedures. Second, deviating story, allowing too many flexible action that lead to the game in an unintent directions. Third, giving spoilers, disclosing information that shouldn't be revealed."
+    },
+    {
+      "start": "00:01:53.00",
+      "end": "00:02:43.00",
+      "text": "To address these issues, we proposed a multi-agent approach. As shown in this system architecture, one GM agent generates proposal response and then revises them by incorporating feedback from specialized agent. The rule agent focus only on rules, and correct rule misunderstanding based on the rulebook. The scenario agent prevents story problem and spoilers by correcting deviation from the scenario. By dividing these responsibilities, each agent handle a smaller portion of context. The system iterates that GM proposes, agent review, and if any disapprove, GM revises."
+    },
+    {
+      "start": "00:02:43.00",
+      "end": "00:03:13.00",
+      "text": "We evaluate with 56 experienced TRPG players. The multi-agent approach lead to increase in rule violation and spoilers. However, the number of scene reached also increased, showing user progressed further in the scenario. In the questionnaire, only one item showed significantly improvement: played with the proper manners."
+    },
+    {
+      "start": "00:03:13.00",
+      "end": "00:04:00.00",
+      "text": "Analysis revealed several limitation of our multi-agent approach. Inappropriate feedback from agent caused problem. The scenario agent mistakenly give feedback on rule that it shouldn't have handle, causing correct response to become incorrect. Conflicting feedback between agents caused the system to get stuck generating answer. Communication smoothness also declined significantly. The response time per utterance become much slower as nearly half of the response required revisions. These feedback iteration negatively impacted conversation flow."
+    },
+    {
+      "start": "00:04:00.00",
+      "end": "00:04:26.00",
+      "text": "In conclusion, the LLM-based GM system shows sufficient capability for simple scenario. However, the multi-agent approach shows limited effectiveness due to inappropriate feedback and slower response times. Please visit my poster for more details. Thank you."
+    }
+  ]
+}

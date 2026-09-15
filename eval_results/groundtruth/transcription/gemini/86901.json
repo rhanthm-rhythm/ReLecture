@@ -1,0 +1,150 @@
+{
+  "video": "data/videos/86901.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 497.400011,
+  "chunks": 2,
+  "raw_text": "Here is the complete timestamped transcript for the video:\n\n00:00:01 --> 00:00:12: Hello, and thank you for viewing our presentation. We are Ba-Thinh Tran-Le and Patrick Thomas presenting on behalf of our research team at the University of Dayton.\n\n00:00:12 --> 00:00:32: Our project examines how LLM-powered coding assistance shape incidental learning in programming education, and specifically whether explanation-based AI assistance helps students develop algorithmic reasoning, debugging skills, and learning for transfer.\n\n00:00:32 --> 00:00:52: LLM tools such as ChatGPT and GitHub Copilot are now embedded in student workflows. And while these tools can improve task completion, they often do so at the cost of reduced engagement, shallow reasoning, and skill degradation, particularly for novice programmers.\n\n00:00:52 --> 00:01:02: Our motivation is not to ask whether AI works, but how should it be designed to support learning rather than replace it?\n\n00:01:02 --> 00:01:05: Our work addresses three interrelated issues.\n\n00:01:05 --> 00:01:14: First, speed: AI assistants prioritize rapid code completion over problem solving.\n\n00:01:14 --> 00:01:22: Second, engagement: the speed reduces the cognitive work necessary for learning transfer to new problems.\n\n00:01:22 --> 00:01:34: And third, overreliance: especially for novices, correctness is favored over pattern recognition, debugging, and metacognitive development.\n\n00:01:34 --> 00:01:52: In response, we set out to design an AI assistant that forces cognitive engagement and invites learners into productive struggle. Our goal was to create an AI assistant that supports future learning and transfer rather than immediate efficiency.\n\n00:01:52 --> 00:02:03: To ground this work, we draw on incidental learning, learning that occurs as a byproduct of doing a task rather than through direct instruction about the task.\n\n00:02:03 --> 00:02:13: In programming, incidental learning depends on cognitive engagement, such as making decisions, testing ideas, and interpreting feedback.\n\n00:02:13 --> 00:02:30: Prior work shows that explanation-only or decision-first AI assistance can improve learning outcomes because learners are still required to think. This suggests that AI assistants should be designed to invite reasoning rather than bypass it.\n\n00:02:30 --> 00:02:35: We also employ cognitive forcing as a design feature.\n\n00:02:35 --> 00:02:42: Cognitive forcing introduces intentional constraints that require learners to think before receiving assistance.\n\n00:02:42 --> 00:02:52: So, rather than providing answers, the system prompts learners to commit to decisions, predict outcomes, or reflect on errors.\n\n00:02:52 --> 00:03:05: Although this approach does require more cognitive load, that increase is intentional; the goal is deeper engagement that supports learning and transfer.\n\n00:03:05 --> 00:03:13: The core product of our work is a web-based coding platform similar to LeetCode called LeetCoach.\n\n00:03:13 --> 00:03:30: The platform has two main layers: the user interface, where participants interact directly with the system, and the underlying system layer, which handles data operations and controls the behavior of the LLM.\n\n00:03:30 --> 00:03:39: The interface includes sample code problem description, which presents the problem statement and input-output specifications;\n\n00:03:39 --> 00:03:44: timer, enables users to skip the problem after 10 minutes;\n\n00:03:44 --> 00:03:50: code refinement, a button which translates non-Python or pseudocode to executable Python;\n\n00:03:50 --> 00:03:57: solution evaluation, two buttons which run the user code for feedback or final submission;\n\n00:03:57 --> 00:04:04: code development area, which is a workspace for writing and editing code in any language before refinement;\n\n00:04:04 --> 00:04:13: and finally, the chat assistant, or Ask LeetCoach, which provides LLM-powered guidance through a chatbot.\n\n00:04:13 --> 00:04:24: As mentioned earlier, our motivation is to design a platform that addresses essential questions: how incidental learning can be supported through guided interaction?\n\n00:04:24 --> 00:04:34: To achieve this, the LLM component is governed by strict pedagogical principles. It operates under a prompt with several core guidelines:\n\n00:04:34 --> 00:04:36: it never provides full solutions;\n\n00:04:36 --> 00:04:42: it offers only minimal syntax guidance without tying it to the problem's logic;\n\n00:04:42 --> 00:04:50: and it handles debugging conceptually by explaining why an approach might fail rather than suggesting code.\n\n00:04:50 --> 00:05:00: We also enforce additional constraints, such as controlled scope, a supportive tone, and resistance to user pressure.\n\nBelow is a timestamped transcript of the video:\n\n00:00 --> 00:04\nThese are examples of the system responses.\n\n00:04 --> 00:11\nOn the left, the assistant demonstrates how it supports debugging by explaining why an approach may fail.\n\n00:11 --> 00:17\nFor example, when negative numbers can break an implicit constraint.\n\n00:17 --> 00:23\nOn the right, it shows how the assistant responds when a user requests a complete function\n\n00:23 --> 00:27\nby refusing to provide a full solution.\n\n00:27 --> 00:39\nWe conducted a within-subjects pilot study of 19 participants divided into novice and advanced groups based on prior data structures and algorithms experience.\n\n00:39 --> 00:51\nParticipants completed a pre-test without AI, an AI-assisted intervention task using LeetCoach, and a post-test without AI.\n\n00:51 --> 01:03\nThis design allows for us to examine not just users' performance with AI, but what learning persists once that AI support is removed.\n\n01:03 --> 01:08\nTo evaluate, we distinguish between two kinds of improvement.\n\n01:08 --> 01:13\nImmediate gain refers to the difference between pre-test and intervention performance.\n\n01:13 --> 01:21\nLearning gain refers to the difference between pre-test and post-test performance when AI is no longer available.\n\n01:21 --> 01:28\nSo this distinction helps us separate short-term assistant effects from real learning transfer.\n\n01:28 --> 01:30\n3. Result\n\n01:30 --> 01:35\nFor novice learners, performance improves modestly during the intervention,\n\n01:35 --> 01:40\nbut increases substantially in the post-test when no AI is available.\n\n01:40 --> 01:48\nThis result suggests that AI support promoted learning that transferred to later problem-solving.\n\n01:48 --> 01:57\nAt the same time, both novice and advanced learners make more debugging attempts during the intervention stage, which we\n\n01:57 --> 02:01\ninterpret as important cognitive friction.\n\n02:01 --> 02:12\nIn the post-test, both groups require fewer debugging attempts, indicating an improved efficiency and understanding, especially for novices.\n\n02:12 --> 02:16\nThese results lead to two main findings.\n\n02:16 --> 02:25\nFirst, reasoning-first AI support produces delayed, but enduring learning gains, particularly for novices.\n\n02:25 --> 02:34\nSecond, increased effort during AI use is not a signal of failure,\n\n02:34 --> 02:40\nrather it reflects deeper engagement that later translates into more efficient and independent problem-solving.\n\n02:40 --> 02:42\n4. Conclusion\n\n02:42 --> 02:50\nOur findings suggest that reasoning-first and explanation-based AI assistance can support learning, rather than just task completion.\n\n02:50 --> 03:01\nAlthough cognitive forcing increases effort during AI use, that effort results in meaningful gains when learners work independently.\n\n03:01 --> 03:11\nAnd while this study is exploratory and certainly limited in scale, it offers early evidence that AI does not have to replace thinking to be helpful.\n\n03:11 --> 03:17\nThank you very much for listening, and we look forward to your questions and discussion.",
+  "segments": [
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:04.00",
+      "text": "These are examples of the system responses."
+    },
+    {
+      "start": "00:05:04.00",
+      "end": "00:05:11.00",
+      "text": "On the left, the assistant demonstrates how it supports debugging by explaining why an approach may fail."
+    },
+    {
+      "start": "00:05:11.00",
+      "end": "00:05:17.00",
+      "text": "For example, when negative numbers can break an implicit constraint."
+    },
+    {
+      "start": "00:05:17.00",
+      "end": "00:05:23.00",
+      "text": "On the right, it shows how the assistant responds when a user requests a complete function"
+    },
+    {
+      "start": "00:05:23.00",
+      "end": "00:05:27.00",
+      "text": "by refusing to provide a full solution."
+    },
+    {
+      "start": "00:05:27.00",
+      "end": "00:05:39.00",
+      "text": "We conducted a within-subjects pilot study of 19 participants divided into novice and advanced groups based on prior data structures and algorithms experience."
+    },
+    {
+      "start": "00:05:39.00",
+      "end": "00:05:51.00",
+      "text": "Participants completed a pre-test without AI, an AI-assisted intervention task using LeetCoach, and a post-test without AI."
+    },
+    {
+      "start": "00:05:51.00",
+      "end": "00:06:03.00",
+      "text": "This design allows for us to examine not just users' performance with AI, but what learning persists once that AI support is removed."
+    },
+    {
+      "start": "00:06:03.00",
+      "end": "00:06:08.00",
+      "text": "To evaluate, we distinguish between two kinds of improvement."
+    },
+    {
+      "start": "00:06:08.00",
+      "end": "00:06:13.00",
+      "text": "Immediate gain refers to the difference between pre-test and intervention performance."
+    },
+    {
+      "start": "00:06:13.00",
+      "end": "00:06:21.00",
+      "text": "Learning gain refers to the difference between pre-test and post-test performance when AI is no longer available."
+    },
+    {
+      "start": "00:06:21.00",
+      "end": "00:06:28.00",
+      "text": "So this distinction helps us separate short-term assistant effects from real learning transfer."
+    },
+    {
+      "start": "00:06:28.00",
+      "end": "00:06:30.00",
+      "text": "3. Result"
+    },
+    {
+      "start": "00:06:30.00",
+      "end": "00:06:35.00",
+      "text": "For novice learners, performance improves modestly during the intervention,"
+    },
+    {
+      "start": "00:06:35.00",
+      "end": "00:06:40.00",
+      "text": "but increases substantially in the post-test when no AI is available."
+    },
+    {
+      "start": "00:06:40.00",
+      "end": "00:06:48.00",
+      "text": "This result suggests that AI support promoted learning that transferred to later problem-solving."
+    },
+    {
+      "start": "00:06:48.00",
+      "end": "00:06:57.00",
+      "text": "At the same time, both novice and advanced learners make more debugging attempts during the intervention stage, which we"
+    },
+    {
+      "start": "00:06:57.00",
+      "end": "00:07:01.00",
+      "text": "interpret as important cognitive friction."
+    },
+    {
+      "start": "00:07:01.00",
+      "end": "00:07:12.00",
+      "text": "In the post-test, both groups require fewer debugging attempts, indicating an improved efficiency and understanding, especially for novices."
+    },
+    {
+      "start": "00:07:12.00",
+      "end": "00:07:16.00",
+      "text": "These results lead to two main findings."
+    },
+    {
+      "start": "00:07:16.00",
+      "end": "00:07:25.00",
+      "text": "First, reasoning-first AI support produces delayed, but enduring learning gains, particularly for novices."
+    },
+    {
+      "start": "00:07:25.00",
+      "end": "00:07:34.00",
+      "text": "Second, increased effort during AI use is not a signal of failure,"
+    },
+    {
+      "start": "00:07:34.00",
+      "end": "00:07:40.00",
+      "text": "rather it reflects deeper engagement that later translates into more efficient and independent problem-solving."
+    },
+    {
+      "start": "00:07:40.00",
+      "end": "00:07:42.00",
+      "text": "4. Conclusion"
+    },
+    {
+      "start": "00:07:42.00",
+      "end": "00:07:50.00",
+      "text": "Our findings suggest that reasoning-first and explanation-based AI assistance can support learning, rather than just task completion."
+    },
+    {
+      "start": "00:07:50.00",
+      "end": "00:08:01.00",
+      "text": "Although cognitive forcing increases effort during AI use, that effort results in meaningful gains when learners work independently."
+    },
+    {
+      "start": "00:08:01.00",
+      "end": "00:08:11.00",
+      "text": "And while this study is exploratory and certainly limited in scale, it offers early evidence that AI does not have to replace thinking to be helpful."
+    },
+    {
+      "start": "00:08:11.00",
+      "end": "00:08:17.00",
+      "text": "Thank you very much for listening, and we look forward to your questions and discussion."
+    }
+  ]
+}

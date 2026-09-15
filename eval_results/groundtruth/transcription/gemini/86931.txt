@@ -1,0 +1,9 @@
+0:00 – 0:15: Hi, my name is Marcus B. Pettersson and I'm here on behalf of my colleagues to present our work on Debiasing Machine Learning Predictions for Causal Inference Without Additional Ground Truth Data, and introduce our framework, "One Map, Many Trials" in Satellite-Driven Poverty Analysis.
+
+0:15 – 0:32: So, first for some context. Uh, today there are about 700 million people who live in extreme poverty. Poverty researchers today have a rather clear picture on what this looks like on a national level, like we know which communities are wealthy, which ones are poor, which countries are turning in the right or wrong direction.
+
+0:32 – 0:41: But often times we want to get more local on this. We want to know which villages are turning in the right direction, or which neighborhoods the city, uh, are poor.
+
+0:41 – 0:50: And traditionally, the only way of getting this data has been to go door-to-door, uh, and ask questions, fill out questionnaires, conduct a survey.
+
+0:50 – 1:03: Uh, and however, as you can imagine, this is quite an expensive process, and as poverty almost by definition, uh, have a lack of funding, uh, this is something that just hasn't been done to the extent that we would like to see.

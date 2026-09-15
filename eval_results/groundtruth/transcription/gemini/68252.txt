@@ -1,0 +1,147 @@
+00:00:00.00 --> 00:00:02.00  Thanks for giving me the opportunity to present today.
+00:00:02.00 --> 00:00:04.00  My name is Yuji Kasamara.
+00:00:04.00 --> 00:00:09.00  Now I will represent a topic titled Task Management System for Construction Machinery using the open platform OPERA.
+00:00:09.00 --> 00:00:15.00  First, let me introduce the common control messages used in our system named OPERA.
+00:00:15.00 --> 00:00:20.00  Currently in Japan, efforts towards autonomous construction known as i-Construction are actively progressing,
+00:00:20.00 --> 00:00:25.00  and as part of this trend, various autonomous construction systems are being developed.
+00:00:25.00 --> 00:00:30.00  However, at present, there are no established standards for internal signals used to operate construction machinery.
+00:00:30.00 --> 00:00:36.00  In such cases, the necessity to partner with construction machinery manufacturers for autonomous construction machinery creates a significant barrier to entry for research and development.
+00:00:36.00 --> 00:00:43.00  Therefore, the Public Works Research Institute has published a proposal for common control messages with the aim of standardizing the signal specifications for autonomous control of construction machinery.
+00:00:43.00 --> 00:00:50.00  If the common control messages are realized and are open source, any company can use various manufacturers' machines of the same type through these signals.
+00:00:50.00 --> 00:00:55.00  ROS2-TMS for Construction is an open-source platform we are currently developing for autonomous construction using OPERA.
+00:00:55.00 --> 00:01:01.00  To explain this system in detail, first, as shown in this figure, sensors are placed at various locations on the construction site.
+00:01:01.00 --> 00:01:05.00  The system centrally collects the data obtained from these sensors.
+00:01:05.00 --> 00:01:10.00  Then, the system builds a real-time virtual construction site in cyberspace based on the collected sensor data.
+00:01:10.00 --> 00:01:15.00  Then, in the virtual construction site, the system plans the operations of the construction machinery.
+00:01:15.00 --> 00:01:20.00  After determining the optimal operations, the system sends commands to the actual construction machinery.
+00:01:20.00 --> 00:01:25.00  Then, actual construction machinery moves according to the received commands.
+00:01:25.00 --> 00:01:31.00  ROS2-TMS for Construction manages construction machinery on site in real-time by repeating this cycle.
+00:01:31.00 --> 00:01:38.00  The specific implementation of ROS2-TMS for Construction is shown in this figure. The entire architecture of ROS2-TMS for Construction, including the Task Management System, is divided into modules shown like this.
+00:01:38.00 --> 00:01:43.00  TMS-TS is the module that manages the operation of construction machinery.
+00:01:43.00 --> 00:01:48.00  TMS Interface for OPERA is the module for connecting ROS2-TMS for Construction with OPERA.
+00:01:48.00 --> 00:01:53.00  TMS-RP is the module for planning the operation of construction machinery,
+00:01:53.00 --> 00:02:00.00  and TMS-RC serves as the driver when handling the actual construction machinery.
+00:02:00.00 --> 00:02:07.00  OPERA is used as TMS-RP and TMS-RC, and it plays the role of controlling the actual construction machinery based on commands received from the higher-level Task Management System.
+00:02:07.00 --> 00:02:14.00  Next, I will introduce the overview of the Task Management System. As shown in this figure, in the Task Management System, data on a series of construction operations are stored in the database in advance as a set of task data.
+00:02:14.00 --> 00:02:20.00  In addition, various parameters used in the task data, e.g., target blade-edge positions for backhoe, are also stored.
+00:02:20.00 --> 00:02:25.00  When the Task Management System receives a start command,
+00:05:00.00 --> 00:05:03.00  In the proposed system, the system receives
+00:05:03.00 --> 00:05:08.00  necessary task data and parameter data from the database,
+00:05:08.00 --> 00:05:11.00  then the system sends operation commands
+00:05:11.00 --> 00:05:16.00  to the actual construction machinery based on this data
+00:05:16.00 --> 00:05:22.00  read from database and operate it. While the construction
+00:05:22.00 --> 00:05:26.00  machinery is operating, status signals are
+00:05:26.00 --> 00:05:30.00  constantly sent to the task management system,
+00:05:30.00 --> 00:05:34.00  allowing it to manage the operation of the construction machinery.
+00:05:34.00 --> 00:05:38.00  Additionally, information obtained from the
+00:05:38.00 --> 00:05:43.00  sensors placed at the construction site is centrally collected,
+00:05:43.00 --> 00:05:47.00  and necessary information is calculated to
+00:05:47.00 --> 00:05:51.00  update the parameter data in the database
+00:05:51.00 --> 00:05:56.00  by reading the values that change during task execution.
+00:05:56.00 --> 00:06:00.00  During task execution, the task management system enables the adaptive operation.
+00:06:00.00 --> 00:06:04.00  This task management system is built based on a scheduler
+00:06:04.00 --> 00:06:08.00  called a behavior tree, BT. Next, I will
+00:06:08.00 --> 00:06:12.00  explain about BT. In the behavior tree,
+00:06:12.00 --> 00:06:17.00  we have extended the implementation addition in the task tree
+00:06:17.00 --> 00:06:21.00  on the right side on the figure. In a standard behavior tree,
+00:06:21.00 --> 00:06:25.00  an action node is placed at the end of the tree,
+00:06:25.00 --> 00:06:30.00  where the desired operations were implemented on this node.
+00:06:30.00 --> 00:06:34.00  We extended this implementation and divided
+00:06:34.00 --> 00:06:38.00  the action node into two types, leaf node and subtask node.
+00:06:38.00 --> 00:06:42.00  The leaf node acts as a node that converts signals
+00:06:42.00 --> 00:06:47.00  between ROS 2 action and the behavior tree while the subtask
+00:06:47.00 --> 00:06:52.00  node uses ROS 2 action to implement subtask processing.
+00:06:52.00 --> 00:06:56.00  This implementation realizes managing the state of subtasks
+00:06:56.00 --> 00:07:00.00  implemented with ROS 2 action using the behavior tree.
+00:07:00.00 --> 00:07:04.00  This is the process flow for designing tasks in the
+00:07:04.00 --> 00:07:08.00  behavior tree. Since the task management system is based on
+00:07:08.00 --> 00:07:13.00  BehaviorTree.CPP, it is possible to use a tool called Groot,
+00:07:13.00 --> 00:07:18.00  which is available for use with BehaviorTree.CPP.
+00:07:18.00 --> 00:07:22.00  The BT of Groot is shown here.
+00:07:22.00 --> 00:07:27.00  The part of the task tree enclosed in the red frame
+00:07:27.00 --> 00:07:32.00  can be implemented graphically on Groot. At this time, the subtask node connected
+00:07:32.00 --> 00:07:36.00  to the leaf node is specified as a parameter
+00:07:36.00 --> 00:07:40.00  on the leaf node. Specifically, leaf node and subtask node
+00:07:40.00 --> 00:07:45.00  are connected by selecting the names defined for each subtask
+00:07:45.00 --> 00:07:50.00  node in the Groot frame. And this subtask node is a node
+00:07:50.00 --> 00:07:54.00  that can change its behavior based on the given parameters,
+00:07:54.00 --> 00:07:59.00  and the parameters to be passed are stored in the database.
+00:07:59.00 --> 00:08:03.00  In the data format shown here, and the values
+00:08:03.00 --> 00:08:07.00  on the database are searched using two type keys
+00:08:07.00 --> 00:08:12.00  enclosed in green frame on the leaf node and are used on
+00:08:12.00 --> 00:08:16.00  the subtask node. Additionally, many nodes
+00:08:16.00 --> 00:08:21.00  available by default in Groot and the behavior tree. By using these
+00:08:21.00 --> 00:08:26.00  nodes, it becomes easy to implement complex processes.
+00:08:26.00 --> 00:08:30.00  Next, I will introduce the flow of operations
+00:08:30.00 --> 00:08:35.00  using the actual construction machinery. When operating the
+00:08:35.00 --> 00:08:40.00  actual construction machinery, the task management system first
+00:08:40.00 --> 00:08:45.00  starts and then the task tree shown here
+00:08:45.00 --> 00:08:50.00  is executed. Then after the leaf node is activated
+00:08:50.00 --> 00:08:55.00  according to the task implementation, leaf nodes connect to the subtask
+00:08:55.00 --> 00:09:00.00  node selected by parameters on the leaf node through ROS 2 action.
+00:09:00.00 --> 00:09:05.00  When the subtask node is activated, the target position and posture
+00:09:05.00 --> 00:09:10.00  of the construction machinery are sent to the PLC interface for Opera
+00:09:10.00 --> 00:09:15.00  node. This node connects ROS 2 of construction with Opera, then
+00:10:00.00 --> 00:10:03.00  It's an interface for Opera/Z.
+00:10:03.00 --> 00:10:07.00  Target position and posture for the motion planner.
+00:10:07.00 --> 00:10:10.00  Implemented in the Opera.
+00:10:10.00 --> 00:10:14.00  The motion planner plans the trajectory to achieve...
+00:10:14.00 --> 00:10:18.00  ...the given target position and posture.
+00:10:18.00 --> 00:10:22.00  The planned trajectory is then sent to the controller.
+00:10:22.00 --> 00:10:26.00  The controller calculates values such as the value...
+00:10:26.00 --> 00:10:31.00  ...of valve opening degree for the pilot pressure...
+00:10:31.00 --> 00:10:35.00  ...controlled construction machinery based on this planned trajectory.
+00:10:35.00 --> 00:10:39.00  These calculated values are then sent to the ROS-CAN...
+00:10:39.00 --> 00:10:43.00  ...signal converter.
+00:10:43.00 --> 00:10:47.00  The values such as valve opening degree are converted into...
+00:10:47.00 --> 00:10:51.00  ...common control messages in CAN format.
+00:10:51.00 --> 00:10:55.00  And actual machinery operates.
+00:11:13.00 --> 00:11:17.00  Next, I will introduce the validation test of...
+00:11:17.00 --> 00:11:21.00  ...the task management system with actual construction machinery.
+00:11:21.00 --> 00:11:25.00  The purpose of this test is to verify that the current...
+00:11:25.00 --> 00:11:29.00  ...task management system has the ability to perform...
+00:11:29.00 --> 00:11:34.00  ...autonomous construction using actual construction machinery.
+00:11:34.00 --> 00:11:39.00  Specifically, the task involves placing a backhoe near...
+00:11:39.00 --> 00:11:44.00  ...a soil mound and transporting the soil from the mound...
+00:11:44.00 --> 00:11:49.00  ...to another location while changing their excavation position...
+00:11:49.00 --> 00:11:54.00  ...according to the shape of the mound.
+00:11:54.00 --> 00:11:58.00  During the test, several sensors such as LiDAR...
+00:11:58.00 --> 00:12:02.00  ...and cameras were placed around the soil mound...
+00:12:02.00 --> 00:12:06.00  ...to collect data.
+00:12:06.00 --> 00:12:10.00  Based on collected data, a height map of the soil...
+00:12:10.00 --> 00:12:14.00  ...mound was created, then the target excavation position...
+00:12:14.00 --> 00:12:19.00  ...was estimated and input into the task management system.
+00:12:19.00 --> 00:12:24.00  Using the prepared sub-tasks, the task was created...
+00:12:24.00 --> 00:12:29.00  ...and input into the task management system after being...
+00:12:29.00 --> 00:12:34.00  ...tested in a simulator.
+00:12:34.00 --> 00:12:39.00  Based on these values, the task management system sends...
+00:12:39.00 --> 00:12:44.00  ...the appropriate operation command to the construction...
+00:12:44.00 --> 00:12:49.00  ...machinery at real-time.
+00:12:49.00 --> 00:12:54.00  Here is the result of the validation test.
+00:12:54.00 --> 00:12:59.00  The execution command is sent to the task management...
+00:12:59.00 --> 00:13:04.00  ...system through the zero-buffer, and the backhoe is operated.
+00:13:04.00 --> 00:13:09.00  On the left side of the video is RViz, which is...
+00:13:09.00 --> 00:13:14.00  ...a ROS tool visualization tool that shows the target...
+00:13:14.00 --> 00:13:19.00  ...posture and planned trajectory of the backhoe.
+00:13:19.00 --> 00:13:24.00  You can see that the actual backhoe is operating in...
+00:13:24.00 --> 00:13:29.00  ...synchronization with the display on RViz.
+00:13:29.00 --> 00:13:34.00  Through this validation test, we have demonstrated...
+00:13:34.00 --> 00:13:39.00  ...that the current task management system has the capability...
+00:13:39.00 --> 00:13:44.00  ...to achieve autonomous construction.
+00:13:44.00 --> 00:13:49.00  In conclusion, we have proven that it is possible...
+00:13:49.00 --> 00:13:54.00  ...to perform autonomous construction using actual construction...
+00:13:54.00 --> 00:13:59.00  ...machinery through the common control message Opera...
+00:13:59.00 --> 00:14:04.00  ...using the current task management system of ROS-P-MS...
+00:14:04.00 --> 00:14:09.00  ...for construction.
+00:14:09.00 --> 00:14:14.00  In the future, we plan to enhance the task management...
+00:14:14.00 --> 00:14:19.00  ...system to operate various construction machines...
+00:14:19.00 --> 00:14:24.00  ...such as dump trucks, rollers, and bulldozers.
+00:14:24.00 --> 00:14:29.00  And systems introduced today are all managed on...
+00:14:29.00 --> 00:14:34.00  ...GitHub and are open source.
+00:14:34.00 --> 00:14:39.00  If you are interested, we would appreciate it if...
+00:14:39.00 --> 00:14:44.00  ...you could check them out.
+00:14:44.00 --> 00:14:48.00  This concludes my presentation.
+00:14:48.00 --> 00:14:53.00  Thank you for listening.
+00:15:00.00 --> 00:15:03.00  Okay, well since no there are no questions
+00:15:03.00 --> 00:15:06.00  then we'll just say thanks once again.
+00:15:06.00 --> 00:15:12.00  (clapping and crowd noise)

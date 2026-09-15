@@ -1,0 +1,176 @@
+00:00:00.00 --> 00:00:09.00  The topic of this talk is enhancing corrosion resistance of lightweight metal alloys through laser surface processing. Thank you. Yep.
+00:00:10.00 --> 00:00:15.00  Ah, thank you for the introduction.
+00:00:16.00 --> 00:00:30.00  So earlier today, I gave a presentation on the, the work for the CO2 reduction, so we applied the laser surface engineering to modify the catalyst surface wetting behavior...
+00:00:31.00 --> 00:00:41.00  ...and then we influence how the electrical chemical process, you know, has been influenced to generate different species for the CO2 reduction process.
+00:00:42.00 --> 00:00:56.00  For this afternoon, I will spend the next 20 minutes, I'll focus on some the corrosion property evaluation, some of the things we have done, and as well as the tribology experiments we have performed.
+00:00:57.00 --> 00:01:10.00  So this work is a collaboration between myself and mostly with Professor Mubin who is from chemical engineering from the University of Iowa.
+00:01:11.00 --> 00:01:21.00  Some of these samples, some of the corrosion analysis were supported by Ashish Rohadi who is a senior, you know, senior scientist from PNL.
+00:01:22.00 --> 00:01:34.00  My research at the University of Iowa, I mostly for the past couple years, I've been spending most of time for surface surface processing using nanosecond pulse lasers.
+00:01:35.00 --> 00:01:46.00  The primary reason for using a nanosecond pulse laser because of its low cost and then also because of its potential for high throughput surface processing.
+00:01:47.00 --> 00:01:58.00  So some of the applications I had was superhydrophobic surface and superhydrophilic surface and also the pattern surface, right? And then there are industrial applications for various for various components, various things.
+00:01:59.00 --> 00:02:08.00  I'm also actively developing research in terms of laser technologies for additive manufacturing, joining, and some other processes.
+00:02:09.00 --> 00:02:18.00  So as I sort of discussed, you know, earlier today, there are some common issues for laser superhydrophobic surface processing.
+00:02:19.00 --> 00:02:30.00  So from the literature, you know, we have seen some of the presentations throughout this conference, but also every year you will see a lot of papers, research papers published in this regard. One of the common issue it's its relative limited production efficiency.
+00:02:31.00 --> 00:02:45.00  So when you try to apply, for example, a very ultra short pulse laser, for example, a femtosecond laser for superhydrophobic surface processing, there has a significant sort of a shortcoming, it's its production efficiency.
+00:02:46.00 --> 00:02:59.00  That's limited because you have to use the femtosecond laser to create all those microscale features and which is you have to raster scan the whole surface repeatedly.
+00:03:00.00 --> 00:03:15.00  So even for a smaller area, for example, one inch by one inch surface area, and you have to scan many many hundreds of lines and sometimes you have to repeat the repeat your scanning for multiple times in order to create those, you know, nano and micro structures.
+00:03:16.00 --> 00:03:22.00  ...which which is has this limitation its limitation efficiency is relatively slow.
+00:03:23.00 --> 00:03:36.00  So that's the main main motivation of our research. So my former students, former PhD students and I, you know, when we started this research, and, you know, we thought, you know, all the solution, all the paper we have read it's they provide all the, you know, very nice excellent solutions...
+00:03:37.00 --> 00:03:48.00  ...you know, so initially I was not super interested in this topic, but then as my students, you know, spent like almost one semester working on this topic, eventually we discovered something new.
+00:03:49.00 --> 00:03:59.00  So we try to improve this process efficiency using a relative lower cost laser, nanosecond pulse laser.
+00:04:32.00 --> 00:04:42.00  So here is is our setup. So essentially our setup involves two steps. The first step is nanosecond pulse laser processing.
+00:04:43.00 --> 00:04:59.00  Ah, so that can be done in water confinement or it can be done in air. Depends on the situations. In air, if it's in air, you want to create some trenches, create some channels, and that's something you could do.
+00:05:00.00 --> 00:05:10.00  ...underwater with the water as a confinement you could have a higher efficiency you can bombard surface like even faster. Um so a key
+00:05:10.00 --> 00:05:20.00  a unique thing a unique feature of our processes is the laser spot size we applied in our process. So typically for micro-machining
+00:05:20.00 --> 00:05:30.00  we're talking about 20 micron laser spot size or maybe 30 maybe 50 but definitely lesser than you know lesser or equal to 100 microns.
+00:05:30.00 --> 00:05:40.00  All right but in our case the laser spot size is a very coarse. It's on the order of a five millimeter. Um that's also kind of limited to the laser power we have.
+00:05:40.00 --> 00:05:50.00  If I have a industrial scale laser like the one the laser I have the overall power is only like three watts okay? And then has a repetition rate only 10 hertz.
+00:05:50.00 --> 00:06:00.00  If I have a powerful nanosecond pulsed laser I was talking to one of the friends here uh from industry uh you talk about kilowatts nanosecond pulsed laser
+00:06:00.00 --> 00:06:10.00  we can significantly improve this efficiency because the laser spot size we used is on the order five millimeter and we can raster scan the whole surface very very fast.
+00:06:10.00 --> 00:06:20.00  Um so that would be the first step. The first step treat the laser treat uh create the surface change the surface condition. And then the following step is a is a chemical immersion treatment.
+00:06:20.00 --> 00:06:30.00  Uh chemical immersion treatment by definition is very easy right? So you have a container and you dip your parts laser treated surfaces under the in the solution for a a period of time right?
+00:06:30.00 --> 00:06:40.00  So on the order like a you know half an hour one hour you can treat multiple components within same batch and then so essentially that process is a very very efficient.
+00:06:40.00 --> 00:06:50.00  So this is a one of the sample my former student has produced like many years ago. Uh so we had this is untreated um aluminum surface
+00:06:50.00 --> 00:07:00.00  the part the two parts is held horizontally there's no tilting. Uh so for this for this uh this white part that's laser laser treated using our process.
+00:07:00.00 --> 00:07:10.00  And then you can see it's has a very strong superhydrophobic surface property. Because of the very coarse uh laser spot size we use
+00:07:10.00 --> 00:07:20.00  so our significant advantage we're try to demonstrate is the processing efficiency. So we significantly improve this processing efficiency even using our lab scale laser.
+00:07:20.00 --> 00:07:30.00  Just remember the lab scale laser we have in our lab right now is only lesser than five watts. And then we can treat uh for um you know for example for one minute
+00:07:30.00 --> 00:07:40.00  uh we can treat eight inch square. Right? So if you're talking thinking about femtosecond laser or some other some other work when you try to create all those micro nano structures
+00:07:40.00 --> 00:07:50.00  and then that processing time is much much much less. Two or three order of magnitudes less. So I think this is a very very significant
+00:07:50.00 --> 00:08:00.00  and uh we try to that's why we try to apply that to industrial applications. Okay. Um so overall we can control the surface wetting capability from
+00:08:00.00 --> 00:08:10.00  extremely superhydrophobic surface so that would be that's characterized using the water contact angle here if the water contact angle is about 150 degrees that's superhydrophobic
+00:08:10.00 --> 00:08:20.00  and to for uh very superhydrophilic surfaces okay. And then so here because we have two processes so essentially we have two set of parameters.
+00:08:20.00 --> 00:08:30.00  We have one process is a laser surface texturing parameters which we can use to condition the surface we can pattern the surface because laser is you know automated
+00:08:30.00 --> 00:08:40.00  we can create all these patterns on different surfaces okay. And then we can regulate the laser power in density. And then so because of that you can see that
+00:08:40.00 --> 00:08:50.00  uh when you apply different laser power in density you can see that the water contact angle can be regulated. So the laser surface texturing is to to scan the parts
+00:08:50.00 --> 00:09:00.00  you know using the patterns right creating the patterns and also you can regulate the uh water contact angle. But the other parameters we also control is the chemistry.
+00:09:00.00 --> 00:09:10.00  So when we select the proper uh chemical regions you can create very very strong superhydrophobic surface or you can change with the different chemical regions
+00:09:10.00 --> 00:09:20.00  you can create superhydrophilic surface. Right? So so that's why you see here there's a range of data right? So we have superhydrophobic to superhydrophilic
+00:09:20.00 --> 00:09:30.00  and then their chemical composition chemical uh
+00:10:00.00 --> 00:10:01.00  attributes, it will be different, okay?
+00:10:02.00 --> 00:10:04.00  And then, so here down here, these are the...
+00:10:04.00 --> 00:10:07.00  the samples or the surface microstructures we have created.
+00:10:08.00 --> 00:10:10.00  Okay, you can see those are on the...
+00:10:11.00 --> 00:10:13.00  you know, on the 100-nanometer scale size.
+00:10:15.00 --> 00:10:17.00  So based on this knowledge, because now we have...
+00:10:18.00 --> 00:10:20.00  this sort of processing processing knowledge...
+00:10:21.00 --> 00:10:24.00  we can control the laser parameters, we can control the chemical attributes.
+00:10:25.00 --> 00:10:27.00  Now we combine the superhydrophobic and the superhydrophilic...
+00:10:28.00 --> 00:10:30.00  surface technique together within one step.
+00:10:31.00 --> 00:10:34.00  So what we create is a surface pattern with both...
+00:10:35.00 --> 00:10:37.00  superhydrophobic regions and superhydrophilic regions.
+00:10:38.00 --> 00:10:40.00  So in this case, we don't actually need to apply any mask...
+00:10:41.00 --> 00:10:43.00  because, you know, when you do use the laser scanning parameters...
+00:10:44.00 --> 00:10:46.00  and you just scan the surfaces for those selected areas.
+00:10:47.00 --> 00:10:50.00  And then we do have to apply two chemical treatment steps...
+00:10:51.00 --> 00:10:53.00  because for some regions you want to create superhydrophobicity...
+00:10:54.00 --> 00:10:56.00  some regions you want to create superhydrophilicity.
+00:10:57.00 --> 00:10:59.00  So there's does some tricks. So the trick is, well...
+00:11:00.00 --> 00:11:02.00  based on our research, right? Based on our data, based on the lasers we have...
+00:11:03.00 --> 00:11:06.00  I think the trick we want to use is you want to create superhydrophobic surfaces first.
+00:11:07.00 --> 00:11:10.00  Those superhydrophobic patterns first. Those will be the white portions.
+00:11:11.00 --> 00:11:13.00  And then the last step you want to create the superhydrophilic portions.
+00:11:14.00 --> 00:11:16.00  So for example, I have this is one sample...
+00:11:17.00 --> 00:11:19.00  all the white is a checkerboard, right? So all the white portions...
+00:11:20.00 --> 00:11:23.00  all the white grids, those are superhydrophobic.
+00:11:24.00 --> 00:11:26.00  And you can see there's some water droplets dropped there...
+00:11:27.00 --> 00:11:28.00  and the water droplet is just forms.
+00:11:29.00 --> 00:11:31.00  And then actually the same amount of water already applied...
+00:11:32.00 --> 00:11:34.00  to the darker region, but then those region has a very nice hydrophilicity.
+00:11:35.00 --> 00:11:37.00  So the water basically wets the surface, you don't see that from this digital image here, okay?
+00:11:39.00 --> 00:11:42.00  And then we alternate the sequences, we try different processes...
+00:11:43.00 --> 00:11:46.00  using underwater or in air, we create different properties...
+00:11:47.00 --> 00:11:49.00  and then we kind of compare some of these.
+00:11:50.00 --> 00:11:52.00  But I think the general thing we'd like to present to you guys is...
+00:11:53.00 --> 00:11:55.00  we have this capability to create patterns for a larger surface area.
+00:11:57.00 --> 00:11:59.00  Okay, and now the next one is to show the superhydrophilic property.
+00:12:00.00 --> 00:12:03.00  So what you are seeing is this is a open flat panel...
+00:12:04.00 --> 00:12:06.00  and then my student pour water, you can see here...
+00:12:07.00 --> 00:12:10.00  I don't know if you can see that, you can see the water quickly being absorbed along these tracks against gravity.
+00:12:11.00 --> 00:12:13.00  Okay, and then this is a capillary force certainly, this is a super wicking property...
+00:12:14.00 --> 00:12:16.00  but also notice this is a just a flat surface...
+00:12:17.00 --> 00:12:19.00  it's not like a circular like a closed tube, you know, closed like a hollow tube.
+00:12:20.00 --> 00:12:23.00  And so I think it's quite impressive, and the size is about 10 centimeters...
+00:12:24.00 --> 00:12:26.00  about 4 inches in height, we demonstrated that the superhydrophilicity...
+00:12:27.00 --> 00:12:29.00  has a really really strong water super wicking capability.
+00:12:30.00 --> 00:12:32.00  So the next one is, so now we demonstrate some of these capabilities...
+00:12:33.00 --> 00:12:35.00  now a lot of people also from companies, from academia...
+00:12:36.00 --> 00:12:38.00  everybody is interested how reliable these surfaces are.
+00:12:39.00 --> 00:12:41.00  So for today, I will be focusing on two topics.
+00:12:42.00 --> 00:12:44.00  One is in terms of corrosion, the other is in terms of tribology.
+00:12:45.00 --> 00:12:47.00  So when you have wear, what is the tribological performance?
+00:12:48.00 --> 00:12:50.00  So the first one is a corrosion analysis.
+00:12:51.00 --> 00:12:53.00  Corrosion analysis, I'll go a little bit faster.
+00:12:54.00 --> 00:12:56.00  So the analysis, we prepare the samples, we prepare samples using our procedures.
+00:12:57.00 --> 00:12:59.00  And then for today, they're mostly two materials.
+00:13:00.00 --> 00:13:02.00  Both are the lightweight alloys, aluminum alloy 6061 and magnesium alloy AG31.
+00:13:03.00 --> 00:13:05.00  So magnesium alloy is famously for having a poor corrosion resistance.
+00:13:07.00 --> 00:13:09.00  So the story was, I made these, we made these samples...
+00:13:10.00 --> 00:13:12.00  for our friends from PNNL the National Lab like several years ago.
+00:13:13.00 --> 00:13:15.00  We send those samples, but during the COVID time, you know, the lab was sort of temporarily closed.
+00:13:16.00 --> 00:13:18.00  So those samples were just secure in his drawer for like several years.
+00:13:19.00 --> 00:13:22.00  And then all of a sudden my friend Ashish, one year, he opened the drawer, he was trying to get some of those...
+00:15:00.00 --> 00:15:03.00  He saw the previous samples. He saw the magnesium samples we sent to him
+00:15:03.00 --> 00:15:06.00  still no corrosion at all. He was super, super excited
+00:15:06.00 --> 00:15:10.00  because from his experience, he's a metallurgist, he knows
+00:15:10.00 --> 00:15:13.00  magnesium alloy if it's exposed out there and after
+00:15:13.00 --> 00:15:17.00  like several years, it's going to be you would definitely see some corrosion signs.
+00:15:17.00 --> 00:15:20.00  So based on that thing, and then he was super interested,
+00:15:20.00 --> 00:15:23.00  they conducted these electrochemical corrosion analysis.
+00:15:23.00 --> 00:15:27.00  They did the analysis. I'll show you some of these results.
+00:15:27.00 --> 00:15:31.00  So for the aluminum alloy, aluminum 6061, these are the EIS
+00:15:31.00 --> 00:15:34.00  measurements. Right? So basically, the bigger of these arcs,
+00:15:34.00 --> 00:15:37.00  that indicates its higher resistance to corrosion.
+00:15:37.00 --> 00:15:41.00  And then you can see that for the magnesium alloy is basically
+00:15:41.00 --> 00:15:44.00  shows very much improved corrosion resistance.
+00:15:44.00 --> 00:15:47.00  Similar thing, we calculated the corrosion resistance
+00:15:47.00 --> 00:15:51.00  calculation based on the formulas, and then we demonstrated
+00:15:51.00 --> 00:15:54.00  showed like almost 200% 300% increase
+00:15:54.00 --> 00:15:57.00  when we use the laser treatment. Okay?
+00:15:57.00 --> 00:16:00.00  And then we also did the corrosion rate reduction.
+00:16:00.00 --> 00:16:04.00  And then this is a little bit extrapolation, but I think
+00:16:04.00 --> 00:16:07.00  the results are also significant. We still need to do some more
+00:16:07.00 --> 00:16:10.00  validations for following these experiments.
+00:16:10.00 --> 00:16:13.00  So our friends from PNNL, we're still making samples for them.
+00:16:13.00 --> 00:16:17.00  It's going to take us a while to make some of these samples.
+00:16:17.00 --> 00:16:21.00  The next application is in terms of the wear.
+00:16:21.00 --> 00:16:24.00  So for this one, I mean, people are generally interested
+00:16:24.00 --> 00:16:28.00  are these scratch resistant? Right? So like if you scratch surface,
+00:16:28.00 --> 00:16:31.00  with that superhydrophobic surface or superhydro,
+00:16:31.00 --> 00:16:34.00  would you lose those properties? Right? So genuinely people are interested in that.
+00:16:34.00 --> 00:16:38.00  But also, I have a, sorry, okay, I have a collaborator
+00:16:38.00 --> 00:16:42.00  from ORNL. They are doing the lubrication analysis.
+00:16:42.00 --> 00:16:45.00  So they are the lubrication group.
+00:16:45.00 --> 00:16:49.00  They are inventing all the, you know, from the Department of Energy,
+00:16:49.00 --> 00:16:52.00  they are inventing the new type of ionic liquid
+00:16:52.00 --> 00:16:56.00  additives, lubrication oil. So the idea is they have
+00:16:56.00 --> 00:16:59.00  all these wonderful lubrication oils, and then we want
+00:16:59.00 --> 00:17:03.00  to create these superhydrophobic surfaces or superhydrophilic surfaces.
+00:17:03.00 --> 00:17:07.00  We want to do the testing. So we actually conducted these experiments
+00:17:07.00 --> 00:17:11.00  with my students, and my students spent half a year
+00:17:11.00 --> 00:17:14.00  in ORNL using their tribological study. And this is their setup.
+00:17:14.00 --> 00:17:17.00  Basically, it's a linear tribological center here.
+00:17:17.00 --> 00:17:21.00  They apply the standard loading, and then they did analysis.
+00:17:21.00 --> 00:17:24.00  And let me show you the results. So for example,
+00:17:24.00 --> 00:17:28.00  this is one of the wear result after one hour.
+00:17:28.00 --> 00:17:31.00  Okay? After 1000m wearing test, and we show
+00:17:31.00 --> 00:17:35.00  some of these wears. And you can see here, definitely it
+00:17:35.00 --> 00:17:38.00  shows some improvement. And the even previous slides,
+00:17:38.00 --> 00:17:41.00  and I think even the previous slide, there's friction
+00:17:41.00 --> 00:17:44.00  coefficient decrease, right? Due to the improvement
+00:17:44.00 --> 00:17:48.00  of the surface wetting. So I think I'll just stop here.
+00:17:48.00 --> 00:17:52.00  You guys are welcome to ask me any questions.
+00:17:52.00 --> 00:17:55.00  I think my time is up. Thank you for your attention.
+00:17:55.00 --> 00:17:58.00  Thank you very much for the presentation. So I think we have
+00:17:58.00 --> 00:18:01.00  time for one quick question. No question?
+00:18:01.00 --> 00:18:04.00  Maybe from my side, one question. What are the planned
+00:18:04.00 --> 00:18:07.00  next steps in your research? So we're trying various things,
+00:18:07.00 --> 00:18:11.00  and you know, like, so even we are even thinking about
+00:18:11.00 --> 00:18:14.00  commercializing this process because we have a lab-scale
+00:18:14.00 --> 00:18:17.00  nanosecond pulse laser. We're thinking about applying
+00:18:17.00 --> 00:18:21.00  like a powerful, you know, hundreds of watts nanosecond pulse
+00:18:21.00 --> 00:18:24.00  laser for this thing. So we can demonstrate definitely
+00:18:24.00 --> 00:18:27.00  like a surface treatment for like a car door or something.
+00:18:27.00 --> 00:18:30.00  So we can demonstrate that capability. That's our goal.
+00:18:30.00 --> 00:18:34.00  Okay, very cool. Thank you very much. Thanks for the presentation again.
+00:18:34.00 --> 00:18:36.00  And then we come

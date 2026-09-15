@@ -1,0 +1,52 @@
+00:00:00.00 --> 00:00:05.00  Hello everyone. I'm Dexin Zuo from Shanghai Jiao Tong University.
+00:00:05.00 --> 00:00:15.00  Today, I'm excited to present our work CoordAR, which focus on one-reference 6D object pose estimation.
+00:00:15.00 --> 00:00:27.00  6D object pose estimation is a fundamental problem in computer vision. In literature, extensive researches have paid attention to model-based 6D pose estimation,
+00:00:27.00 --> 00:00:39.00  where a 3D model is given. A common solution is to build a training set that covers several objects by rendering lots of photorealistic training images.
+00:00:39.00 --> 00:00:50.00  However, the rendering process is computationally expensive, and these methods are limited to trained objects or categories.
+00:00:50.00 --> 00:01:01.00  Recent researches have turned to reference-based methods by estimating the relative pose between query and reference.
+00:01:01.00 --> 00:01:09.00  A typical reference data is the 3D model. But it is hard to obtain a high quality 3D model.
+00:01:09.00 --> 00:01:21.00  Another choice is the multi-view images, but they are usually computationally intensive, since they need to compare with all views.
+00:01:21.00 --> 00:01:37.00  More recently, researchers started to use single view as the reference. Some methods match the descriptors between views to set up 3D to 3D correspondence.
+00:01:37.00 --> 00:01:57.00  However, they usually fails in large view variation when there is no overlap region in two views, and it is difficult to learn robust descriptors for textureless object.
+00:01:57.00 --> 00:02:04.00  Another solution is to build correspondence using coordinate map.
+00:02:04.00 --> 00:02:10.00  In this slide, I'm going to tell you how pose are represented in our work.
+00:02:10.00 --> 00:02:18.00  First, let's review a previous work One2Any, which is also proposed for one-reference pose estimation.
+00:02:18.00 --> 00:02:29.00  They propose ROC map to represent the relative pose. They first normalized the reference frame using the center and object size.
+00:02:29.00 --> 00:02:38.00  Then, each pixel in the query view stores its coordinate in the normalized reference frame.
+00:02:38.00 --> 00:02:45.00  That's how they compute the ground truth ROC map for training.
+00:02:45.00 --> 00:03:06.00  At inference, the network predicts an ROC map. For each pixel, we have the coordinate in the reference frame, so we can compute an optimal rigid transformation. The resulting transformation is the relative pose.
+00:03:06.00 --> 00:03:16.00  Although One2Any demonstrates high performance in one-reference pose estimation, it still suffers from low coordinate map quality.
+00:03:16.00 --> 00:03:32.00  We think the current coordinate map regression are limited due to no explicit uncertainty modeling, and the local nature of convolutional architecture.
+00:03:32.00 --> 00:03:37.00  To address these problems, we present CoordAR.
+00:03:37.00 --> 00:03:46.00  First, to model the uncertainty, we tokenize the coordinate map and treat it as a token sequence.
+00:03:46.00 --> 00:04:00.00  Second, to improve the network architecture, we adopt a modality-decoupled visual encoding strategy, and a transformer-style autoregressive decoder.
+00:04:00.00 --> 00:04:05.00  Specifically, we train a VQ-VAE to tokenize the coordinate map.
+00:04:05.00 --> 00:04:15.00  After tokenization, the resulting token map is discrete and can be modeled as a token sequence.
+00:04:15.00 --> 00:04:27.00  At each step, we generate several tokens based on the input data and previously generated tokens.
+00:04:27.00 --> 00:04:35.00  Furthermore, to improve the network architecture, we design a modality-decoupled visual encoding strategy.
+00:04:35.00 --> 00:04:48.00  Unlike the encoding strategy used in One2Any, where encoders are allocated based on the roles of data, we assign separate encoders based on their modality.
+00:04:48.00 --> 00:05:00.00  For example, we have a shared RGB encoder, and another encoder for ROC and mask. Based on the above ideas,
+00:05:00.00 --> 00:05:03.00  We proposed an autoregressive framework.
+00:05:03.00 --> 00:05:10.00  First, we pre-process the reference view and the query view to remove interference in the image.
+00:05:10.00 --> 00:05:19.00  Then, the visual cues are encoded according to their modality and fused by transformer-based fusion blocks.
+00:05:19.00 --> 00:05:24.00  Finally, we obtain the condition feature for generation.
+00:05:24.00 --> 00:05:29.00  Next, we enter an autoregressive decoding loop.
+00:05:29.00 --> 00:05:34.00  In each step, we randomly select several locations to predict.
+00:05:34.00 --> 00:05:39.00  The loop finishes until all tokens are generated.
+00:05:39.00 --> 00:05:48.00  Then, the generated tokens are transformed back to ROC map using the pre-trained VQ-VAE decoder.
+00:05:48.00 --> 00:05:58.00  Finally, we can obtain the relative pose by computing the optimal rigid transformation from the resulting ROC map.
+00:05:58.00 --> 00:06:07.00  To justify the key design choices, we conduct ablation experiment on the LINEMOD dataset.
+00:06:07.00 --> 00:06:13.00  Our autoregressive transformer is overall superior compared with convolutional decoder.
+00:06:13.00 --> 00:06:27.00  For further understanding, we kept the tokenization and disabled the autoregression. We found non-autoregressive predictions exhibit disrupted spatial coherence.
+00:06:27.00 --> 00:06:36.00  Afterward, we further removed tokenization by regressing continuous-valued ROC maps.
+00:06:36.00 --> 00:06:55.00  Notably, token-based models demonstrate improved performance with clearer qualitative maps, suggesting that probabilistic token prediction plays a key role in resolving such ambiguities.
+00:06:55.00 --> 00:07:06.00  We compare our method with existing one-reference-based methods following the evaluation protocols adopted in One2Any.
+00:07:06.00 --> 00:07:16.00  Our method outperforms other methods by achieving significantly higher recall and AUC values.
+00:07:16.00 --> 00:07:29.00  Our method is also computationally efficient. It supports trade-offs between accuracy and computational efficiency by adjusting the number of generation steps.
+00:07:29.00 --> 00:07:40.00  For example, our model can achieve near real-time speed with even a single step while maintaining comparable accuracy.
+00:07:40.00 --> 00:07:51.00  We visualize the generation with 16 steps. Patches corresponding to unpredicted tokens are masked in black.
+00:07:51.00 --> 00:08:01.00  In the left figure, we present more qualitative results compared with existing methods on LINEMOD dataset.
+00:08:01.00 --> 00:08:13.00  In the middle and right figure, we show more results on Toyota-Light and Real275 dataset.
+00:08:13.00 --> 00:08:21.00  To conclude, we propose the first autoregressive framework for one-reference 6D pose estimation of novel objects.
+00:08:21.00 --> 00:08:29.00  We demonstrate the effectiveness of autoregressive coordinate modeling for generating high-quality coordinate maps.
+00:08:29.00 --> 00:08:35.00  We achieve significant improvements over existing methods.

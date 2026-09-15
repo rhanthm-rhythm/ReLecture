@@ -1,0 +1,92 @@
+00:00:00.00 --> 00:00:09.00  Leo Usaka, I hope I say that correctly, from the University of Tokyo. Continuing with the theme, but this time in the deep sea.
+00:00:09.00 --> 00:00:32.00  Well, um, yeah, thank you for the introduction. Okay. I'm Leo Usaka from the University of Tokyo and I would like to talk about the King Penguin's foraging behavior observed by the video camera and this study is pretty much easy to understand, there's no equations, there's no complicated graphs or statistics, so please feel free to enjoy it. Well, so yeah, let's start from the very basic overview. Uh, yeah, the deep-diving animals are always very hard to study because they it's it's not easy to archive eyes on the individual during the whole diving period. So there's these kind of studies are always done by the depth record or acceleration logger to see which depths they actually forage or how do they move their body. And because of the extremely low light level under the deep sea, it's uh the visual record is not always available.
+00:00:32.00 --> 00:00:54.00  As for the King Penguins, it's known as a yeah, they're known as a very deep diver, they go down more than 100 more than 100 depths and sometimes more than 200 or 300 and the world record is more than 400 meters depth. And from the the eye structures study, they're believed that they're visual foragers, I mean they they actually taken they can actually see the fish even under the deep ocean without the light because they're very they have a very good eyesight and the previous study uh oh yeah, yup. Here is the depth record of the King Penguin's foraging event and you can see that there is a specific wiggling pattern at the at the bottom phase of the dive, I mean they they repeatedly ascend and descend again and again and again and again and this is known that the number of this wiggling pattern is somehow correlated to the number of the prey capture event.
+00:00:54.00 --> 00:01:21.00  But still we don't know why how they capture prey or why do they make this kind of wiggles or how much is the foraging success rate or what's the prey reaction. So there's a strong demand for the visual record even for this King Penguins.
+00:01:21.00 --> 00:01:46.00  So, you may think that why don't you put the video logger on the King Penguins, the matter is not that simple. Uh, yeah. As you can see the compared to the other mammals going dive to the deep ocean, like seals or fur seals, the King Penguins have a relatively smaller body size and which limits the size of the logger they can carry. And the smaller size of logger means that the smaller battery capacity and leads to the shorter video recording period. So it's it's a kind of very hard thing to capture the foraging event. And another thing is that the the penguins has a more higher agility or high maneuverability, so the the site of the video video site would be moved move more. So we actually need the higher resolution for the video to record the quick motion of the penguins and both both the penguins and preys.
+00:01:46.00 --> 00:02:00.00  And what is more important is that we of course need the light source to capture the foraging event. So here is the previous study uh by uh by the French team. Uh they put the video video they they put the video logger without the light source but you can see there's almost uh yeah, I shouldn't say there's almost nothing but it's a very hard to observe their foraging event without the light source.
+00:02:00.00 --> 00:02:32.00  So, uh we we somehow developed together with the Japanese company to make a best video logger for penguins. So here this this has a high resolution with the full HD resolution in the 30 30 frames per minutes, uh frames per seconds. Uh and it has a red LED light source on the both side of the camera and they also record the very basic parameter like acceleration, depth, temperature and what is more important they they this their size is smaller enough to small enough that we can put on the King Penguins. I mean it's not the ideal size but it's still acceptable.
+00:02:32.00 --> 00:02:59.00  And you can see the picture here. Yeah, it looks like this. So I went to the Kerguelen Island which is the French territory in the sub-Antarctic region and I put the video on the five King Penguins and retrieved from four individual and unfortunately only one video record works correctly. But still I could get the one and a half hour of the records that includes 12 dives during the video recording period. So the gray shaded area means that we have
+00:05:00.00 --> 00:05:03.00  We have a video record here, and there's 1, 2, 3, 4, 5...
+00:05:03.00 --> 00:05:07.00  Yeah, 12 diving videos.
+00:05:07.00 --> 00:05:15.00  And as you can see, some of these diving patterns show the wiggling pattern at the bottom phase. So actually, they foraged during the video recording period.
+00:05:15.00 --> 00:05:23.00  So yeah, here's the video that we captured.
+00:05:23.00 --> 00:05:29.00  This is the transition from the floating phase to the swimming phase.
+00:05:29.00 --> 00:05:37.00  This is just I want to show you how the video is clear.
+00:05:37.00 --> 00:05:43.00  And the another one is foraging bout. Then the prey come in front of the video...
+00:05:43.00 --> 00:05:53.00  ...and they the penguin capture the fish one after another, like this.
+00:05:53.00 --> 00:06:03.00  And we observed the 136 foraging events during the 1 and a half hours video recording.
+00:06:03.00 --> 00:06:07.00  (silence)
+00:06:07.00 --> 00:06:14.00  So here's the general feature of the King Penguins' foraging event. They usually turn its head...
+00:06:14.00 --> 00:06:21.00  ...toward the prey a few seconds before the capture event.
+00:06:21.00 --> 00:06:33.00  So actually, King Penguins' swimming speed is around 2 meters per second, that is known, that is revealed by the previous study, and it means that the King Penguin can actually detect the prey from a 1 meter to 3 meters distance.
+00:06:33.00 --> 00:06:43.00  And at the moment of capturing prey, they use this his flexible and long neck to make a final adjustment to the moving fish.
+00:06:43.00 --> 00:06:57.00  And actually they have quite long neck that is usually bended under the body in the normal position.
+00:06:57.00 --> 00:07:04.00  And this is about the prey reactions. So we observed both the evasive prey and non-evasive preys...
+00:07:04.00 --> 00:07:18.00  ...but even when the prey showed the evasive behavior, it was just a few frames before the capture moment, so it means it's too late to escape from the penguin's beak.
+00:07:18.00 --> 00:07:30.00  So it means that the King Penguin has actually the ability to sneak to the fish without being noticed.
+00:07:30.00 --> 00:07:40.00  And this supports the high predation success rate, which is more than 80%. So the top video is the non-evasive behavior of the prey.
+00:07:40.00 --> 00:07:51.00  You can see the prey doesn't move at all. I will show you again.
+00:07:51.00 --> 00:08:00.00  And the other one is the evasive behavior of the fish, but it's apparently too late to escape from the penguin.
+00:08:00.00 --> 00:08:14.00  I mean, the fish come from the front and they shows the typical C-shaped body that is shown in the previous presentation. But still the penguin can follow the fish movement and they can catch the prey.
+00:08:14.00 --> 00:08:28.00  Oh, yeah, I want to show it again. Yeah, like this.
+00:08:28.00 --> 00:08:32.00  So let's go deeper to the the penguin's strategy.
+00:08:32.00 --> 00:08:41.00  When we plot the the foraging event... no, no, no. When I plot the foraging event on the diving record...
+00:08:41.00 --> 00:08:52.00  ...like this, the almost all the foraging event plotted on the ascending period during the bottom phase, like here, here, here.
+00:08:52.00 --> 00:09:04.00  And actually, more than 80% of the foraging event was happened during the the ascending period. And it means that the King Penguin always capture the prey from the bottom to the surface...
+00:09:04.00 --> 00:09:14.00  ...and going up to the surface and capture prey. And if they keep doing that type of strategy, they can easily go up to the surface of the ocean...
+00:09:14.00 --> 00:09:26.00  ...where there is no prey. So they have to move down to the bottom again to reach to the specific depth where there's a much prey and they make the ascending predation again and go down again, ascend again, which results in the typical wiggling pattern of the King Penguins.
+00:09:26.00 --> 00:09:36.00  So why do they do this ascending predation? We have three reasonable explanation for this behavior.
+00:09:36.00 --> 00:09:47.00  The one is it simply they prevent being noticed by the prey because the fish is like always looking forward...
+00:09:47.00 --> 00:10:00.00  ...and if the penguins come from the darker and bottom side of the ocean, it may be better to reach to the fish without being noticed.
+00:10:00.00 --> 00:10:03.00  the ocean is not easy to find the penguin before and.
+00:10:04.00 --> 00:10:10.00  Another reason is that the counter shading effect, that’s what we call counter shading effect.
+00:10:11.00 --> 00:10:16.00  For king penguin side, it’s much easier to have the brighter side of the ocean.
+00:10:17.00 --> 00:10:22.00  as a background to see the clear silhouette of the fish.
+00:10:23.00 --> 00:10:25.00  This is what we call counter shading effect.
+00:10:26.00 --> 00:10:32.00  And the third one is quite simple, because the penguin has penguins usually have a positive buoyancy.
+00:10:33.00 --> 00:10:37.00  so it’s much much effort is required when they dive down.
+00:10:38.00 --> 00:10:43.00  so it’s easier for them to capture prey during the ascending period.
+00:10:44.00 --> 00:10:51.00  So, okay, this is the final slide about what’s the prey species.
+00:10:52.00 --> 00:10:58.00  And this is there are a lot of previous studies focusing on which type of prey they forage on.
+00:10:59.00 --> 00:11:06.00  and the it’s known that the king penguins during this summer period exclusively foraging on a single species of prey which is called Krefftichthys anderssoni.
+00:11:07.00 --> 00:11:10.00  it’s a family of the myctophid fish.
+00:11:11.00 --> 00:11:17.00  And during the in the observed video, we can actually see the silhouette very similar to this type of fish.
+00:11:18.00 --> 00:11:23.00  And the important thing of this is that the this type of fish prey is actually shared by the another deep diving mammals like Antarctic fur seals or the Southern elephant seals.
+00:11:24.00 --> 00:11:28.00  So they somehow share this prey species among these mammals.
+00:11:29.00 --> 00:11:34.00  But still they have a different tactics to prey to to capture these prey. I mean the dive depth or prey detection distance are all different for these species.
+00:11:35.00 --> 00:11:41.00  so studying this each strategy for these animals leads to the better understanding of the whole ecosystem in the subantarctic region.
+00:11:42.00 --> 00:11:48.00  That’s what I think important for this study. So that’s all for today. Thank you.
+00:11:49.00 --> 00:12:18.00  I’m sure there are going to be several questions. from someone else that uses tags and they fail and it’s a pain. Why did why do you think the cameras did not work? Did they fall off or was it a problem internally with the four cameras that didn’t record data?
+00:12:19.00 --> 00:12:26.00  Oh, yeah, it’s simply because of the technical problem. Because the camera is still under the development and.
+00:12:27.00 --> 00:12:35.00  I actually used the depth trigger to start the recording the video recording but the trigger didn’t work at all. So it doesn’t mean that king penguins didn’t dive. They actually dived to the deeper and I think they of course foraged but yeah, depth trigger didn’t work somehow.
+00:12:36.00 --> 00:12:40.00  we’ve had similar things.
+00:12:41.00 --> 00:12:46.00  But the problem is already solved. I mean I talked much with the company and I hope next year I’ll get more data.
+00:12:47.00 --> 00:12:54.00  How long did you record?
+00:12:55.00 --> 00:13:01.00  the depth record, we can actually record the depth for whole trip, it’s more than five days to one week.
+00:13:02.00 --> 00:13:08.00  Because they have another type of battery, the one is for the video and one’s for the the another parameters.
+00:13:09.00 --> 00:13:15.00  So the video is only one and a half hour but the other parameter records the during the whole trip. Yeah.
+00:13:16.00 --> 00:13:22.00  Thank you for your talk. I I was just wondering if you know that if the red light can help the bird to see the prey.
+00:13:23.00 --> 00:13:29.00  Oh yeah, that’s very good point. And I I honestly wanted to talk about it during the presentation but I didn’t have time.
+00:13:30.00 --> 00:13:38.00  So there is a lot of genetic study about the eye cells of king penguins. And they all say that the the photoreceptor of the king penguins shifted to the.
+00:13:39.00 --> 00:13:45.00  shorter wavelengths. So it means that they they’re very insensitive to the red light. So at this moment we believe that they they don’t see the any red color. So it doesn’t change the original behavior. That’s what we think at this moment.
+00:14:31.00 --> 00:14:39.00  More questions? Well, I’m afraid to say unless I’m wrong the last speaker is not here.
+00:14:40.00 --> 00:14:47.00  so I have to close the session here.
+00:14:48.00 --> 00:14:55.00  I was worried that I’d be sitting here with only the six speakers so I’ve never been so glad to be wrong. So thank you very much for all staying out to the to the to the end and.
+00:14:56.00 --> 00:15:01.00  congratulate the speakers on an excellent session. Thank you very much.
+00:15:00.00 --> 00:15:02.00  And a safe onward journey.
+00:15:02.00 --> 00:15:07.00  Well, we just watched you walk off, which is actually more normal than you'd expect.
+00:15:07.00 --> 00:15:09.00  Yeah, it was good. Yeah, I think... yeah.
+00:15:09.00 --> 00:15:11.00  And then you stopped and looked back.
+00:15:11.00 --> 00:15:15.00  Well, because... because I wasn't... I wasn't really feeling it.
+00:15:15.00 --> 00:15:20.00  I thought it was okay. I just... I'm a bit... I don't really like... running.
+00:15:20.00 --> 00:15:23.00  Yeah, I know. I run with my mask on.
+00:15:23.00 --> 00:15:28.00  Yeah, that's not... that's not good. I've got my headphones in too, so I'm completely in my own world.
+00:15:28.00 --> 00:15:32.00  Yeah, and I'm just like running over to him, and he didn't even notice me until I tapped him.
+00:15:32.00 --> 00:15:34.00  I didn't! I didn't see you at all.
+00:15:34.00 --> 00:15:38.00  No. No, it was good though. I think it went okay.
+00:15:38.00 --> 00:15:41.00  Yeah, I think so too. It was fun.
+00:15:41.00 --> 00:15:43.00  Yeah, it was. We should do it again.
+00:15:43.00 --> 00:15:45.00  Yeah, for sure.
+00:15:45.00 --> 00:15:48.00  I'll let you get off then.
+00:15:48.00 --> 00:15:52.00  Okay. See ya!
+00:15:52.00 --> 00:15:55.00  Bye!

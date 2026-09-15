@@ -1,0 +1,48 @@
+00:00:00.00 --> 00:00:04.00  Thank you Jeff for your introduction.
+00:00:04.00 --> 00:00:13.00  And this afternoon, I'm very excited to share some of the GM recently work at R&D.
+00:00:13.00 --> 00:00:20.00  So, this presentation covers two parts, laser welding and laser ablation.
+00:00:20.00 --> 00:00:32.00  And welding actually is from the research area I work on, and the laser ablation is from colleague, Dr.
+00:00:32.00 --> 00:00:35.00  So, the first part I'm going to talk about is a
+00:00:35.00 --> 00:00:46.00  stabilize the keyhole try to mitigate the welding defects for two applications.
+00:00:46.00 --> 00:00:52.00  One is welding of zinc coated steel, the other is a welding of thick aluminum sheets.
+00:00:52.00 --> 00:00:59.00  We know laser welding of zinc coated steel in a lap joint configuration is very challenging.
+00:00:59.00 --> 00:01:06.00  As during the welding, the zinc coating at the contact interface is readily vaporized,
+00:01:06.00 --> 00:01:13.00  and the highly vaporized or highly pressurized zinc vapor will jet into the keyhole.
+00:01:13.00 --> 00:01:21.00  And break the rear wall of keyhole, and causing a lot of spatters and porosities,
+00:01:21.00 --> 00:01:28.00  and dramatically decrease or decrease the strength of the joints.
+00:01:28.00 --> 00:01:40.00  So, our goal is to get defect-free welds, and also the welding processes that allowed the welds without burn-through or no-through holes.
+00:01:40.00 --> 00:01:47.00  So, what we propose is what we call here in-line pulsed oscillation schedule. What does that mean?
+00:01:47.00 --> 00:01:58.00  It's a one-dimension oscillation, so the laser only oscillates backward and forward along the welding direction.
+00:01:58.00 --> 00:02:10.00  So, when laser move forward, the laser is turned on. Then laser power is off when it's going back.
+00:02:10.00 --> 00:02:23.00  So, during the forward stroke, the laser is on and it will create an elongated keyhole, which is a steady
+00:02:23.00 --> 00:02:28.00  venting channel for the zinc vapor.
+00:02:28.00 --> 00:02:39.00  And during the back stroke, the laser is closed and that has a function to avoid overheating the welding zone,
+00:02:39.00 --> 00:02:41.00  which is avoided to generate excessive zinc vapor there.
+00:02:41.00 --> 00:02:50.00  All right, also we did a CFD simulation, trying to get an idea of what the keyhole profile looks like.
+00:02:50.00 --> 00:03:00.00  So, there are, as you see, we did a study on
+00:03:00.00 --> 00:03:07.00  the effect of the frequency and amplitude of this oscillation process.
+00:03:07.00 --> 00:03:13.00  So, the first one is compare the oscillation at 100 Hz versus 200 Hz.
+00:03:13.00 --> 00:03:22.00  We can see at higher oscillation frequency, actually it decreased the keyhole constriction.
+00:03:22.00 --> 00:03:27.00  So, we also see that at interface, the keyhole opening is longer or enlarged.
+00:03:27.00 --> 00:03:33.00  And the other study is about the effect of the oscillation amplitude. We compared 1.5 and 2 mm
+00:03:33.00 --> 00:03:48.00  oscillation amplitude. And we can see with higher amplitude, it can decrease the front keyhole wall slope, which can enhance the laser absorption, which has the effect to enlarge the keyhole opening at the interface.
+00:03:48.00 --> 00:03:52.00  Marangoni flow,
+00:03:52.00 --> 00:04:03.00  we did a simulation and we can see Marangoni stress drives the melt move backwards along the keyhole wall.
+00:04:03.00 --> 00:04:13.00  And also, by seeing highest temperatures along the keyhole wall, which makes sense, right? And also that result in high
+00:04:13.00 --> 00:04:19.00  temperature gradients, that result in high Marangoni stresses.
+00:04:19.00 --> 00:04:28.00  So, during the welding process, we see the recoil pressure is kind of like to push and trying to open the keyhole.
+00:04:28.00 --> 00:04:34.00  And the melt surface tension is trying to collapse the keyhole.
+00:04:34.00 --> 00:04:48.00  And we here, we have the Marangoni stresses kind of like balance with the surface tension, trying to maintain the keyhole opening, so which establish a stable channel for the zinc vapor to degassing.
+00:04:48.00 --> 00:05:00.00  And with that understanding, we use simulation to support the optimization of the process. We got optimized
+00:05:00.00 --> 00:05:15.00  crease, and you can see the results here, um. There's no porosity, and the welding process is pretty stable. All right, that's the first part
+00:05:15.00 --> 00:05:22.00  of the laser welding. The second one is, uh, I want to talk about laser welding aluminum.
+00:05:22.00 --> 00:05:30.00  We know that welding aluminum, one of the challenges is the porosity in the welds.
+00:05:30.00 --> 00:05:38.00  So, one of the main resource or reason contributed to the porosity is the collapse of the keyhole.
+00:05:38.00 --> 00:05:52.00  When keyhole collapse, it will leave a void, or we call it bubble, in the molten pool. And if the bubble cannot escape the molten pool before it solidifies, it will result in a porosity.
+00:05:52.00 --> 00:06:15.00  Some researchers, they proposed like oscillation of the process. So, the oscillation does have the effect kind of stir the molten pool, which can ease the escape of the bubbles. And also the movement of the keyhole, that can also absorb, re-absorb the bubbles.
+00:06:15.00 --> 00:06:31.00  That does have the effect to reduce the porosity. But here, what we are proposing is trying to stabilize the keyhole process to avoid the keyhole collapse, to avoid the bubble generate at the front.
+00:06:31.00 --> 00:06:47.00  So, that's our goal. The material stack-up, we look at is aluminum 5754, sorry, 3 millimeter in overlap configuration.
+00:06:47.00 --> 00:07:00.00  And we use a circular oscillation welding parameters. So, the key parameter of interest is the oscillation frequency and amplitude.
+00:07:00.00 --> 00:07:16.00  To begin with some mathematical model here. So, from literature, a cylindrical void in a liquid,
+00:07:16.00 --> 00:07:36.00  the collapse time can be defined as equation, we call tau here. We call it characteristic collapse time. So, that's the time a cylindrical void collapse in a liquid.
+00:07:36.00 --> 00:07:46.00  So, here, it turns out the the radius of that cylinder is critical to decide the tau here.

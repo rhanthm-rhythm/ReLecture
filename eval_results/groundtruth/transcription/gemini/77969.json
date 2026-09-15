@@ -1,0 +1,75 @@
+{
+  "video": "data/videos/77969.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 142.0,
+  "chunks": 1,
+  "raw_text": "00:00:00 --> 00:00:10\nIn this video, we will present our paper exploration system, GenGO Ultra, which integrates a large language model with ACL paper database.\n\n00:00:10 --> 00:00:19\nLet's see how it works. We can type a query in a form here. In this video, let's try \"List limitations of ROUGE\".\n\n00:00:19 --> 00:00:26\nAfter hitting the send button, GenGO Ultra generates a response by taking the relevant papers into account.\n\n00:00:26 --> 00:00:36\nGenGO Ultra includes references to the original papers in its response. So you can easily check the information sources by clicking these reference icons.\n\n00:00:36 --> 00:00:48\nThis is useful, for instance, to validate the factuality of the response, or you can find even more relevant papers in another system that we developed called GenGO.\n\n00:00:48 --> 00:00:54\nBut for now, let's go back to our GenGO Ultra.\n\n00:00:54 --> 00:01:07\nYou can write a follow-up question in GenGO Ultra because it can take the interaction history into account. In this case, we can try something like \"Are there alternatives?\".\n\n00:01:07 --> 00:01:11\nAnd now, it shows the alternatives of ROUGE.\n\n00:01:11 --> 00:01:23\nUp to this point, GenGO Ultra has been considering the whole paper database when answering the queries. However, it is also possible to query over one conference.\n\n00:01:23 --> 00:01:32\nTo do this, let's go to one conference page at GenGO and click this button.\n\n00:01:32 --> 00:01:47\nNow, let's try to generate a list of summarization datasets mentioned in this conference.\n\n00:01:47 --> 00:02:06\nWe also have implemented a few other useful features into GenGO Ultra. For instance, you can export interaction history including the system prompt to share with your colleagues or to analyze the LLM's behavior. You can do this by clicking this \"Download Chat History\" button.\n\n00:02:06 --> 00:02:19\nAdditionally, by going to the setting page, you can also change the LLM as well as the number of context papers used for the response generation. Thank you for watching this video.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:10.00",
+      "text": "In this video, we will present our paper exploration system, GenGO Ultra, which integrates a large language model with ACL paper database."
+    },
+    {
+      "start": "00:00:10.00",
+      "end": "00:00:19.00",
+      "text": "Let's see how it works. We can type a query in a form here. In this video, let's try \"List limitations of ROUGE\"."
+    },
+    {
+      "start": "00:00:19.00",
+      "end": "00:00:26.00",
+      "text": "After hitting the send button, GenGO Ultra generates a response by taking the relevant papers into account."
+    },
+    {
+      "start": "00:00:26.00",
+      "end": "00:00:36.00",
+      "text": "GenGO Ultra includes references to the original papers in its response. So you can easily check the information sources by clicking these reference icons."
+    },
+    {
+      "start": "00:00:36.00",
+      "end": "00:00:48.00",
+      "text": "This is useful, for instance, to validate the factuality of the response, or you can find even more relevant papers in another system that we developed called GenGO."
+    },
+    {
+      "start": "00:00:48.00",
+      "end": "00:00:54.00",
+      "text": "But for now, let's go back to our GenGO Ultra."
+    },
+    {
+      "start": "00:00:54.00",
+      "end": "00:01:07.00",
+      "text": "You can write a follow-up question in GenGO Ultra because it can take the interaction history into account. In this case, we can try something like \"Are there alternatives?\"."
+    },
+    {
+      "start": "00:01:07.00",
+      "end": "00:01:11.00",
+      "text": "And now, it shows the alternatives of ROUGE."
+    },
+    {
+      "start": "00:01:11.00",
+      "end": "00:01:23.00",
+      "text": "Up to this point, GenGO Ultra has been considering the whole paper database when answering the queries. However, it is also possible to query over one conference."
+    },
+    {
+      "start": "00:01:23.00",
+      "end": "00:01:32.00",
+      "text": "To do this, let's go to one conference page at GenGO and click this button."
+    },
+    {
+      "start": "00:01:32.00",
+      "end": "00:01:47.00",
+      "text": "Now, let's try to generate a list of summarization datasets mentioned in this conference."
+    },
+    {
+      "start": "00:01:47.00",
+      "end": "00:02:06.00",
+      "text": "We also have implemented a few other useful features into GenGO Ultra. For instance, you can export interaction history including the system prompt to share with your colleagues or to analyze the LLM's behavior. You can do this by clicking this \"Download Chat History\" button."
+    },
+    {
+      "start": "00:02:06.00",
+      "end": "00:02:19.00",
+      "text": "Additionally, by going to the setting page, you can also change the LLM as well as the number of context papers used for the response generation. Thank you for watching this video."
+    }
+  ]
+}

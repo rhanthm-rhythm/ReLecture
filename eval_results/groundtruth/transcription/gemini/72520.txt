@@ -1,0 +1,45 @@
+00:00:00.00 --> 00:00:05.00  Hey everyone, we are Team Ingenuity from Lambton College.
+00:00:05.00 --> 00:00:13.00  Our team members include myself Bimal Kumar Shrestha, Aanal Kamleshkumar Patel, Danilo Diaz, Ernie Sumoso, and Jayachandran Saravanan.
+00:00:13.00 --> 00:00:27.00  For this 2024 Inter-University Big Data and AI Challenge, our team has decided to take Imposter Syndrome as the subject research where we have done some studies and analysis about the condition and...
+00:00:27.00 --> 00:00:35.00  ...developed an Imposter Syndrome Comparison Map, which is a comprehensive evaluation and visualization tool.
+00:00:35.00 --> 00:00:47.00  Imposter syndrome, it's a psychological phenomenon in which high-achieving individuals consistently doubt about their own abilities, intelligence, or accomplishment.
+00:00:47.00 --> 00:00:56.00  Even when they have clear objective evidence of their success, they struggle to accept it, which leads to pervasive sense of inadequacy.
+00:00:56.00 --> 00:01:11.00  This self-doubt often manifests as chronic stress, anxiety, depression, and a constant fear of being exposed as imposters or frauds in their professional or academic environments.
+00:01:11.00 --> 00:01:21.00  Despite their achievements, they feel undeserving of recognition and worry that others will eventually discover their perceived incompetence.
+00:01:21.00 --> 00:01:33.00  It is highly prevalent in the field of medicine, backed up by various studies which shows its prevalence ranging from 22.5% to 46.6%.
+00:01:33.00 --> 00:01:46.00  More females, around 41% to 52%, experience clinical level of imposter phenomenon compared to males, which was around 23.7% to 48%.
+00:01:46.00 --> 00:01:55.00  According to the studies, imposter syndrome affects about 70% of high-achieving individuals.
+00:01:55.00 --> 00:02:08.00  The phenomenon is often driven by perfectionism, a deep fear of failure, and the belief that success is due to luck rather than personal ability or hard work.
+00:02:08.00 --> 00:02:23.00  These feelings can severely impact mental health and professional well-being. Early detection and targeted interventions are essential in addressing these issues, helping individuals recognize their achievements and promoting resilience.
+00:02:23.00 --> 00:02:33.00  By understanding and addressing imposter syndrome, we can improve both mental health and professional outcomes of those affected.
+00:02:33.00 --> 00:02:36.00  Our research addresses two key questions:
+00:02:36.00 --> 00:03:00.00  First one is investigating the connection between imposter syndrome traits and various demographics such as age, gender, and professional backgrounds. By analyzing these factors, we aim to identify which groups are more susceptible to imposter syndrome and how it manifests differently across populations.
+00:03:00.00 --> 00:03:29.00  Secondly, we explore whether social media usage correlates with the prevalence and severity of imposter syndrome or not. We hypothesize that higher social media use may develop feelings of inadequacy and self-doubt, particularly by encouraging unrealistic comparisons. Our analysis will determine if social media plays a significant role in increasing imposter syndrome symptoms across different demographic groups or not.
+00:03:29.00 --> 00:03:43.00  The first step in understanding the imposter syndrome was to collect the dataset. The dataset we gathered was made available by Open Data Commons, and it was a survey data from 2014.
+00:03:43.00 --> 00:04:00.00  And after we collected the data, which had different columns for different attributes like if the person has worked before or not, if he's self-employed, if he has a history of imposter syndrome, their age, gender, sex, and...
+00:04:00.00 --> 00:04:11.00  ...after doing basic EDA, we found out most of the people in the survey, they were from USA, Canada, Netherlands, France, and then most of the surveyors, they were male as well.
+00:04:11.00 --> 00:04:16.00  Similarly, most of the people in the survey were not self-employed.
+00:04:16.00 --> 00:04:24.00  After doing basic EDA, we looked at the correlation between the features and the prevalence of imposter syndrome...
+00:04:24.00 --> 00:04:36.00  ...and on doing so, we found out that the feature with most correlation was work interference, family history, age, state, care options, etc.
+00:04:36.00 --> 00:04:43.00  And after that, we tried to create multiple models which would help us predict if a person has imposter syndrome.
+00:04:43.00 --> 00:04:57.00  For the trials, we used K-Neighbors, Bagging algorithms, Decision Tree Classifier, Log Regression, and out of those, Log Regression gave us the best results.
+00:04:57.00 --> 00:05:00.00  This classifier could be used later on.
+00:05:00.00 --> 00:05:07.00  to help individuals visualize the severity of the imposter syndrome in comparisons to others.
+00:05:07.00 --> 00:05:18.00  We began by utilizing a set of questions from a study conducted in Bangladesh, which were used in a survey to assess imposter syndrome severity among students.
+00:05:18.00 --> 00:05:26.00  There, participants submitted their information through the survey, and their responses were analyzed to predict the imposter syndrome traits.
+00:05:26.00 --> 00:05:37.00  We used the same concept here and built a web app where the user had to answer all of the questions and also put in their age and years of experience.
+00:05:37.00 --> 00:05:48.00  Now using K-means or mean shift algorithms, we could group the participants into cluster based on similar traits and demographic profiles.
+00:05:48.00 --> 00:06:06.00  After that, to make this data meaningful for users, we created visualizations using 2D and 3D scatter plots, where these plots highlighted each user's data point within the broader clusters, enabling them to see how their experiences align with or differ from others.
+00:06:06.00 --> 00:06:20.00  This personalized visualization approach provides individual with a clear and intuitive way to understand their imposter syndrome severity in the context of a larger population, offering valuable insights into their mental health.
+00:06:20.00 --> 00:06:36.00  So to sum up, in our study, we conducted an in-depth analysis to explore how various factors contribute to imposter syndrome, discovering that it is significantly influenced by work environment, age, and gender.
+00:06:36.00 --> 00:06:47.00  We found that young individuals and those in high-pressure jobs such as academia and medicine are particularly vulnerable to higher levels of imposter syndromes.
+00:06:47.00 --> 00:07:05.00  We also developed a predictive model using these factors—age, field of work, and gender, etc.—to estimate the likelihood and severity of imposter syndrome. And this model helps identify which group are more prone to these feelings and potential severity of their experiences.
+00:07:05.00 --> 00:07:25.00  Additionally, we created an imposter syndrome comparison map, which allows user to input their personal data and see how their imposter syndrome severity compares to others with similar characteristics. This visual tool highlights where they have fallen within the cluster and provide a personalized perspective,
+00:07:25.00 --> 00:07:35.00  and it can be beneficial in mental well-being because of its early detection possibilities, personal insight, and targeted interventions.
+00:07:35.00 --> 00:07:46.00  By integrating open data analytics with insights from mental health experts, our study seeks to offer a comprehensive tool for understanding and addressing imposter syndrome.
+00:07:46.00 --> 00:07:57.00  Our research has revealed significant correlation between different factors with imposter syndrome, which provides valuable insights for both personal and professional growth.
+00:07:57.00 --> 00:08:07.00  However, it is important to note that our study is still in its early stages and require further validation to refine and enhance the accuracy of our tools.
+00:08:07.00 --> 00:08:17.00  We are committed to ongoing improvements and validation to ensure that our model and visualization effectively address the complexities of imposter syndrome.
+00:08:17.00 --> 00:08:27.00  We invite you to support our project by participating and contributing our data, which will help us improve the model and expand its applicability.
+00:08:27.00 --> 00:08:45.00  Your participation is really crucial in enhancing the tool's effectiveness by reaching a broader audience, and we also welcome your suggestions and feedback as they are invaluable in shaping the future of this research and ensuring it meets the need of those affected by imposter syndrome.
+00:08:45.00 --> 00:08:57.00  Thank you for your support and engagement in this important journey. Together, we can achieve our understanding of imposter syndrome and develop more effective strategies for managing and overcoming these challenges.

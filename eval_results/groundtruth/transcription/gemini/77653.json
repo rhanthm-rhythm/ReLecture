@@ -1,0 +1,385 @@
+{
+  "video": "data/videos/77653.mp4",
+  "model": "gemini-3-flash-preview",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 929.097944,
+  "chunks": 4,
+  "raw_text": "00:00:00 --> 00:00:03 Good afternoon everyone, nice to meet you again.\n00:00:03 --> 00:00:15 My name is Shizun. Today I'm presenting Semantic Segmentation on Raindrop Degraded Images using Two-stage Dual Teacher Student Learning.\n00:00:15 --> 00:00:25 Okay, so today's contents are compromise background, methodology, and results.\n00:00:25 --> 00:00:27 So let's begin with the background.\n00:00:27 --> 00:00:39 Our research focuses on semantic segmentation under heavy rain conditions. In such scenarios, raindrops tend to become larger and more frequent,\n00:00:39 --> 00:00:49 significantly occluding the background scene and degrading the performance of existing methods. Here is an example,\n00:00:49 --> 00:00:59 how raindrops can impact different semantic segmentation models. Notably, even foundation models like SAM with semantic segmentation head can be misled by the presence of raindrops.\n00:00:59 --> 00:01:06 Under heavy rain conditions, raindrops pose the most significant challenge. This is primarily due to their unique characteristics.\n00:01:06 --> 00:01:13 They are transparent, blurred, vary in size, and are unevenly distributed across an image.\n00:01:13 --> 00:01:23 More importantly, their spherical shape refracts the light passing through them, further complicating the scene, causing elements like cables and posts to appear twisted or misaligned.\n00:01:23 --> 00:01:33 Moreover, for relatively distant objects, the refractions can render the information within the raindrop area entirely misleading.\n00:01:33 --> 00:01:42 For example, in the raindrop shown in the image, the top part reflects the roof, while the bottom part refracts the sky,\n00:01:42 --> 00:01:46 creating a contradiction with the true background scene.\n00:01:46 --> 00:01:56 In addition to raindrops, other visual impairments co-exist under heavy rain conditions. For example, after using the wipers, raindrops are reduced but not entirely removed,\n00:01:56 --> 00:02:03 leaving water residual on the windscreen. This residual introduces blurriness, further degrading the clarity of the scene.\n00:02:03 --> 00:02:13 Another common visual impairment is the fog-like rain veiling effect. During heavy rain, rain streaks can accumulate, creating\n00:02:13 --> 00:02:19 a fog-like layer that obscures distant objects such as distant cars, trees, and buildings.\n00:02:19 --> 00:02:27 So to address the vision task under adverse weather conditions, two common approaches are typically employed.\n00:02:27 --> 00:02:37 The first approach involves image enhancing methods. This method aim to improve image quality by, for example, removing the raindrops\n00:02:37 --> 00:02:47 and then feeding the enhanced image into semantic segmentation models. However, this approach faced two significant challenges.\n00:02:47 --> 00:02:57 First, raindrop removal itself remains a difficult and unresolved problem. Second, image enhancement method are not trained jointly with semantic segmentation models\n00:02:57 --> 00:03:07 in an end-to-end manner. As a result, they may introduce artifacts that can adversely affect the performance of the semantic segmentation task.\n00:03:07 --> 00:03:17 The second approach is the unsupervised domain adaptation method. In this approach, there are two domains, the source domain and the target domain.\n00:03:17 --> 00:03:27 In our context, the source domain consists of images captured under clear weather conditions with precise annotations,\n00:03:27 --> 00:03:37 while the target domain comprises images taken under heavy rain conditions without any annotations. The goal of unsupervised domain adaptation is to train a model that performs well on both the\n00:03:37 --> 00:03:47 source and target domain, making it robust to varying weather conditions. However, existing methods primarily focus on adverse\n00:03:47 --> 00:03:57 conditions such as the fog or nighttime, and they are less effective in handling heavy rain conditions, particularly when severe raindrops are present.\n00:03:57 --> 00:04:03 This limitation highlights the need for more specialized techniques to address the challenge posed by heavy rain scenarios.\n00:04:03 --> 00:04:13 To address the complex raindrop problem, we follow the method two, significantly design a unsupervised domain adaptation method for heavy rain condition with raindrops.\n00:04:13 --> 00:04:23 Our solution tackles the complex problem of raindrop degradation by dividing it into two distinct challenges, degraded visual appearance and raindrop occlusion.\n00:04:23 --> 00:04:33 These challenges are then addressed individually in two stages, utilizing two...\n\n00:00:00 --> 00:00:02 pairs of teacher student networks.\n00:00:03 --> 00:00:09 And in this methodological section I will explain our method in detail.\n00:00:10 --> 00:00:13 Here's an overview of our method.\n00:00:14 --> 00:00:23 We adopt an unsupervised domain adaptation approach to train a model that is robust to both clear weather and heavy rain conditions.\n00:00:24 --> 00:00:37 Our method has two key components: a dual teacher student framework where two pairs of teacher student networks collaborate to address this complex degradation caused by heavy rain conditions\n00:00:38 --> 00:00:52 and two, a second stage that incorporates a mask based raindrop recovery strategy to rectify residual large raindrops that were not fully resolved in the first stage.\n00:00:53 --> 00:01:01 During the second stage we also swapped the augmentation between the two teacher student pairs, enabling them to learn from different types of augmentations.\n00:01:02 --> 00:01:12 This helps broaden their knowledge and potentially improve their performance. Together, these components ensure a more effective and robust solution for handling heavy rain conditions.\n00:01:13 --> 00:01:21 Before discussing our dual teacher student approach, let me briefly explain what is a teacher student framework.\n00:01:22 --> 00:01:41 It consists of two models: a teacher and a student. The teacher is trained on labeled source images, which in our case are clear weather images. The teacher then generates pseudo-labels for unlabeled target images, such as heavy rain images.\n00:01:42 --> 00:01:51 The student learns from these pseudo-labels. To improve the student, data augmentations are applied to target domain.\n00:01:52 --> 00:02:11 We then encourage the student to make consistent prediction across different augmented views. This consistency boosts the robustness and helps the student to generalize better to the target domain.\n00:02:12 --> 00:02:26 In our dual teacher student framework, we address the complex issue of raindrop degradation by dividing it into two separate challenges: raindrop and other visual impairments. To address them, we use two pairs of teacher student networks:\n00:02:27 --> 00:02:57 a raindrop pair and a reference pair. The raindrop pair is augmented with synthesized raindrop occlusions of varying size and ratios. To simulate the behavior of single raindrop, we first randomly determine its location, size, shape and thickness. Using this information, we calculate the directions of refracted light and simulate the refracted scene based on the physical model of raindrops.\n00:02:58 --> 00:03:20 Therefore, the raindrop pair primarily focuses on addressing raindrop related distortions, while the reference pair assists in handling other types of visual degradation. Together, they collaborate to generate a high quality pseudo-label, which is used to train the student in the raindrop pair.\n00:03:21 --> 00:03:36 Importantly, we do not feed the pseudo-label to both pairs, as doing so would cause different pairs to converge, reducing their ability to specialize in their respective tasks.\n00:03:37 --> 00:03:52 The reference pair, on the other hand, undergoes standard augmentations commonly used in unsupervised domain adaptation methods for general visual impairments, such as color jitter, random cropping and masking.\n00:03:53 --> 00:03:59 A question might arise: are two pairs of teacher student networks really necessary?\n00:04:00 --> 00:04:12 Or couldn't we simply use one pair and combine all the augmentations? The answer is no. This is due to the negative impact of extreme augmentations.\n00:04:13 --> 00:04:31 When augmentations are too challenging or extreme, the student model may give up and fail to converge. This issue has also been observed in other studies. The negative effect of extreme augmentation is a key reason why existing unsupervised domain adaptation methods struggles with complex heavy rain conditions.\n00:04:32 --> 00:04:41 Using two pairs of networks helps mitigate this problem and ensure more stable and effective learning.\n00:04:42 --> 00:04:59 With the current configuration, the raindrop pair continuously learns from both the reference pair and the raindrop pair. However, the learning of both pairs is constrained by their exclusive focus on their specifically assigned tasks.\n\n00:00 --> 00:14  assigned augmentations. Consequently, their collective knowledge may be limited over time, as each pair has not been exposed to the alternate augmentation strategy.\n00:14 --> 00:33  To address this limitation, we introduce a two-stage updating strategy. Stage one involves exposing the reference pair to the standard augmentation while the rain-drop pair is exposed to both the rain-drop specific augmentation and the guidance from the reference from the reference pair.\n00:33 --> 01:00  After the learning completes a certain number of iterations, in stage two, we swap the rain-drop and reference pairs. Teacher two and student two are now exposed to the standard augmentation while teacher one and student one are exposed to the rain-drop augmentation. By swapping the augmentation in the second stage, we encourage both pairs to expand their knowledge, which in turn further enhance the quality of the ensemble pseudo labels.\n01:00 --> 01:21  In the second stage, we also apply a mask-based rain-drop recovery strategy. This step aims to further mitigate the impact of larger rain-drop areas that remain unresolved after stage one. In regions severely affected by the rain-drops, the model’s predictions may be uncertain as indicated by low confidence scores.\n01:21 --> 01:46  For such areas, we apply masks to remove potentially misleading information and incorporate pseudo labels generated from the altered image. While some information may be lost due to masking, this approach ensures that no misleading information is propagated.\n01:46 --> 02:15  Although some non-rain-drop affected uncertain areas might also be masked, empirical results show that the confidence score improvement in rain-drop affected area is significantly more pronounced compared to non-rain-drop affected regions. Thus, the update focused on rain-drop affected areas are more effective.\n02:15 --> 02:32  This is an illustration of the mask-based rain-drop recovery in one iteration. In figure b, the pseudo labels are misled by rain-drops. The area also has a lower confidence score. In the second round\n02:32 --> 02:51  upon putting the masked image into the network, we rectify the wrong pseudo labels by employing the confidence mask as illustrated in the figure c. This process aims to correct the erroneous pseudo labels that were influenced by rain-drops as shown in figure d.\n02:51 --> 03:00  Over many iterations, the entire erroneous region will be filled, resulting in the final prediction in the figure e.\n03:00 --> 03:15  In this results section, I will present both quantitative and qualitative results. For our source domain, we use Cityscapes dataset, which comprise real-world images captured under clear weather conditions.\n03:15 --> 03:32  As for target domain, we utilize both Rainy-WCT and ACDC-Rainy dataset, which consist of real-world images captured under diverse rain conditions.\n03:32 --> 03:51  This table demonstrate the robustness of our model under heavy rain conditions with severe rain-drop degradation, evaluated using the Rainy-WCT dataset as the target dataset. Our method outperformed the best existing method over 4.4 mIoU.\n03:51 --> 04:12  Furthermore, our evaluation extends to light rain conditions with minor rain-drop occlusion, using ACDC-Rainy dataset as our target dataset. Our method outperform before best existing method over 2.3 mIoU.\n04:12 --> 04:32  Here is a qualitative result. Against the SOTA rain-drop removal method, weather diffusion, and SOTA unsupervised domain adaptation method, MSC. From the result, we can observe that the rain-drop removal method suffer from the\n04:32 --> 04:52  massive hallucination effects and hence a poor performance. As for MSC, since it does not have any occlusion recovery technique, it cannot recover the areas occluded by rain-drops and water flow. In the first row, existing method fail to identify the rider and side walk accurately due to the rain-drop occlusion.\n04:52 --> 04:59  In the second row, the rain-drop\n\n00:00:00 --> 00:00:04 stopplers at the bus causing existing methods to fail in accuracy\n00:00:04 --> 00:00:09 inaccurately identifying the scene. Conversely our method exhibited\n00:00:09 --> 00:00:14 better robustness under raindrops condition and successfully addressed\n00:00:14 --> 00:00:19 the issues present in existing methods. And thank you, that's all for\n00:00:19 --> 00:00:24 today's presentation and if you have any questions please contact the author.\n00:00:24 --> 00:00:28 Thank you.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:03.00",
+      "text": "Good afternoon everyone, nice to meet you again."
+    },
+    {
+      "start": "00:00:03.00",
+      "end": "00:00:15.00",
+      "text": "My name is Shizun. Today I'm presenting Semantic Segmentation on Raindrop Degraded Images using Two-stage Dual Teacher Student Learning."
+    },
+    {
+      "start": "00:00:15.00",
+      "end": "00:00:25.00",
+      "text": "Okay, so today's contents are compromise background, methodology, and results."
+    },
+    {
+      "start": "00:00:25.00",
+      "end": "00:00:27.00",
+      "text": "So let's begin with the background."
+    },
+    {
+      "start": "00:00:27.00",
+      "end": "00:00:39.00",
+      "text": "Our research focuses on semantic segmentation under heavy rain conditions. In such scenarios, raindrops tend to become larger and more frequent,"
+    },
+    {
+      "start": "00:00:39.00",
+      "end": "00:00:49.00",
+      "text": "significantly occluding the background scene and degrading the performance of existing methods. Here is an example,"
+    },
+    {
+      "start": "00:00:49.00",
+      "end": "00:00:59.00",
+      "text": "how raindrops can impact different semantic segmentation models. Notably, even foundation models like SAM with semantic segmentation head can be misled by the presence of raindrops."
+    },
+    {
+      "start": "00:00:59.00",
+      "end": "00:01:06.00",
+      "text": "Under heavy rain conditions, raindrops pose the most significant challenge. This is primarily due to their unique characteristics."
+    },
+    {
+      "start": "00:01:06.00",
+      "end": "00:01:13.00",
+      "text": "They are transparent, blurred, vary in size, and are unevenly distributed across an image."
+    },
+    {
+      "start": "00:01:13.00",
+      "end": "00:01:23.00",
+      "text": "More importantly, their spherical shape refracts the light passing through them, further complicating the scene, causing elements like cables and posts to appear twisted or misaligned."
+    },
+    {
+      "start": "00:01:23.00",
+      "end": "00:01:33.00",
+      "text": "Moreover, for relatively distant objects, the refractions can render the information within the raindrop area entirely misleading."
+    },
+    {
+      "start": "00:01:33.00",
+      "end": "00:01:42.00",
+      "text": "For example, in the raindrop shown in the image, the top part reflects the roof, while the bottom part refracts the sky,"
+    },
+    {
+      "start": "00:01:42.00",
+      "end": "00:01:46.00",
+      "text": "creating a contradiction with the true background scene."
+    },
+    {
+      "start": "00:01:46.00",
+      "end": "00:01:56.00",
+      "text": "In addition to raindrops, other visual impairments co-exist under heavy rain conditions. For example, after using the wipers, raindrops are reduced but not entirely removed,"
+    },
+    {
+      "start": "00:01:56.00",
+      "end": "00:02:03.00",
+      "text": "leaving water residual on the windscreen. This residual introduces blurriness, further degrading the clarity of the scene."
+    },
+    {
+      "start": "00:02:03.00",
+      "end": "00:02:13.00",
+      "text": "Another common visual impairment is the fog-like rain veiling effect. During heavy rain, rain streaks can accumulate, creating"
+    },
+    {
+      "start": "00:02:13.00",
+      "end": "00:02:19.00",
+      "text": "a fog-like layer that obscures distant objects such as distant cars, trees, and buildings."
+    },
+    {
+      "start": "00:02:19.00",
+      "end": "00:02:27.00",
+      "text": "So to address the vision task under adverse weather conditions, two common approaches are typically employed."
+    },
+    {
+      "start": "00:02:27.00",
+      "end": "00:02:37.00",
+      "text": "The first approach involves image enhancing methods. This method aim to improve image quality by, for example, removing the raindrops"
+    },
+    {
+      "start": "00:02:37.00",
+      "end": "00:02:47.00",
+      "text": "and then feeding the enhanced image into semantic segmentation models. However, this approach faced two significant challenges."
+    },
+    {
+      "start": "00:02:47.00",
+      "end": "00:02:57.00",
+      "text": "First, raindrop removal itself remains a difficult and unresolved problem. Second, image enhancement method are not trained jointly with semantic segmentation models"
+    },
+    {
+      "start": "00:02:57.00",
+      "end": "00:03:07.00",
+      "text": "in an end-to-end manner. As a result, they may introduce artifacts that can adversely affect the performance of the semantic segmentation task."
+    },
+    {
+      "start": "00:03:07.00",
+      "end": "00:03:17.00",
+      "text": "The second approach is the unsupervised domain adaptation method. In this approach, there are two domains, the source domain and the target domain."
+    },
+    {
+      "start": "00:03:17.00",
+      "end": "00:03:27.00",
+      "text": "In our context, the source domain consists of images captured under clear weather conditions with precise annotations,"
+    },
+    {
+      "start": "00:03:27.00",
+      "end": "00:03:37.00",
+      "text": "while the target domain comprises images taken under heavy rain conditions without any annotations. The goal of unsupervised domain adaptation is to train a model that performs well on both the"
+    },
+    {
+      "start": "00:03:37.00",
+      "end": "00:03:47.00",
+      "text": "source and target domain, making it robust to varying weather conditions. However, existing methods primarily focus on adverse"
+    },
+    {
+      "start": "00:03:47.00",
+      "end": "00:03:57.00",
+      "text": "conditions such as the fog or nighttime, and they are less effective in handling heavy rain conditions, particularly when severe raindrops are present."
+    },
+    {
+      "start": "00:03:57.00",
+      "end": "00:04:03.00",
+      "text": "This limitation highlights the need for more specialized techniques to address the challenge posed by heavy rain scenarios."
+    },
+    {
+      "start": "00:04:03.00",
+      "end": "00:04:13.00",
+      "text": "To address the complex raindrop problem, we follow the method two, significantly design a unsupervised domain adaptation method for heavy rain condition with raindrops."
+    },
+    {
+      "start": "00:04:13.00",
+      "end": "00:04:23.00",
+      "text": "Our solution tackles the complex problem of raindrop degradation by dividing it into two distinct challenges, degraded visual appearance and raindrop occlusion."
+    },
+    {
+      "start": "00:04:23.00",
+      "end": "00:04:33.00",
+      "text": "These challenges are then addressed individually in two stages, utilizing two..."
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:02.00",
+      "text": "pairs of teacher student networks."
+    },
+    {
+      "start": "00:05:03.00",
+      "end": "00:05:09.00",
+      "text": "And in this methodological section I will explain our method in detail."
+    },
+    {
+      "start": "00:05:10.00",
+      "end": "00:05:13.00",
+      "text": "Here's an overview of our method."
+    },
+    {
+      "start": "00:05:14.00",
+      "end": "00:05:23.00",
+      "text": "We adopt an unsupervised domain adaptation approach to train a model that is robust to both clear weather and heavy rain conditions."
+    },
+    {
+      "start": "00:05:24.00",
+      "end": "00:05:37.00",
+      "text": "Our method has two key components: a dual teacher student framework where two pairs of teacher student networks collaborate to address this complex degradation caused by heavy rain conditions"
+    },
+    {
+      "start": "00:05:38.00",
+      "end": "00:05:52.00",
+      "text": "and two, a second stage that incorporates a mask based raindrop recovery strategy to rectify residual large raindrops that were not fully resolved in the first stage."
+    },
+    {
+      "start": "00:05:53.00",
+      "end": "00:06:01.00",
+      "text": "During the second stage we also swapped the augmentation between the two teacher student pairs, enabling them to learn from different types of augmentations."
+    },
+    {
+      "start": "00:06:02.00",
+      "end": "00:06:12.00",
+      "text": "This helps broaden their knowledge and potentially improve their performance. Together, these components ensure a more effective and robust solution for handling heavy rain conditions."
+    },
+    {
+      "start": "00:06:13.00",
+      "end": "00:06:21.00",
+      "text": "Before discussing our dual teacher student approach, let me briefly explain what is a teacher student framework."
+    },
+    {
+      "start": "00:06:22.00",
+      "end": "00:06:41.00",
+      "text": "It consists of two models: a teacher and a student. The teacher is trained on labeled source images, which in our case are clear weather images. The teacher then generates pseudo-labels for unlabeled target images, such as heavy rain images."
+    },
+    {
+      "start": "00:06:42.00",
+      "end": "00:06:51.00",
+      "text": "The student learns from these pseudo-labels. To improve the student, data augmentations are applied to target domain."
+    },
+    {
+      "start": "00:06:52.00",
+      "end": "00:07:11.00",
+      "text": "We then encourage the student to make consistent prediction across different augmented views. This consistency boosts the robustness and helps the student to generalize better to the target domain."
+    },
+    {
+      "start": "00:07:12.00",
+      "end": "00:07:26.00",
+      "text": "In our dual teacher student framework, we address the complex issue of raindrop degradation by dividing it into two separate challenges: raindrop and other visual impairments. To address them, we use two pairs of teacher student networks:"
+    },
+    {
+      "start": "00:07:27.00",
+      "end": "00:07:57.00",
+      "text": "a raindrop pair and a reference pair. The raindrop pair is augmented with synthesized raindrop occlusions of varying size and ratios. To simulate the behavior of single raindrop, we first randomly determine its location, size, shape and thickness. Using this information, we calculate the directions of refracted light and simulate the refracted scene based on the physical model of raindrops."
+    },
+    {
+      "start": "00:07:58.00",
+      "end": "00:08:20.00",
+      "text": "Therefore, the raindrop pair primarily focuses on addressing raindrop related distortions, while the reference pair assists in handling other types of visual degradation. Together, they collaborate to generate a high quality pseudo-label, which is used to train the student in the raindrop pair."
+    },
+    {
+      "start": "00:08:21.00",
+      "end": "00:08:36.00",
+      "text": "Importantly, we do not feed the pseudo-label to both pairs, as doing so would cause different pairs to converge, reducing their ability to specialize in their respective tasks."
+    },
+    {
+      "start": "00:08:37.00",
+      "end": "00:08:52.00",
+      "text": "The reference pair, on the other hand, undergoes standard augmentations commonly used in unsupervised domain adaptation methods for general visual impairments, such as color jitter, random cropping and masking."
+    },
+    {
+      "start": "00:08:53.00",
+      "end": "00:08:59.00",
+      "text": "A question might arise: are two pairs of teacher student networks really necessary?"
+    },
+    {
+      "start": "00:09:00.00",
+      "end": "00:09:12.00",
+      "text": "Or couldn't we simply use one pair and combine all the augmentations? The answer is no. This is due to the negative impact of extreme augmentations."
+    },
+    {
+      "start": "00:09:13.00",
+      "end": "00:09:31.00",
+      "text": "When augmentations are too challenging or extreme, the student model may give up and fail to converge. This issue has also been observed in other studies. The negative effect of extreme augmentation is a key reason why existing unsupervised domain adaptation methods struggles with complex heavy rain conditions."
+    },
+    {
+      "start": "00:09:32.00",
+      "end": "00:09:41.00",
+      "text": "Using two pairs of networks helps mitigate this problem and ensure more stable and effective learning."
+    },
+    {
+      "start": "00:09:42.00",
+      "end": "00:09:59.00",
+      "text": "With the current configuration, the raindrop pair continuously learns from both the reference pair and the raindrop pair. However, the learning of both pairs is constrained by their exclusive focus on their specifically assigned tasks."
+    },
+    {
+      "start": "00:10:00.00",
+      "end": "00:10:14.00",
+      "text": "assigned augmentations. Consequently, their collective knowledge may be limited over time, as each pair has not been exposed to the alternate augmentation strategy."
+    },
+    {
+      "start": "00:10:14.00",
+      "end": "00:10:33.00",
+      "text": "To address this limitation, we introduce a two-stage updating strategy. Stage one involves exposing the reference pair to the standard augmentation while the rain-drop pair is exposed to both the rain-drop specific augmentation and the guidance from the reference from the reference pair."
+    },
+    {
+      "start": "00:10:33.00",
+      "end": "00:11:00.00",
+      "text": "After the learning completes a certain number of iterations, in stage two, we swap the rain-drop and reference pairs. Teacher two and student two are now exposed to the standard augmentation while teacher one and student one are exposed to the rain-drop augmentation. By swapping the augmentation in the second stage, we encourage both pairs to expand their knowledge, which in turn further enhance the quality of the ensemble pseudo labels."
+    },
+    {
+      "start": "00:11:00.00",
+      "end": "00:11:21.00",
+      "text": "In the second stage, we also apply a mask-based rain-drop recovery strategy. This step aims to further mitigate the impact of larger rain-drop areas that remain unresolved after stage one. In regions severely affected by the rain-drops, the model’s predictions may be uncertain as indicated by low confidence scores."
+    },
+    {
+      "start": "00:11:21.00",
+      "end": "00:11:46.00",
+      "text": "For such areas, we apply masks to remove potentially misleading information and incorporate pseudo labels generated from the altered image. While some information may be lost due to masking, this approach ensures that no misleading information is propagated."
+    },
+    {
+      "start": "00:11:46.00",
+      "end": "00:12:15.00",
+      "text": "Although some non-rain-drop affected uncertain areas might also be masked, empirical results show that the confidence score improvement in rain-drop affected area is significantly more pronounced compared to non-rain-drop affected regions. Thus, the update focused on rain-drop affected areas are more effective."
+    },
+    {
+      "start": "00:12:15.00",
+      "end": "00:12:32.00",
+      "text": "This is an illustration of the mask-based rain-drop recovery in one iteration. In figure b, the pseudo labels are misled by rain-drops. The area also has a lower confidence score. In the second round"
+    },
+    {
+      "start": "00:12:32.00",
+      "end": "00:12:51.00",
+      "text": "upon putting the masked image into the network, we rectify the wrong pseudo labels by employing the confidence mask as illustrated in the figure c. This process aims to correct the erroneous pseudo labels that were influenced by rain-drops as shown in figure d."
+    },
+    {
+      "start": "00:12:51.00",
+      "end": "00:13:00.00",
+      "text": "Over many iterations, the entire erroneous region will be filled, resulting in the final prediction in the figure e."
+    },
+    {
+      "start": "00:13:00.00",
+      "end": "00:13:15.00",
+      "text": "In this results section, I will present both quantitative and qualitative results. For our source domain, we use Cityscapes dataset, which comprise real-world images captured under clear weather conditions."
+    },
+    {
+      "start": "00:13:15.00",
+      "end": "00:13:32.00",
+      "text": "As for target domain, we utilize both Rainy-WCT and ACDC-Rainy dataset, which consist of real-world images captured under diverse rain conditions."
+    },
+    {
+      "start": "00:13:32.00",
+      "end": "00:13:51.00",
+      "text": "This table demonstrate the robustness of our model under heavy rain conditions with severe rain-drop degradation, evaluated using the Rainy-WCT dataset as the target dataset. Our method outperformed the best existing method over 4.4 mIoU."
+    },
+    {
+      "start": "00:13:51.00",
+      "end": "00:14:12.00",
+      "text": "Furthermore, our evaluation extends to light rain conditions with minor rain-drop occlusion, using ACDC-Rainy dataset as our target dataset. Our method outperform before best existing method over 2.3 mIoU."
+    },
+    {
+      "start": "00:14:12.00",
+      "end": "00:14:32.00",
+      "text": "Here is a qualitative result. Against the SOTA rain-drop removal method, weather diffusion, and SOTA unsupervised domain adaptation method, MSC. From the result, we can observe that the rain-drop removal method suffer from the"
+    },
+    {
+      "start": "00:14:32.00",
+      "end": "00:14:52.00",
+      "text": "massive hallucination effects and hence a poor performance. As for MSC, since it does not have any occlusion recovery technique, it cannot recover the areas occluded by rain-drops and water flow. In the first row, existing method fail to identify the rider and side walk accurately due to the rain-drop occlusion."
+    },
+    {
+      "start": "00:14:52.00",
+      "end": "00:14:59.00",
+      "text": "In the second row, the rain-drop"
+    },
+    {
+      "start": "00:15:00.00",
+      "end": "00:15:04.00",
+      "text": "stopplers at the bus causing existing methods to fail in accuracy"
+    },
+    {
+      "start": "00:15:04.00",
+      "end": "00:15:09.00",
+      "text": "inaccurately identifying the scene. Conversely our method exhibited"
+    },
+    {
+      "start": "00:15:09.00",
+      "end": "00:15:14.00",
+      "text": "better robustness under raindrops condition and successfully addressed"
+    },
+    {
+      "start": "00:15:14.00",
+      "end": "00:15:19.00",
+      "text": "the issues present in existing methods. And thank you, that's all for"
+    },
+    {
+      "start": "00:15:19.00",
+      "end": "00:15:24.00",
+      "text": "today's presentation and if you have any questions please contact the author."
+    },
+    {
+      "start": "00:15:24.00",
+      "end": "00:15:28.00",
+      "text": "Thank you."
+    }
+  ]
+}

@@ -1,0 +1,2635 @@
+{
+  "video": "data/videos/72740.mp4",
+  "model": "gemini-3-flash-preview",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 3792.923822,
+  "chunks": 13,
+  "raw_text": "00:00 --> 00:02  line process monitoring for laser welding applications \n00:03 --> 00:05  and for powder bed fusion technologies \n00:06 --> 00:08  and he will be doing this using directional reflection measurements \n00:09 --> 00:12  and he's specifically interested also in the laser material interaction dynamics \n00:13 --> 00:15  and studying this with this technology that he will present today. \n00:16 --> 00:18  So I would give the floor to Moritz. \n00:19 --> 00:20  All right, thank you for this introduction. \n00:21 --> 00:23  As mentioned, yes, my name is Moritz Wittema \n00:24 --> 00:26  and I'm going to present to you my latest findings \n00:27 --> 00:30  in regards of directional process monitoring with directional reflection monitoring. \n00:31 --> 00:33  All right, let's start right into the motivation of my research. \n00:34 --> 00:36  It's mostly based on the fact that when you currently want to develop a new laser-based process \n00:37 --> 00:39  you either have the chance of buying the parameters that suit your requirements \n00:40 --> 00:42  and they're bound to deliver at least reasonable results \n00:43 --> 00:45  but if they're not available or you can't spend the money, you develop them yourself. \n00:46 --> 00:48  And if you develop them yourself, you usually start off with multiple experiments \n00:49 --> 00:51  where then you test the resulting specimens for the density, for the surface roughness and so on \n00:52 --> 00:54  and based on those results, you conduct further experiments \n00:55 --> 00:58  to narrow down continuously to the right parameter you actually want to have. \n00:59 --> 01:01  And this is very labor intensive and time consuming \n01:02 --> 01:04  as most of you probably have experienced it yourself \n01:05 --> 01:07  and this is why I'm focusing on replacing this ex-situ specimen testing \n01:08 --> 01:12  which is the most time consuming part of this endeavor \n01:13 --> 01:16  by in-situ process monitoring. \n01:17 --> 01:18  And this in turn would reduce the time of each iteration \n01:19 --> 01:21  and then as a whole accelerate the process development. \n01:22 --> 01:25  And the question there is what monitoring technique to use for this goal \n01:26 --> 01:28  and this is mostly based on the different challenges that come with different monitoring techniques. \n01:29 --> 01:32  Just because you do have a very fast process in powder bed fusion \n01:33 --> 01:35  or in laser welding, we do need a very high measuring frequency \n01:36 --> 01:39  to have valuable results. \n01:40 --> 01:42  And this means that we do acquire quite a lot of data \n01:43 --> 01:45  and especially for data heavy approaches such as optical or camera based monitoring \n01:46 --> 01:48  it becomes very difficult to analyze this data reasonably fast. \n01:49 --> 01:52  Another issue is for a lot of techniques that the signal to noise ratio isn't very good \n01:53 --> 01:55  for example for optical coherence tomography or acoustic measurements \n01:56 --> 01:59  you do require quite extensive post-processing to enrich the quality of the data. \n02:00 --> 02:03  And then lastly, as soon as you do want to have absolute monitoring data \n02:04 --> 02:07  meaning you want absolute temperatures for example, you always have to have a calibration \n02:08 --> 02:11  before your actual measurement to deliver this accuracy \n02:12 --> 02:14  and the calibration often needs to be repeated sometimes even before every experiment. \n02:15 --> 02:17  And this led us to reflection monitoring \n02:18 --> 02:20  because reflection monitoring delivers one-dimensional data, one analog signal \n02:21 --> 02:23  in a very high quality and in a robust way. \n02:24 --> 02:26  And the groundwork for this was already laid in 2016 by Trapp et al. \n02:27 --> 02:29  when they discovered a distinct change in the absorption in their reflection monitoring \n02:30 --> 02:32  that appeared when traversing regimes from conduction to keyhole monitoring. \n02:33 --> 02:36  And then later in 2022 we used those results \n02:37 --> 02:39  and repeated them but with a fully integrated in-situ monitoring system \n02:40 --> 02:42  that doesn't require any calibration. It's very robust in its measurement. \n02:43 --> 02:45  And then lastly in 2023 Huang et al. published one step further \n02:46 --> 02:48  when they introduced this system for a directional reflection monitoring \n02:49 --> 02:51  meaning they can see where the reflection actually goes after the interaction. \n02:52 --> 02:55  But at this stage it is very limited in their measuring area, measuring range \n02:56 --> 02:59  and also does require quite a lot of calibration to deliver results. \n03:00 --> 03:02  So our goal here is to find a reflection monitoring system that's calibration-less \n03:03 --> 03:05  has a wide measuring area, does not pose any restrictions to the process \n03:06 --> 03:09  and still is directional. \n03:10 --> 03:12  And for this, in this particular investigation, we looked at two different geometries \n03:13 --> 03:15  for capturing the reflection in the process. \n03:16 --> 03:18  The one on the left is based on an integrating sphere, it's by now a pretty established geometry \n03:19 --> 03:22  for different research endeavors \n03:23 --> 03:26  and it is quite an aperture at the top and the bottom \n03:27 --> 03:29  where the laser propagates through the sphere prior to the interaction \n03:30 --> 03:32  and then it captures the reflection that's straight back up. \n03:33 --> 03:35  And additionally to this\n\n00:00:00 --> 00:00:05  this video developed and then investigated a different geometry based here on two different\n\n00:00:05 --> 00:00:10  parabolic shapes a small one so it's basically a satellite dish\n\n00:00:10 --> 00:00:14  and it also captures and integrates the reflection\n\n00:00:14 --> 00:00:18  depending on where it's actually positioned in the chamber\n\n00:00:18 --> 00:00:23  and both of with both geometries you do sample them at 20 kilohertz\n\n00:00:23 --> 00:00:28  and isolate the actual laser from other reflections or other radiations\n\n00:00:28 --> 00:00:33  and the main difference is how we can position them just because the laser has to propagate through the sphere\n\n00:00:33 --> 00:00:38  it is limited to the very center and only allows a small measuring area in the\n\n00:00:38 --> 00:00:43  size of the bottom aperture of the sphere while with the dish\n\n00:00:43 --> 00:00:48  we can position it pretty much anywhere and we decide went here for four instances surrounding the working area as you can see right here\n\n00:00:48 --> 00:00:53  um with the four green positions and that in turn changed the\n\n00:00:53 --> 00:00:58  the experiments we can were able to conduct with those geometries the sphere only with the sphere\n\n00:00:58 --> 00:01:03  we only did one scan pattern comprised of 15 melt tracks in 50 watts steps\n\n00:01:03 --> 00:01:08  because we are interested in the development of the reflection over an increase in laser power\n\n00:01:08 --> 00:01:13  and with the satellite dishes we were able to conduct the same scan pattern 95 times\n\n00:01:13 --> 00:01:18  around the working area so now much wider area and for both of them it was at 800 millimeters per second\n\n00:01:18 --> 00:01:23  with an 175 micrometer gaussian spot and it was on 316L plates\n\n00:01:23 --> 00:01:28  after the experiments we referenced the signal to the laser power so we don't just get\n\n00:01:28 --> 00:01:33  arbitrary reflections but a quotient of reflectivity in relation to the laser power\n\n00:01:33 --> 00:01:38  and then per melt track we um we basically compressed all the data to one\n\n00:01:38 --> 00:01:43  statistical description as you can see here in the box plot so median percentile ranges and outliers\n\n00:01:43 --> 00:01:48  and the results from those experiments we're gonna look at the integrating sphere results first\n\n00:01:48 --> 00:01:53  so you can see here the sphere signal on the y-axis over the laser power on the x-axis\n\n00:01:53 --> 00:01:58  and it starts off with a relatively high reflection with low powers and a high standard deviation which then drops down to\n\n00:01:58 --> 00:02:03  low low low reflections and low standard deviations\n\n00:02:03 --> 00:02:08  and they are this is a for us at least a very familiar pattern by now we had multiple publications on this pattern\n\n00:02:08 --> 00:02:13  and in a nutshell the important thing is that right at the jump from high to low reflections we this\n\n00:02:13 --> 00:02:18  correlates to the onset of vapor formation so the start start when a vapor depression starts to form\n\n00:02:18 --> 00:02:23  and our dish signals here's all four median or all four signals comprised to one median signal so all positions\n\n00:02:23 --> 00:02:28  um starts rather low and then increases at the same threshold as the sphere signal drops\n\n00:02:28 --> 00:02:33  and so does the standard deviation and this obviously is a very different behavior as we've seen before even though it also has a very character-characteristic\n\n00:02:33 --> 00:02:38  characteristic feature right at the threshold but to investigate this further we do did\n\n00:02:38 --> 00:02:43  look at the four individual signals of the\n\n00:02:43 --> 00:02:48  of the dish and there you can see they start off all relatively similar with a with a\n\n00:02:48 --> 00:02:53  low reflectivity a rather low standard deviation and right at the threshold the ones on the left jump significantly higher up than the ones on the right\n\n00:02:53 --> 00:02:58  and the main difference between those positions here or the position of the dishes in the chamber it is\n\n00:02:58 --> 00:03:03  is relative position towards the scan direction so here we go from left to right\n\n00:03:03 --> 00:03:08  and we have so we have a difference between left and right and to validate this claim so the the influence of the scan direction\n\n00:03:08 --> 00:03:13  is the reason for this behavior we conducted the same experiments with reverse scan direction and there you can see also our\n\n00:03:13 --> 00:03:18  signal behavior or position dependent signal behavior changes now we have the high jump on the right so again in the rear\n\n00:03:18 --> 00:03:23  of the scan direction instead of the left as you can see at the top what we just looked at\n\n00:03:23 --> 00:03:28  and these results in combination with the our previous results of the integrating sphere led us to the conclusion\n\n00:03:28 --> 00:03:33  that what's happening here is that right at the threshold obviously where vapor formation happens we do start to have a vapor depression\n\n00:03:33 --> 00:03:38  this changes the surface topography of our of our plates or process zone meaning that suddenly the\n\n00:03:38 --> 00:03:43  interaction zone is not flat anymore but it is inclined this shifts the predominant reflection direction from\n\nSure! Here's the timestamped transcription for the provided video:\n\n00:00 --> 00:05 from the from straight back up towards the back meaning that while the integrating sphere \n\n00:05 --> 00:11 has a drop in reflection when this shifts towards the back the satellite or satellite dishes \n\n00:11 --> 00:16 in the rear do have an increase in reflection meaning on all also with this new parabolic dish design \n\n00:16 --> 00:23 we can also detect the point of vapor depression formation so this threshold and but theoretically \n\n00:23 --> 00:28 we can do it over the whole working area because we're not limited in any way so this was obviously the next step \n\n00:28 --> 00:33 we looked at all 95 patterns that are within this working area and you can see here two distinct groups \n\n00:33 --> 00:39 we have the one that i called here in green that coincide with the behavior we just looked at so we do have a \n\n00:39 --> 00:46 jump in the rear satellites at the vapor depression formation but the ones in yellow and i've only shown one \n\n00:46 --> 00:52 individual example here at the top does have a very erratic signal behavior so all yellow all \n\n00:52 --> 00:58 scan patterns that are here marked in yellow do have a very different behavior and no one is the and not \n\n00:58 --> 01:03 one is the same and the reason for this is that the small parabolic shape of our satellite dish \n\n01:03 --> 01:09 does not just act as an integrating partner so the signal is integrated between the big and the small \n\n01:09 --> 01:14 the big and the small parabolic shape but it also shields the diode or the fiber inlet which leads to the \n\n01:14 --> 01:21 diode from direct reflections so the most of the reflections can enter the diode without prior \n\n01:21 --> 01:26 integration but obviously this is only in the area that is shielded by the baffle which is here shown as \n\n01:26 --> 01:31 or the projection of this area is shown on in green here the fiber we're using does have a wider \n\n01:31 --> 01:37 acceptance angle than we do have a baffle angle so this means we have scan patterns that lie outside our \n\n01:37 --> 01:43 baffled area but inside our acceptance area and this means that at this point we don't have any integration \n\n01:43 --> 01:49 leading to a erratic signal behavior and even though this seems like a very big limitation on our \n\n01:49 --> 01:54 measuring area it also means we know exactly why this is the case \n\n01:54 --> 01:59 and it's also very easy to change the shape of our dishes just because we do print them in-house with \n\n01:59 --> 02:05 with a powder bed fusion method of plastics i think it's pa pa12 and so we can just enlarge the bottom \n\n02:05 --> 02:12 the bottom parabolic shape to tailor the measuring area where we want it to go for different \n\n02:12 --> 02:18 applications for example right now we're trying to implement this in a different machine a different setup \n\n02:18 --> 02:23 so this means we have to redesign it for this case so the conclusion here is that we have with those parabolic \n\n02:23 --> 02:29 or with our new satellite dish collectors a way to integrate our signal which is in a different shape \n\n02:29 --> 02:35 than our normal integrating spheres and they allow us to measure the reflections over a wide area \n\n02:35 --> 02:40 depending on the baffle area and with this we can detect the onset of vapor formation and maybe just \n\n02:40 --> 02:46 as a last thought here why is this even important there's a lot of literature out there that shows us \n\n02:46 --> 02:51 that the sweet spot for powder bed fusion lies somewhere between keyhole mode so right at the \n\n02:51 --> 02:57 onset of vapor depression so this would give us a way to have our parameters set and this is also our \n\n02:57 --> 03:03 the outlook that the next stage would be to do the same measurement for \n\n03:03 --> 03:09 multi-layer experiments on complex shapes so simply put in normal powder bed fusion jobs \n\n03:09 --> 03:15 and also at the same time of measurement fuse them with metadata to then in the end give us a digital \n\n03:15 --> 03:22 shadow of the part based on this reflection data that can in in the end help us in quality assurance \n\n03:22 --> 03:26 and process evaluation \n\n03:26 --> 03:31 so thank you for your attention i'm looking forward to any discussion that might follow \n\n03:31 --> 03:36 yeah \n\n03:36 --> 03:42 thank you moritz for the nice presentation i would like to ask the audience to ask questions \n\n03:42 --> 03:48 uh thank you for the talk um i'm just curious what consideration do you give polarization in this \n\n03:48 --> 03:54 measurement because you've got a randomly\n\n00:00:00 --> 00:00:10 polarized beam from the laser so you don't know the state and of course that's going to inflect the or affect the reflection.\n\n00:00:10 --> 00:00:31 Um, we personally never considered the polarization just because the as in the state of the art as I shown, in those experiments the polarization seemed to have no effect in this kind of measurement. So we went from that point on and just never looked any deeper into polarization or the effect of polarization.\n\n00:00:37 --> 00:00:42 Additional questions for our speaker?\n\n00:00:42 --> 00:00:51 I was wondering if you have now those powder bed fusion machines with multiple laser systems, what would be the impact of this on your system?\n\n00:00:51 --> 00:01:22 It depends on if they do irradiate the working area at the same time. We cannot distinguish between different process zones just because it only gives us an insight into the overall reflection in our process chamber, so meaning with two process zones they would overlap. Of course you could if they're split apart as because to enlarge the area you can have multiple sets and there would need to be an investigation but as soon as they work right at the within the area at the same time we couldn't do any differentiation.\n\n00:01:23 --> 00:01:30 Could you give us a ballpark figure of how big your system is and how big this parabolic...\n\n00:01:30 --> 00:01:45 Right at the beginning we do have some there you go. So our process chamber or the working area is around 150 to 130 millimeters and every dish is around 120 millimeters in size. So this I think one of the big challenges with larger working areas would be to have also the an reasonable amount of height in the chamber to position them at a near to 45 degree as because as soon as they get too low down obviously the reflection has to be pivoted quite a lot to still be detected.\n\n00:01:45 --> 00:01:53 Okay then I would like to thank you for your talk once again. My pleasure.\n\n00:01:53 --> 00:02:08 Then I would like to ask to Dr. Marvin Klein to come on the stage and there will be a short hiccup because he will be connecting his computer in the meantime. So Dr. Marvin Klein is working as a consultant at the Intelligent Optical Systems company and he's specifically working in the group of laser ultrasonic products.\n\n00:02:08 --> 00:02:22 He has quite some experience in laser ultrasonics, he has more than 70 published papers on the topic and also he has 16 issued patents in the domain.\n\n00:02:22 --> 00:02:35 So today he will be giving us a talk regarding the inline defect detection by using laser ultrasonics and this specifically for the additive manufacturing industry. So it's not only for powder bed fusion but it goes further as he has mentioned during the initial talk that I had with him.\n\n00:02:35 --> 00:02:40 So we will wait for a number of seconds for the smart technical intervention. Then we can start.\n\n00:00:00 --> 00:01:17 (music)\n00:01:17 --> 00:01:21 Thank you Mr. Presider. My name is Marvin Klein,\n00:01:21 --> 00:01:25 and I'm very pleased to make this presentation.\n00:01:25 --> 00:01:28 I'll just turn on my pointer.\n00:01:28 --> 00:01:31 So, I'm a member of the Laser Ultrasonics Products Group\n00:01:31 --> 00:01:34 at Intelligent Optical Systems.\n00:01:34 --> 00:01:36 So, in my presentation,\n00:01:36 --> 00:01:39 I'd like to contrast some of the issues associated with\n00:01:39 --> 00:01:42 current monitoring techniques. I'm not an expert,\n00:01:42 --> 00:01:45 so I'm going to give you kind of a high-level thing\n00:01:45 --> 00:01:48 and I invite comments later on.\n00:01:48 --> 00:01:52 But given those issues, our proposed solution is\n00:01:52 --> 00:01:56 laser ultrasonic testing. And it's particularly suitable\n00:01:56 --> 00:02:00 for builds by laser powder bed fusion, and I'll talk about that.\n00:02:00 --> 00:02:03 And then, an integration of our system onto a powder bed fusion machine.\n00:02:03 --> 00:02:07 And finally, other applications of laser ultrasonic testing,\n00:02:07 --> 00:02:10 of which there are many interesting industrial ones.\n00:02:10 --> 00:02:13 So, current qualification techniques.\n00:02:13 --> 00:02:16 In this session, and I'm sure many others,\n00:02:16 --> 00:02:19 people are talking about process monitoring and control,\n00:02:19 --> 00:02:22 melt pool, or whatever other techniques are being used.\n00:02:22 --> 00:02:25 I'm sure they can set the process parameters very carefully,\n00:02:25 --> 00:02:28 but it seems to me they still require a predictive algorithm\n00:02:28 --> 00:02:32 with uncertain performance, especially for defects.\n00:02:32 --> 00:02:35 Do they know where defects are, and what is their size and position?\n00:02:35 --> 00:02:38 And we can do all of that with laser ultrasonic testing.\n00:02:38 --> 00:02:41 Post-process CT scans, I think people understand\n00:02:41 --> 00:02:45 that it's really not a production technique.\n00:02:45 --> 00:02:48 So, with laser ultrasonics, we have\n00:02:48 --> 00:02:51 a direct readout of defects in real time,\n00:02:51 --> 00:02:54 and I mean their depth and position in real time.\n00:02:54 --> 00:02:57 And then of course, enables ideally corrective action\n00:02:57 --> 00:03:00 to either cure the defects or scrap the part.\n00:03:00 --> 00:03:03 So laser ultrasonic testing is a form of ultrasonic,\n00:03:03 --> 00:03:07 conventional ultrasonic testing, except now\n00:03:07 --> 00:03:10 we're using lasers on the surface of the target, no transducer.\n00:03:10 --> 00:03:13 You start off here with a pulse YAG laser,\n00:03:13 --> 00:03:16 delivered through a fiber, and focused here on the surface.\n00:03:16 --> 00:03:20 This focused beam in turn generates ultrasonic waves\n00:03:20 --> 00:03:23 inside the part. And one or more of these waves scatter\n00:03:23 --> 00:03:26 from some defect, and return here to the surface\n00:03:26 --> 00:03:29 where you see the green beam. At the surface,\n00:03:29 --> 00:03:32 there's a very small surface displacement.\n00:03:32 --> 00:03:35 And so it creates a phase modulation\n00:03:35 --> 00:03:38 of this green beam when you collect it back.\n00:03:38 --> 00:03:41 You have a demodulator here to convert it to an analog signal.\n00:03:41 --> 00:03:44 So, that's it in brief, and I'm happy\n00:03:44 --> 00:03:47 to answer more questions as the talk goes on.\n00:03:47 --> 00:03:51 Well, laser ultrasonic testing, first of all, as I said\n00:03:51 --> 00:05:00 (music)\n\n00:00 --> 00:06 We were just using two lasers on the surface, so as you can imagine, this enables testing of parts that are hot \n00:06 --> 00:11 or moving or both. Something that couldn't be done, sorry, with conventional transducers. \n00:11 --> 00:16 We can do inspection on a layer-by-layer basis of AM parts. \n00:16 --> 00:22 And the data displays are similar if anybody works with transducer ultrasonics. \n00:22 --> 00:28 So we're hoping to avoid, in the ideal case, the need for process monitoring \n00:28 --> 00:32 because now we're actually seeing what's produced and not predicting it. \n00:32 --> 00:37 And of course, post-process CT, not appropriate. \n00:37 --> 00:43 So, as I was saying, laser ultrasonic testing functions effectively at targets at high temperature, \n00:43 --> 00:49 moving and rough surfaces. We have a very small laser spot on the surface, \n00:49 --> 00:54 200 microns, and that enables actually the testing of very small materials, \n00:54 --> 00:58 very small samples, excuse me. And finally, the bandwidth is high enough to be sensitive to really small defects. \n00:58 --> 01:05 So here again is the generation beam. It's a pulsed YAG beam at 1.06 microns. \n01:05 --> 01:10 And when the beam is incident on the surface, it's energetic and it causes a little bit of ablation. \n01:10 --> 01:16 And that in turn, the recoil from all the ejected material, produces actually very strong ultrasonic waves. \n01:16 --> 01:21 And they're omnidirectional. They're in the full range here. \n01:21 --> 01:26 And so they can really interrogate defects or features most anywhere in the range of the beams. \n01:26 --> 01:31 And one of them, in particular, scatters from a defect, and the scattered light arrives here at the surface. \n01:31 --> 01:38 And I mentioned that there's a very small but measurable surface displacement when the wave arrives. \n01:38 --> 01:43 So our detection beam is incident on the surface, but we also collect the reflected beam backward, \n01:43 --> 01:48 which is now phase-modulated and we in turn demodulate it later on. \n01:48 --> 01:54 So here's an experiment in which we take a completed powder bed fusion bar. \n01:54 --> 01:59 The surface is as created, there's no machining or anything on this surface. \n01:59 --> 02:04 And as a test, we've made artificial defects using EDM side-drilled holes. \n02:04 --> 02:09 So holes from the side going most or all the way through with sizes down to about 300 micrometers. \n02:09 --> 02:14 Now, how do we scan? We have two beams here, generation and detection, \n02:14 --> 02:19 and they are scanned in tandem along this direction, which is the build direction. \n02:19 --> 02:24 So the beams move together in tandem. And I'll explain here now at the bottom \n02:24 --> 02:29 a little bit more about how that works. The generation beam produces an ultrasonic wave, \n02:29 --> 02:34 it scatters from, in this case, a side-drilled hole and returns to the surface right here \n02:34 --> 02:39 and where, as I said, it's processed. But the important thing is that we maintain the beam separation as we scan. \n02:39 --> 02:44 And the result is a very dramatic feature that you'll see in the raw data in a few slides down from here. \n02:44 --> 02:49 So we tested two bars with side-drilled EDM holes. \n02:49 --> 02:54 They're a little hard to see in the photo, but this is a schematic cross-section. \n02:54 --> 02:59 They're all 1 millimeter deep and they had five different sizes from about 300 microns, I think, to 1 or 1 and a half millimeters. \n02:59 --> 03:04 And we have both Ti-64 and Inconel 718. \n03:04 --> 03:09 And so once again, these two beams that I showed before are being scanned in this direction along the surface. \n03:09 --> 03:14 So this is the resulting data display. This is the raw data \n03:14 --> 03:19 and it may be not particularly known by people in the audience, so I'll take a second to try to explain it.\n\nHere's a timestamped transcription of the video:\n\n00:00:00 --> 00:00:04 Conventional transducer ultrasound is the normal data display.\n\n00:00:04 --> 00:00:10 So at every position, here's position on the vertical scale.\n\n00:00:10 --> 00:00:14 As we're scanning along here at every position, we acquire a temporal signal.\n\n00:00:14 --> 00:00:18 And we plot the temporal signal in gray scale.\n\n00:00:18 --> 00:00:23 And we move to the next position, we acquire another temporal signal.\n\n00:00:23 --> 00:00:28 And we move along with small enough steps that this looks continuous.\n\n00:00:28 --> 00:00:32 And we get these very dramatic hyperbolas associated with each of the side-drilled holes.\n\n00:00:32 --> 00:00:37 And in fact, hyperbolas are the shape that is unique to this measurement technique.\n\n00:00:37 --> 00:00:43 And it makes it easier or easier to do signal processing because you recognize these features from everything else on the screen.\n\n00:00:54 --> 00:01:03 So now this, the first one was Ti-64, this one is Inconel 718.\n\n00:01:03 --> 00:01:07 And again, we get these hyperbolas, but Inconel is a more scattering material.\n\n00:01:07 --> 00:01:13 The waves scatter more and so we don't have the signal-to-noise that we had before.\n\n00:01:13 --> 00:01:18 But it's still enough to recognize these unique features, which once again go from 300 microns in this case to 900 microns.\n\n00:01:23 --> 00:01:28 Now that kind of image is not suitable for a machine operator, we know that.\n\n00:01:28 --> 00:01:34 A machine operator wants an interpretation, a process of this image into something more recognizable.\n\n00:01:34 --> 00:01:38 So the first step is to do a cross-section. This happens to be a simulation for clarity purposes.\n\n00:01:38 --> 00:01:43 But in this case, you have a cross-section, and now you see in this case one, two, three, four defects at three different depths from about a half millimeter to four millimeters.\n\n00:01:43 --> 00:01:49 And so this is much more evocative, and from the position of this defect, you can get its depth and its position with pretty high accuracy.\n\n00:01:53 --> 00:01:58 And even this may not be satisfactory because the operator doesn't want to look at a whole series of cross-sections as your inspection scan proceeds.\n\n00:01:58 --> 00:02:04 So what they really want is something I don't have to show here, but it's some sort of a display along the scan where defects are marked in such a way as to alert the operator.\n\n00:02:04 --> 00:02:10 And possibly create a red flag, but in any case, the characteristics are visible without having to look at a cross-section.\n\n00:02:10 --> 00:02:13 So I want to make that point, this should be entirely automated.\n\n00:02:13 --> 00:02:21 So integration onto a machine, we've done some demos at a company called Arktos in Dayton, Ohio.\n\n00:02:21 --> 00:02:27 And the way we scan powder bed fusion samples is to mount our probe on the spreader arm.\n\n00:02:27 --> 00:02:33 So the spreader arm itself scans the probe in one axis.\n\n00:02:33 --> 00:02:38 And we put a one-dimensional stage on top of the spreader arm to create the second scan axis.\n\n00:02:38 --> 00:02:44 So we foresee at least in principle a two-step operation.\n\n00:02:44 --> 00:02:50 The first step would be a profilometer, some other kind of imaging system for height variation.\n\n00:02:50 --> 00:02:55 And we scan the surface and identify features of interest which frequently can be bumps.\n\n00:02:55 --> 00:03:00 Subsurface defects are frequently, if not all the time, characterized by small but measurable bumps on the surface.\n\n00:03:00 --> 00:03:06 So once they're identified, they create a region of interest, and then we are scanning only within that region of interest.\n\n00:03:06 --> 00:03:13 Not the whole pattern, the laser pattern, if possible. We want to speed up the process to only look at regions of interest.\n\n00:03:13 --> 00:03:19 Now the measurement head, I'm going to show the actual one in the next photo, but this is an enlargement of a very similar one to what we actually use in our experiments.\n\n00:03:19 --> 00:03:22 And you can see this is six centimeters, excuse me, six millimeters.\n\n00:00:00 --> 00:00:03 long, 4 mm wide and about 3 mm high\n00:00:03 --> 00:00:06 with the beam directed out this aperture and we have\n00:00:06 --> 00:00:11 the two delivery fibers, this one for the pulsed\n00:00:11 --> 00:00:15 YAG laser and this one for the CW detection\n00:00:15 --> 00:00:19 laser. So again, this can be very\n00:00:19 --> 00:00:23 compact. Now here it is mounted on a PBF\n00:00:23 --> 00:00:28 machine, here's our probe, again with similar\n00:00:28 --> 00:00:32 size with the two delivery fibers. Now the beams are\n00:00:32 --> 00:00:37 directed downward onto the surface and you have\n00:00:37 --> 00:00:41 as usual the generation and detection beam and\n00:00:41 --> 00:00:46 in this case they're scanning a completed build there's an\n00:00:46 --> 00:00:51 array here and once again we have two axis\n00:00:51 --> 00:00:55 of motion, we have a scan, excuse me, a stage on top\n00:00:55 --> 00:01:00 of the spreader arm and then the motion of the spreader arm\n00:01:00 --> 00:01:04 itself. So in conclusion we think that laser ultrasonic\n00:01:04 --> 00:01:09 testing can be useful for inline inspection\n00:01:09 --> 00:01:14 I want to emphasize this is actual inspection not\n00:01:14 --> 00:01:18 predictive information, we actually find what's\n00:01:18 --> 00:01:23 really there by way of defects and we can do it\n00:01:23 --> 00:01:27 inline or almost inline. And what I mean by that is for\n00:01:27 --> 00:01:32 powder bed fusion the layers are so thin that we think\n00:01:32 --> 00:01:37 we only need to scan every 3, 4, 5, or 6 layers,\n00:01:37 --> 00:01:43 not every single layer. And so we've done testing\n00:01:43 --> 00:01:47 with powder bed fusion but we also think that\n00:01:47 --> 00:01:52 this technique applies equally well to directed\n00:01:52 --> 00:01:57 energy deposition, wire fed and other kinds of builds\n00:01:57 --> 00:02:02 that people are now developing. And so we think\n00:02:02 --> 00:02:07 that laser ultrasonic testing has a benefit over\n00:02:07 --> 00:02:11 say melt pool monitoring looking at the melt pool\n00:02:11 --> 00:02:15 and using a predictive algorithm. I'm repeating myself,\n00:02:15 --> 00:02:21 we're finding the actual defects as they appear.\n00:02:21 --> 00:02:25 I also wanted to take a minute or two to talk\n00:02:25 --> 00:02:30 about other applications of laser ultrasonic testing\n00:02:30 --> 00:02:35 and in fact there are many. AM is only one part\n00:02:35 --> 00:02:39 of the general processes that laser ultrasonic can\n00:02:39 --> 00:02:44 be used to test. Some of which we've done and others\n00:02:44 --> 00:02:49 are on our roadmap. So, laser welds, we can\n00:02:49 --> 00:02:53 monitor defects in laser welds and other kinds\n00:02:53 --> 00:02:58 of welds inline immediately following the melt\n00:02:58 --> 00:03:03 laser, we can look for defects and the part can\n00:03:03 --> 00:03:07 be hot when we do it. Friction stir welds,\n00:03:07 --> 00:03:11 we've actually done a lot of work on them.\n00:03:11 --> 00:03:16 So if anyone here is interested in friction stir welds\n00:03:16 --> 00:03:21 actually we can talk about that and interesting\n00:03:21 --> 00:03:26 you'll see a photo in a second pipeline girth\n00:03:26 --> 00:03:31 welds. So that's a sample of the weld applications\n00:03:31 --> 00:03:36 but then there are others that also may be\n00:03:36 --> 00:03:41 interesting, for example we've studied the\n00:03:41 --> 00:03:45 testing the inspection of stress corrosion cracks,\n00:03:45 --> 00:03:49 something important in oil-gas pipelines and\n00:03:49 --> 00:03:54 in nuclear fuel canisters. And so wall\n00:03:54 --> 00:03:58 thickness oh here's interesting, screening of\n00:03:58 --> 00:04:02 sub-millimeter chip capacitors, we can inspect\n00:04:02 --> 00:04:07 one by one parts that are sub-millimeter.\n00:04:07 --> 00:04:12 Load measurement in fasteners, adhesive spread,\n00:04:12 --> 00:04:17 and here are just some photos and then I'll complete\n00:04:17 --> 00:04:22 the talk. Here is a friction stir weld situation\n00:04:22 --> 00:04:27 where you have long profiles, 7-meter profiles,\n00:04:27 --> 00:04:32 that are butt-welded together one by one, side by\n00:04:32 --> 00:04:37 side, to make a panel and we've done real time\n00:04:37 --> 00:04:42 inspection. So our measurement head follows\n00:04:42 --> 00:04:46 the weld tool by about a foot and is inspecting\n00:04:46 --> 00:04:51 in line. This is a girth weld setup using\n00:04:51 --> 00:04:56 laser arc and our measurement probe is just\n00:04:56 --> 00:05:01 behind and the two move together to perform the weld.\n\n00:00:00 --> 00:00:03  ...all the way around. Seamless tube wall thickness. Here's an important one, we've integrated our probe into a thin crawler...\n00:00:03 --> 00:00:07  ...it's shown here and it's intended for scanning of stress corrosion cracks on the walls...\n00:00:07 --> 00:00:10  ...of spent fuel canisters. So, spent fuel rod canisters is an important question in nuclear utilities.\n00:00:10 --> 00:00:13  So okay, that completes my presentation and thank you for your attention.\n00:00:13 --> 00:00:16  We have time for just one question, so does the audience have any questions for our speaker?\n00:00:16 --> 00:00:19  Thank you for your interesting presentation. I have a question on...\n00:00:19 --> 00:00:23  ...you mentioned what is very interesting anyway, so the scattering of the microstructure which can generate some noise I mean...\n00:00:23 --> 00:00:27  ...with some difficulty to check to have the signals coming from the defects. However, our defects are usually also smaller than expected in...\n00:00:27 --> 00:00:31  ...but anyway, but I have another question concerning the surface roughness because we have made this kind of experiments...\n00:00:31 --> 00:00:34  ...and surface roughness in LPBF can be sometimes tricky.\n00:00:34 --> 00:00:37  Well, interestingly, as we tested many different types of surfaces as-built, as-hot, we have not yet found a problem...\n00:00:37 --> 00:00:40  ...we have not yet found a problem that affects the accuracy of our measurement. It's impervious almost to surface roughness, almost.\n00:00:40 --> 00:00:43  But I have literature with me and I'm happy to talk at the end of the session.\n00:00:43 --> 00:00:47  Okay and I would like to thank the speaker once again and then I would like to invite Dr. Ing. Hans-Joachim Rohde on the stage.\n00:00:47 --> 00:00:50  Hans-Joachim Rohde has a PhD from the University of Stuttgart.\n00:00:50 --> 00:00:54  He completed his doctorate in combination with LASAG in Switzerland in cooperation with the University of Stuttgart.\n00:00:54 --> 00:00:57  He has quite some expertise in CO2 lasers also, but today he will provide us a talk regarding the development in diagnostic mirrors...\n00:00:57 --> 00:01:00  ...for monitoring in the laser additive manufacturing process. So, I would give the floor to Hans-Joachim.\n00:01:00 --> 01:03:07  Thank you very much for the kind introduction. Good afternoon everybody.\n01:03:07 --> 01:03:10  So, my name is Hans-Joachim Rohde and I am from Laser Components and I welcome you to my presentation of...\n01:03:10 --> 01:03:13  ...development in diagnostic mirrors for monitoring the laser additive manufacturing process.\n01:03:13 --> 01:03:17  And as you heard as the introduction I've worked before for laser companies and laser machine manufacturers...\n01:03:17 --> 01:03:20  ...so I have used a lot of optics during my time and know Laser Components always since thirty years as a supplier...\n01:03:20 --> 01:03:23  ...and I would like to give you with this presentation a little bit a view on the parameters which we have to deal with...\n01:03:23 --> 01:03:27  ...during the laser optics manufacturing. And then I would like to introduce shortly Laser Components.\n01:03:27 --> 01:03:30  Laser Components was founded 1984 and since then we're producing several different products which is showing in this slide.\n01:03:30 --> 01:03:33  So the first product is here, see a laser diodes from this manufacturing Canada...\n01:03:33 --> 01:03:37  ...then see sensors which are manufactured in Phoenix, Arizona, and the other things laser modules, photon counters...\n01:03:37 --> 01:03:40  ...fiber optics and laser optics are manufactured in Olching close to Munich.\n01:03:40 --> 01:03:43  My topic is as a product manager is fiber optics and laser optics, and laser optics as you can see we manufacturing these since 1986.\n01:03:43 --> 01:03:47  Today we are around 250 people and around 160 are in Olching located.\n01:03:47 --> 01:03:50  Shortly something about our production methods, so we have in principle three techniques: E-beam, Plasma Ion Assisted Deposition...\n01:03:50 --> 01:03:54  ...and Ion Beam Sputtering. Shortly little bit about Plasma Ion Assisted Deposition.\n\n00:00:00 --> 00:00:31 It's more or less an E-beam technique with an additional plasma source, which provides a better homogeneity of the coating and also reducing, for example, here the coating temperature. So with E-beam it's much higher. We can use metallic and oxidic targets here, and we have several holders here up here for the rotation of the substrate. And at the end, one of the properties is with this coating technique you have less water molecules in your coating.\n\n00:00:31 --> 00:01:05 The other one, ion beam sputtering, in this case we use an ion beam source with either xenon or other gases. We have a two-zone target zone here, which we can move quite quickly, so that we can use two different materials. And also here we using metallic and oxidic targets. The calotte is rotating as well as with the ion assisted deposition process, and the film formation will be happening up here.\n\n00:01:05 --> 00:01:40 A comparison a little bit about the three techniques. So E-beam is of course one of the oldest ones, has the highest growth rate, but as well also the roughest surface. So it's typical this pole, let's say coating layer thickness. And on the other hand, it has a low layer tension but a relatively high optical absorption.\n\n00:01:40 --> 00:02:04 The other one is the plasma ion assisted deposition. In this case we have a high to medium growth rate, so similar to E-beam but a little bit less, but a higher layer tension and also higher optical losses in that case. But the surface is even still let's say rough, but it's much smoother than E-beam and it's more dense in comparison to E-beam.\n\n00:02:04 --> 00:02:46 And the last one is then IBS. Here we have the lowest growth rate. That means also that the most cost-effective coating technique. On the other hand we can do the most complex coatings with this technique. It has low optical losses but a very high let's say layer tension of the optics. And the coating surface is very, very dense in comparison to all other things. Nevertheless, each technique has its own specialty. For example, with E-beam we still manufacturing today the Gaussian mirrors.\n\n00:02:46 --> 00:03:26 Typical optics in the process, I think all of you know that. Of course we have protection glasses, we have processing lenses, we have these diagnostic mirrors, we have beam splitters and maybe also at the beginning collimating lenses which collimate the beam. And all these optics, what you see is that they are transmissive optics, that means absorption is a very important factor for these optics. So if you optimize the absorption then you have less thermal load and better properties at the end for your process and also for the diagnostics. And that's exactly that what we have now in the last 12 months investigated a little bit more intensively.\n\n00:03:26 --> 00:04:08 So one of these things is for the process ion deposition process, so for PIAD, we have reduced the gas flow because originally the machine supplier said to us we have to use 30 square cubic centimeters oxygen gas flow. But in the meantime we have reduced that and we have found out that we can reduce massively the absorption behavior of one layer. So which causes then really that we come down here up to three or two ppm absorption with this technique for wavelengths at 1064, yeah. And this is done here for hafnia. Next slide I show you then for tantal.\n\n00:04:08 --> 00:04:36 Of course one of the things is what happens with the damage threshold, with the LIDT? What I can say up to now, what we have shown our investigation is that with this reduction we have still the same damage threshold. So we reduce only really the absorption of the coating layers, which is of course a good advantage for the optical properties.\n\n00:04:36 --> 00:05:01 And the same is for tantal, even so that tantal has already a very low absorption in general, but also here we could reduce this down to 0.5 ppm absorption per thickness of the layer. And as you see similar values, so we come from down from 30 and below 10 or even close to 0.5 ppm.\n\n00:00:00 --> 00:00:05 between 5 and 10 we have then more or less the best stable results.\n00:00:05 --> 00:00:10 Of course we will do some more investigations also what does it mean for the rest of the machine parameters\n00:00:10 --> 00:00:15 and also for other wavelengths, but for the moment, for example one of these let's say parameters\n00:00:15 --> 00:00:20 which we can use now for the modern production of optics is to reduce the oxygen flow.\n00:00:20 --> 00:00:25 Of course it also saves us oxygen consumption.\n00:00:25 --> 00:00:30 Another thing is then we have had a challenge to solve for a customer\n00:00:30 --> 00:00:35 which we has an existing processing head and we have then checked with him together\n00:00:35 --> 00:00:40 the possibilities to reduce the absorption of the optical elements.\n00:00:40 --> 00:00:45 And here in comparison to a protection window which is... the blue line is... oops... wrong... the blue line is the original one\n00:00:45 --> 00:00:50 and then we have used different materials with one coating type at 12 kilowatt laser power\n00:00:50 --> 00:00:55 and you can see we can reduce more than 50% with different materials\n00:00:55 --> 00:01:00 in comparison to the original window which was mounted into the head.\n00:01:00 --> 00:01:05 So the thermal load is really defined by the different materials\n00:01:05 --> 00:01:10 and you can really reduce this for the materials and accordingly have a really certain order of materials\n00:01:10 --> 00:01:15 So number 1, 2, and 3, it means this material have always the same same thing.\n00:01:15 --> 00:01:20 So we tested this also at 8 kilowatt, 4 kilowatt, 2 kilowatt, 1 kilowatt and 0.5 kilowatt.\n00:01:20 --> 00:01:25 The difference is that of course the curves are going closer to each other\n00:01:25 --> 00:01:30 because the difference is not so dramatic with lower powers than with let's say with 12 kilowatt.\n00:01:30 --> 00:01:35 And then we changed different coating layers.\n00:01:35 --> 00:01:40 So in this case again the standard window and then the same material as this one\n00:01:40 --> 00:01:45 but with a different number of coating layers.\n00:01:45 --> 00:01:50 And you can see there is at the end a minimum where we can achieve the lowest absorption.\n00:01:50 --> 00:01:55 So the temperature difference is then here the lowest value.\n00:01:55 --> 00:02:00 So it's really so that when you make different coating of number of layers\n00:02:00 --> 00:02:05 then you can optimize this at the end for an optic which has really then the lowest absorption\n00:02:05 --> 00:02:10 in that case for the same material and same thickness and everything\n00:02:10 --> 00:02:15 for this kind of power level at 12 kilowatt and 1064 nanometer.\n00:02:15 --> 00:02:20 So you can see that it's important to know which kind of material together with the right coating\n00:02:20 --> 00:02:25 you can really reduce here the absorption behavior very much.\n00:02:25 --> 00:02:30 And then another... we have another possibility: so we can also we call it pre- and post-processing.\n00:02:30 --> 00:02:35 So pre- means that for example we can use optics with different polishing grades.\n00:02:35 --> 00:02:40 This has an influence. Cleaning has an influence beforehand.\n00:02:40 --> 00:02:45 Also cleaning in the machine for example due to plasma we can also treat the surface\n00:02:45 --> 00:02:50 and this can also influence the absorption of the optics.\n00:02:50 --> 00:02:55 And post-processing is for example again cleaning and for example then later on I show you then annealing of the optics after the coating process.\n00:02:55 --> 00:03:00 And also here you see for the 8 kilowatt and also for 4, 2 and 1 kilowatt\n00:03:00 --> 00:03:05 that here... oops... that here with and without we have an improvement of the thermal.\n00:03:05 --> 00:03:10 It's not much but you can achieve a certain value.\n00:03:10 --> 00:03:15 The same is also for here for the other material we have this distance here.\n00:03:15 --> 00:03:20 So you can really do the pre- and post-processing, you can again improve the absorption behavior of the optics\n00:03:20 --> 00:03:25 which is then of course then at the end with this technique you have then at the end\n00:03:25 --> 00:03:30 with coating material and this pre- and post-processing you have then the optimized optical behavior of the optics.\n00:03:30 --> 00:03:35 But it's sometimes not so easy when we have made then the tests with the 12 kilowatt power level\n00:03:35 --> 00:03:40 it does not show this behavior. So there all the pre- and post-processing samples are slightly higher than without.\n00:03:40 --> 00:03:45 So you can see that not everything is now finally investigated.\n00:03:45 --> 00:03:50 So we have still to do something here and to see why is that so\n00:03:50 --> 00:03:55 but in this case as you see the not processed samples are lower than the processed sample in this case.\n00:03:55 --> 00:04:00 We do not know as I said at the moment if it's due to the post-process or pre-process\n00:04:00 --> 00:04:05 but we will investigate this further as well as for more power levels or higher power levels up to 30 kilowatt.\n00:04:05 --> 00:04:10 As I said one of the post-processing things is annealing.\n00:04:10 --> 00:04:15 Here you have only a sample for that how we can change here the transmission\n00:04:15 --> 00:04:20 or at the end the absorption of this optic at a wavelength of 2900 nanometer.\n\n00:00:00 --> 00:00:04 14 nanometers. As you see, with this annealing we can increase it from close to, let's say, 95.8 \n\n00:00:04 --> 00:00:09 over 99%. So it's a 3% increase only that we are, after the coating process, we anneal these optics. \n\n00:00:09 --> 00:00:15 Also with that, you can learn that all these things are really influence at the end of the \n\n00:00:15 --> 00:00:20 performance of your optics. Another thing is then I mentioned before, not the number of coating layers, \n\n00:00:20 --> 00:00:25 but also the coating design. So we started a new technique called quantum nanolaminates. \n\n00:00:25 --> 00:00:30 So what we are doing is we have then typical dielectric coating here with hafnium and silicon \n\n00:00:30 --> 00:00:35 oxide and we substitute one of these hafnium layer by a layer which is existing out of very, \n\n00:00:35 --> 00:00:40 very thin alternative layers of hafnium and silicon oxide. So thin means they are in \n\n00:00:40 --> 00:00:45 nanometer range, 1 nanometer, half a nanometer, so depending on how many layers we are doing here. \n\n00:00:45 --> 00:00:50 And this influencing as well the optical properties of the optics, which we can see in the next \n\n00:00:50 --> 00:00:55 slide, for example, for UV. So what we have done, we have substitute one of these layers as shown \n\n00:00:55 --> 00:01:00 in the previous slide, and what you see here now, is the red line. So we achieve an 205 nanometer. \n\n00:01:00 --> 00:01:05 We are still below 2% absorption in comparison to a normal coating which is already at six \n\n00:01:05 --> 00:01:10 or 8% absorption. So also with this technique, you can then change the properties of your optics \n\n00:01:10 --> 00:01:15 and optimize it really for your process. Diagnostic mirrors, as you have seen before, \n\n00:01:15 --> 00:01:20 we have diagnostic mirrors which can be transmissive. That's one of the first one, it's only an example \n\n00:01:20 --> 00:01:25 because we do almost all our optics, we do it really customized to the need of our customers. \n\n00:01:25 --> 00:01:30 But here you can see, for example, one mirror which we have optimized with all these parameters \n\n00:01:30 --> 00:01:35 before, with annealing, with special coating techniques and layer numbers. So we have \n\n00:01:35 --> 00:01:40 then very, very low reflection or transmissive, absorption here for the laser wavelengths \n\n00:01:40 --> 00:01:45 and for the diagnostic we have a high reflection of 99.5% of the diagnostic wavelengths. \n\n00:01:45 --> 00:01:50 And also you see that we have also to taken care about polarization sometimes. So depending on \n\n00:01:50 --> 00:01:55 that, we can optimize our mirrors for this diagnostic purpose. Another possibility of course \n\n00:01:55 --> 00:02:00 is that you use not transmissive optics for your laser, you're using a reflecting. So in \n\n00:02:00 --> 00:02:05 this case, the laser beam, parallel beam, are coming here, reflected down to the process area, \n\n00:02:05 --> 00:02:10 and the reflected process wavelengths are coming up and going through this mirror. But \n\n00:02:10 --> 00:02:15 nevertheless also here, transmissive is a topic because we want to have of course large \n\n00:02:15 --> 00:02:20 signals here. So when the light is only, let's say, a low level, but still we want to have maximum \n\n00:02:20 --> 00:02:25 out of there to achieve then also the right monitoring. One of these challenges also of these \n\n00:02:25 --> 00:02:30 mirrors is, for example, that the laser wavelengths is very close to the diagnostic \n\n00:02:30 --> 00:02:35 wavelengths, which is then of course not an easy design to achieve something like that in this case. \n\n00:02:35 --> 00:02:40 and it's very much to optimize all these things to have an at the end an optimized mirror for the \n\n00:02:40 --> 00:02:45 process monitoring. So I'm already at the end of my presentation. I hope I can show you a little \n\n00:02:45 --> 00:02:50 bit that we have also in optics a very high number of parameters which we can deal with, which we can \n\n00:02:50 --> 00:02:55 optimize it. I've shown you here the material is one of these things, the pre-processing like \n\n00:02:55 --> 00:03:00 polishing and cleaning, the coating design itself, as well as post-processing e.g. annealing \n\n00:03:00 --> 00:03:05 things. Of course the separation of the individual processes helps us to define the correct \n\n00:03:05 --> 00:03:10 procedures for complex diagnostic mirrors in the future. So that's the reason why we have started \n\n00:03:10 --> 00:03:15 with simple, let's say windows to analyze these, what is the best material, what is the best coating \n\n00:03:15 --> 00:03:20 for low absorption that we can later on can use this knowledge to optimize then the diagnostic mirrors. \n\n00:03:20 --> 00:03:25 And as well this deep process understanding helps us to find the right action for the complex \n\n00:03:25 --> 00:03:30 diagnostic mirrors in the future. So we will investigate this further on also in relation, \n\n00:03:30 --> 00:03:35 of course, to damage threshold. And as you have seen, new technology like the quantum nanolayers \n\n00:03:35 --> 00:03:40 open new design paths for future products. Thank you for your attention and I would like \n\n00:03:40 --> 00:03:45 also to say that we have a booth or table here at 5:30 it's table number nine. So if you have \n\n00:03:45 --> 00:03:49 any question later on, you're really welcome. Thank you.\n\n00:00 --> 00:05 Please, come to our table and we can discuss further on this. Thank you very much.\n\n00:05 --> 00:10 Thank you Hans-Joerg for this very nice presentation.\n\n00:10 --> 00:15 I think we have still time for two short questions. Yes?\n\n00:15 --> 00:20 [Music]\n\n00:20 --> 00:25 A very good presentation, thank you. I'm just curious with the pre and post-processing\n\n00:25 --> 00:30 that you do to get the improved performance, what's the additional relative cost\n\n00:30 --> 00:35 you know, to that, to achieve that?\n\n00:35 --> 00:40 Yes of course, that's it's one of these factors. For example for the post-processing it depends of course\n\n00:40 --> 00:45 how long we have to anneal and which temperature. So in one example it was shown that\n\n00:45 --> 00:50 at 700 degrees Celsius but we don't have to for example to anneal all these optics at 700, some of only\n\n00:50 --> 00:55 annealed at 400 and then of course it's the time which also then but it's an add-on cost of course,\n\n00:55 --> 01:00 it's an additional handling cost something could happen also with your optics. There is\n\n01:00 --> 01:05 a plus of cost, yes. But if it improves your optical features, it is worth to do so because when you would like to have\n\n01:05 --> 01:10 very low absorption, that means very, very thermal load, means very less thermal\n\n01:10 --> 01:15 focus shift then it's worth to do it at the end. But of course it's different depending on the time and temperature.\n\n01:15 --> 01:20 A last question from the audience? Okay.\n\n01:20 --> 01:25 [Music]\n\n01:25 --> 01:30 [Music]\n\n01:30 --> 01:35 Hans-Joerg, thank you for the great presentation. Now I have a question regarding the nanolaminates.\n\n01:35 --> 01:40 If we add the nanolaminates, does that mean we are adding more layers\n\n01:40 --> 01:45 to the coating? Or is that... No, the total coating thickness as shown in the picture\n\n01:45 --> 01:50 is exactly the same. The thickness is the same, but you have more layers.\n\n01:50 --> 01:55 The total thickness is the same, but you have more layers. And yeah we have more layers when you say, but we\n\n01:55 --> 02:00 call this as one layer, one layer of quantum-nanolaminate. So even that this one layer of\n\n02:00 --> 02:05 quantum-nanolaminate consists out of for example 14, 18 layers.\n\n02:05 --> 02:10 Okay. So my question is if we have more layers in quantity,\n\n02:10 --> 02:15 wouldn't that be adding tension to the substrate?\n\n02:15 --> 02:20 No, in that case not now. This is no change in that case, there's no additional tension on that\n\n02:20 --> 02:25 because they are so thin, these quantum-nanolayers. Okay, alright.\n\n02:25 --> 02:30 There's no add-on in that case. But of course it's changing for example the damage threshold, so that way we are testing.\n\n02:30 --> 02:35 So we will have another presentation on the Photonics West regarding that that we investigated further on\n\n02:35 --> 02:40 these things regarding also damage threshold and other wavelengths.\n\n02:40 --> 02:45 Okay, then I would like to thank the four speakers of the Session 6 as the last time\n\n02:45 --> 02:50 and I would like to invite everybody for the coffee break then afterwards here. Okay. Thank you.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:02.00",
+      "text": "line process monitoring for laser welding applications"
+    },
+    {
+      "start": "00:00:03.00",
+      "end": "00:00:05.00",
+      "text": "and for powder bed fusion technologies"
+    },
+    {
+      "start": "00:00:06.00",
+      "end": "00:00:08.00",
+      "text": "and he will be doing this using directional reflection measurements"
+    },
+    {
+      "start": "00:00:09.00",
+      "end": "00:00:12.00",
+      "text": "and he's specifically interested also in the laser material interaction dynamics"
+    },
+    {
+      "start": "00:00:13.00",
+      "end": "00:00:15.00",
+      "text": "and studying this with this technology that he will present today."
+    },
+    {
+      "start": "00:00:16.00",
+      "end": "00:00:18.00",
+      "text": "So I would give the floor to Moritz."
+    },
+    {
+      "start": "00:00:19.00",
+      "end": "00:00:20.00",
+      "text": "All right, thank you for this introduction."
+    },
+    {
+      "start": "00:00:21.00",
+      "end": "00:00:23.00",
+      "text": "As mentioned, yes, my name is Moritz Wittema"
+    },
+    {
+      "start": "00:00:24.00",
+      "end": "00:00:26.00",
+      "text": "and I'm going to present to you my latest findings"
+    },
+    {
+      "start": "00:00:27.00",
+      "end": "00:00:30.00",
+      "text": "in regards of directional process monitoring with directional reflection monitoring."
+    },
+    {
+      "start": "00:00:31.00",
+      "end": "00:00:33.00",
+      "text": "All right, let's start right into the motivation of my research."
+    },
+    {
+      "start": "00:00:34.00",
+      "end": "00:00:36.00",
+      "text": "It's mostly based on the fact that when you currently want to develop a new laser-based process"
+    },
+    {
+      "start": "00:00:37.00",
+      "end": "00:00:39.00",
+      "text": "you either have the chance of buying the parameters that suit your requirements"
+    },
+    {
+      "start": "00:00:40.00",
+      "end": "00:00:42.00",
+      "text": "and they're bound to deliver at least reasonable results"
+    },
+    {
+      "start": "00:00:43.00",
+      "end": "00:00:45.00",
+      "text": "but if they're not available or you can't spend the money, you develop them yourself."
+    },
+    {
+      "start": "00:00:46.00",
+      "end": "00:00:48.00",
+      "text": "And if you develop them yourself, you usually start off with multiple experiments"
+    },
+    {
+      "start": "00:00:49.00",
+      "end": "00:00:51.00",
+      "text": "where then you test the resulting specimens for the density, for the surface roughness and so on"
+    },
+    {
+      "start": "00:00:52.00",
+      "end": "00:00:54.00",
+      "text": "and based on those results, you conduct further experiments"
+    },
+    {
+      "start": "00:00:55.00",
+      "end": "00:00:58.00",
+      "text": "to narrow down continuously to the right parameter you actually want to have."
+    },
+    {
+      "start": "00:00:59.00",
+      "end": "00:01:01.00",
+      "text": "And this is very labor intensive and time consuming"
+    },
+    {
+      "start": "00:01:02.00",
+      "end": "00:01:04.00",
+      "text": "as most of you probably have experienced it yourself"
+    },
+    {
+      "start": "00:01:05.00",
+      "end": "00:01:07.00",
+      "text": "and this is why I'm focusing on replacing this ex-situ specimen testing"
+    },
+    {
+      "start": "00:01:08.00",
+      "end": "00:01:12.00",
+      "text": "which is the most time consuming part of this endeavor"
+    },
+    {
+      "start": "00:01:13.00",
+      "end": "00:01:16.00",
+      "text": "by in-situ process monitoring."
+    },
+    {
+      "start": "00:01:17.00",
+      "end": "00:01:18.00",
+      "text": "And this in turn would reduce the time of each iteration"
+    },
+    {
+      "start": "00:01:19.00",
+      "end": "00:01:21.00",
+      "text": "and then as a whole accelerate the process development."
+    },
+    {
+      "start": "00:01:22.00",
+      "end": "00:01:25.00",
+      "text": "And the question there is what monitoring technique to use for this goal"
+    },
+    {
+      "start": "00:01:26.00",
+      "end": "00:01:28.00",
+      "text": "and this is mostly based on the different challenges that come with different monitoring techniques."
+    },
+    {
+      "start": "00:01:29.00",
+      "end": "00:01:32.00",
+      "text": "Just because you do have a very fast process in powder bed fusion"
+    },
+    {
+      "start": "00:01:33.00",
+      "end": "00:01:35.00",
+      "text": "or in laser welding, we do need a very high measuring frequency"
+    },
+    {
+      "start": "00:01:36.00",
+      "end": "00:01:39.00",
+      "text": "to have valuable results."
+    },
+    {
+      "start": "00:01:40.00",
+      "end": "00:01:42.00",
+      "text": "And this means that we do acquire quite a lot of data"
+    },
+    {
+      "start": "00:01:43.00",
+      "end": "00:01:45.00",
+      "text": "and especially for data heavy approaches such as optical or camera based monitoring"
+    },
+    {
+      "start": "00:01:46.00",
+      "end": "00:01:48.00",
+      "text": "it becomes very difficult to analyze this data reasonably fast."
+    },
+    {
+      "start": "00:01:49.00",
+      "end": "00:01:52.00",
+      "text": "Another issue is for a lot of techniques that the signal to noise ratio isn't very good"
+    },
+    {
+      "start": "00:01:53.00",
+      "end": "00:01:55.00",
+      "text": "for example for optical coherence tomography or acoustic measurements"
+    },
+    {
+      "start": "00:01:56.00",
+      "end": "00:01:59.00",
+      "text": "you do require quite extensive post-processing to enrich the quality of the data."
+    },
+    {
+      "start": "00:02:00.00",
+      "end": "00:02:03.00",
+      "text": "And then lastly, as soon as you do want to have absolute monitoring data"
+    },
+    {
+      "start": "00:02:04.00",
+      "end": "00:02:07.00",
+      "text": "meaning you want absolute temperatures for example, you always have to have a calibration"
+    },
+    {
+      "start": "00:02:08.00",
+      "end": "00:02:11.00",
+      "text": "before your actual measurement to deliver this accuracy"
+    },
+    {
+      "start": "00:02:12.00",
+      "end": "00:02:14.00",
+      "text": "and the calibration often needs to be repeated sometimes even before every experiment."
+    },
+    {
+      "start": "00:02:15.00",
+      "end": "00:02:17.00",
+      "text": "And this led us to reflection monitoring"
+    },
+    {
+      "start": "00:02:18.00",
+      "end": "00:02:20.00",
+      "text": "because reflection monitoring delivers one-dimensional data, one analog signal"
+    },
+    {
+      "start": "00:02:21.00",
+      "end": "00:02:23.00",
+      "text": "in a very high quality and in a robust way."
+    },
+    {
+      "start": "00:02:24.00",
+      "end": "00:02:26.00",
+      "text": "And the groundwork for this was already laid in 2016 by Trapp et al."
+    },
+    {
+      "start": "00:02:27.00",
+      "end": "00:02:29.00",
+      "text": "when they discovered a distinct change in the absorption in their reflection monitoring"
+    },
+    {
+      "start": "00:02:30.00",
+      "end": "00:02:32.00",
+      "text": "that appeared when traversing regimes from conduction to keyhole monitoring."
+    },
+    {
+      "start": "00:02:33.00",
+      "end": "00:02:36.00",
+      "text": "And then later in 2022 we used those results"
+    },
+    {
+      "start": "00:02:37.00",
+      "end": "00:02:39.00",
+      "text": "and repeated them but with a fully integrated in-situ monitoring system"
+    },
+    {
+      "start": "00:02:40.00",
+      "end": "00:02:42.00",
+      "text": "that doesn't require any calibration. It's very robust in its measurement."
+    },
+    {
+      "start": "00:02:43.00",
+      "end": "00:02:45.00",
+      "text": "And then lastly in 2023 Huang et al. published one step further"
+    },
+    {
+      "start": "00:02:46.00",
+      "end": "00:02:48.00",
+      "text": "when they introduced this system for a directional reflection monitoring"
+    },
+    {
+      "start": "00:02:49.00",
+      "end": "00:02:51.00",
+      "text": "meaning they can see where the reflection actually goes after the interaction."
+    },
+    {
+      "start": "00:02:52.00",
+      "end": "00:02:55.00",
+      "text": "But at this stage it is very limited in their measuring area, measuring range"
+    },
+    {
+      "start": "00:02:56.00",
+      "end": "00:02:59.00",
+      "text": "and also does require quite a lot of calibration to deliver results."
+    },
+    {
+      "start": "00:03:00.00",
+      "end": "00:03:02.00",
+      "text": "So our goal here is to find a reflection monitoring system that's calibration-less"
+    },
+    {
+      "start": "00:03:03.00",
+      "end": "00:03:05.00",
+      "text": "has a wide measuring area, does not pose any restrictions to the process"
+    },
+    {
+      "start": "00:03:06.00",
+      "end": "00:03:09.00",
+      "text": "and still is directional."
+    },
+    {
+      "start": "00:03:10.00",
+      "end": "00:03:12.00",
+      "text": "And for this, in this particular investigation, we looked at two different geometries"
+    },
+    {
+      "start": "00:03:13.00",
+      "end": "00:03:15.00",
+      "text": "for capturing the reflection in the process."
+    },
+    {
+      "start": "00:03:16.00",
+      "end": "00:03:18.00",
+      "text": "The one on the left is based on an integrating sphere, it's by now a pretty established geometry"
+    },
+    {
+      "start": "00:03:19.00",
+      "end": "00:03:22.00",
+      "text": "for different research endeavors"
+    },
+    {
+      "start": "00:03:23.00",
+      "end": "00:03:26.00",
+      "text": "and it is quite an aperture at the top and the bottom"
+    },
+    {
+      "start": "00:03:27.00",
+      "end": "00:03:29.00",
+      "text": "where the laser propagates through the sphere prior to the interaction"
+    },
+    {
+      "start": "00:03:30.00",
+      "end": "00:03:32.00",
+      "text": "and then it captures the reflection that's straight back up."
+    },
+    {
+      "start": "00:03:33.00",
+      "end": "00:03:35.00",
+      "text": "And additionally to this"
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:05.00",
+      "text": "this video developed and then investigated a different geometry based here on two different"
+    },
+    {
+      "start": "00:05:05.00",
+      "end": "00:05:10.00",
+      "text": "parabolic shapes a small one so it's basically a satellite dish"
+    },
+    {
+      "start": "00:05:10.00",
+      "end": "00:05:14.00",
+      "text": "and it also captures and integrates the reflection"
+    },
+    {
+      "start": "00:05:14.00",
+      "end": "00:05:18.00",
+      "text": "depending on where it's actually positioned in the chamber"
+    },
+    {
+      "start": "00:05:18.00",
+      "end": "00:05:23.00",
+      "text": "and both of with both geometries you do sample them at 20 kilohertz"
+    },
+    {
+      "start": "00:05:23.00",
+      "end": "00:05:28.00",
+      "text": "and isolate the actual laser from other reflections or other radiations"
+    },
+    {
+      "start": "00:05:28.00",
+      "end": "00:05:33.00",
+      "text": "and the main difference is how we can position them just because the laser has to propagate through the sphere"
+    },
+    {
+      "start": "00:05:33.00",
+      "end": "00:05:38.00",
+      "text": "it is limited to the very center and only allows a small measuring area in the"
+    },
+    {
+      "start": "00:05:38.00",
+      "end": "00:05:43.00",
+      "text": "size of the bottom aperture of the sphere while with the dish"
+    },
+    {
+      "start": "00:05:43.00",
+      "end": "00:05:48.00",
+      "text": "we can position it pretty much anywhere and we decide went here for four instances surrounding the working area as you can see right here"
+    },
+    {
+      "start": "00:05:48.00",
+      "end": "00:05:53.00",
+      "text": "um with the four green positions and that in turn changed the"
+    },
+    {
+      "start": "00:05:53.00",
+      "end": "00:05:58.00",
+      "text": "the experiments we can were able to conduct with those geometries the sphere only with the sphere"
+    },
+    {
+      "start": "00:05:58.00",
+      "end": "00:06:03.00",
+      "text": "we only did one scan pattern comprised of 15 melt tracks in 50 watts steps"
+    },
+    {
+      "start": "00:06:03.00",
+      "end": "00:06:08.00",
+      "text": "because we are interested in the development of the reflection over an increase in laser power"
+    },
+    {
+      "start": "00:06:08.00",
+      "end": "00:06:13.00",
+      "text": "and with the satellite dishes we were able to conduct the same scan pattern 95 times"
+    },
+    {
+      "start": "00:06:13.00",
+      "end": "00:06:18.00",
+      "text": "around the working area so now much wider area and for both of them it was at 800 millimeters per second"
+    },
+    {
+      "start": "00:06:18.00",
+      "end": "00:06:23.00",
+      "text": "with an 175 micrometer gaussian spot and it was on 316L plates"
+    },
+    {
+      "start": "00:06:23.00",
+      "end": "00:06:28.00",
+      "text": "after the experiments we referenced the signal to the laser power so we don't just get"
+    },
+    {
+      "start": "00:06:28.00",
+      "end": "00:06:33.00",
+      "text": "arbitrary reflections but a quotient of reflectivity in relation to the laser power"
+    },
+    {
+      "start": "00:06:33.00",
+      "end": "00:06:38.00",
+      "text": "and then per melt track we um we basically compressed all the data to one"
+    },
+    {
+      "start": "00:06:38.00",
+      "end": "00:06:43.00",
+      "text": "statistical description as you can see here in the box plot so median percentile ranges and outliers"
+    },
+    {
+      "start": "00:06:43.00",
+      "end": "00:06:48.00",
+      "text": "and the results from those experiments we're gonna look at the integrating sphere results first"
+    },
+    {
+      "start": "00:06:48.00",
+      "end": "00:06:53.00",
+      "text": "so you can see here the sphere signal on the y-axis over the laser power on the x-axis"
+    },
+    {
+      "start": "00:06:53.00",
+      "end": "00:06:58.00",
+      "text": "and it starts off with a relatively high reflection with low powers and a high standard deviation which then drops down to"
+    },
+    {
+      "start": "00:06:58.00",
+      "end": "00:07:03.00",
+      "text": "low low low reflections and low standard deviations"
+    },
+    {
+      "start": "00:07:03.00",
+      "end": "00:07:08.00",
+      "text": "and they are this is a for us at least a very familiar pattern by now we had multiple publications on this pattern"
+    },
+    {
+      "start": "00:07:08.00",
+      "end": "00:07:13.00",
+      "text": "and in a nutshell the important thing is that right at the jump from high to low reflections we this"
+    },
+    {
+      "start": "00:07:13.00",
+      "end": "00:07:18.00",
+      "text": "correlates to the onset of vapor formation so the start start when a vapor depression starts to form"
+    },
+    {
+      "start": "00:07:18.00",
+      "end": "00:07:23.00",
+      "text": "and our dish signals here's all four median or all four signals comprised to one median signal so all positions"
+    },
+    {
+      "start": "00:07:23.00",
+      "end": "00:07:28.00",
+      "text": "um starts rather low and then increases at the same threshold as the sphere signal drops"
+    },
+    {
+      "start": "00:07:28.00",
+      "end": "00:07:33.00",
+      "text": "and so does the standard deviation and this obviously is a very different behavior as we've seen before even though it also has a very character-characteristic"
+    },
+    {
+      "start": "00:07:33.00",
+      "end": "00:07:38.00",
+      "text": "characteristic feature right at the threshold but to investigate this further we do did"
+    },
+    {
+      "start": "00:07:38.00",
+      "end": "00:07:43.00",
+      "text": "look at the four individual signals of the"
+    },
+    {
+      "start": "00:07:43.00",
+      "end": "00:07:48.00",
+      "text": "of the dish and there you can see they start off all relatively similar with a with a"
+    },
+    {
+      "start": "00:07:48.00",
+      "end": "00:07:53.00",
+      "text": "low reflectivity a rather low standard deviation and right at the threshold the ones on the left jump significantly higher up than the ones on the right"
+    },
+    {
+      "start": "00:07:53.00",
+      "end": "00:07:58.00",
+      "text": "and the main difference between those positions here or the position of the dishes in the chamber it is"
+    },
+    {
+      "start": "00:07:58.00",
+      "end": "00:08:03.00",
+      "text": "is relative position towards the scan direction so here we go from left to right"
+    },
+    {
+      "start": "00:08:03.00",
+      "end": "00:08:08.00",
+      "text": "and we have so we have a difference between left and right and to validate this claim so the the influence of the scan direction"
+    },
+    {
+      "start": "00:08:08.00",
+      "end": "00:08:13.00",
+      "text": "is the reason for this behavior we conducted the same experiments with reverse scan direction and there you can see also our"
+    },
+    {
+      "start": "00:08:13.00",
+      "end": "00:08:18.00",
+      "text": "signal behavior or position dependent signal behavior changes now we have the high jump on the right so again in the rear"
+    },
+    {
+      "start": "00:08:18.00",
+      "end": "00:08:23.00",
+      "text": "of the scan direction instead of the left as you can see at the top what we just looked at"
+    },
+    {
+      "start": "00:08:23.00",
+      "end": "00:08:28.00",
+      "text": "and these results in combination with the our previous results of the integrating sphere led us to the conclusion"
+    },
+    {
+      "start": "00:08:28.00",
+      "end": "00:08:33.00",
+      "text": "that what's happening here is that right at the threshold obviously where vapor formation happens we do start to have a vapor depression"
+    },
+    {
+      "start": "00:08:33.00",
+      "end": "00:08:38.00",
+      "text": "this changes the surface topography of our of our plates or process zone meaning that suddenly the"
+    },
+    {
+      "start": "00:08:38.00",
+      "end": "00:08:43.00",
+      "text": "interaction zone is not flat anymore but it is inclined this shifts the predominant reflection direction from"
+    },
+    {
+      "start": "00:10:00.00",
+      "end": "00:10:05.00",
+      "text": "from the from straight back up towards the back meaning that while the integrating sphere"
+    },
+    {
+      "start": "00:10:05.00",
+      "end": "00:10:11.00",
+      "text": "has a drop in reflection when this shifts towards the back the satellite or satellite dishes"
+    },
+    {
+      "start": "00:10:11.00",
+      "end": "00:10:16.00",
+      "text": "in the rear do have an increase in reflection meaning on all also with this new parabolic dish design"
+    },
+    {
+      "start": "00:10:16.00",
+      "end": "00:10:23.00",
+      "text": "we can also detect the point of vapor depression formation so this threshold and but theoretically"
+    },
+    {
+      "start": "00:10:23.00",
+      "end": "00:10:28.00",
+      "text": "we can do it over the whole working area because we're not limited in any way so this was obviously the next step"
+    },
+    {
+      "start": "00:10:28.00",
+      "end": "00:10:33.00",
+      "text": "we looked at all 95 patterns that are within this working area and you can see here two distinct groups"
+    },
+    {
+      "start": "00:10:33.00",
+      "end": "00:10:39.00",
+      "text": "we have the one that i called here in green that coincide with the behavior we just looked at so we do have a"
+    },
+    {
+      "start": "00:10:39.00",
+      "end": "00:10:46.00",
+      "text": "jump in the rear satellites at the vapor depression formation but the ones in yellow and i've only shown one"
+    },
+    {
+      "start": "00:10:46.00",
+      "end": "00:10:52.00",
+      "text": "individual example here at the top does have a very erratic signal behavior so all yellow all"
+    },
+    {
+      "start": "00:10:52.00",
+      "end": "00:10:58.00",
+      "text": "scan patterns that are here marked in yellow do have a very different behavior and no one is the and not"
+    },
+    {
+      "start": "00:10:58.00",
+      "end": "00:11:03.00",
+      "text": "one is the same and the reason for this is that the small parabolic shape of our satellite dish"
+    },
+    {
+      "start": "00:11:03.00",
+      "end": "00:11:09.00",
+      "text": "does not just act as an integrating partner so the signal is integrated between the big and the small"
+    },
+    {
+      "start": "00:11:09.00",
+      "end": "00:11:14.00",
+      "text": "the big and the small parabolic shape but it also shields the diode or the fiber inlet which leads to the"
+    },
+    {
+      "start": "00:11:14.00",
+      "end": "00:11:21.00",
+      "text": "diode from direct reflections so the most of the reflections can enter the diode without prior"
+    },
+    {
+      "start": "00:11:21.00",
+      "end": "00:11:26.00",
+      "text": "integration but obviously this is only in the area that is shielded by the baffle which is here shown as"
+    },
+    {
+      "start": "00:11:26.00",
+      "end": "00:11:31.00",
+      "text": "or the projection of this area is shown on in green here the fiber we're using does have a wider"
+    },
+    {
+      "start": "00:11:31.00",
+      "end": "00:11:37.00",
+      "text": "acceptance angle than we do have a baffle angle so this means we have scan patterns that lie outside our"
+    },
+    {
+      "start": "00:11:37.00",
+      "end": "00:11:43.00",
+      "text": "baffled area but inside our acceptance area and this means that at this point we don't have any integration"
+    },
+    {
+      "start": "00:11:43.00",
+      "end": "00:11:49.00",
+      "text": "leading to a erratic signal behavior and even though this seems like a very big limitation on our"
+    },
+    {
+      "start": "00:11:49.00",
+      "end": "00:11:54.00",
+      "text": "measuring area it also means we know exactly why this is the case"
+    },
+    {
+      "start": "00:11:54.00",
+      "end": "00:11:59.00",
+      "text": "and it's also very easy to change the shape of our dishes just because we do print them in-house with"
+    },
+    {
+      "start": "00:11:59.00",
+      "end": "00:12:05.00",
+      "text": "with a powder bed fusion method of plastics i think it's pa pa12 and so we can just enlarge the bottom"
+    },
+    {
+      "start": "00:12:05.00",
+      "end": "00:12:12.00",
+      "text": "the bottom parabolic shape to tailor the measuring area where we want it to go for different"
+    },
+    {
+      "start": "00:12:12.00",
+      "end": "00:12:18.00",
+      "text": "applications for example right now we're trying to implement this in a different machine a different setup"
+    },
+    {
+      "start": "00:12:18.00",
+      "end": "00:12:23.00",
+      "text": "so this means we have to redesign it for this case so the conclusion here is that we have with those parabolic"
+    },
+    {
+      "start": "00:12:23.00",
+      "end": "00:12:29.00",
+      "text": "or with our new satellite dish collectors a way to integrate our signal which is in a different shape"
+    },
+    {
+      "start": "00:12:29.00",
+      "end": "00:12:35.00",
+      "text": "than our normal integrating spheres and they allow us to measure the reflections over a wide area"
+    },
+    {
+      "start": "00:12:35.00",
+      "end": "00:12:40.00",
+      "text": "depending on the baffle area and with this we can detect the onset of vapor formation and maybe just"
+    },
+    {
+      "start": "00:12:40.00",
+      "end": "00:12:46.00",
+      "text": "as a last thought here why is this even important there's a lot of literature out there that shows us"
+    },
+    {
+      "start": "00:12:46.00",
+      "end": "00:12:51.00",
+      "text": "that the sweet spot for powder bed fusion lies somewhere between keyhole mode so right at the"
+    },
+    {
+      "start": "00:12:51.00",
+      "end": "00:12:57.00",
+      "text": "onset of vapor depression so this would give us a way to have our parameters set and this is also our"
+    },
+    {
+      "start": "00:12:57.00",
+      "end": "00:13:03.00",
+      "text": "the outlook that the next stage would be to do the same measurement for"
+    },
+    {
+      "start": "00:13:03.00",
+      "end": "00:13:09.00",
+      "text": "multi-layer experiments on complex shapes so simply put in normal powder bed fusion jobs"
+    },
+    {
+      "start": "00:13:09.00",
+      "end": "00:13:15.00",
+      "text": "and also at the same time of measurement fuse them with metadata to then in the end give us a digital"
+    },
+    {
+      "start": "00:13:15.00",
+      "end": "00:13:22.00",
+      "text": "shadow of the part based on this reflection data that can in in the end help us in quality assurance"
+    },
+    {
+      "start": "00:13:22.00",
+      "end": "00:13:26.00",
+      "text": "and process evaluation"
+    },
+    {
+      "start": "00:13:26.00",
+      "end": "00:13:31.00",
+      "text": "so thank you for your attention i'm looking forward to any discussion that might follow"
+    },
+    {
+      "start": "00:13:31.00",
+      "end": "00:13:36.00",
+      "text": "yeah"
+    },
+    {
+      "start": "00:13:36.00",
+      "end": "00:13:42.00",
+      "text": "thank you moritz for the nice presentation i would like to ask the audience to ask questions"
+    },
+    {
+      "start": "00:13:42.00",
+      "end": "00:13:48.00",
+      "text": "uh thank you for the talk um i'm just curious what consideration do you give polarization in this"
+    },
+    {
+      "start": "00:13:48.00",
+      "end": "00:13:54.00",
+      "text": "measurement because you've got a randomly"
+    },
+    {
+      "start": "00:15:00.00",
+      "end": "00:15:10.00",
+      "text": "polarized beam from the laser so you don't know the state and of course that's going to inflect the or affect the reflection."
+    },
+    {
+      "start": "00:15:10.00",
+      "end": "00:15:31.00",
+      "text": "Um, we personally never considered the polarization just because the as in the state of the art as I shown, in those experiments the polarization seemed to have no effect in this kind of measurement. So we went from that point on and just never looked any deeper into polarization or the effect of polarization."
+    },
+    {
+      "start": "00:15:37.00",
+      "end": "00:15:42.00",
+      "text": "Additional questions for our speaker?"
+    },
+    {
+      "start": "00:15:42.00",
+      "end": "00:15:51.00",
+      "text": "I was wondering if you have now those powder bed fusion machines with multiple laser systems, what would be the impact of this on your system?"
+    },
+    {
+      "start": "00:15:51.00",
+      "end": "00:16:22.00",
+      "text": "It depends on if they do irradiate the working area at the same time. We cannot distinguish between different process zones just because it only gives us an insight into the overall reflection in our process chamber, so meaning with two process zones they would overlap. Of course you could if they're split apart as because to enlarge the area you can have multiple sets and there would need to be an investigation but as soon as they work right at the within the area at the same time we couldn't do any differentiation."
+    },
+    {
+      "start": "00:16:23.00",
+      "end": "00:16:30.00",
+      "text": "Could you give us a ballpark figure of how big your system is and how big this parabolic..."
+    },
+    {
+      "start": "00:16:30.00",
+      "end": "00:16:45.00",
+      "text": "Right at the beginning we do have some there you go. So our process chamber or the working area is around 150 to 130 millimeters and every dish is around 120 millimeters in size. So this I think one of the big challenges with larger working areas would be to have also the an reasonable amount of height in the chamber to position them at a near to 45 degree as because as soon as they get too low down obviously the reflection has to be pivoted quite a lot to still be detected."
+    },
+    {
+      "start": "00:16:45.00",
+      "end": "00:16:53.00",
+      "text": "Okay then I would like to thank you for your talk once again. My pleasure."
+    },
+    {
+      "start": "00:16:53.00",
+      "end": "00:17:08.00",
+      "text": "Then I would like to ask to Dr. Marvin Klein to come on the stage and there will be a short hiccup because he will be connecting his computer in the meantime. So Dr. Marvin Klein is working as a consultant at the Intelligent Optical Systems company and he's specifically working in the group of laser ultrasonic products."
+    },
+    {
+      "start": "00:17:08.00",
+      "end": "00:17:22.00",
+      "text": "He has quite some experience in laser ultrasonics, he has more than 70 published papers on the topic and also he has 16 issued patents in the domain."
+    },
+    {
+      "start": "00:17:22.00",
+      "end": "00:17:35.00",
+      "text": "So today he will be giving us a talk regarding the inline defect detection by using laser ultrasonics and this specifically for the additive manufacturing industry. So it's not only for powder bed fusion but it goes further as he has mentioned during the initial talk that I had with him."
+    },
+    {
+      "start": "00:17:35.00",
+      "end": "00:17:40.00",
+      "text": "So we will wait for a number of seconds for the smart technical intervention. Then we can start."
+    },
+    {
+      "start": "00:20:00.00",
+      "end": "00:21:17.00",
+      "text": "(music)"
+    },
+    {
+      "start": "00:21:17.00",
+      "end": "00:21:21.00",
+      "text": "Thank you Mr. Presider. My name is Marvin Klein,"
+    },
+    {
+      "start": "00:21:21.00",
+      "end": "00:21:25.00",
+      "text": "and I'm very pleased to make this presentation."
+    },
+    {
+      "start": "00:21:25.00",
+      "end": "00:21:28.00",
+      "text": "I'll just turn on my pointer."
+    },
+    {
+      "start": "00:21:28.00",
+      "end": "00:21:31.00",
+      "text": "So, I'm a member of the Laser Ultrasonics Products Group"
+    },
+    {
+      "start": "00:21:31.00",
+      "end": "00:21:34.00",
+      "text": "at Intelligent Optical Systems."
+    },
+    {
+      "start": "00:21:34.00",
+      "end": "00:21:36.00",
+      "text": "So, in my presentation,"
+    },
+    {
+      "start": "00:21:36.00",
+      "end": "00:21:39.00",
+      "text": "I'd like to contrast some of the issues associated with"
+    },
+    {
+      "start": "00:21:39.00",
+      "end": "00:21:42.00",
+      "text": "current monitoring techniques. I'm not an expert,"
+    },
+    {
+      "start": "00:21:42.00",
+      "end": "00:21:45.00",
+      "text": "so I'm going to give you kind of a high-level thing"
+    },
+    {
+      "start": "00:21:45.00",
+      "end": "00:21:48.00",
+      "text": "and I invite comments later on."
+    },
+    {
+      "start": "00:21:48.00",
+      "end": "00:21:52.00",
+      "text": "But given those issues, our proposed solution is"
+    },
+    {
+      "start": "00:21:52.00",
+      "end": "00:21:56.00",
+      "text": "laser ultrasonic testing. And it's particularly suitable"
+    },
+    {
+      "start": "00:21:56.00",
+      "end": "00:22:00.00",
+      "text": "for builds by laser powder bed fusion, and I'll talk about that."
+    },
+    {
+      "start": "00:22:00.00",
+      "end": "00:22:03.00",
+      "text": "And then, an integration of our system onto a powder bed fusion machine."
+    },
+    {
+      "start": "00:22:03.00",
+      "end": "00:22:07.00",
+      "text": "And finally, other applications of laser ultrasonic testing,"
+    },
+    {
+      "start": "00:22:07.00",
+      "end": "00:22:10.00",
+      "text": "of which there are many interesting industrial ones."
+    },
+    {
+      "start": "00:22:10.00",
+      "end": "00:22:13.00",
+      "text": "So, current qualification techniques."
+    },
+    {
+      "start": "00:22:13.00",
+      "end": "00:22:16.00",
+      "text": "In this session, and I'm sure many others,"
+    },
+    {
+      "start": "00:22:16.00",
+      "end": "00:22:19.00",
+      "text": "people are talking about process monitoring and control,"
+    },
+    {
+      "start": "00:22:19.00",
+      "end": "00:22:22.00",
+      "text": "melt pool, or whatever other techniques are being used."
+    },
+    {
+      "start": "00:22:22.00",
+      "end": "00:22:25.00",
+      "text": "I'm sure they can set the process parameters very carefully,"
+    },
+    {
+      "start": "00:22:25.00",
+      "end": "00:22:28.00",
+      "text": "but it seems to me they still require a predictive algorithm"
+    },
+    {
+      "start": "00:22:28.00",
+      "end": "00:22:32.00",
+      "text": "with uncertain performance, especially for defects."
+    },
+    {
+      "start": "00:22:32.00",
+      "end": "00:22:35.00",
+      "text": "Do they know where defects are, and what is their size and position?"
+    },
+    {
+      "start": "00:22:35.00",
+      "end": "00:22:38.00",
+      "text": "And we can do all of that with laser ultrasonic testing."
+    },
+    {
+      "start": "00:22:38.00",
+      "end": "00:22:41.00",
+      "text": "Post-process CT scans, I think people understand"
+    },
+    {
+      "start": "00:22:41.00",
+      "end": "00:22:45.00",
+      "text": "that it's really not a production technique."
+    },
+    {
+      "start": "00:22:45.00",
+      "end": "00:22:48.00",
+      "text": "So, with laser ultrasonics, we have"
+    },
+    {
+      "start": "00:22:48.00",
+      "end": "00:22:51.00",
+      "text": "a direct readout of defects in real time,"
+    },
+    {
+      "start": "00:22:51.00",
+      "end": "00:22:54.00",
+      "text": "and I mean their depth and position in real time."
+    },
+    {
+      "start": "00:22:54.00",
+      "end": "00:22:57.00",
+      "text": "And then of course, enables ideally corrective action"
+    },
+    {
+      "start": "00:22:57.00",
+      "end": "00:23:00.00",
+      "text": "to either cure the defects or scrap the part."
+    },
+    {
+      "start": "00:23:00.00",
+      "end": "00:23:03.00",
+      "text": "So laser ultrasonic testing is a form of ultrasonic,"
+    },
+    {
+      "start": "00:23:03.00",
+      "end": "00:23:07.00",
+      "text": "conventional ultrasonic testing, except now"
+    },
+    {
+      "start": "00:23:07.00",
+      "end": "00:23:10.00",
+      "text": "we're using lasers on the surface of the target, no transducer."
+    },
+    {
+      "start": "00:23:10.00",
+      "end": "00:23:13.00",
+      "text": "You start off here with a pulse YAG laser,"
+    },
+    {
+      "start": "00:23:13.00",
+      "end": "00:23:16.00",
+      "text": "delivered through a fiber, and focused here on the surface."
+    },
+    {
+      "start": "00:23:16.00",
+      "end": "00:23:20.00",
+      "text": "This focused beam in turn generates ultrasonic waves"
+    },
+    {
+      "start": "00:23:20.00",
+      "end": "00:23:23.00",
+      "text": "inside the part. And one or more of these waves scatter"
+    },
+    {
+      "start": "00:23:23.00",
+      "end": "00:23:26.00",
+      "text": "from some defect, and return here to the surface"
+    },
+    {
+      "start": "00:23:26.00",
+      "end": "00:23:29.00",
+      "text": "where you see the green beam. At the surface,"
+    },
+    {
+      "start": "00:23:29.00",
+      "end": "00:23:32.00",
+      "text": "there's a very small surface displacement."
+    },
+    {
+      "start": "00:23:32.00",
+      "end": "00:23:35.00",
+      "text": "And so it creates a phase modulation"
+    },
+    {
+      "start": "00:23:35.00",
+      "end": "00:23:38.00",
+      "text": "of this green beam when you collect it back."
+    },
+    {
+      "start": "00:23:38.00",
+      "end": "00:23:41.00",
+      "text": "You have a demodulator here to convert it to an analog signal."
+    },
+    {
+      "start": "00:23:41.00",
+      "end": "00:23:44.00",
+      "text": "So, that's it in brief, and I'm happy"
+    },
+    {
+      "start": "00:23:44.00",
+      "end": "00:23:47.00",
+      "text": "to answer more questions as the talk goes on."
+    },
+    {
+      "start": "00:23:47.00",
+      "end": "00:23:51.00",
+      "text": "Well, laser ultrasonic testing, first of all, as I said"
+    },
+    {
+      "start": "00:23:51.00",
+      "end": "00:25:00.00",
+      "text": "(music)"
+    },
+    {
+      "start": "00:25:00.00",
+      "end": "00:25:06.00",
+      "text": "We were just using two lasers on the surface, so as you can imagine, this enables testing of parts that are hot"
+    },
+    {
+      "start": "00:25:06.00",
+      "end": "00:25:11.00",
+      "text": "or moving or both. Something that couldn't be done, sorry, with conventional transducers."
+    },
+    {
+      "start": "00:25:11.00",
+      "end": "00:25:16.00",
+      "text": "We can do inspection on a layer-by-layer basis of AM parts."
+    },
+    {
+      "start": "00:25:16.00",
+      "end": "00:25:22.00",
+      "text": "And the data displays are similar if anybody works with transducer ultrasonics."
+    },
+    {
+      "start": "00:25:22.00",
+      "end": "00:25:28.00",
+      "text": "So we're hoping to avoid, in the ideal case, the need for process monitoring"
+    },
+    {
+      "start": "00:25:28.00",
+      "end": "00:25:32.00",
+      "text": "because now we're actually seeing what's produced and not predicting it."
+    },
+    {
+      "start": "00:25:32.00",
+      "end": "00:25:37.00",
+      "text": "And of course, post-process CT, not appropriate."
+    },
+    {
+      "start": "00:25:37.00",
+      "end": "00:25:43.00",
+      "text": "So, as I was saying, laser ultrasonic testing functions effectively at targets at high temperature,"
+    },
+    {
+      "start": "00:25:43.00",
+      "end": "00:25:49.00",
+      "text": "moving and rough surfaces. We have a very small laser spot on the surface,"
+    },
+    {
+      "start": "00:25:49.00",
+      "end": "00:25:54.00",
+      "text": "200 microns, and that enables actually the testing of very small materials,"
+    },
+    {
+      "start": "00:25:54.00",
+      "end": "00:25:58.00",
+      "text": "very small samples, excuse me. And finally, the bandwidth is high enough to be sensitive to really small defects."
+    },
+    {
+      "start": "00:25:58.00",
+      "end": "00:26:05.00",
+      "text": "So here again is the generation beam. It's a pulsed YAG beam at 1.06 microns."
+    },
+    {
+      "start": "00:26:05.00",
+      "end": "00:26:10.00",
+      "text": "And when the beam is incident on the surface, it's energetic and it causes a little bit of ablation."
+    },
+    {
+      "start": "00:26:10.00",
+      "end": "00:26:16.00",
+      "text": "And that in turn, the recoil from all the ejected material, produces actually very strong ultrasonic waves."
+    },
+    {
+      "start": "00:26:16.00",
+      "end": "00:26:21.00",
+      "text": "And they're omnidirectional. They're in the full range here."
+    },
+    {
+      "start": "00:26:21.00",
+      "end": "00:26:26.00",
+      "text": "And so they can really interrogate defects or features most anywhere in the range of the beams."
+    },
+    {
+      "start": "00:26:26.00",
+      "end": "00:26:31.00",
+      "text": "And one of them, in particular, scatters from a defect, and the scattered light arrives here at the surface."
+    },
+    {
+      "start": "00:26:31.00",
+      "end": "00:26:38.00",
+      "text": "And I mentioned that there's a very small but measurable surface displacement when the wave arrives."
+    },
+    {
+      "start": "00:26:38.00",
+      "end": "00:26:43.00",
+      "text": "So our detection beam is incident on the surface, but we also collect the reflected beam backward,"
+    },
+    {
+      "start": "00:26:43.00",
+      "end": "00:26:48.00",
+      "text": "which is now phase-modulated and we in turn demodulate it later on."
+    },
+    {
+      "start": "00:26:48.00",
+      "end": "00:26:54.00",
+      "text": "So here's an experiment in which we take a completed powder bed fusion bar."
+    },
+    {
+      "start": "00:26:54.00",
+      "end": "00:26:59.00",
+      "text": "The surface is as created, there's no machining or anything on this surface."
+    },
+    {
+      "start": "00:26:59.00",
+      "end": "00:27:04.00",
+      "text": "And as a test, we've made artificial defects using EDM side-drilled holes."
+    },
+    {
+      "start": "00:27:04.00",
+      "end": "00:27:09.00",
+      "text": "So holes from the side going most or all the way through with sizes down to about 300 micrometers."
+    },
+    {
+      "start": "00:27:09.00",
+      "end": "00:27:14.00",
+      "text": "Now, how do we scan? We have two beams here, generation and detection,"
+    },
+    {
+      "start": "00:27:14.00",
+      "end": "00:27:19.00",
+      "text": "and they are scanned in tandem along this direction, which is the build direction."
+    },
+    {
+      "start": "00:27:19.00",
+      "end": "00:27:24.00",
+      "text": "So the beams move together in tandem. And I'll explain here now at the bottom"
+    },
+    {
+      "start": "00:27:24.00",
+      "end": "00:27:29.00",
+      "text": "a little bit more about how that works. The generation beam produces an ultrasonic wave,"
+    },
+    {
+      "start": "00:27:29.00",
+      "end": "00:27:34.00",
+      "text": "it scatters from, in this case, a side-drilled hole and returns to the surface right here"
+    },
+    {
+      "start": "00:27:34.00",
+      "end": "00:27:39.00",
+      "text": "and where, as I said, it's processed. But the important thing is that we maintain the beam separation as we scan."
+    },
+    {
+      "start": "00:27:39.00",
+      "end": "00:27:44.00",
+      "text": "And the result is a very dramatic feature that you'll see in the raw data in a few slides down from here."
+    },
+    {
+      "start": "00:27:44.00",
+      "end": "00:27:49.00",
+      "text": "So we tested two bars with side-drilled EDM holes."
+    },
+    {
+      "start": "00:27:49.00",
+      "end": "00:27:54.00",
+      "text": "They're a little hard to see in the photo, but this is a schematic cross-section."
+    },
+    {
+      "start": "00:27:54.00",
+      "end": "00:27:59.00",
+      "text": "They're all 1 millimeter deep and they had five different sizes from about 300 microns, I think, to 1 or 1 and a half millimeters."
+    },
+    {
+      "start": "00:27:59.00",
+      "end": "00:28:04.00",
+      "text": "And we have both Ti-64 and Inconel 718."
+    },
+    {
+      "start": "00:28:04.00",
+      "end": "00:28:09.00",
+      "text": "And so once again, these two beams that I showed before are being scanned in this direction along the surface."
+    },
+    {
+      "start": "00:28:09.00",
+      "end": "00:28:14.00",
+      "text": "So this is the resulting data display. This is the raw data"
+    },
+    {
+      "start": "00:28:14.00",
+      "end": "00:28:19.00",
+      "text": "and it may be not particularly known by people in the audience, so I'll take a second to try to explain it."
+    },
+    {
+      "start": "00:30:00.00",
+      "end": "00:30:04.00",
+      "text": "Conventional transducer ultrasound is the normal data display."
+    },
+    {
+      "start": "00:30:04.00",
+      "end": "00:30:10.00",
+      "text": "So at every position, here's position on the vertical scale."
+    },
+    {
+      "start": "00:30:10.00",
+      "end": "00:30:14.00",
+      "text": "As we're scanning along here at every position, we acquire a temporal signal."
+    },
+    {
+      "start": "00:30:14.00",
+      "end": "00:30:18.00",
+      "text": "And we plot the temporal signal in gray scale."
+    },
+    {
+      "start": "00:30:18.00",
+      "end": "00:30:23.00",
+      "text": "And we move to the next position, we acquire another temporal signal."
+    },
+    {
+      "start": "00:30:23.00",
+      "end": "00:30:28.00",
+      "text": "And we move along with small enough steps that this looks continuous."
+    },
+    {
+      "start": "00:30:28.00",
+      "end": "00:30:32.00",
+      "text": "And we get these very dramatic hyperbolas associated with each of the side-drilled holes."
+    },
+    {
+      "start": "00:30:32.00",
+      "end": "00:30:37.00",
+      "text": "And in fact, hyperbolas are the shape that is unique to this measurement technique."
+    },
+    {
+      "start": "00:30:37.00",
+      "end": "00:30:43.00",
+      "text": "And it makes it easier or easier to do signal processing because you recognize these features from everything else on the screen."
+    },
+    {
+      "start": "00:30:54.00",
+      "end": "00:31:03.00",
+      "text": "So now this, the first one was Ti-64, this one is Inconel 718."
+    },
+    {
+      "start": "00:31:03.00",
+      "end": "00:31:07.00",
+      "text": "And again, we get these hyperbolas, but Inconel is a more scattering material."
+    },
+    {
+      "start": "00:31:07.00",
+      "end": "00:31:13.00",
+      "text": "The waves scatter more and so we don't have the signal-to-noise that we had before."
+    },
+    {
+      "start": "00:31:13.00",
+      "end": "00:31:18.00",
+      "text": "But it's still enough to recognize these unique features, which once again go from 300 microns in this case to 900 microns."
+    },
+    {
+      "start": "00:31:23.00",
+      "end": "00:31:28.00",
+      "text": "Now that kind of image is not suitable for a machine operator, we know that."
+    },
+    {
+      "start": "00:31:28.00",
+      "end": "00:31:34.00",
+      "text": "A machine operator wants an interpretation, a process of this image into something more recognizable."
+    },
+    {
+      "start": "00:31:34.00",
+      "end": "00:31:38.00",
+      "text": "So the first step is to do a cross-section. This happens to be a simulation for clarity purposes."
+    },
+    {
+      "start": "00:31:38.00",
+      "end": "00:31:43.00",
+      "text": "But in this case, you have a cross-section, and now you see in this case one, two, three, four defects at three different depths from about a half millimeter to four millimeters."
+    },
+    {
+      "start": "00:31:43.00",
+      "end": "00:31:49.00",
+      "text": "And so this is much more evocative, and from the position of this defect, you can get its depth and its position with pretty high accuracy."
+    },
+    {
+      "start": "00:31:53.00",
+      "end": "00:31:58.00",
+      "text": "And even this may not be satisfactory because the operator doesn't want to look at a whole series of cross-sections as your inspection scan proceeds."
+    },
+    {
+      "start": "00:31:58.00",
+      "end": "00:32:04.00",
+      "text": "So what they really want is something I don't have to show here, but it's some sort of a display along the scan where defects are marked in such a way as to alert the operator."
+    },
+    {
+      "start": "00:32:04.00",
+      "end": "00:32:10.00",
+      "text": "And possibly create a red flag, but in any case, the characteristics are visible without having to look at a cross-section."
+    },
+    {
+      "start": "00:32:10.00",
+      "end": "00:32:13.00",
+      "text": "So I want to make that point, this should be entirely automated."
+    },
+    {
+      "start": "00:32:13.00",
+      "end": "00:32:21.00",
+      "text": "So integration onto a machine, we've done some demos at a company called Arktos in Dayton, Ohio."
+    },
+    {
+      "start": "00:32:21.00",
+      "end": "00:32:27.00",
+      "text": "And the way we scan powder bed fusion samples is to mount our probe on the spreader arm."
+    },
+    {
+      "start": "00:32:27.00",
+      "end": "00:32:33.00",
+      "text": "So the spreader arm itself scans the probe in one axis."
+    },
+    {
+      "start": "00:32:33.00",
+      "end": "00:32:38.00",
+      "text": "And we put a one-dimensional stage on top of the spreader arm to create the second scan axis."
+    },
+    {
+      "start": "00:32:38.00",
+      "end": "00:32:44.00",
+      "text": "So we foresee at least in principle a two-step operation."
+    },
+    {
+      "start": "00:32:44.00",
+      "end": "00:32:50.00",
+      "text": "The first step would be a profilometer, some other kind of imaging system for height variation."
+    },
+    {
+      "start": "00:32:50.00",
+      "end": "00:32:55.00",
+      "text": "And we scan the surface and identify features of interest which frequently can be bumps."
+    },
+    {
+      "start": "00:32:55.00",
+      "end": "00:33:00.00",
+      "text": "Subsurface defects are frequently, if not all the time, characterized by small but measurable bumps on the surface."
+    },
+    {
+      "start": "00:33:00.00",
+      "end": "00:33:06.00",
+      "text": "So once they're identified, they create a region of interest, and then we are scanning only within that region of interest."
+    },
+    {
+      "start": "00:33:06.00",
+      "end": "00:33:13.00",
+      "text": "Not the whole pattern, the laser pattern, if possible. We want to speed up the process to only look at regions of interest."
+    },
+    {
+      "start": "00:33:13.00",
+      "end": "00:33:19.00",
+      "text": "Now the measurement head, I'm going to show the actual one in the next photo, but this is an enlargement of a very similar one to what we actually use in our experiments."
+    },
+    {
+      "start": "00:33:19.00",
+      "end": "00:33:22.00",
+      "text": "And you can see this is six centimeters, excuse me, six millimeters."
+    },
+    {
+      "start": "00:35:00.00",
+      "end": "00:35:03.00",
+      "text": "long, 4 mm wide and about 3 mm high"
+    },
+    {
+      "start": "00:35:03.00",
+      "end": "00:35:06.00",
+      "text": "with the beam directed out this aperture and we have"
+    },
+    {
+      "start": "00:35:06.00",
+      "end": "00:35:11.00",
+      "text": "the two delivery fibers, this one for the pulsed"
+    },
+    {
+      "start": "00:35:11.00",
+      "end": "00:35:15.00",
+      "text": "YAG laser and this one for the CW detection"
+    },
+    {
+      "start": "00:35:15.00",
+      "end": "00:35:19.00",
+      "text": "laser. So again, this can be very"
+    },
+    {
+      "start": "00:35:19.00",
+      "end": "00:35:23.00",
+      "text": "compact. Now here it is mounted on a PBF"
+    },
+    {
+      "start": "00:35:23.00",
+      "end": "00:35:28.00",
+      "text": "machine, here's our probe, again with similar"
+    },
+    {
+      "start": "00:35:28.00",
+      "end": "00:35:32.00",
+      "text": "size with the two delivery fibers. Now the beams are"
+    },
+    {
+      "start": "00:35:32.00",
+      "end": "00:35:37.00",
+      "text": "directed downward onto the surface and you have"
+    },
+    {
+      "start": "00:35:37.00",
+      "end": "00:35:41.00",
+      "text": "as usual the generation and detection beam and"
+    },
+    {
+      "start": "00:35:41.00",
+      "end": "00:35:46.00",
+      "text": "in this case they're scanning a completed build there's an"
+    },
+    {
+      "start": "00:35:46.00",
+      "end": "00:35:51.00",
+      "text": "array here and once again we have two axis"
+    },
+    {
+      "start": "00:35:51.00",
+      "end": "00:35:55.00",
+      "text": "of motion, we have a scan, excuse me, a stage on top"
+    },
+    {
+      "start": "00:35:55.00",
+      "end": "00:36:00.00",
+      "text": "of the spreader arm and then the motion of the spreader arm"
+    },
+    {
+      "start": "00:36:00.00",
+      "end": "00:36:04.00",
+      "text": "itself. So in conclusion we think that laser ultrasonic"
+    },
+    {
+      "start": "00:36:04.00",
+      "end": "00:36:09.00",
+      "text": "testing can be useful for inline inspection"
+    },
+    {
+      "start": "00:36:09.00",
+      "end": "00:36:14.00",
+      "text": "I want to emphasize this is actual inspection not"
+    },
+    {
+      "start": "00:36:14.00",
+      "end": "00:36:18.00",
+      "text": "predictive information, we actually find what's"
+    },
+    {
+      "start": "00:36:18.00",
+      "end": "00:36:23.00",
+      "text": "really there by way of defects and we can do it"
+    },
+    {
+      "start": "00:36:23.00",
+      "end": "00:36:27.00",
+      "text": "inline or almost inline. And what I mean by that is for"
+    },
+    {
+      "start": "00:36:27.00",
+      "end": "00:36:32.00",
+      "text": "powder bed fusion the layers are so thin that we think"
+    },
+    {
+      "start": "00:36:32.00",
+      "end": "00:36:37.00",
+      "text": "we only need to scan every 3, 4, 5, or 6 layers,"
+    },
+    {
+      "start": "00:36:37.00",
+      "end": "00:36:43.00",
+      "text": "not every single layer. And so we've done testing"
+    },
+    {
+      "start": "00:36:43.00",
+      "end": "00:36:47.00",
+      "text": "with powder bed fusion but we also think that"
+    },
+    {
+      "start": "00:36:47.00",
+      "end": "00:36:52.00",
+      "text": "this technique applies equally well to directed"
+    },
+    {
+      "start": "00:36:52.00",
+      "end": "00:36:57.00",
+      "text": "energy deposition, wire fed and other kinds of builds"
+    },
+    {
+      "start": "00:36:57.00",
+      "end": "00:37:02.00",
+      "text": "that people are now developing. And so we think"
+    },
+    {
+      "start": "00:37:02.00",
+      "end": "00:37:07.00",
+      "text": "that laser ultrasonic testing has a benefit over"
+    },
+    {
+      "start": "00:37:07.00",
+      "end": "00:37:11.00",
+      "text": "say melt pool monitoring looking at the melt pool"
+    },
+    {
+      "start": "00:37:11.00",
+      "end": "00:37:15.00",
+      "text": "and using a predictive algorithm. I'm repeating myself,"
+    },
+    {
+      "start": "00:37:15.00",
+      "end": "00:37:21.00",
+      "text": "we're finding the actual defects as they appear."
+    },
+    {
+      "start": "00:37:21.00",
+      "end": "00:37:25.00",
+      "text": "I also wanted to take a minute or two to talk"
+    },
+    {
+      "start": "00:37:25.00",
+      "end": "00:37:30.00",
+      "text": "about other applications of laser ultrasonic testing"
+    },
+    {
+      "start": "00:37:30.00",
+      "end": "00:37:35.00",
+      "text": "and in fact there are many. AM is only one part"
+    },
+    {
+      "start": "00:37:35.00",
+      "end": "00:37:39.00",
+      "text": "of the general processes that laser ultrasonic can"
+    },
+    {
+      "start": "00:37:39.00",
+      "end": "00:37:44.00",
+      "text": "be used to test. Some of which we've done and others"
+    },
+    {
+      "start": "00:37:44.00",
+      "end": "00:37:49.00",
+      "text": "are on our roadmap. So, laser welds, we can"
+    },
+    {
+      "start": "00:37:49.00",
+      "end": "00:37:53.00",
+      "text": "monitor defects in laser welds and other kinds"
+    },
+    {
+      "start": "00:37:53.00",
+      "end": "00:37:58.00",
+      "text": "of welds inline immediately following the melt"
+    },
+    {
+      "start": "00:37:58.00",
+      "end": "00:38:03.00",
+      "text": "laser, we can look for defects and the part can"
+    },
+    {
+      "start": "00:38:03.00",
+      "end": "00:38:07.00",
+      "text": "be hot when we do it. Friction stir welds,"
+    },
+    {
+      "start": "00:38:07.00",
+      "end": "00:38:11.00",
+      "text": "we've actually done a lot of work on them."
+    },
+    {
+      "start": "00:38:11.00",
+      "end": "00:38:16.00",
+      "text": "So if anyone here is interested in friction stir welds"
+    },
+    {
+      "start": "00:38:16.00",
+      "end": "00:38:21.00",
+      "text": "actually we can talk about that and interesting"
+    },
+    {
+      "start": "00:38:21.00",
+      "end": "00:38:26.00",
+      "text": "you'll see a photo in a second pipeline girth"
+    },
+    {
+      "start": "00:38:26.00",
+      "end": "00:38:31.00",
+      "text": "welds. So that's a sample of the weld applications"
+    },
+    {
+      "start": "00:38:31.00",
+      "end": "00:38:36.00",
+      "text": "but then there are others that also may be"
+    },
+    {
+      "start": "00:38:36.00",
+      "end": "00:38:41.00",
+      "text": "interesting, for example we've studied the"
+    },
+    {
+      "start": "00:38:41.00",
+      "end": "00:38:45.00",
+      "text": "testing the inspection of stress corrosion cracks,"
+    },
+    {
+      "start": "00:38:45.00",
+      "end": "00:38:49.00",
+      "text": "something important in oil-gas pipelines and"
+    },
+    {
+      "start": "00:38:49.00",
+      "end": "00:38:54.00",
+      "text": "in nuclear fuel canisters. And so wall"
+    },
+    {
+      "start": "00:38:54.00",
+      "end": "00:38:58.00",
+      "text": "thickness oh here's interesting, screening of"
+    },
+    {
+      "start": "00:38:58.00",
+      "end": "00:39:02.00",
+      "text": "sub-millimeter chip capacitors, we can inspect"
+    },
+    {
+      "start": "00:39:02.00",
+      "end": "00:39:07.00",
+      "text": "one by one parts that are sub-millimeter."
+    },
+    {
+      "start": "00:39:07.00",
+      "end": "00:39:12.00",
+      "text": "Load measurement in fasteners, adhesive spread,"
+    },
+    {
+      "start": "00:39:12.00",
+      "end": "00:39:17.00",
+      "text": "and here are just some photos and then I'll complete"
+    },
+    {
+      "start": "00:39:17.00",
+      "end": "00:39:22.00",
+      "text": "the talk. Here is a friction stir weld situation"
+    },
+    {
+      "start": "00:39:22.00",
+      "end": "00:39:27.00",
+      "text": "where you have long profiles, 7-meter profiles,"
+    },
+    {
+      "start": "00:39:27.00",
+      "end": "00:39:32.00",
+      "text": "that are butt-welded together one by one, side by"
+    },
+    {
+      "start": "00:39:32.00",
+      "end": "00:39:37.00",
+      "text": "side, to make a panel and we've done real time"
+    },
+    {
+      "start": "00:39:37.00",
+      "end": "00:39:42.00",
+      "text": "inspection. So our measurement head follows"
+    },
+    {
+      "start": "00:39:42.00",
+      "end": "00:39:46.00",
+      "text": "the weld tool by about a foot and is inspecting"
+    },
+    {
+      "start": "00:39:46.00",
+      "end": "00:39:51.00",
+      "text": "in line. This is a girth weld setup using"
+    },
+    {
+      "start": "00:39:51.00",
+      "end": "00:39:56.00",
+      "text": "laser arc and our measurement probe is just"
+    },
+    {
+      "start": "00:39:56.00",
+      "end": "00:40:01.00",
+      "text": "behind and the two move together to perform the weld."
+    },
+    {
+      "start": "00:40:00.00",
+      "end": "00:40:03.00",
+      "text": "...all the way around. Seamless tube wall thickness. Here's an important one, we've integrated our probe into a thin crawler..."
+    },
+    {
+      "start": "00:40:03.00",
+      "end": "00:40:07.00",
+      "text": "...it's shown here and it's intended for scanning of stress corrosion cracks on the walls..."
+    },
+    {
+      "start": "00:40:07.00",
+      "end": "00:40:10.00",
+      "text": "...of spent fuel canisters. So, spent fuel rod canisters is an important question in nuclear utilities."
+    },
+    {
+      "start": "00:40:10.00",
+      "end": "00:40:13.00",
+      "text": "So okay, that completes my presentation and thank you for your attention."
+    },
+    {
+      "start": "00:40:13.00",
+      "end": "00:40:16.00",
+      "text": "We have time for just one question, so does the audience have any questions for our speaker?"
+    },
+    {
+      "start": "00:40:16.00",
+      "end": "00:40:19.00",
+      "text": "Thank you for your interesting presentation. I have a question on..."
+    },
+    {
+      "start": "00:40:19.00",
+      "end": "00:40:23.00",
+      "text": "...you mentioned what is very interesting anyway, so the scattering of the microstructure which can generate some noise I mean..."
+    },
+    {
+      "start": "00:40:23.00",
+      "end": "00:40:27.00",
+      "text": "...with some difficulty to check to have the signals coming from the defects. However, our defects are usually also smaller than expected in..."
+    },
+    {
+      "start": "00:40:27.00",
+      "end": "00:40:31.00",
+      "text": "...but anyway, but I have another question concerning the surface roughness because we have made this kind of experiments..."
+    },
+    {
+      "start": "00:40:31.00",
+      "end": "00:40:34.00",
+      "text": "...and surface roughness in LPBF can be sometimes tricky."
+    },
+    {
+      "start": "00:40:34.00",
+      "end": "00:40:37.00",
+      "text": "Well, interestingly, as we tested many different types of surfaces as-built, as-hot, we have not yet found a problem..."
+    },
+    {
+      "start": "00:40:37.00",
+      "end": "00:40:40.00",
+      "text": "...we have not yet found a problem that affects the accuracy of our measurement. It's impervious almost to surface roughness, almost."
+    },
+    {
+      "start": "00:40:40.00",
+      "end": "00:40:43.00",
+      "text": "But I have literature with me and I'm happy to talk at the end of the session."
+    },
+    {
+      "start": "00:40:43.00",
+      "end": "00:40:47.00",
+      "text": "Okay and I would like to thank the speaker once again and then I would like to invite Dr. Ing. Hans-Joachim Rohde on the stage."
+    },
+    {
+      "start": "00:40:47.00",
+      "end": "00:40:50.00",
+      "text": "Hans-Joachim Rohde has a PhD from the University of Stuttgart."
+    },
+    {
+      "start": "00:40:50.00",
+      "end": "00:40:54.00",
+      "text": "He completed his doctorate in combination with LASAG in Switzerland in cooperation with the University of Stuttgart."
+    },
+    {
+      "start": "00:40:54.00",
+      "end": "00:40:57.00",
+      "text": "He has quite some expertise in CO2 lasers also, but today he will provide us a talk regarding the development in diagnostic mirrors..."
+    },
+    {
+      "start": "00:40:57.00",
+      "end": "00:41:00.00",
+      "text": "...for monitoring in the laser additive manufacturing process. So, I would give the floor to Hans-Joachim."
+    },
+    {
+      "start": "00:41:00.00",
+      "end": "01:43:07.00",
+      "text": "Thank you very much for the kind introduction. Good afternoon everybody."
+    },
+    {
+      "start": "00:43:07.00",
+      "end": "01:43:10.00",
+      "text": "So, my name is Hans-Joachim Rohde and I am from Laser Components and I welcome you to my presentation of..."
+    },
+    {
+      "start": "00:43:10.00",
+      "end": "01:43:13.00",
+      "text": "...development in diagnostic mirrors for monitoring the laser additive manufacturing process."
+    },
+    {
+      "start": "00:43:13.00",
+      "end": "01:43:17.00",
+      "text": "And as you heard as the introduction I've worked before for laser companies and laser machine manufacturers..."
+    },
+    {
+      "start": "00:43:17.00",
+      "end": "01:43:20.00",
+      "text": "...so I have used a lot of optics during my time and know Laser Components always since thirty years as a supplier..."
+    },
+    {
+      "start": "00:43:20.00",
+      "end": "01:43:23.00",
+      "text": "...and I would like to give you with this presentation a little bit a view on the parameters which we have to deal with..."
+    },
+    {
+      "start": "00:43:23.00",
+      "end": "01:43:27.00",
+      "text": "...during the laser optics manufacturing. And then I would like to introduce shortly Laser Components."
+    },
+    {
+      "start": "00:43:27.00",
+      "end": "01:43:30.00",
+      "text": "Laser Components was founded 1984 and since then we're producing several different products which is showing in this slide."
+    },
+    {
+      "start": "00:43:30.00",
+      "end": "01:43:33.00",
+      "text": "So the first product is here, see a laser diodes from this manufacturing Canada..."
+    },
+    {
+      "start": "00:43:33.00",
+      "end": "01:43:37.00",
+      "text": "...then see sensors which are manufactured in Phoenix, Arizona, and the other things laser modules, photon counters..."
+    },
+    {
+      "start": "00:43:37.00",
+      "end": "01:43:40.00",
+      "text": "...fiber optics and laser optics are manufactured in Olching close to Munich."
+    },
+    {
+      "start": "00:43:40.00",
+      "end": "01:43:43.00",
+      "text": "My topic is as a product manager is fiber optics and laser optics, and laser optics as you can see we manufacturing these since 1986."
+    },
+    {
+      "start": "00:43:43.00",
+      "end": "01:43:47.00",
+      "text": "Today we are around 250 people and around 160 are in Olching located."
+    },
+    {
+      "start": "00:43:47.00",
+      "end": "01:43:50.00",
+      "text": "Shortly something about our production methods, so we have in principle three techniques: E-beam, Plasma Ion Assisted Deposition..."
+    },
+    {
+      "start": "00:43:50.00",
+      "end": "01:43:54.00",
+      "text": "...and Ion Beam Sputtering. Shortly little bit about Plasma Ion Assisted Deposition."
+    },
+    {
+      "start": "00:45:00.00",
+      "end": "00:45:31.00",
+      "text": "It's more or less an E-beam technique with an additional plasma source, which provides a better homogeneity of the coating and also reducing, for example, here the coating temperature. So with E-beam it's much higher. We can use metallic and oxidic targets here, and we have several holders here up here for the rotation of the substrate. And at the end, one of the properties is with this coating technique you have less water molecules in your coating."
+    },
+    {
+      "start": "00:45:31.00",
+      "end": "00:46:05.00",
+      "text": "The other one, ion beam sputtering, in this case we use an ion beam source with either xenon or other gases. We have a two-zone target zone here, which we can move quite quickly, so that we can use two different materials. And also here we using metallic and oxidic targets. The calotte is rotating as well as with the ion assisted deposition process, and the film formation will be happening up here."
+    },
+    {
+      "start": "00:46:05.00",
+      "end": "00:46:40.00",
+      "text": "A comparison a little bit about the three techniques. So E-beam is of course one of the oldest ones, has the highest growth rate, but as well also the roughest surface. So it's typical this pole, let's say coating layer thickness. And on the other hand, it has a low layer tension but a relatively high optical absorption."
+    },
+    {
+      "start": "00:46:40.00",
+      "end": "00:47:04.00",
+      "text": "The other one is the plasma ion assisted deposition. In this case we have a high to medium growth rate, so similar to E-beam but a little bit less, but a higher layer tension and also higher optical losses in that case. But the surface is even still let's say rough, but it's much smoother than E-beam and it's more dense in comparison to E-beam."
+    },
+    {
+      "start": "00:47:04.00",
+      "end": "00:47:46.00",
+      "text": "And the last one is then IBS. Here we have the lowest growth rate. That means also that the most cost-effective coating technique. On the other hand we can do the most complex coatings with this technique. It has low optical losses but a very high let's say layer tension of the optics. And the coating surface is very, very dense in comparison to all other things. Nevertheless, each technique has its own specialty. For example, with E-beam we still manufacturing today the Gaussian mirrors."
+    },
+    {
+      "start": "00:47:46.00",
+      "end": "00:48:26.00",
+      "text": "Typical optics in the process, I think all of you know that. Of course we have protection glasses, we have processing lenses, we have these diagnostic mirrors, we have beam splitters and maybe also at the beginning collimating lenses which collimate the beam. And all these optics, what you see is that they are transmissive optics, that means absorption is a very important factor for these optics. So if you optimize the absorption then you have less thermal load and better properties at the end for your process and also for the diagnostics. And that's exactly that what we have now in the last 12 months investigated a little bit more intensively."
+    },
+    {
+      "start": "00:48:26.00",
+      "end": "00:49:08.00",
+      "text": "So one of these things is for the process ion deposition process, so for PIAD, we have reduced the gas flow because originally the machine supplier said to us we have to use 30 square cubic centimeters oxygen gas flow. But in the meantime we have reduced that and we have found out that we can reduce massively the absorption behavior of one layer. So which causes then really that we come down here up to three or two ppm absorption with this technique for wavelengths at 1064, yeah. And this is done here for hafnia. Next slide I show you then for tantal."
+    },
+    {
+      "start": "00:49:08.00",
+      "end": "00:49:36.00",
+      "text": "Of course one of the things is what happens with the damage threshold, with the LIDT? What I can say up to now, what we have shown our investigation is that with this reduction we have still the same damage threshold. So we reduce only really the absorption of the coating layers, which is of course a good advantage for the optical properties."
+    },
+    {
+      "start": "00:49:36.00",
+      "end": "00:50:01.00",
+      "text": "And the same is for tantal, even so that tantal has already a very low absorption in general, but also here we could reduce this down to 0.5 ppm absorption per thickness of the layer. And as you see similar values, so we come from down from 30 and below 10 or even close to 0.5 ppm."
+    },
+    {
+      "start": "00:50:00.00",
+      "end": "00:50:05.00",
+      "text": "between 5 and 10 we have then more or less the best stable results."
+    },
+    {
+      "start": "00:50:05.00",
+      "end": "00:50:10.00",
+      "text": "Of course we will do some more investigations also what does it mean for the rest of the machine parameters"
+    },
+    {
+      "start": "00:50:10.00",
+      "end": "00:50:15.00",
+      "text": "and also for other wavelengths, but for the moment, for example one of these let's say parameters"
+    },
+    {
+      "start": "00:50:15.00",
+      "end": "00:50:20.00",
+      "text": "which we can use now for the modern production of optics is to reduce the oxygen flow."
+    },
+    {
+      "start": "00:50:20.00",
+      "end": "00:50:25.00",
+      "text": "Of course it also saves us oxygen consumption."
+    },
+    {
+      "start": "00:50:25.00",
+      "end": "00:50:30.00",
+      "text": "Another thing is then we have had a challenge to solve for a customer"
+    },
+    {
+      "start": "00:50:30.00",
+      "end": "00:50:35.00",
+      "text": "which we has an existing processing head and we have then checked with him together"
+    },
+    {
+      "start": "00:50:35.00",
+      "end": "00:50:40.00",
+      "text": "the possibilities to reduce the absorption of the optical elements."
+    },
+    {
+      "start": "00:50:40.00",
+      "end": "00:50:45.00",
+      "text": "And here in comparison to a protection window which is... the blue line is... oops... wrong... the blue line is the original one"
+    },
+    {
+      "start": "00:50:45.00",
+      "end": "00:50:50.00",
+      "text": "and then we have used different materials with one coating type at 12 kilowatt laser power"
+    },
+    {
+      "start": "00:50:50.00",
+      "end": "00:50:55.00",
+      "text": "and you can see we can reduce more than 50% with different materials"
+    },
+    {
+      "start": "00:50:55.00",
+      "end": "00:51:00.00",
+      "text": "in comparison to the original window which was mounted into the head."
+    },
+    {
+      "start": "00:51:00.00",
+      "end": "00:51:05.00",
+      "text": "So the thermal load is really defined by the different materials"
+    },
+    {
+      "start": "00:51:05.00",
+      "end": "00:51:10.00",
+      "text": "and you can really reduce this for the materials and accordingly have a really certain order of materials"
+    },
+    {
+      "start": "00:51:10.00",
+      "end": "00:51:15.00",
+      "text": "So number 1, 2, and 3, it means this material have always the same same thing."
+    },
+    {
+      "start": "00:51:15.00",
+      "end": "00:51:20.00",
+      "text": "So we tested this also at 8 kilowatt, 4 kilowatt, 2 kilowatt, 1 kilowatt and 0.5 kilowatt."
+    },
+    {
+      "start": "00:51:20.00",
+      "end": "00:51:25.00",
+      "text": "The difference is that of course the curves are going closer to each other"
+    },
+    {
+      "start": "00:51:25.00",
+      "end": "00:51:30.00",
+      "text": "because the difference is not so dramatic with lower powers than with let's say with 12 kilowatt."
+    },
+    {
+      "start": "00:51:30.00",
+      "end": "00:51:35.00",
+      "text": "And then we changed different coating layers."
+    },
+    {
+      "start": "00:51:35.00",
+      "end": "00:51:40.00",
+      "text": "So in this case again the standard window and then the same material as this one"
+    },
+    {
+      "start": "00:51:40.00",
+      "end": "00:51:45.00",
+      "text": "but with a different number of coating layers."
+    },
+    {
+      "start": "00:51:45.00",
+      "end": "00:51:50.00",
+      "text": "And you can see there is at the end a minimum where we can achieve the lowest absorption."
+    },
+    {
+      "start": "00:51:50.00",
+      "end": "00:51:55.00",
+      "text": "So the temperature difference is then here the lowest value."
+    },
+    {
+      "start": "00:51:55.00",
+      "end": "00:52:00.00",
+      "text": "So it's really so that when you make different coating of number of layers"
+    },
+    {
+      "start": "00:52:00.00",
+      "end": "00:52:05.00",
+      "text": "then you can optimize this at the end for an optic which has really then the lowest absorption"
+    },
+    {
+      "start": "00:52:05.00",
+      "end": "00:52:10.00",
+      "text": "in that case for the same material and same thickness and everything"
+    },
+    {
+      "start": "00:52:10.00",
+      "end": "00:52:15.00",
+      "text": "for this kind of power level at 12 kilowatt and 1064 nanometer."
+    },
+    {
+      "start": "00:52:15.00",
+      "end": "00:52:20.00",
+      "text": "So you can see that it's important to know which kind of material together with the right coating"
+    },
+    {
+      "start": "00:52:20.00",
+      "end": "00:52:25.00",
+      "text": "you can really reduce here the absorption behavior very much."
+    },
+    {
+      "start": "00:52:25.00",
+      "end": "00:52:30.00",
+      "text": "And then another... we have another possibility: so we can also we call it pre- and post-processing."
+    },
+    {
+      "start": "00:52:30.00",
+      "end": "00:52:35.00",
+      "text": "So pre- means that for example we can use optics with different polishing grades."
+    },
+    {
+      "start": "00:52:35.00",
+      "end": "00:52:40.00",
+      "text": "This has an influence. Cleaning has an influence beforehand."
+    },
+    {
+      "start": "00:52:40.00",
+      "end": "00:52:45.00",
+      "text": "Also cleaning in the machine for example due to plasma we can also treat the surface"
+    },
+    {
+      "start": "00:52:45.00",
+      "end": "00:52:50.00",
+      "text": "and this can also influence the absorption of the optics."
+    },
+    {
+      "start": "00:52:50.00",
+      "end": "00:52:55.00",
+      "text": "And post-processing is for example again cleaning and for example then later on I show you then annealing of the optics after the coating process."
+    },
+    {
+      "start": "00:52:55.00",
+      "end": "00:53:00.00",
+      "text": "And also here you see for the 8 kilowatt and also for 4, 2 and 1 kilowatt"
+    },
+    {
+      "start": "00:53:00.00",
+      "end": "00:53:05.00",
+      "text": "that here... oops... that here with and without we have an improvement of the thermal."
+    },
+    {
+      "start": "00:53:05.00",
+      "end": "00:53:10.00",
+      "text": "It's not much but you can achieve a certain value."
+    },
+    {
+      "start": "00:53:10.00",
+      "end": "00:53:15.00",
+      "text": "The same is also for here for the other material we have this distance here."
+    },
+    {
+      "start": "00:53:15.00",
+      "end": "00:53:20.00",
+      "text": "So you can really do the pre- and post-processing, you can again improve the absorption behavior of the optics"
+    },
+    {
+      "start": "00:53:20.00",
+      "end": "00:53:25.00",
+      "text": "which is then of course then at the end with this technique you have then at the end"
+    },
+    {
+      "start": "00:53:25.00",
+      "end": "00:53:30.00",
+      "text": "with coating material and this pre- and post-processing you have then the optimized optical behavior of the optics."
+    },
+    {
+      "start": "00:53:30.00",
+      "end": "00:53:35.00",
+      "text": "But it's sometimes not so easy when we have made then the tests with the 12 kilowatt power level"
+    },
+    {
+      "start": "00:53:35.00",
+      "end": "00:53:40.00",
+      "text": "it does not show this behavior. So there all the pre- and post-processing samples are slightly higher than without."
+    },
+    {
+      "start": "00:53:40.00",
+      "end": "00:53:45.00",
+      "text": "So you can see that not everything is now finally investigated."
+    },
+    {
+      "start": "00:53:45.00",
+      "end": "00:53:50.00",
+      "text": "So we have still to do something here and to see why is that so"
+    },
+    {
+      "start": "00:53:50.00",
+      "end": "00:53:55.00",
+      "text": "but in this case as you see the not processed samples are lower than the processed sample in this case."
+    },
+    {
+      "start": "00:53:55.00",
+      "end": "00:54:00.00",
+      "text": "We do not know as I said at the moment if it's due to the post-process or pre-process"
+    },
+    {
+      "start": "00:54:00.00",
+      "end": "00:54:05.00",
+      "text": "but we will investigate this further as well as for more power levels or higher power levels up to 30 kilowatt."
+    },
+    {
+      "start": "00:54:05.00",
+      "end": "00:54:10.00",
+      "text": "As I said one of the post-processing things is annealing."
+    },
+    {
+      "start": "00:54:10.00",
+      "end": "00:54:15.00",
+      "text": "Here you have only a sample for that how we can change here the transmission"
+    },
+    {
+      "start": "00:54:15.00",
+      "end": "00:54:20.00",
+      "text": "or at the end the absorption of this optic at a wavelength of 2900 nanometer."
+    },
+    {
+      "start": "00:55:00.00",
+      "end": "00:55:04.00",
+      "text": "14 nanometers. As you see, with this annealing we can increase it from close to, let's say, 95.8"
+    },
+    {
+      "start": "00:55:04.00",
+      "end": "00:55:09.00",
+      "text": "over 99%. So it's a 3% increase only that we are, after the coating process, we anneal these optics."
+    },
+    {
+      "start": "00:55:09.00",
+      "end": "00:55:15.00",
+      "text": "Also with that, you can learn that all these things are really influence at the end of the"
+    },
+    {
+      "start": "00:55:15.00",
+      "end": "00:55:20.00",
+      "text": "performance of your optics. Another thing is then I mentioned before, not the number of coating layers,"
+    },
+    {
+      "start": "00:55:20.00",
+      "end": "00:55:25.00",
+      "text": "but also the coating design. So we started a new technique called quantum nanolaminates."
+    },
+    {
+      "start": "00:55:25.00",
+      "end": "00:55:30.00",
+      "text": "So what we are doing is we have then typical dielectric coating here with hafnium and silicon"
+    },
+    {
+      "start": "00:55:30.00",
+      "end": "00:55:35.00",
+      "text": "oxide and we substitute one of these hafnium layer by a layer which is existing out of very,"
+    },
+    {
+      "start": "00:55:35.00",
+      "end": "00:55:40.00",
+      "text": "very thin alternative layers of hafnium and silicon oxide. So thin means they are in"
+    },
+    {
+      "start": "00:55:40.00",
+      "end": "00:55:45.00",
+      "text": "nanometer range, 1 nanometer, half a nanometer, so depending on how many layers we are doing here."
+    },
+    {
+      "start": "00:55:45.00",
+      "end": "00:55:50.00",
+      "text": "And this influencing as well the optical properties of the optics, which we can see in the next"
+    },
+    {
+      "start": "00:55:50.00",
+      "end": "00:55:55.00",
+      "text": "slide, for example, for UV. So what we have done, we have substitute one of these layers as shown"
+    },
+    {
+      "start": "00:55:55.00",
+      "end": "00:56:00.00",
+      "text": "in the previous slide, and what you see here now, is the red line. So we achieve an 205 nanometer."
+    },
+    {
+      "start": "00:56:00.00",
+      "end": "00:56:05.00",
+      "text": "We are still below 2% absorption in comparison to a normal coating which is already at six"
+    },
+    {
+      "start": "00:56:05.00",
+      "end": "00:56:10.00",
+      "text": "or 8% absorption. So also with this technique, you can then change the properties of your optics"
+    },
+    {
+      "start": "00:56:10.00",
+      "end": "00:56:15.00",
+      "text": "and optimize it really for your process. Diagnostic mirrors, as you have seen before,"
+    },
+    {
+      "start": "00:56:15.00",
+      "end": "00:56:20.00",
+      "text": "we have diagnostic mirrors which can be transmissive. That's one of the first one, it's only an example"
+    },
+    {
+      "start": "00:56:20.00",
+      "end": "00:56:25.00",
+      "text": "because we do almost all our optics, we do it really customized to the need of our customers."
+    },
+    {
+      "start": "00:56:25.00",
+      "end": "00:56:30.00",
+      "text": "But here you can see, for example, one mirror which we have optimized with all these parameters"
+    },
+    {
+      "start": "00:56:30.00",
+      "end": "00:56:35.00",
+      "text": "before, with annealing, with special coating techniques and layer numbers. So we have"
+    },
+    {
+      "start": "00:56:35.00",
+      "end": "00:56:40.00",
+      "text": "then very, very low reflection or transmissive, absorption here for the laser wavelengths"
+    },
+    {
+      "start": "00:56:40.00",
+      "end": "00:56:45.00",
+      "text": "and for the diagnostic we have a high reflection of 99.5% of the diagnostic wavelengths."
+    },
+    {
+      "start": "00:56:45.00",
+      "end": "00:56:50.00",
+      "text": "And also you see that we have also to taken care about polarization sometimes. So depending on"
+    },
+    {
+      "start": "00:56:50.00",
+      "end": "00:56:55.00",
+      "text": "that, we can optimize our mirrors for this diagnostic purpose. Another possibility of course"
+    },
+    {
+      "start": "00:56:55.00",
+      "end": "00:57:00.00",
+      "text": "is that you use not transmissive optics for your laser, you're using a reflecting. So in"
+    },
+    {
+      "start": "00:57:00.00",
+      "end": "00:57:05.00",
+      "text": "this case, the laser beam, parallel beam, are coming here, reflected down to the process area,"
+    },
+    {
+      "start": "00:57:05.00",
+      "end": "00:57:10.00",
+      "text": "and the reflected process wavelengths are coming up and going through this mirror. But"
+    },
+    {
+      "start": "00:57:10.00",
+      "end": "00:57:15.00",
+      "text": "nevertheless also here, transmissive is a topic because we want to have of course large"
+    },
+    {
+      "start": "00:57:15.00",
+      "end": "00:57:20.00",
+      "text": "signals here. So when the light is only, let's say, a low level, but still we want to have maximum"
+    },
+    {
+      "start": "00:57:20.00",
+      "end": "00:57:25.00",
+      "text": "out of there to achieve then also the right monitoring. One of these challenges also of these"
+    },
+    {
+      "start": "00:57:25.00",
+      "end": "00:57:30.00",
+      "text": "mirrors is, for example, that the laser wavelengths is very close to the diagnostic"
+    },
+    {
+      "start": "00:57:30.00",
+      "end": "00:57:35.00",
+      "text": "wavelengths, which is then of course not an easy design to achieve something like that in this case."
+    },
+    {
+      "start": "00:57:35.00",
+      "end": "00:57:40.00",
+      "text": "and it's very much to optimize all these things to have an at the end an optimized mirror for the"
+    },
+    {
+      "start": "00:57:40.00",
+      "end": "00:57:45.00",
+      "text": "process monitoring. So I'm already at the end of my presentation. I hope I can show you a little"
+    },
+    {
+      "start": "00:57:45.00",
+      "end": "00:57:50.00",
+      "text": "bit that we have also in optics a very high number of parameters which we can deal with, which we can"
+    },
+    {
+      "start": "00:57:50.00",
+      "end": "00:57:55.00",
+      "text": "optimize it. I've shown you here the material is one of these things, the pre-processing like"
+    },
+    {
+      "start": "00:57:55.00",
+      "end": "00:58:00.00",
+      "text": "polishing and cleaning, the coating design itself, as well as post-processing e.g. annealing"
+    },
+    {
+      "start": "00:58:00.00",
+      "end": "00:58:05.00",
+      "text": "things. Of course the separation of the individual processes helps us to define the correct"
+    },
+    {
+      "start": "00:58:05.00",
+      "end": "00:58:10.00",
+      "text": "procedures for complex diagnostic mirrors in the future. So that's the reason why we have started"
+    },
+    {
+      "start": "00:58:10.00",
+      "end": "00:58:15.00",
+      "text": "with simple, let's say windows to analyze these, what is the best material, what is the best coating"
+    },
+    {
+      "start": "00:58:15.00",
+      "end": "00:58:20.00",
+      "text": "for low absorption that we can later on can use this knowledge to optimize then the diagnostic mirrors."
+    },
+    {
+      "start": "00:58:20.00",
+      "end": "00:58:25.00",
+      "text": "And as well this deep process understanding helps us to find the right action for the complex"
+    },
+    {
+      "start": "00:58:25.00",
+      "end": "00:58:30.00",
+      "text": "diagnostic mirrors in the future. So we will investigate this further on also in relation,"
+    },
+    {
+      "start": "00:58:30.00",
+      "end": "00:58:35.00",
+      "text": "of course, to damage threshold. And as you have seen, new technology like the quantum nanolayers"
+    },
+    {
+      "start": "00:58:35.00",
+      "end": "00:58:40.00",
+      "text": "open new design paths for future products. Thank you for your attention and I would like"
+    },
+    {
+      "start": "00:58:40.00",
+      "end": "00:58:45.00",
+      "text": "also to say that we have a booth or table here at 5:30 it's table number nine. So if you have"
+    },
+    {
+      "start": "00:58:45.00",
+      "end": "00:58:49.00",
+      "text": "any question later on, you're really welcome. Thank you."
+    },
+    {
+      "start": "01:00:00.00",
+      "end": "01:00:05.00",
+      "text": "Please, come to our table and we can discuss further on this. Thank you very much."
+    },
+    {
+      "start": "01:00:05.00",
+      "end": "01:00:10.00",
+      "text": "Thank you Hans-Joerg for this very nice presentation."
+    },
+    {
+      "start": "01:00:10.00",
+      "end": "01:00:15.00",
+      "text": "I think we have still time for two short questions. Yes?"
+    },
+    {
+      "start": "01:00:15.00",
+      "end": "01:00:20.00",
+      "text": "[Music]"
+    },
+    {
+      "start": "01:00:20.00",
+      "end": "01:00:25.00",
+      "text": "A very good presentation, thank you. I'm just curious with the pre and post-processing"
+    },
+    {
+      "start": "01:00:25.00",
+      "end": "01:00:30.00",
+      "text": "that you do to get the improved performance, what's the additional relative cost"
+    },
+    {
+      "start": "01:00:30.00",
+      "end": "01:00:35.00",
+      "text": "you know, to that, to achieve that?"
+    },
+    {
+      "start": "01:00:35.00",
+      "end": "01:00:40.00",
+      "text": "Yes of course, that's it's one of these factors. For example for the post-processing it depends of course"
+    },
+    {
+      "start": "01:00:40.00",
+      "end": "01:00:45.00",
+      "text": "how long we have to anneal and which temperature. So in one example it was shown that"
+    },
+    {
+      "start": "01:00:45.00",
+      "end": "01:00:50.00",
+      "text": "at 700 degrees Celsius but we don't have to for example to anneal all these optics at 700, some of only"
+    },
+    {
+      "start": "01:00:50.00",
+      "end": "01:00:55.00",
+      "text": "annealed at 400 and then of course it's the time which also then but it's an add-on cost of course,"
+    },
+    {
+      "start": "01:00:55.00",
+      "end": "01:01:00.00",
+      "text": "it's an additional handling cost something could happen also with your optics. There is"
+    },
+    {
+      "start": "01:01:00.00",
+      "end": "01:01:05.00",
+      "text": "a plus of cost, yes. But if it improves your optical features, it is worth to do so because when you would like to have"
+    },
+    {
+      "start": "01:01:05.00",
+      "end": "01:01:10.00",
+      "text": "very low absorption, that means very, very thermal load, means very less thermal"
+    },
+    {
+      "start": "01:01:10.00",
+      "end": "01:01:15.00",
+      "text": "focus shift then it's worth to do it at the end. But of course it's different depending on the time and temperature."
+    },
+    {
+      "start": "01:01:15.00",
+      "end": "01:01:20.00",
+      "text": "A last question from the audience? Okay."
+    },
+    {
+      "start": "01:01:20.00",
+      "end": "01:01:25.00",
+      "text": "[Music]"
+    },
+    {
+      "start": "01:01:25.00",
+      "end": "01:01:30.00",
+      "text": "[Music]"
+    },
+    {
+      "start": "01:01:30.00",
+      "end": "01:01:35.00",
+      "text": "Hans-Joerg, thank you for the great presentation. Now I have a question regarding the nanolaminates."
+    },
+    {
+      "start": "01:01:35.00",
+      "end": "01:01:40.00",
+      "text": "If we add the nanolaminates, does that mean we are adding more layers"
+    },
+    {
+      "start": "01:01:40.00",
+      "end": "01:01:45.00",
+      "text": "to the coating? Or is that... No, the total coating thickness as shown in the picture"
+    },
+    {
+      "start": "01:01:45.00",
+      "end": "01:01:50.00",
+      "text": "is exactly the same. The thickness is the same, but you have more layers."
+    },
+    {
+      "start": "01:01:50.00",
+      "end": "01:01:55.00",
+      "text": "The total thickness is the same, but you have more layers. And yeah we have more layers when you say, but we"
+    },
+    {
+      "start": "01:01:55.00",
+      "end": "01:02:00.00",
+      "text": "call this as one layer, one layer of quantum-nanolaminate. So even that this one layer of"
+    },
+    {
+      "start": "01:02:00.00",
+      "end": "01:02:05.00",
+      "text": "quantum-nanolaminate consists out of for example 14, 18 layers."
+    },
+    {
+      "start": "01:02:05.00",
+      "end": "01:02:10.00",
+      "text": "Okay. So my question is if we have more layers in quantity,"
+    },
+    {
+      "start": "01:02:10.00",
+      "end": "01:02:15.00",
+      "text": "wouldn't that be adding tension to the substrate?"
+    },
+    {
+      "start": "01:02:15.00",
+      "end": "01:02:20.00",
+      "text": "No, in that case not now. This is no change in that case, there's no additional tension on that"
+    },
+    {
+      "start": "01:02:20.00",
+      "end": "01:02:25.00",
+      "text": "because they are so thin, these quantum-nanolayers. Okay, alright."
+    },
+    {
+      "start": "01:02:25.00",
+      "end": "01:02:30.00",
+      "text": "There's no add-on in that case. But of course it's changing for example the damage threshold, so that way we are testing."
+    },
+    {
+      "start": "01:02:30.00",
+      "end": "01:02:35.00",
+      "text": "So we will have another presentation on the Photonics West regarding that that we investigated further on"
+    },
+    {
+      "start": "01:02:35.00",
+      "end": "01:02:40.00",
+      "text": "these things regarding also damage threshold and other wavelengths."
+    },
+    {
+      "start": "01:02:40.00",
+      "end": "01:02:45.00",
+      "text": "Okay, then I would like to thank the four speakers of the Session 6 as the last time"
+    },
+    {
+      "start": "01:02:45.00",
+      "end": "01:02:50.00",
+      "text": "and I would like to invite everybody for the coffee break then afterwards here. Okay. Thank you."
+    }
+  ]
+}

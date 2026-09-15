@@ -1,0 +1,257 @@
+00:00:00.00 --> 00:00:02.00  And welcome to the session 6.
+00:00:02.00 --> 00:00:04.00  Laser welding fundamentals.
+00:00:04.00 --> 00:00:08.00  And it's my pleasure to introduce the first presenter,
+00:00:08.00 --> 00:00:13.00  Professor Michael Schmidt from BLG.
+00:00:13.00 --> 00:00:17.00  Professor Michael Schmidt has held the chair of the Institute of Photonic Technologies.
+00:00:17.00 --> 00:00:23.00  Following his engagement in its executive board,
+00:00:23.00 --> 00:00:29.00  he has led the BLG as managing director since 2005.
+00:00:29.00 --> 00:00:33.00  His current research interests include laser applications
+00:00:33.00 --> 00:00:41.00  from micro to macroscopic scale within the fields of industrial manufacturing, additive manufacturing, and medical engineering.
+00:00:41.00 --> 00:00:47.00  Professor Schmidt is an active member of several national and international research groups and committees.
+00:00:47.00 --> 00:00:53.00  So please join me in welcoming Professor Schmidt for his presentation.
+00:00:58.00 --> 00:01:03.00  Thank you, Mr. Chairman, for this very kind introduction.
+00:01:03.00 --> 00:01:07.00  And good afternoon, ladies and gentlemen. It's my pleasure to be here today
+00:01:07.00 --> 00:01:13.00  and to share with you some of my thoughts on a topic that we heard in this conference already several times,
+00:01:13.00 --> 00:01:18.00  and with that, of course, I'm talking about beam shaping as you can see here,
+00:01:18.00 --> 00:01:23.00  and I would like to introduce another wording with this presentation here that's the second one,
+00:01:23.00 --> 00:01:28.00  feature-synchronous energy control, which sounds a bit weird,
+00:01:28.00 --> 00:01:33.00  at least I hope, or it sounds a bit weird at the moment for you,
+00:01:33.00 --> 00:01:38.00  but I'd like to explain a bit what I mean with this and what I think
+00:01:38.00 --> 00:01:44.00  well, this can bring us in the future.
+00:01:44.00 --> 00:01:49.00  The presentation is based on a research paper that you can check, that you can see here,
+00:01:49.00 --> 00:01:54.00  that a few colleagues and me did, among them as you can see here,
+00:01:54.00 --> 00:02:00.00  I was very happy that the people from Mainz joined us and those from Erlangen and from Princeton.
+00:02:00.00 --> 00:02:05.00  But now let's start talking about beam shaping. I think for everybody it's already clear,
+00:02:05.00 --> 00:02:11.00  beam shaping is nothing new to talk about. So we build our laser, this we'll go back to the 1960s,
+00:02:11.00 --> 00:02:16.00  we built our laser, and we always times our beam shape,
+00:02:16.00 --> 00:02:22.00  quite clear. Yeah, we have our cavity, we have certain geometries of our cavity,
+00:02:22.00 --> 00:02:30.00  we have a laser-active material there, we align our resonator, and this in the end is responsible for what beam shape we got,
+00:02:30.00 --> 00:02:36.00  for our intensity distribution we have.
+00:02:36.00 --> 00:02:41.00  And of course, the most applicable example that we have is the Gaussian beam shape.
+00:02:41.00 --> 00:02:47.00  To be honest, I don't know what it is that came out first, maybe the Gaussian beam shape,
+00:02:47.00 --> 00:02:52.00  then calculated very easily with the Gaussian beam, then calculated throughout history,
+00:02:52.00 --> 00:02:57.00  or because everyone was happy that they have a best beam,
+00:02:57.00 --> 00:03:02.00  that they can move. But soon after that, all the other beam shapes came up.
+00:03:02.00 --> 00:03:08.00  So this is the Gaussian one, of course, and then we have the TEM 10 or TEM 01,
+00:03:08.00 --> 00:03:13.00  and then you combine them, you might have a donut mode,
+00:03:13.00 --> 00:03:18.00  and then you have other tasks, and maybe you want to do something like an ablation,
+00:03:18.00 --> 00:03:23.00  and then suddenly your Gaussian beam is not the best,
+00:03:23.00 --> 00:03:29.00  because you're ablating in the middle but you don't want to ablate at the edges, if you have a bigger area that you want to ablate,
+00:03:29.00 --> 00:03:34.00  it might not be the best one.
+00:03:34.00 --> 00:03:40.00  So you do beam shaping and you come up with the top hat profile.
+00:03:40.00 --> 00:03:45.00  So so far for the history of beam shaping.
+00:03:45.00 --> 00:03:51.00  We jump now into today. We have several systems, technologies that allow us beam shaping.
+00:03:51.00 --> 00:03:57.00  And let just let me just mention a few of them here. So on the left thing is usually you build your own,
+00:03:57.00 --> 00:04:02.00  or somebody builds your optical diffractive element. So this one is a binary one that we did on our own.
+00:04:02.00 --> 00:04:08.00  So what you do in the end, you divide your XY plane into pixels,
+00:04:08.00 --> 00:04:13.00  and you assign each pixel a certain phase play of the wavelength between 0 and 2π.
+00:04:13.00 --> 00:04:18.00  And after that, if you think about that Huygens principle of elementary waves,
+00:04:18.00 --> 00:04:24.00  you get interference, you bring all these small sub-waves, and then you have areas where
+00:04:24.00 --> 00:04:30.00  you have a lot of intensity, and areas with less intensity and zero intensity.
+00:04:30.00 --> 00:04:35.00  It's a bit more complicated, but we don't need to go in the depth.
+00:04:35.00 --> 00:04:41.00  So this is how you usually do your beam shaping with that. But there's others.
+00:04:41.00 --> 00:04:47.00  You can use other elements, but you have always one beam shape that you got
+00:04:47.00 --> 00:04:52.00  from that, and then it is solid. So you build this element, it is solid and you have
+00:04:52.00 --> 00:05:00.00  one beam shape. And you can do it different, you can calculate from the beam shape
+00:05:00.00 --> 00:05:05.00  So you heard a lot already about green core fibers, it might be a hollow core, it might be a solid core...
+00:05:05.00 --> 00:05:10.00  ...where you have the inner area, which is quite beneficial for several processes amongst the processes that we've...
+00:05:10.00 --> 00:05:16.00  ...talked about already. You could also, if you want to be very quick and have more freedom of design...
+00:05:16.00 --> 00:05:23.00  ...you can use acoustic deflectors, so you wrap your acoustic sound wave into a crystal...
+00:05:23.00 --> 00:05:29.00  ...and the maxima and the density pattern of the sound wave, then it's a diffraction pattern that you have.
+00:05:29.00 --> 00:05:35.00  And you can use this also for diffraction. Unfortunately, we lose a lot of intensity by that...
+00:05:35.00 --> 00:05:41.00  ...so if we call it 100%, we might end up with 30% outcome intensity.
+00:05:41.00 --> 00:05:46.00  And then you go for the XY, like with the acoustic deflectors, we end up in the 15 to 18% range.
+00:05:46.00 --> 00:05:52.00  So it's fast, it's great, it can go for megahertz range, but not quite energy-efficient.
+00:05:52.00 --> 00:05:58.00  So the other ones here, spatial light modulator and coherent beam combining, I will go through it quickly.
+00:05:58.00 --> 00:06:05.00  I think some of you might be already familiar with that, so we have our plane wave, which is our incident wave...
+00:06:05.00 --> 00:06:10.00  ...then we have our glass plate on top, we have an ITO, so indium tin oxide layer...
+00:06:10.00 --> 00:06:16.00  ...so an electrode layer that is transparent. Then we have, on the bottom, we have pixelated electrodes...
+00:06:16.00 --> 00:06:21.00  ...where we can put a voltage between these electrodes and the ITO layer.
+00:06:21.00 --> 00:06:26.00  In between there, we have the liquid crystal molecules. And depending on the voltage that we apply here...
+00:06:26.00 --> 00:06:31.00  ...the liquid crystals, they change their direction. And depending on their direction...
+00:06:31.00 --> 00:06:36.00  ...the refractive index changes and then you have a phase shift.
+00:06:36.00 --> 00:06:41.00  This then leads to pixelated phase shift that we can program. Which is quite nice and in the end...
+00:06:41.00 --> 00:06:47.00  ...leads to something like this. So you can make out plane waves, something like this, but you can also freely program it.
+00:06:47.00 --> 00:06:52.00  Another thing we also heard about that, and I mention this because it's one of the high-power things you can use, is coherent beam combining.
+00:06:52.00 --> 00:06:58.00  So imagine you have a seed laser, then you take the output and go into three, in this example it's three different fibers.
+00:06:58.00 --> 00:07:04.00  Each fiber has a phase modulator, so again, we can make a phase shift there. Then we have amplifiers, then we have collimators.
+00:07:04.00 --> 00:07:09.00  And we bring everything together in the beam splitter, we have the output here, the target.
+00:07:09.00 --> 00:07:14.00  But what we also need is a camera-based feedback, so to see if what we switch with our phase modulators...
+00:07:14.00 --> 00:07:19.00  ...it really is the outcome that we want to have. And with this, we have the interference, in this example, of three different fibers...
+00:07:19.00 --> 00:07:26.00  ...that we can have separately. This is again what I just told, it's just shown here. And let's see how this works.
+00:07:26.00 --> 00:07:32.00  So if we have two beams, and this is what this would look like, we have two lines, and you might be able to see that the lines are moving quite a bit...
+00:07:32.00 --> 00:07:38.00  ...what you see here in the video, and this is by a phase shift we introduced between the two fibers.
+00:07:38.00 --> 00:07:44.00  This is something fancy, you can project lines and then make the display lines or so. So let's go to the three beams.
+00:07:44.00 --> 00:07:49.00  With the three beams you see, it starts to be dots. And if you take multiple beams, then it could look like this here.
+00:07:49.00 --> 00:07:55.00  So here we have the dot that we want to have. So this is the desired dot. And then you can imagine that if you individually change...
+00:07:55.00 --> 00:08:00.00  ...the phase of the multiple beams, you can move around this spot. So you can have a spot very quickly moving around...
+00:08:00.00 --> 00:08:06.00  ...just by changing phase. These spots around here, by the way, are not desired. Let's say they're in a neglected or unwanted state.
+00:08:06.00 --> 00:08:12.00  So the side peaks as I mentioned here, they are there because we have limited spatial frequency bandwidth...
+00:08:12.00 --> 00:08:17.00  ...so limited number of fibers that we can use for beam phase space.
+00:08:17.00 --> 00:08:22.00  We tried then, because I mentioned it's a review paper, we tried to estimate and judge what's out there for beam shaping at the moment.
+00:10:00.00 --> 00:10:04.00  On behalf of that, we plotted here the addressable frequencies
+00:10:04.00 --> 00:10:09.00  over to the modulation complexity. And if we quickly go through,
+00:10:09.00 --> 00:10:15.00  we have spatial light modulators here, so you can do very complex shapes indeed, but they are not so quick.
+00:10:15.00 --> 00:10:17.00  Digital micro mirrors are there,
+00:10:17.00 --> 00:10:23.00  the deformable mirrors are a bit quicker but less complex. The AODs, EODs rank here at the moment,
+00:10:23.00 --> 00:10:28.00  the phase arrays, so the SLMs that we've just seen, rank here.
+00:10:28.00 --> 00:10:33.00  So they are quick but have less complexity, modulation complexity than the SLMs.
+00:10:33.00 --> 00:10:39.00  EOMs, so electro-optic modulators, you can count on them and also there might be modulators
+00:10:39.00 --> 00:10:46.00  that will be based on ultra-fast non-linearities, but we'll not go into details.
+00:10:46.00 --> 00:10:53.00  So this is the technology we have, the types of types we have. I could stop here and say, OK, that's nice indeed,
+00:10:53.00 --> 00:10:58.00  we have pulse shapers that we can use, so let's just use them.
+00:10:58.00 --> 00:11:03.00  But then we come to the how. So we heard, OK, we have core-ring fibers, that's nice,
+00:11:03.00 --> 00:11:08.00  and we have distribution intensity distributions. But everybody of course asks themselves
+00:11:08.00 --> 00:11:13.00  what is the best intensity distribution for the process I'm doing.
+00:11:13.00 --> 00:11:16.00  So we need to look a bit further,
+00:11:16.00 --> 00:11:21.00  and I'm coming back to this simple example. When we take this example here
+00:11:21.00 --> 00:11:26.00  and don't use it only for removing material but have let's say heatable material layers on it,
+00:11:26.00 --> 00:11:31.00  you can see here that due to the heat conduction however this out-of-our top-hat profile nevertheless
+00:11:31.00 --> 00:11:37.00  we will have a ring profile. Of course because we have flow that spreads in all directions.
+00:11:37.00 --> 00:11:42.00  And then in the end if we are not keen on removing the top layer but if we want to change something
+00:11:42.00 --> 00:11:47.00  in the material we have to take into account the process, so sub-process
+00:11:47.00 --> 00:11:53.00  that is induced by our intensity distribution. It's heat conduction and that changes maybe the result.
+00:11:53.00 --> 00:11:58.00  So the result is no longer the same geometry as we had before.
+00:11:58.00 --> 00:12:03.00  And taking this idea into account, I just give an example here for hardening.
+00:12:03.00 --> 00:12:07.00  We have zero phase transitions. OK, I have to admit, a material scientist told me,
+00:12:07.00 --> 00:12:13.00  well Michael this is not true, you might have a solid phase transition, so for metallurgists
+00:12:13.00 --> 00:12:18.00  of course this is also included here. But then if we go up and then you go to liquid material,
+00:12:18.00 --> 00:12:24.00  so you have one phase transition or you even have vapor you have two phase transitions.
+00:12:24.00 --> 00:12:29.00  So physics are getting more complex. You bring in of course more energy. More energy means the time scale
+00:12:29.00 --> 00:12:35.00  change. So you have shorter time scales for the physics and the physics are coupled from the shorter to the
+00:12:35.00 --> 00:12:41.00  longer time scales, so from the evaporation to the liquid to the heat flow that we have to take into account.
+00:12:41.00 --> 00:12:48.00  So let's take an also very common example like deep penetration welding. It's nearly as old as the laser,
+00:12:48.00 --> 00:12:53.00  so one would think it's under control, but all of you know it's not.
+00:12:53.00 --> 00:12:58.00  So we have several, let's say, defects we are still dealing with that I mentioned here,
+00:12:58.00 --> 00:13:04.00  but I didn't bring samples because I think you all know the samples for that. And as I was checking with
+00:13:04.00 --> 00:13:10.00  visual research I chose one, some of you might know, and I chose this one of course willingly.
+00:13:10.00 --> 00:13:16.00  First thing is so the laser is 1960, this film is 1964, was first shown in September 1964 by the way.
+00:13:16.00 --> 00:13:22.00  And Goldfinger asks James Bond "Do you know what this is?" and Bond says "It's not rocket science is it?".
+00:13:22.00 --> 00:13:27.00  So we have to reconsider this sentence talking about the details of our laser processes that we have.
+00:13:27.00 --> 00:13:33.00  So what can we do? So in principle the interface between the process and what we do is the intensity
+00:13:33.00 --> 00:13:40.00  distribution over time, right? This is what lies our process don't have any other tools to control,
+00:13:40.00 --> 00:13:45.00  just the energy that we bring in. So it's the source of our process and it's the means to control
+00:13:45.00 --> 00:13:51.00  of our process. So let's start with something very old. Andreas is sitting here, I believe Andreas and me
+00:13:51.00 --> 00:13:57.00  we have a patent 20 years ago with an automotive company at that time it worked more or less.
+00:13:57.00 --> 00:14:02.00  So we could do some intensity modulation.
+00:14:02.00 --> 00:14:05.00  And then of course we go to laser sintering and we hear from Andreas again,
+00:14:05.00 --> 00:14:11.00  you use different intensities. But when we take our intensity distribution over time,
+00:14:11.00 --> 00:14:16.00  we can of course control the heat flow. And this is what we do when we move our focus
+00:14:16.00 --> 00:14:21.00  or move our beam, so moving our energy. And there's this very simple thing,
+00:14:21.00 --> 00:14:28.00  the beam wobble. It's really simple, I mean, it's just circular movement or eight-shaped movement.
+00:14:28.00 --> 00:14:34.00  It's a standard feature for many scanner types. So it works, it works more or less, but of course
+00:14:34.00 --> 00:14:42.00  we can do more. We don't have only to move the center of our focus, but we can change the focus itself,
+00:14:42.00 --> 00:14:48.00  meaning that we can shape the intensity distribution of the focus. And this is what we have seen before,
+00:14:48.00 --> 00:14:54.00  so core-ring fibers. So we can have something in the core, something in the ring. But this is
+00:14:54.00 --> 00:14:59.00  only one-dimensional, right? So we have just core and ring, this is only one dimension.
+00:14:59.00 --> 00:15:03.00  Of course we can change this also over time. So we have two dimensions, core and ring, and time.
+00:15:02.00 --> 00:15:07.00  And here this is of course also the baseline picture and if you just look here at the
+00:15:08.00 --> 00:15:15.00  liquid solid phase front. It's you can see it here. It runs quite nice. So look we have we are quite quick here
+00:15:16.00 --> 00:15:23.00  so we are in the humping regime normally but we had a shape beam here but it doesn't matter what I just want to show you. Okay, this is no power modulation
+00:15:24.00 --> 00:15:33.00  and then when we switch to power modulation, of course, it happens what you would expect. You see the solid-liquid interface very nicely pumping up and down.
+00:15:34.00 --> 00:15:43.00  And I think it's obvious for everybody that this has an influence on the melt that's a bath so we'll influence the process.
+00:15:44.00 --> 00:15:53.00  Just to give you some numbers for that so we did this not only with 250 Hz that I showed you just but also 100 and 1000 Hz.
+00:15:54.00 --> 00:16:03.00  And then we measured at the top of the weld seam later on the roughness of the weld seam. We measured the amplitude and we measured the distance here
+00:16:04.00 --> 00:16:13.00  out of the distance knowing of course the feed speed we could calculate the frequency so we calculate back the frequency and interestingly
+00:16:14.00 --> 00:16:23.00  so we have first result of peaks. So the maxima of these peaks and this let's say just the absolute value in quadratic of the
+00:16:24.00 --> 00:16:34.00  integral that we have. The peaks are directly at the frequencies that we chose. So with 250 we have 250 Hz modulation frequency and we see a peak in the frequency at 250 Hz in the roughness.
+00:16:35.00 --> 00:16:45.00  And interestingly also the amplitudes, the highest amplitudes these are the dots here we also find at these frequencies.
+00:16:46.00 --> 00:16:55.00  And even more interesting but I'm not going to detail here the peaks don't have the same height. So that means obviously there is frequencies where our process reacts better on what we do
+00:16:56.00 --> 00:17:05.00  not assuming this is a good thing to do at the time but it reacts. And it reacts stronger at the 250 Hz than with the other frequencies.
+00:17:06.00 --> 00:17:15.00  So that means at least what we can follow there is so we have an influence here and it seems we have some time-scale dependent coupling efficiency
+00:17:16.00 --> 00:17:25.00  the coupling of the energy fluctuation that we bring in. How does it influence the process? That's what I'm talking about.
+00:17:26.00 --> 00:17:35.00  In the end, coupling efficiency of the dynamic beam shaping becomes that as a dynamic beam shaping on the process.
+00:17:36.00 --> 00:17:45.00  And of course we don't only have the power modulation we also have feed speed and I just showed you the new beam shapers that all have the ability of also working
+00:17:46.00 --> 00:17:55.00  spatio-temporarily. So not only in time but also space which gives us even a larger freedom of what we want to do.
+00:17:56.00 --> 00:18:05.00  And I'm skipping that quite quick because I've seen this in your presentations this morning a lot. So it's clear that the shape beam can be beneficial for the process. We accept this as a given, we know that.
+00:18:06.00 --> 00:18:15.00  What is a shape beam? If you just have a common Gaussian beam and you have a point on your workpiece here and this Gaussian beam moves over the workpiece
+00:18:16.00 --> 00:18:25.00  the temperature that the point on the workpiece sees changes this is this distribution. If you have your donut mode here and do the same it's this distribution.
+00:18:26.00 --> 00:18:35.00  So what I want to say with this is that even if you have let's say an officially non-shape beam if you move it over a volume element in your workpiece
+00:18:36.00 --> 00:18:45.00  this volume element sees some time-dependent heating so I would also suggest to count this as a dynamic energy input. So making it a bit more wide.
+00:18:46.00 --> 00:18:55.00  And the beam shaping that we have again you know that is still the top hat profile. We had also this top hat profile causes a temperature distribution in the middle by the way of the top hat that looks like this
+00:18:56.00 --> 00:19:05.00  so also this is a modulation. So pulsed beam is a dynamic energy input as well.
+00:19:06.00 --> 00:19:15.00  So let's make a short break here and think about what I'm talking about. So one thing is the static versus dynamic beam shaping.
+00:19:16.00 --> 00:19:19.00  In my opinion, this is
+00:20:00.00 --> 00:20:03.00  system's technological point of view, so that means how do I do beam shaping?
+00:20:03.00 --> 00:20:07.00  it's things that happen here in the optics section.
+00:20:07.00 --> 00:20:11.00  Do I have a programmable diffractive element there or a non-programmable?
+00:20:11.00 --> 00:20:15.00  but still I must say and this is something that I learned.
+00:20:15.00 --> 00:20:19.00  but I could say yeah if it's non-programmable its static beam shaping.
+00:20:19.00 --> 00:20:23.00  but is this for us that we look at laser processes.
+00:20:23.00 --> 00:20:27.00  isn't this the view that we should have, yes or no, of course I wouldn't ask.
+00:20:27.00 --> 00:20:31.00  maybe not because we should have a look what happens there.
+00:20:31.00 --> 00:20:35.00  at the workpiece so for us it should be interesting.
+00:20:35.00 --> 00:20:39.00  what is the dynamic energy input so the process point of view.
+00:20:39.00 --> 00:20:43.00  and having said this, so I don't mind how the energy input.
+00:20:43.00 --> 00:20:47.00  or the change of the energy input that I need is achieved.
+00:20:47.00 --> 00:20:51.00  but when I look from the process side what we should take into account.
+00:20:51.00 --> 00:20:55.00  and this comes back to the efficiency of our energy coupling.
+00:20:55.00 --> 00:20:59.00  the scales, the time scales of the energy input.
+00:20:59.00 --> 00:21:03.00  I'm going a bit more with our example here in detail.
+00:21:03.00 --> 00:21:07.00  this is our deep penetration welding process so we have vaporization there.
+00:21:07.00 --> 00:21:11.00  we have hydro-dynamics, we have solidification front.
+00:21:11.00 --> 00:21:15.00  of course they inter-depend on each other and we have the microstructure.
+00:21:15.00 --> 00:21:19.00  that results in the end when solidifying or after being solidified already.
+00:21:19.00 --> 00:21:23.00  so and there's examples out there just to give you three now.
+00:21:23.00 --> 00:21:27.00  that if you have a dynamic energy input and in this case it's.
+00:21:27.00 --> 00:21:31.00  really only a modulation and that was reported in 2020.
+00:21:31.00 --> 00:21:35.00  that for dissimilar materials joining you can control.
+00:21:35.00 --> 00:21:39.00  in different sources also here you can control your inter-metallic zone.
+00:21:39.00 --> 00:21:43.00  by doing so this is possible due to a modulation or this example.
+00:21:43.00 --> 00:21:47.00  that says moving a multi-spot optics through your workpiece.
+00:21:47.00 --> 00:21:51.00  so multi-spots instead of one spot helps to reduce spatter a lot.
+00:21:51.00 --> 00:21:55.00  and a third one I'm mentioning and this is even more dynamic.
+00:21:55.00 --> 00:21:59.00  and here it goes about humping so if you change each five microseconds.
+00:21:59.00 --> 00:22:03.00  with your coherent beam combining system the pattern.
+00:22:03.00 --> 00:22:07.00  you can push humping to higher speeds, I wouldn't say prevent humping.
+00:22:07.00 --> 00:22:11.00  but you can push humping but obviously you disturb the melt flow somehow.
+00:22:11.00 --> 00:22:15.00  cannot go into detail so these are thoughts about that.
+00:22:15.00 --> 00:22:19.00  so there is already answers that say okay dynamic energy input.
+00:22:19.00 --> 00:22:23.00  is beneficial for the process, so coming back to what we had before.
+00:22:23.00 --> 00:22:27.00  and I added here we need to be able to address the necessary time scales.
+00:22:27.00 --> 00:22:31.00  let's say to be able to communicate with the process.
+00:22:31.00 --> 00:22:35.00  so we cannot only bring in the energy but by controlling how we bring in the energy.
+00:22:35.00 --> 00:22:39.00  we can try to communicate with the process and maybe even influence certain.
+00:22:39.00 --> 00:22:43.00  sub-features of the process or sub-processes, what do I mean by that.
+00:22:43.00 --> 00:22:47.00  again the same example here that I already had before.
+00:22:47.00 --> 00:22:51.00  if you think about capitalization so we are in time scales of let's say.
+00:22:51.00 --> 00:22:55.00  around 100 microseconds, if you think about material flow.
+00:22:55.00 --> 00:22:59.00  so liquid flows we are maybe in the range of a few milliseconds.
+00:22:59.00 --> 00:23:03.00  and if we think about cooling rates maybe we're even in the range of more than.
+00:23:03.00 --> 00:23:07.00  100 milliseconds or reaching into seconds that we have.
+00:23:07.00 --> 00:23:11.00  so if it would be possible to address all of these process features.
+00:23:11.00 --> 00:23:15.00  or let's call sub-processes separately assuming they were not connected.
+00:23:15.00 --> 00:23:19.00  but they are of course they are if you would have the possibility.
+00:23:19.00 --> 00:23:23.00  to address a spatial temporal beam shaping in these time scales.
+00:23:23.00 --> 00:23:27.00  you would be able to communicate with the process.
+00:23:27.00 --> 00:23:31.00  unfortunately we would probably not be as easy because the process.
+00:23:31.00 --> 00:23:35.00  the different process stages and features are connected.
+00:23:35.00 --> 00:23:39.00  nevertheless and this is my postulate or my hypothesis.
+00:23:39.00 --> 00:23:43.00  if we will be able to do this and if we would know exactly why we do what.
+00:23:43.00 --> 00:23:47.00  at what time scale or process stage we would be able to have at least.
+00:23:47.00 --> 00:23:51.00  a better control of the process, full control might be a bit.
+00:25:00.00 --> 00:25:11.00  ...hard, but we will have a much better control on the process than we have today. And this is what I mean by the second part of the headline as the future is dynamic beam shaping.
+00:25:12.00 --> 00:25:30.00  The beam shaping at least for deep penetration welding is starting to be there, so the possibilities are there to have spatial temporal beam shaping to do that. The understanding of what we need to do is still not there. And it's really hard to say where we start...
+00:25:31.00 --> 00:25:59.00  ...or how can we start? We could, again basic thoughts here, if we have a simulation, if we could run the simulation backwards and say, okay, I know there's something, but I don't want to have it. What should the intensity distribution look like? But taking into account all that evaporation and everything, I think it's hard, at least, but if not not possible, but there's other experts.
+00:26:00.00 --> 00:26:29.00  What is the take-home messages? So, I could show you that the process is partly dynamic and changes in energy input, and the keyword here was the coupling efficiency. So, the spatial-temporal energy input will allow us better control of the process. And then dynamic beam shaping is something that helps us go there and try out what we can do. We do not have enough process knowledge. If we would have the process knowledge, I'm absolutely sure that we will be able to better control the effects of processes, maybe even run processes that are not possible today, like think about welding a thick sheet on a very thin sheet. That's really hard or even impossible. This might be an example that can be possible.
+00:26:30.00 --> 00:26:54.00  So, if we can do but nobody knows how to start, I would like to show two slides of a proposal of a former colleague of mine that just did a starting a way straightforward. He just made a pattern, divided a grid space and randomly addressed spots as beam shaping. Said, okay, this is a beam shaping. Then he made a very easy simulation on heat conduction and said, okay, I estimate my melt pool temperature. For example, my melt pool might look like this.
+00:26:55.00 --> 00:27:20.00  And he randomly created these and then selected by looking what is the minimal melt pool temperature, the maximum melt pool area and so on to find out which of these randomly, let's say, calculated distributions might fit or not. And even though the simulation is, let's say, very basic, we could already show that for some of the things that I mentioned...
+00:27:21.00 --> 00:27:49.00  ...here this is the maximum temperature, this is the thermal gradient and this is the melt pool area. And the left side here of the square is what you can reach with a ring shape profile whereas the right side of this rectangular is what you reach with Gaussian profile. And you can see there's beam shapes out there even though the distance between ring shape and Gaussian there offers a span already, but there's other beam shapes...
+00:27:50.00 --> 00:28:20.00  ...that are wide in that. This is the lines that you can see here that he's found out. This is of course only qualitatively and not absolute correct, but shows a first way how we can maybe go ahead. And as I'm out with my time now, now it's 12 minutes, but I'll stop talking now. Thank you for listening, I'm open for questions. Thank you.
+00:28:21.00 --> 00:28:50.00  [Applause]
+00:28:51.00 --> 00:29:10.00  Thank you for the very interesting presentation. So, any questions?
+00:29:11.00 --> 00:30:00.00  [Question from the audience] I think it's very good that we need some possibility to calculate and to optimize beam shapes... not without implementation of as I say the big parts it to melt you can try to do this with if you have put this in an optimize loop and and say what see what's going on but assuming we go through all the month we have this only over the metal flow and and evaporation. That's why I am not doing it. Thank you.
+00:30:00.00 --> 00:30:01.00  No problem at all.
+00:30:01.00 --> 00:30:02.00  Thank you for the questions.
+00:30:02.00 --> 00:30:04.00  Yeah, definitely see it as well.
+00:30:04.00 --> 00:30:07.00  But I think it's absolutely necessary that the onboard things that
+00:30:07.00 --> 00:30:10.00  actually get adapted and to combine this information
+00:30:10.00 --> 00:30:13.00  to find solutions for people that are actually there
+00:30:13.00 --> 00:30:15.00  on board at the site to start
+00:30:15.00 --> 00:30:18.00  even go for more dynamic change or feature long road to go
+00:30:18.00 --> 00:30:21.00  between those steps as well to make it on the process.
+00:30:21.00 --> 00:30:23.00  So we need to somehow connect everyone on the process.
+00:30:24.00 --> 00:30:26.00  Then we use it. Thank you very much.
+00:30:29.00 --> 00:30:31.00  More than welcome.
+00:30:31.00 --> 00:30:34.00  Thank you again to Professor Schmidt.
+00:30:34.00 --> 00:30:36.00  Thank you.

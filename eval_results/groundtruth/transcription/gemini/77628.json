@@ -1,0 +1,710 @@
+{
+  "video": "data/videos/77628.mp4",
+  "model": "gemini-3-flash-preview",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 968.437244,
+  "chunks": 4,
+  "raw_text": "00:00:00 --> 00:00:03 Hello everyone, my name is Xin-Chang Gao and today I'll be presenting the work\n00:00:03 --> 00:00:06 Learning 2D Invariant Affordance Knowledge for 3D Affordance Grounding.\n00:00:06 --> 00:00:10 This work was done in collaboration with my colleagues from the University of Science and Technology\n00:00:10 --> 00:00:13 of China, Shanghai AI Laboratory and Fudan University.\n00:00:13 --> 00:00:15 I will walk you through our research step-by-step.\n00:00:15 --> 00:00:18 Let's start with the background. 3D object affordance grounding\n00:00:18 --> 00:00:23 seeks to identify and predict functional regions on an object's 3D point cloud.\n00:00:23 --> 00:00:27 This task has laid the foundation for connecting visual perception with physical operation\n00:00:27 --> 00:00:33 and paved the way for a wide range of real-world applications such as embodied systems, object manipulation, and object grasping.\n00:00:33 --> 00:00:37 Currently, methods in 3D object affordance prediction can be divided into two categories.\n00:00:37 --> 00:00:41 One of them involves in reinforcement learning, which requires an agent to interact with objects\n00:00:41 --> 00:00:46 repeatedly in a simulated environment. Such methods are usually time-consuming\n00:00:46 --> 00:00:51 and their generalization methods are usually strict restricted by the limited number of simulation scenes.\n00:00:51 --> 00:00:55 The other category leverages label 3D object affordance data\n00:00:55 --> 00:01:00 and attempts to learn a mapping between objects and affordance in an end-to-end manner.\n00:01:00 --> 00:01:04 This kind of approach is more direct and has gained more and more popularity recently.\n00:01:04 --> 00:01:08 In the meantime, the affordance of an object is usually determined by multiple\n00:01:08 --> 00:01:13 human-object reference images. Take bottle as an example, you can rotate the cap to open it\n00:01:13 --> 00:01:18 and you can also just hold the body. These two actions correspond to different affordance types\n00:01:18 --> 00:01:23 and are associated with different functional regions of the bottles.\n00:01:23 --> 00:01:27 To accommodate the diverse affordance of a single object, human interaction references\n00:01:27 --> 00:01:31 are incorporated using images in recent works.\n00:01:31 --> 00:01:36 So in our work, we use the end-to-end manner and incorporate with the human interaction image as reference.\n00:01:36 --> 00:01:40 And our motivation comes from the limitations of existing methods, that is\n00:01:40 --> 00:01:44 they mostly ignore image correlations among objects of the same affordance type.\n00:01:44 --> 00:01:48 As shown in Figure 1, the affordance of an object is usually determined by multiple\n00:01:48 --> 00:01:53 human-object reference images. These real-world images exhibit significant variation in appearance\n00:01:53 --> 00:01:58 yet represent the same object and of affordance category.\n00:01:58 --> 00:02:03 Thus, they share invariant affordance knowledge and strong internal relationships\n00:02:03 --> 00:02:08 providing valuable insights into the object's affordance across different contexts.\n00:02:08 --> 00:02:13 Similarly, predicting the affordance of an object requires the invariant knowledge\n00:02:13 --> 00:02:18 derived from numerous human-object interaction images.\n00:02:18 --> 00:02:22 However, previous approaches have not fully addressed this limitation\n00:02:22 --> 00:02:27 often either lacking visual information or simply focusing on mapping 3D regions\n00:02:27 --> 00:02:32 to a single human-object interaction image, leading to poor generalization and suboptimal performance.\n00:02:32 --> 00:02:35 So we proposed MIFAC.\n00:02:35 --> 00:02:38 Now let's move on to the MIFAC framework. Here is the problem definition.\n00:02:38 --> 00:02:43 Given a 3D object P and its corresponding n reference images, where PC represents\n00:02:43 --> 00:02:47 the point cloud coordinates and P-label denotes the affordance annotation\n00:02:47 --> 00:02:51 for each coordinate. Our goal is to ground the affordance region for P prediction\n00:02:51 --> 00:02:56 on the point cloud using the invariant affordance knowledge derived from the n images.\n00:02:56 --> 00:03:00 This is our framework. As illustrated in Figure 2, our MIFAC framework consists of two modules.\n00:03:00 --> 00:03:05 The first is the invariant affordance knowledge extraction module, which is IAEM\n00:03:05 --> 00:03:11 and the affordance dictionary adaptive fusion module, that is ADFM, which are used to extract affordance knowledge\n00:03:11 --> 00:03:15 and fuse this knowledge with point clouds respectively.\n00:03:15 --> 00:03:20 In the IAEM, a dual branch structure, which is image feature branch\n00:03:20 --> 00:03:25 and affordance knowledge branch, is designed to minimize interference caused by appearance\n00:03:25 --> 00:03:29 variations in the images. The output of the last layer of the...\n\n00:00:00 --> 00:00:03 the affordance knowledge branch forms an invariant affordance knowledge dictionary\n00:00:03 --> 00:00:07 that encapsulates the affordance knowledge across all reference images.\n00:00:07 --> 00:00:10 Then in the ADM, we apply dictionary-based cross-attention\n00:00:10 --> 00:00:15 and self-weighted attention to fuse the affordance with the point clouds,\n00:00:15 --> 00:00:17 resulting in the output Pmix.\n00:00:17 --> 00:00:20 Finally, an affordance decoder is used to produce\n00:00:20 --> 00:00:24 the final affordance prediction Pprediction.\n00:00:24 --> 00:00:29 The appearances of the object among the reference images vary significantly,\n00:00:29 --> 00:00:32 yet they all share a common affordance category\n00:00:32 --> 00:00:36 and provide valuable insights into how the object can be used.\n00:00:36 --> 00:00:40 Accordingly, we design the IAM to align multiple images based on their common affordance type\n00:00:40 --> 00:00:45 and to gradually extract the invariant affordance knowledge using a multi-layer network and dual branch structure.\n00:00:45 --> 00:00:49 As illustrated in figure, we first randomly initialize a series of learnable affordance query tokens Q,\n00:00:49 --> 00:00:54 which are used to represent the learned invariant affordance knowledge from the reference images.\n00:00:54 --> 00:00:58 These query tokens are then iteratively updated by the multi-layer network\n00:00:58 --> 00:01:03 using multi-head cross-attention with the reference image features serving as the key and value,\n00:01:03 --> 00:01:06 as formulated as equation one.\n00:01:06 --> 00:01:10 And then the aggregated features are then fed back into the image feature branch\n00:01:10 --> 00:01:13 by multi-head cross-attention.\n00:01:13 --> 00:01:17 Additionally, to continually extract consistent image features,\n00:01:17 --> 00:01:21 the image feature branch is also updated iteratively using a multi-head self-attention layer.\n00:01:21 --> 00:01:26 This process can be expressed as equation two to four.\n00:01:26 --> 00:01:29 And for the ADM, unlike existing multi-head self-attention,\n00:01:29 --> 00:01:34 which generates query key and value tokens from the input feature itself,\n00:01:34 --> 00:01:39 our approach utilizes the obtained invariant affordance knowledge as an extra dictionary\n00:01:39 --> 00:01:43 to seamlessly guide the affordance learning on the point cloud during the training phase.\n00:01:43 --> 00:01:48 We use the point cloud feature Pin to generate the query Qp for cross-attention,\n00:01:48 --> 00:01:52 while the keys and values are obtained from the invariant affordance knowledge dictionary.\n00:01:52 --> 00:01:56 With the dictionary attention matrix A serving as guidance\n00:01:56 --> 00:02:00 to adaptively refine the knowledge in the dictionary,\n00:02:00 --> 00:02:03 the IQD-CA process can be expressed as equation nine,\n00:02:03 --> 00:02:07 where we apply a self-weighted attention layer to discard irrelevant tokens\n00:02:07 --> 00:02:12 to obtain the final affordance dictionary-based adaptive fusion feature Pmix.\n00:02:12 --> 00:02:16 And next, this adaptively weighted fusion feature is combined with\n00:02:16 --> 00:02:20 the original point cloud feature Pin to obtain the final feature Pout,\n00:02:20 --> 00:02:24 which is then fed into the affordance decoder to predict the distribution of the affordance region.\n00:02:24 --> 00:02:27 Next is our experimental part.\n00:02:27 --> 00:02:31 Common datasets like visual information are primarily focused on single-object corresponding images,\n00:02:31 --> 00:02:36 ignoring the invariant affordance knowledge and internal relationships across different object contexts.\n00:02:36 --> 00:02:40 To address these challenges, we constructed the multi-image point affordance (MIPA) dataset,\n00:02:40 --> 00:02:44 which comprises paired multi-images and point clouds.\n00:02:44 --> 00:02:48 We reproduce the baseline methods with the same feature extractors\n00:02:48 --> 00:02:51 and settings in the original papers to ensure a fair comparison.\n00:02:51 --> 00:02:56 Besides, we enhance these methods by replacing the single-image or text inputs with multiple ones,\n00:02:56 --> 00:02:59 allowing for a more direct comparison with our dataset.\n00:02:59 --> 00:03:03 And all the evaluation metrics follow previous work,\n00:03:03 --> 00:03:08 including area under the curve, average intersection over union, similarity, and mean absolute error.\n00:03:08 --> 00:03:12 This is our quantitative analysis.\n00:03:12 --> 00:03:17 Table one reports the metrics of the proposed method Mi-Fak compared with other methods on the MIPA benchmark.\n00:03:17 --> 00:03:22 The seen setting shares identical object categories in training and evaluation,\n00:03:22 --> 00:03:28 whereas the unseen setting utilizes different splits of objects in the training and testing.\n\n00:00:00 --> 00:00:04 splits. And the results demonstrate that our proposed MifaG achieves state-of-the-art performance, significantly surpassing existing methods in 3D point cloud affordance prediction.\n\n00:00:04 --> 00:00:13 Specifically, MifaG achieves scores of 58.1 in AUC and 20.5 in AIOU, outperforming the second best method Lasso and IGNet.\n\n00:00:26 --> 00:00:36 Notably, our method also demonstrates impressive affordance capabilities in unseen point cloud prediction, outperforming the second best method IGNet and Lasso.\n\n00:00:42 --> 00:00:54 And Figure 3 illustrate our qualitative results. It illustrates the point cloud affordance grounding results of various methods in both seen and unseen scenes of the MIPA dataset.\n\n00:00:54 --> 00:01:03 These results demonstrate that our method achieves more accurate results, outperforming Lasso and IGNet.\n\n00:01:04 --> 00:01:13 For instance, on objects such as the door and the vase, Lasso and IGNet suffer from affordance map dispersion or omission.\n\n00:01:13 --> 00:01:21 whereas our approach can accurately focus on the interactive regions.\n\n00:01:21 --> 00:01:31 The results also show that Lasso and IGNet, which ignore consistent cross-image features and rely solely on raw images, can lead to inaccurate area prediction.\n\n00:01:44 --> 00:01:54 And in Figure 4, we visualize the distribution of query tokens as they propagate through the IAM network, demonstrating its effectiveness in extracting invariant affordance knowledge.\n\n00:01:54 --> 00:02:04 The affordance query tokens are randomly initialized at the beginning. As the affordance query tokens iteratively propagate, they gradually cluster based on affordance type, as shown in Figure 4.\n\n00:02:04 --> 00:02:14 For instance, features corresponding to the same open operation across different objects, such as door, microwave, and bag, cluster in the orange region.\n\n00:02:14 --> 00:02:24 This result demonstrates the effectiveness of our approach by precisely extracting invariant knowledge across images.\n\n00:02:31 --> 00:02:44 And Table 2 reports the effect of IAM and ADM in both seen and unseen test datasets. Our full model outperforms in all metrics, such as higher AUC scores, than the model without ADM and IAM on the seen and unseen side, respectively.\n\n00:02:44 --> 00:03:06 And the IAM module leads to significant performance, while the ADM module has a smaller impact because ADM depends on the IAM. It's because the IAM needs the assistance of aligned features. Oh, sorry, ADM needs the assistance of aligned features.\n\n00:03:06 --> 00:03:19 Thus, when IAM and ADM are used together, we'll get the best performance across all metrics, like the last row of Table 2 in seen and unseen.\n\n00:03:31 --> 00:03:41 And Table 3 show the performance of MiFaG with frame input number from 1 to 5. The experiment results indicate a notable performance enhancement in a seen scene with an increased image input, as evidenced by improvements in AUC and AIOU metrics.\n\n00:03:41 --> 00:04:00 Nevertheless, an overabundance of image input can lead to a decline in affordance prediction performance for unseen point clouds.\n\n00:04:01 --> 00:04:13 It indicates that a limited number of multi-images with significant variations may mutually interfere with the alignment process. In contrast, a sufficient number of images enables the model to distill generalizable invariant features, resulting in enhanced performance.\n\n00:04:23 --> 00:04:36 Table 4 evaluates the invariant affordance feature extraction capability of IAM with different iterative layers. Intuitively, increasing the iterative layer numbers can enhance the ability to extract invariant information.\n\n00:04:36 --> 00:04:47 However, the best layer setting for seen and unseen scenarios are 4 and 6, achieving the highest AUC and SIM, respectively.\n\n00:04:47 --> 00:05:00 This discrepancy arises from a sharp increase in similarity loss across successive layers, which can cause a sharp increase in loss, leading to training instability and performance degradation.\n\n00:00:00 --> 00:00:02 performance degradation.\n00:00:03 --> 00:00:05 And finally to\n00:00:05 --> 00:00:09 evaluate the zero-shot generalization ability of\n00:00:09 --> 00:00:12 our method in real world scenarios, we tested on real\n00:00:12 --> 00:00:15 scenes as shown in Figure 5. And\n00:00:16 --> 00:00:19 we conduct the real world evaluation under two\n00:00:19 --> 00:00:22 settings, seen and unseen. In the manner consistent\n00:00:22 --> 00:00:25 with previous experiments, the bed and\n00:00:25 --> 00:00:29 the chair are objects that are present in the dataset,\n00:00:29 --> 00:00:33 while the sofa is not included in the training dataset.\n00:00:33 --> 00:00:37 Notably, objects in both settings are new\n00:00:37 --> 00:00:40 to our trained model, as their point clouds\n00:00:40 --> 00:00:43 are built from scratch by ourselves. So\n00:00:43 --> 00:00:46 the robust visualization results demonstrate the\n00:00:46 --> 00:00:49 effective generalization of our method. Um,\n00:00:49 --> 00:00:53 that's all, thank you. And if you want to know more\n00:00:53 --> 00:00:56 about it, please, uh, email me or\n00:00:56 --> 00:01:00 add me at my WeChat. Thank you.\n00:01:01 --> 00:01:04 Thank you so much. And we have some\n00:01:04 --> 00:01:08 time for questions. Audience any questions?",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:03.00",
+      "text": "Hello everyone, my name is Xin-Chang Gao and today I'll be presenting the work"
+    },
+    {
+      "start": "00:00:03.00",
+      "end": "00:00:06.00",
+      "text": "Learning 2D Invariant Affordance Knowledge for 3D Affordance Grounding."
+    },
+    {
+      "start": "00:00:06.00",
+      "end": "00:00:10.00",
+      "text": "This work was done in collaboration with my colleagues from the University of Science and Technology"
+    },
+    {
+      "start": "00:00:10.00",
+      "end": "00:00:13.00",
+      "text": "of China, Shanghai AI Laboratory and Fudan University."
+    },
+    {
+      "start": "00:00:13.00",
+      "end": "00:00:15.00",
+      "text": "I will walk you through our research step-by-step."
+    },
+    {
+      "start": "00:00:15.00",
+      "end": "00:00:18.00",
+      "text": "Let's start with the background. 3D object affordance grounding"
+    },
+    {
+      "start": "00:00:18.00",
+      "end": "00:00:23.00",
+      "text": "seeks to identify and predict functional regions on an object's 3D point cloud."
+    },
+    {
+      "start": "00:00:23.00",
+      "end": "00:00:27.00",
+      "text": "This task has laid the foundation for connecting visual perception with physical operation"
+    },
+    {
+      "start": "00:00:27.00",
+      "end": "00:00:33.00",
+      "text": "and paved the way for a wide range of real-world applications such as embodied systems, object manipulation, and object grasping."
+    },
+    {
+      "start": "00:00:33.00",
+      "end": "00:00:37.00",
+      "text": "Currently, methods in 3D object affordance prediction can be divided into two categories."
+    },
+    {
+      "start": "00:00:37.00",
+      "end": "00:00:41.00",
+      "text": "One of them involves in reinforcement learning, which requires an agent to interact with objects"
+    },
+    {
+      "start": "00:00:41.00",
+      "end": "00:00:46.00",
+      "text": "repeatedly in a simulated environment. Such methods are usually time-consuming"
+    },
+    {
+      "start": "00:00:46.00",
+      "end": "00:00:51.00",
+      "text": "and their generalization methods are usually strict restricted by the limited number of simulation scenes."
+    },
+    {
+      "start": "00:00:51.00",
+      "end": "00:00:55.00",
+      "text": "The other category leverages label 3D object affordance data"
+    },
+    {
+      "start": "00:00:55.00",
+      "end": "00:01:00.00",
+      "text": "and attempts to learn a mapping between objects and affordance in an end-to-end manner."
+    },
+    {
+      "start": "00:01:00.00",
+      "end": "00:01:04.00",
+      "text": "This kind of approach is more direct and has gained more and more popularity recently."
+    },
+    {
+      "start": "00:01:04.00",
+      "end": "00:01:08.00",
+      "text": "In the meantime, the affordance of an object is usually determined by multiple"
+    },
+    {
+      "start": "00:01:08.00",
+      "end": "00:01:13.00",
+      "text": "human-object reference images. Take bottle as an example, you can rotate the cap to open it"
+    },
+    {
+      "start": "00:01:13.00",
+      "end": "00:01:18.00",
+      "text": "and you can also just hold the body. These two actions correspond to different affordance types"
+    },
+    {
+      "start": "00:01:18.00",
+      "end": "00:01:23.00",
+      "text": "and are associated with different functional regions of the bottles."
+    },
+    {
+      "start": "00:01:23.00",
+      "end": "00:01:27.00",
+      "text": "To accommodate the diverse affordance of a single object, human interaction references"
+    },
+    {
+      "start": "00:01:27.00",
+      "end": "00:01:31.00",
+      "text": "are incorporated using images in recent works."
+    },
+    {
+      "start": "00:01:31.00",
+      "end": "00:01:36.00",
+      "text": "So in our work, we use the end-to-end manner and incorporate with the human interaction image as reference."
+    },
+    {
+      "start": "00:01:36.00",
+      "end": "00:01:40.00",
+      "text": "And our motivation comes from the limitations of existing methods, that is"
+    },
+    {
+      "start": "00:01:40.00",
+      "end": "00:01:44.00",
+      "text": "they mostly ignore image correlations among objects of the same affordance type."
+    },
+    {
+      "start": "00:01:44.00",
+      "end": "00:01:48.00",
+      "text": "As shown in Figure 1, the affordance of an object is usually determined by multiple"
+    },
+    {
+      "start": "00:01:48.00",
+      "end": "00:01:53.00",
+      "text": "human-object reference images. These real-world images exhibit significant variation in appearance"
+    },
+    {
+      "start": "00:01:53.00",
+      "end": "00:01:58.00",
+      "text": "yet represent the same object and of affordance category."
+    },
+    {
+      "start": "00:01:58.00",
+      "end": "00:02:03.00",
+      "text": "Thus, they share invariant affordance knowledge and strong internal relationships"
+    },
+    {
+      "start": "00:02:03.00",
+      "end": "00:02:08.00",
+      "text": "providing valuable insights into the object's affordance across different contexts."
+    },
+    {
+      "start": "00:02:08.00",
+      "end": "00:02:13.00",
+      "text": "Similarly, predicting the affordance of an object requires the invariant knowledge"
+    },
+    {
+      "start": "00:02:13.00",
+      "end": "00:02:18.00",
+      "text": "derived from numerous human-object interaction images."
+    },
+    {
+      "start": "00:02:18.00",
+      "end": "00:02:22.00",
+      "text": "However, previous approaches have not fully addressed this limitation"
+    },
+    {
+      "start": "00:02:22.00",
+      "end": "00:02:27.00",
+      "text": "often either lacking visual information or simply focusing on mapping 3D regions"
+    },
+    {
+      "start": "00:02:27.00",
+      "end": "00:02:32.00",
+      "text": "to a single human-object interaction image, leading to poor generalization and suboptimal performance."
+    },
+    {
+      "start": "00:02:32.00",
+      "end": "00:02:35.00",
+      "text": "So we proposed MIFAC."
+    },
+    {
+      "start": "00:02:35.00",
+      "end": "00:02:38.00",
+      "text": "Now let's move on to the MIFAC framework. Here is the problem definition."
+    },
+    {
+      "start": "00:02:38.00",
+      "end": "00:02:43.00",
+      "text": "Given a 3D object P and its corresponding n reference images, where PC represents"
+    },
+    {
+      "start": "00:02:43.00",
+      "end": "00:02:47.00",
+      "text": "the point cloud coordinates and P-label denotes the affordance annotation"
+    },
+    {
+      "start": "00:02:47.00",
+      "end": "00:02:51.00",
+      "text": "for each coordinate. Our goal is to ground the affordance region for P prediction"
+    },
+    {
+      "start": "00:02:51.00",
+      "end": "00:02:56.00",
+      "text": "on the point cloud using the invariant affordance knowledge derived from the n images."
+    },
+    {
+      "start": "00:02:56.00",
+      "end": "00:03:00.00",
+      "text": "This is our framework. As illustrated in Figure 2, our MIFAC framework consists of two modules."
+    },
+    {
+      "start": "00:03:00.00",
+      "end": "00:03:05.00",
+      "text": "The first is the invariant affordance knowledge extraction module, which is IAEM"
+    },
+    {
+      "start": "00:03:05.00",
+      "end": "00:03:11.00",
+      "text": "and the affordance dictionary adaptive fusion module, that is ADFM, which are used to extract affordance knowledge"
+    },
+    {
+      "start": "00:03:11.00",
+      "end": "00:03:15.00",
+      "text": "and fuse this knowledge with point clouds respectively."
+    },
+    {
+      "start": "00:03:15.00",
+      "end": "00:03:20.00",
+      "text": "In the IAEM, a dual branch structure, which is image feature branch"
+    },
+    {
+      "start": "00:03:20.00",
+      "end": "00:03:25.00",
+      "text": "and affordance knowledge branch, is designed to minimize interference caused by appearance"
+    },
+    {
+      "start": "00:03:25.00",
+      "end": "00:03:29.00",
+      "text": "variations in the images. The output of the last layer of the..."
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:03.00",
+      "text": "the affordance knowledge branch forms an invariant affordance knowledge dictionary"
+    },
+    {
+      "start": "00:05:03.00",
+      "end": "00:05:07.00",
+      "text": "that encapsulates the affordance knowledge across all reference images."
+    },
+    {
+      "start": "00:05:07.00",
+      "end": "00:05:10.00",
+      "text": "Then in the ADM, we apply dictionary-based cross-attention"
+    },
+    {
+      "start": "00:05:10.00",
+      "end": "00:05:15.00",
+      "text": "and self-weighted attention to fuse the affordance with the point clouds,"
+    },
+    {
+      "start": "00:05:15.00",
+      "end": "00:05:17.00",
+      "text": "resulting in the output Pmix."
+    },
+    {
+      "start": "00:05:17.00",
+      "end": "00:05:20.00",
+      "text": "Finally, an affordance decoder is used to produce"
+    },
+    {
+      "start": "00:05:20.00",
+      "end": "00:05:24.00",
+      "text": "the final affordance prediction Pprediction."
+    },
+    {
+      "start": "00:05:24.00",
+      "end": "00:05:29.00",
+      "text": "The appearances of the object among the reference images vary significantly,"
+    },
+    {
+      "start": "00:05:29.00",
+      "end": "00:05:32.00",
+      "text": "yet they all share a common affordance category"
+    },
+    {
+      "start": "00:05:32.00",
+      "end": "00:05:36.00",
+      "text": "and provide valuable insights into how the object can be used."
+    },
+    {
+      "start": "00:05:36.00",
+      "end": "00:05:40.00",
+      "text": "Accordingly, we design the IAM to align multiple images based on their common affordance type"
+    },
+    {
+      "start": "00:05:40.00",
+      "end": "00:05:45.00",
+      "text": "and to gradually extract the invariant affordance knowledge using a multi-layer network and dual branch structure."
+    },
+    {
+      "start": "00:05:45.00",
+      "end": "00:05:49.00",
+      "text": "As illustrated in figure, we first randomly initialize a series of learnable affordance query tokens Q,"
+    },
+    {
+      "start": "00:05:49.00",
+      "end": "00:05:54.00",
+      "text": "which are used to represent the learned invariant affordance knowledge from the reference images."
+    },
+    {
+      "start": "00:05:54.00",
+      "end": "00:05:58.00",
+      "text": "These query tokens are then iteratively updated by the multi-layer network"
+    },
+    {
+      "start": "00:05:58.00",
+      "end": "00:06:03.00",
+      "text": "using multi-head cross-attention with the reference image features serving as the key and value,"
+    },
+    {
+      "start": "00:06:03.00",
+      "end": "00:06:06.00",
+      "text": "as formulated as equation one."
+    },
+    {
+      "start": "00:06:06.00",
+      "end": "00:06:10.00",
+      "text": "And then the aggregated features are then fed back into the image feature branch"
+    },
+    {
+      "start": "00:06:10.00",
+      "end": "00:06:13.00",
+      "text": "by multi-head cross-attention."
+    },
+    {
+      "start": "00:06:13.00",
+      "end": "00:06:17.00",
+      "text": "Additionally, to continually extract consistent image features,"
+    },
+    {
+      "start": "00:06:17.00",
+      "end": "00:06:21.00",
+      "text": "the image feature branch is also updated iteratively using a multi-head self-attention layer."
+    },
+    {
+      "start": "00:06:21.00",
+      "end": "00:06:26.00",
+      "text": "This process can be expressed as equation two to four."
+    },
+    {
+      "start": "00:06:26.00",
+      "end": "00:06:29.00",
+      "text": "And for the ADM, unlike existing multi-head self-attention,"
+    },
+    {
+      "start": "00:06:29.00",
+      "end": "00:06:34.00",
+      "text": "which generates query key and value tokens from the input feature itself,"
+    },
+    {
+      "start": "00:06:34.00",
+      "end": "00:06:39.00",
+      "text": "our approach utilizes the obtained invariant affordance knowledge as an extra dictionary"
+    },
+    {
+      "start": "00:06:39.00",
+      "end": "00:06:43.00",
+      "text": "to seamlessly guide the affordance learning on the point cloud during the training phase."
+    },
+    {
+      "start": "00:06:43.00",
+      "end": "00:06:48.00",
+      "text": "We use the point cloud feature Pin to generate the query Qp for cross-attention,"
+    },
+    {
+      "start": "00:06:48.00",
+      "end": "00:06:52.00",
+      "text": "while the keys and values are obtained from the invariant affordance knowledge dictionary."
+    },
+    {
+      "start": "00:06:52.00",
+      "end": "00:06:56.00",
+      "text": "With the dictionary attention matrix A serving as guidance"
+    },
+    {
+      "start": "00:06:56.00",
+      "end": "00:07:00.00",
+      "text": "to adaptively refine the knowledge in the dictionary,"
+    },
+    {
+      "start": "00:07:00.00",
+      "end": "00:07:03.00",
+      "text": "the IQD-CA process can be expressed as equation nine,"
+    },
+    {
+      "start": "00:07:03.00",
+      "end": "00:07:07.00",
+      "text": "where we apply a self-weighted attention layer to discard irrelevant tokens"
+    },
+    {
+      "start": "00:07:07.00",
+      "end": "00:07:12.00",
+      "text": "to obtain the final affordance dictionary-based adaptive fusion feature Pmix."
+    },
+    {
+      "start": "00:07:12.00",
+      "end": "00:07:16.00",
+      "text": "And next, this adaptively weighted fusion feature is combined with"
+    },
+    {
+      "start": "00:07:16.00",
+      "end": "00:07:20.00",
+      "text": "the original point cloud feature Pin to obtain the final feature Pout,"
+    },
+    {
+      "start": "00:07:20.00",
+      "end": "00:07:24.00",
+      "text": "which is then fed into the affordance decoder to predict the distribution of the affordance region."
+    },
+    {
+      "start": "00:07:24.00",
+      "end": "00:07:27.00",
+      "text": "Next is our experimental part."
+    },
+    {
+      "start": "00:07:27.00",
+      "end": "00:07:31.00",
+      "text": "Common datasets like visual information are primarily focused on single-object corresponding images,"
+    },
+    {
+      "start": "00:07:31.00",
+      "end": "00:07:36.00",
+      "text": "ignoring the invariant affordance knowledge and internal relationships across different object contexts."
+    },
+    {
+      "start": "00:07:36.00",
+      "end": "00:07:40.00",
+      "text": "To address these challenges, we constructed the multi-image point affordance (MIPA) dataset,"
+    },
+    {
+      "start": "00:07:40.00",
+      "end": "00:07:44.00",
+      "text": "which comprises paired multi-images and point clouds."
+    },
+    {
+      "start": "00:07:44.00",
+      "end": "00:07:48.00",
+      "text": "We reproduce the baseline methods with the same feature extractors"
+    },
+    {
+      "start": "00:07:48.00",
+      "end": "00:07:51.00",
+      "text": "and settings in the original papers to ensure a fair comparison."
+    },
+    {
+      "start": "00:07:51.00",
+      "end": "00:07:56.00",
+      "text": "Besides, we enhance these methods by replacing the single-image or text inputs with multiple ones,"
+    },
+    {
+      "start": "00:07:56.00",
+      "end": "00:07:59.00",
+      "text": "allowing for a more direct comparison with our dataset."
+    },
+    {
+      "start": "00:07:59.00",
+      "end": "00:08:03.00",
+      "text": "And all the evaluation metrics follow previous work,"
+    },
+    {
+      "start": "00:08:03.00",
+      "end": "00:08:08.00",
+      "text": "including area under the curve, average intersection over union, similarity, and mean absolute error."
+    },
+    {
+      "start": "00:08:08.00",
+      "end": "00:08:12.00",
+      "text": "This is our quantitative analysis."
+    },
+    {
+      "start": "00:08:12.00",
+      "end": "00:08:17.00",
+      "text": "Table one reports the metrics of the proposed method Mi-Fak compared with other methods on the MIPA benchmark."
+    },
+    {
+      "start": "00:08:17.00",
+      "end": "00:08:22.00",
+      "text": "The seen setting shares identical object categories in training and evaluation,"
+    },
+    {
+      "start": "00:08:22.00",
+      "end": "00:08:28.00",
+      "text": "whereas the unseen setting utilizes different splits of objects in the training and testing."
+    },
+    {
+      "start": "00:10:00.00",
+      "end": "00:10:04.00",
+      "text": "splits. And the results demonstrate that our proposed MifaG achieves state-of-the-art performance, significantly surpassing existing methods in 3D point cloud affordance prediction."
+    },
+    {
+      "start": "00:10:04.00",
+      "end": "00:10:13.00",
+      "text": "Specifically, MifaG achieves scores of 58.1 in AUC and 20.5 in AIOU, outperforming the second best method Lasso and IGNet."
+    },
+    {
+      "start": "00:10:26.00",
+      "end": "00:10:36.00",
+      "text": "Notably, our method also demonstrates impressive affordance capabilities in unseen point cloud prediction, outperforming the second best method IGNet and Lasso."
+    },
+    {
+      "start": "00:10:42.00",
+      "end": "00:10:54.00",
+      "text": "And Figure 3 illustrate our qualitative results. It illustrates the point cloud affordance grounding results of various methods in both seen and unseen scenes of the MIPA dataset."
+    },
+    {
+      "start": "00:10:54.00",
+      "end": "00:11:03.00",
+      "text": "These results demonstrate that our method achieves more accurate results, outperforming Lasso and IGNet."
+    },
+    {
+      "start": "00:11:04.00",
+      "end": "00:11:13.00",
+      "text": "For instance, on objects such as the door and the vase, Lasso and IGNet suffer from affordance map dispersion or omission."
+    },
+    {
+      "start": "00:11:13.00",
+      "end": "00:11:21.00",
+      "text": "whereas our approach can accurately focus on the interactive regions."
+    },
+    {
+      "start": "00:11:21.00",
+      "end": "00:11:31.00",
+      "text": "The results also show that Lasso and IGNet, which ignore consistent cross-image features and rely solely on raw images, can lead to inaccurate area prediction."
+    },
+    {
+      "start": "00:11:44.00",
+      "end": "00:11:54.00",
+      "text": "And in Figure 4, we visualize the distribution of query tokens as they propagate through the IAM network, demonstrating its effectiveness in extracting invariant affordance knowledge."
+    },
+    {
+      "start": "00:11:54.00",
+      "end": "00:12:04.00",
+      "text": "The affordance query tokens are randomly initialized at the beginning. As the affordance query tokens iteratively propagate, they gradually cluster based on affordance type, as shown in Figure 4."
+    },
+    {
+      "start": "00:12:04.00",
+      "end": "00:12:14.00",
+      "text": "For instance, features corresponding to the same open operation across different objects, such as door, microwave, and bag, cluster in the orange region."
+    },
+    {
+      "start": "00:12:14.00",
+      "end": "00:12:24.00",
+      "text": "This result demonstrates the effectiveness of our approach by precisely extracting invariant knowledge across images."
+    },
+    {
+      "start": "00:12:31.00",
+      "end": "00:12:44.00",
+      "text": "And Table 2 reports the effect of IAM and ADM in both seen and unseen test datasets. Our full model outperforms in all metrics, such as higher AUC scores, than the model without ADM and IAM on the seen and unseen side, respectively."
+    },
+    {
+      "start": "00:12:44.00",
+      "end": "00:13:06.00",
+      "text": "And the IAM module leads to significant performance, while the ADM module has a smaller impact because ADM depends on the IAM. It's because the IAM needs the assistance of aligned features. Oh, sorry, ADM needs the assistance of aligned features."
+    },
+    {
+      "start": "00:13:06.00",
+      "end": "00:13:19.00",
+      "text": "Thus, when IAM and ADM are used together, we'll get the best performance across all metrics, like the last row of Table 2 in seen and unseen."
+    },
+    {
+      "start": "00:13:31.00",
+      "end": "00:13:41.00",
+      "text": "And Table 3 show the performance of MiFaG with frame input number from 1 to 5. The experiment results indicate a notable performance enhancement in a seen scene with an increased image input, as evidenced by improvements in AUC and AIOU metrics."
+    },
+    {
+      "start": "00:13:41.00",
+      "end": "00:14:00.00",
+      "text": "Nevertheless, an overabundance of image input can lead to a decline in affordance prediction performance for unseen point clouds."
+    },
+    {
+      "start": "00:14:01.00",
+      "end": "00:14:13.00",
+      "text": "It indicates that a limited number of multi-images with significant variations may mutually interfere with the alignment process. In contrast, a sufficient number of images enables the model to distill generalizable invariant features, resulting in enhanced performance."
+    },
+    {
+      "start": "00:14:23.00",
+      "end": "00:14:36.00",
+      "text": "Table 4 evaluates the invariant affordance feature extraction capability of IAM with different iterative layers. Intuitively, increasing the iterative layer numbers can enhance the ability to extract invariant information."
+    },
+    {
+      "start": "00:14:36.00",
+      "end": "00:14:47.00",
+      "text": "However, the best layer setting for seen and unseen scenarios are 4 and 6, achieving the highest AUC and SIM, respectively."
+    },
+    {
+      "start": "00:14:47.00",
+      "end": "00:15:00.00",
+      "text": "This discrepancy arises from a sharp increase in similarity loss across successive layers, which can cause a sharp increase in loss, leading to training instability and performance degradation."
+    },
+    {
+      "start": "00:15:00.00",
+      "end": "00:15:02.00",
+      "text": "performance degradation."
+    },
+    {
+      "start": "00:15:03.00",
+      "end": "00:15:05.00",
+      "text": "And finally to"
+    },
+    {
+      "start": "00:15:05.00",
+      "end": "00:15:09.00",
+      "text": "evaluate the zero-shot generalization ability of"
+    },
+    {
+      "start": "00:15:09.00",
+      "end": "00:15:12.00",
+      "text": "our method in real world scenarios, we tested on real"
+    },
+    {
+      "start": "00:15:12.00",
+      "end": "00:15:15.00",
+      "text": "scenes as shown in Figure 5. And"
+    },
+    {
+      "start": "00:15:16.00",
+      "end": "00:15:19.00",
+      "text": "we conduct the real world evaluation under two"
+    },
+    {
+      "start": "00:15:19.00",
+      "end": "00:15:22.00",
+      "text": "settings, seen and unseen. In the manner consistent"
+    },
+    {
+      "start": "00:15:22.00",
+      "end": "00:15:25.00",
+      "text": "with previous experiments, the bed and"
+    },
+    {
+      "start": "00:15:25.00",
+      "end": "00:15:29.00",
+      "text": "the chair are objects that are present in the dataset,"
+    },
+    {
+      "start": "00:15:29.00",
+      "end": "00:15:33.00",
+      "text": "while the sofa is not included in the training dataset."
+    },
+    {
+      "start": "00:15:33.00",
+      "end": "00:15:37.00",
+      "text": "Notably, objects in both settings are new"
+    },
+    {
+      "start": "00:15:37.00",
+      "end": "00:15:40.00",
+      "text": "to our trained model, as their point clouds"
+    },
+    {
+      "start": "00:15:40.00",
+      "end": "00:15:43.00",
+      "text": "are built from scratch by ourselves. So"
+    },
+    {
+      "start": "00:15:43.00",
+      "end": "00:15:46.00",
+      "text": "the robust visualization results demonstrate the"
+    },
+    {
+      "start": "00:15:46.00",
+      "end": "00:15:49.00",
+      "text": "effective generalization of our method. Um,"
+    },
+    {
+      "start": "00:15:49.00",
+      "end": "00:15:53.00",
+      "text": "that's all, thank you. And if you want to know more"
+    },
+    {
+      "start": "00:15:53.00",
+      "end": "00:15:56.00",
+      "text": "about it, please, uh, email me or"
+    },
+    {
+      "start": "00:15:56.00",
+      "end": "00:16:00.00",
+      "text": "add me at my WeChat. Thank you."
+    },
+    {
+      "start": "00:16:01.00",
+      "end": "00:16:04.00",
+      "text": "Thank you so much. And we have some"
+    },
+    {
+      "start": "00:16:04.00",
+      "end": "00:16:08.00",
+      "text": "time for questions. Audience any questions?"
+    }
+  ]
+}

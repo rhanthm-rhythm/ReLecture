@@ -1,0 +1,75 @@
+{
+  "video": "data/videos/82278.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 165.0,
+  "chunks": 1,
+  "raw_text": "00:00:00 --> 00:00:08\nYeah, I'm here. So, okay. Ah, so thanks. Uh, so hi, this is Hitomi Yanaka. So now I talk about our work, JBBQ,\n\n00:00:08 --> 00:00:24\nJapanese Bias Benchmark for analyzing social biases in LLMs. The development of social bias benchmark datasets for other languages is important because they shift the focus from English to greater language diversity in NLP.\n\n00:00:24 --> 00:00:40\nSo, we semi-automatically create a Japanese bias benchmark for question answering, JBBQ, based on the English bias benchmark, as you know, BBQ, to ensure both efficiency and quality, um, of the data creation.\n\n00:00:40 --> 00:00:49\nSo, we focus on five social categories common between English and Japanese-speaking countries, such as age and gender identity.\n\n00:00:49 --> 00:01:04\nSo, JBBQ is provided through st— two steps. The first step is machine translation of the BBQ templates and manual modification for Japanese templates. The second step is manual filtering and adding Japanese templates.\n\n00:01:04 --> 00:01:11\nSo, the manual work is done through regular discussion among five researchers.\n\n00:01:11 --> 00:01:24\nSo, here is a Japanese-specific question example about X-gender, which is a local term used mainly in Japan to describe a gender identity that is neither male nor female.\n\n00:01:24 --> 00:01:36\nSo, given an under-informative, ambiguous context, we test how strongly model responses reflect social biases. And given an additional informative context, we test we whether the model's biases\n\n00:01:36 --> 00:01:48\noverride the correct answer choice. So, we also test whether model responses change according to the negative or positive questions.\n\n00:01:48 --> 00:02:03\nAnd we evaluate multiple open models specialized in Japanese and GPT-4. So, the results show that larger parameters improve performance on QA tasks, but also increase biased answers.\n\n00:02:03 --> 00:02:18\nSo, this is not, uh, so, uh, yeah, interesting, actually. Um, but in addition, both instruction tuning and prompts with warning about social bias help models to respond that they cannot answer for ambiguous questions.\n\n00:02:18 --> 00:02:31\nAnd finally, asking models to output their evidence for the answer is effective for bias mitigation, but the the there is still room for improvement in extracting the correct evidence from context.\n\n00:02:31 --> 00:02:42\nAnd finally, ah, J— JBBQ is publicly available here, uh, the QR code, and please check the our dataset in paper.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:08.00",
+      "text": "Yeah, I'm here. So, okay. Ah, so thanks. Uh, so hi, this is Hitomi Yanaka. So now I talk about our work, JBBQ,"
+    },
+    {
+      "start": "00:00:08.00",
+      "end": "00:00:24.00",
+      "text": "Japanese Bias Benchmark for analyzing social biases in LLMs. The development of social bias benchmark datasets for other languages is important because they shift the focus from English to greater language diversity in NLP."
+    },
+    {
+      "start": "00:00:24.00",
+      "end": "00:00:40.00",
+      "text": "So, we semi-automatically create a Japanese bias benchmark for question answering, JBBQ, based on the English bias benchmark, as you know, BBQ, to ensure both efficiency and quality, um, of the data creation."
+    },
+    {
+      "start": "00:00:40.00",
+      "end": "00:00:49.00",
+      "text": "So, we focus on five social categories common between English and Japanese-speaking countries, such as age and gender identity."
+    },
+    {
+      "start": "00:00:49.00",
+      "end": "00:01:04.00",
+      "text": "So, JBBQ is provided through st— two steps. The first step is machine translation of the BBQ templates and manual modification for Japanese templates. The second step is manual filtering and adding Japanese templates."
+    },
+    {
+      "start": "00:01:04.00",
+      "end": "00:01:11.00",
+      "text": "So, the manual work is done through regular discussion among five researchers."
+    },
+    {
+      "start": "00:01:11.00",
+      "end": "00:01:24.00",
+      "text": "So, here is a Japanese-specific question example about X-gender, which is a local term used mainly in Japan to describe a gender identity that is neither male nor female."
+    },
+    {
+      "start": "00:01:24.00",
+      "end": "00:01:36.00",
+      "text": "So, given an under-informative, ambiguous context, we test how strongly model responses reflect social biases. And given an additional informative context, we test we whether the model's biases"
+    },
+    {
+      "start": "00:01:36.00",
+      "end": "00:01:48.00",
+      "text": "override the correct answer choice. So, we also test whether model responses change according to the negative or positive questions."
+    },
+    {
+      "start": "00:01:48.00",
+      "end": "00:02:03.00",
+      "text": "And we evaluate multiple open models specialized in Japanese and GPT-4. So, the results show that larger parameters improve performance on QA tasks, but also increase biased answers."
+    },
+    {
+      "start": "00:02:03.00",
+      "end": "00:02:18.00",
+      "text": "So, this is not, uh, so, uh, yeah, interesting, actually. Um, but in addition, both instruction tuning and prompts with warning about social bias help models to respond that they cannot answer for ambiguous questions."
+    },
+    {
+      "start": "00:02:18.00",
+      "end": "00:02:31.00",
+      "text": "And finally, asking models to output their evidence for the answer is effective for bias mitigation, but the the there is still room for improvement in extracting the correct evidence from context."
+    },
+    {
+      "start": "00:02:31.00",
+      "end": "00:02:42.00",
+      "text": "And finally, ah, J— JBBQ is publicly available here, uh, the QR code, and please check the our dataset in paper."
+    }
+  ]
+}

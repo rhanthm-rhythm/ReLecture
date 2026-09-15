@@ -1,0 +1,23 @@
+00:03 - 00:11 Wordcaster is a gamified reading game which helps young learners practice reading aloud using real-time automatic speech recognition.
+00:11 - 00:16 Players cast magical spells by pronouncing words correctly.
+00:16 - 00:28 The game integrates on-device ASR using Whisper Tiny, and gamified elements such as levels, coins, enemies and rewards to encourage repeated reading practice.
+00:28 - 00:42 A pilot study with three bilingual Arabic-speaking children, aged seven to eight, evaluated ASR accuracy and engagement across two sessions using a fixed list of 20 English words.
+00:42 - 00:51 Results showed improved accuracy and sustained enjoyment, suggesting that speech-based games can motivate reading fluency practice.
+00:51 - 00:57 What is our motivation? Reading fluency requires consistent practice and motivation.
+00:57 - 01:03 Gamification can increase engagement and encourage repetition.
+01:03 - 01:08 Speech technology enables interactive, voice-driven learning experiences.
+01:08 - 01:16 From the game design perspective, Wordcaster combines role-playing game style gameplay with reading tasks.
+01:16 - 01:26 Players pick a spellbook which contain 20 different English words, and player defeat enemies by pronouncing target words correctly.
+01:26 - 01:33 Correct pronunciation deal damage, mistakes have no penalty beyond time loss.
+01:33 - 01:44 As rewards, the player receive coins, experience, they level up their character, and unlock new spellbooks. The game currently runs fully offline on the user device.
+01:44 - 01:52 Regarding the speech recognition system, we use Whisper Tiny for local, real-time ASR.
+01:52 - 02:05 We also incorporate voice activity detection to segment speech. Players adjust the VAD sensitivity based on background noise, and the ASR outputs are matched against active target words in game.
+02:05 - 02:18 In our pilot study setup, three bilingual Arabic-English children aged 7 to 8 played the game on two different sessions. We used the same 20 words in the same fixed order.
+02:18 - 02:30 And as an evaluation matrix, we used the ASR accuracy per word and per session. The goal was to assess how the child performance changed from the first session compared to the second session.
+02:30 - 02:49 When looking at the results, we can see that the ASR accuracy in detecting the correct words increased in the second session. So we had 60 total word-session pairs, 21 of the words improved, 4 declined, and 35 remained unchanged.
+02:49 - 03:04 Children overall reported high enjoyment in both sessions, and we found that specific words like shine, cake, and house were consistently easy for the child, while other words as book and chair were harder.
+03:04 - 03:16 As a conclusion and future work, speech-driven gameplay promotes reading fluency and engagement. On-device ASR ensures privacy and low-cost deployment.
+03:16 - 03:23 For our future plans, we want to collaborate with educators to run a large-scale study.
+03:23 - 03:33 We want to also provide multi-language support in the game, starting by testing out Arabic, and we want to fine-tune the ASR model for children's speech.
+03:33 - 03:38 Additionally, we want to integrate an adaptive learning difficulty.
+03:38 - 03:53 Finally, we would like to thank the participants, from the children and the families, for their time and support. And we want to highlight that this project was supported by Mohamed bin Zayed University of Artificial Intelligence. Thank you.

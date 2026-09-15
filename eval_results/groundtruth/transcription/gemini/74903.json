@@ -1,0 +1,165 @@
+{
+  "video": "data/videos/74903.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 492.126322,
+  "chunks": 2,
+  "raw_text": "Below is a timestamped transcript of the audio from the video:  00:00 --> 00:13 Hello everyone, My name is Qiuyun Zhang. I am very honored to introduce our work named CollageNoter, for real-time and adaptive collage layout design for screenshot-based e-note-taking.  00:13 --> 00:21 Today's introduction is divided into the following three parts: our motivation, method, and experiment results.  00:21 --> 01:00 First, note-taking is vital for comprehending complex information by aggregating multiple contents into an integrated view. Though manual-made note-taking is easy to achieve and does not depend on electronic devices, handwritten notes require physical storage, leading to difficulty in searching, sharing, or editing. With the fast development of various e-note tools, such as Notability, Microsoft OneNote, etc., it is convenient for users to capture screenshots of crucial contents and then arrange them upon a new digital canvas for note-taking.  01:00 --> 01:13 Given the collage layout is suitable for organizing rich information, existing tools provide basic collage layout assistance, like automatic grid line alignment, size adjustment, etc.  01:13 --> 01:42 However, it is still time-consuming for users to make a well-organized layout for notes, as cognitive coherence and readability concern exert different influences on the layout design. The former focuses on organizing images in a cognitive-aware manner that is easy for readers to understand. The latter seeks to avoid visual distortion by optimizing the use of empty spaces, which may sometimes conflict with the cognitive-aware manner.  01:42 --> 01:50 Studies in the field of natural image collage layout generation and graphic layout generation are highly relevant to ours.  01:50 --> 02:49 Although existing works in these two fields have provided valuable insights, each has its own limitations. First, the widely adopted semantic relevance first tree for collage layout generation may cause unavoidable visual distortion and cognitive gaps. As shown in Figure 1a, when two elements with significantly different aspect ratios have to be placed together, element 3 and element 4, due to their highest semantic relevance, both vertical and horizontal arrangements may cause deformation. In addition, as existing layout optimization ignores human reading habits, like the preferred reading trajectories illustrated with purple dotted arrows in Figure 1, viewers have to spend extra effort to discern the correct logical order of screenshots when they read the collage design, thereby increasing the cognitive burden.  02:49 --> 03:13 Second, as for deep-learning-based methods, existing open-source layout datasets, summarized in the table, are not suitable for note-taking and fail to handle diverse device sizes. What's more, since there exists a trade-off on readability and cognitive coherence, it is challenging to solely depend on data-driven methods to address e-note design.  03:13 --> 03:34 In this paper, we propose the CollageNoter with the following improvements to solve the aforementioned issues. First, we introduce a novel two-stage pipeline, as shown in Figure B, including 1, readability-first layout generation, and 2, cognitive-driven layout adjustment.  03:34 --> 03:59 The first stage places images into a collage layout while preserving their original aspect ratio and size. Specifically, preserving the aspect ratio ensures visual consistency. Maintaining size prevents disrupting the original hierarchy of text in screenshots due to scaling, which is typically indicated by font size.  03:59 --> 04:17 The second stage refines the layout based on two human-centric strategies, including the tree-based order adjustment strategy, and the alignment-aware grouping adjust strategy, which aim to align the logical order of screenshots with human natural reading order of the layout.  04:17 --> 04:31 Second, as optimization-based layout search is time-consuming due to the vast solution space for possible layouts, we introduce transformer neural networks for readability-first layout generation.  04:31 --> 04:47 Specifically, when the input screenshots cannot fully cover the whole canvas, the layout generator should be able to arrange the remaining black regions for each element, illustrated with the blue dotted line filled areas, to form the overall alignment collage layout.  04:47 --> 05:00 Therefore, we propose the CollageFormer with the generative adversarial network, which includes a cascade generator decoupled into position and size prediction, and a discriminator to make generate...\n\nHere is the timestamped transcript for the video:\n\n00:00 --> 00:04\ngenerated layouts more closely aligned with the real-world designs.\n\n00:04 --> 00:16\nAs for the dataset construction, the initial collage layout is based on a binary tree, where each region is strictly adjacent to others and occupies the entire canvas.\n\n00:16 --> 00:32\nHowever, as illustrated on the right, the size and aspect ratios of the input screenshots may not exactly match the collage regions, where the remaining black regions should be assigned for some element to form the overall alignment collage layout.\n\n00:32 --> 00:43\nTherefore, given an initial collage layout, we add size noise to each region to simulate complex input scenarios encountered in the real world.\n\n00:43 --> 00:57\nAs introduced above, the cognitive coherence layout should align the logical order of screenshots with the human reading order, which can help users to understand the information continuously, rather than in a disjointed manner.\n\n00:57 --> 01:05\nIn other words, the screenshots should be arranged in logical order along the collage regions in human preferred reading order.\n\n01:05 --> 01:23\nGiven the readability first layout only considers aspect ratio and size of each screenshot, our collage-noter introduces the following layout adjustment strategies to rearrange the layout to a both visual and cognitive appealing result.\n\n01:23 --> 01:38\nFirst, tree-based order adjustment strategy. As illustrated with purple dotted arrows in figure on the top, humans tend to process the collage regions row by row from top left to right down.\n\n01:38 --> 01:57\nSince directly mapping screenshots to their corresponding reading regions will cause visual distortion, a binary collage tree is first refactored from the generated layout, where inner nodes represent vertical or horizontal placements, and leaf nodes indicate corresponding screenshots.\n\n01:57 --> 02:02\nThen, we assign the reading priority order to each node.\n\n02:02 --> 02:22\nThen, the readability first collage tree is refined layer by layer in a bottom-up manner, iteratively ensuring that higher priority nodes become the left children, which arranges these nodes further to the left and above in the collage layout, making them more accessible to readers following the reading order.\n\n02:22 --> 02:38\nTo further reduce user's effort in finding the correct logical order of screenshots, we propose the alignment aware grouping adjustment strategy, which is inspired by the Gestalt cognitive principle that humans tend to perceive adjacent elements as a whole.\n\n02:38 --> 02:51\nBy changing the alignment direction of screenshots, the visual grouping will be aroused where humans tend to first notice the adjacent elements, and thus F pattern reading trajectories are changed.\n\n02:51 --> 02:59\nBoth qualitative and quantitative comparisons verify that our model outperforms the baseline methods overall metrics,\n\n02:59 --> 03:07\nand it is obvious to see that deep learning based methods achieve the fast responses, which can greatly improve the user experience.\n\n03:07 --> 03:10\nMore experiment results could be found in the paper.\n\n03:10 --> 03:12\nThanks for listening.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:13.00",
+      "text": "Hello everyone, My name is Qiuyun Zhang. I am very honored to introduce our work named CollageNoter, for real-time and adaptive collage layout design for screenshot-based e-note-taking."
+    },
+    {
+      "start": "00:00:13.00",
+      "end": "00:00:21.00",
+      "text": "Today's introduction is divided into the following three parts: our motivation, method, and experiment results."
+    },
+    {
+      "start": "00:00:21.00",
+      "end": "00:01:00.00",
+      "text": "First, note-taking is vital for comprehending complex information by aggregating multiple contents into an integrated view. Though manual-made note-taking is easy to achieve and does not depend on electronic devices, handwritten notes require physical storage, leading to difficulty in searching, sharing, or editing. With the fast development of various e-note tools, such as Notability, Microsoft OneNote, etc., it is convenient for users to capture screenshots of crucial contents and then arrange them upon a new digital canvas for note-taking."
+    },
+    {
+      "start": "00:01:00.00",
+      "end": "00:01:13.00",
+      "text": "Given the collage layout is suitable for organizing rich information, existing tools provide basic collage layout assistance, like automatic grid line alignment, size adjustment, etc."
+    },
+    {
+      "start": "00:01:13.00",
+      "end": "00:01:42.00",
+      "text": "However, it is still time-consuming for users to make a well-organized layout for notes, as cognitive coherence and readability concern exert different influences on the layout design. The former focuses on organizing images in a cognitive-aware manner that is easy for readers to understand. The latter seeks to avoid visual distortion by optimizing the use of empty spaces, which may sometimes conflict with the cognitive-aware manner."
+    },
+    {
+      "start": "00:01:42.00",
+      "end": "00:01:50.00",
+      "text": "Studies in the field of natural image collage layout generation and graphic layout generation are highly relevant to ours."
+    },
+    {
+      "start": "00:01:50.00",
+      "end": "00:02:49.00",
+      "text": "Although existing works in these two fields have provided valuable insights, each has its own limitations. First, the widely adopted semantic relevance first tree for collage layout generation may cause unavoidable visual distortion and cognitive gaps. As shown in Figure 1a, when two elements with significantly different aspect ratios have to be placed together, element 3 and element 4, due to their highest semantic relevance, both vertical and horizontal arrangements may cause deformation. In addition, as existing layout optimization ignores human reading habits, like the preferred reading trajectories illustrated with purple dotted arrows in Figure 1, viewers have to spend extra effort to discern the correct logical order of screenshots when they read the collage design, thereby increasing the cognitive burden."
+    },
+    {
+      "start": "00:02:49.00",
+      "end": "00:03:13.00",
+      "text": "Second, as for deep-learning-based methods, existing open-source layout datasets, summarized in the table, are not suitable for note-taking and fail to handle diverse device sizes. What's more, since there exists a trade-off on readability and cognitive coherence, it is challenging to solely depend on data-driven methods to address e-note design."
+    },
+    {
+      "start": "00:03:13.00",
+      "end": "00:03:34.00",
+      "text": "In this paper, we propose the CollageNoter with the following improvements to solve the aforementioned issues. First, we introduce a novel two-stage pipeline, as shown in Figure B, including 1, readability-first layout generation, and 2, cognitive-driven layout adjustment."
+    },
+    {
+      "start": "00:03:34.00",
+      "end": "00:03:59.00",
+      "text": "The first stage places images into a collage layout while preserving their original aspect ratio and size. Specifically, preserving the aspect ratio ensures visual consistency. Maintaining size prevents disrupting the original hierarchy of text in screenshots due to scaling, which is typically indicated by font size."
+    },
+    {
+      "start": "00:03:59.00",
+      "end": "00:04:17.00",
+      "text": "The second stage refines the layout based on two human-centric strategies, including the tree-based order adjustment strategy, and the alignment-aware grouping adjust strategy, which aim to align the logical order of screenshots with human natural reading order of the layout."
+    },
+    {
+      "start": "00:04:17.00",
+      "end": "00:04:31.00",
+      "text": "Second, as optimization-based layout search is time-consuming due to the vast solution space for possible layouts, we introduce transformer neural networks for readability-first layout generation."
+    },
+    {
+      "start": "00:04:31.00",
+      "end": "00:04:47.00",
+      "text": "Specifically, when the input screenshots cannot fully cover the whole canvas, the layout generator should be able to arrange the remaining black regions for each element, illustrated with the blue dotted line filled areas, to form the overall alignment collage layout."
+    },
+    {
+      "start": "00:04:47.00",
+      "end": "00:05:00.00",
+      "text": "Therefore, we propose the CollageFormer with the generative adversarial network, which includes a cascade generator decoupled into position and size prediction, and a discriminator to make generate..."
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:04.00",
+      "text": "generated layouts more closely aligned with the real-world designs."
+    },
+    {
+      "start": "00:05:04.00",
+      "end": "00:05:16.00",
+      "text": "As for the dataset construction, the initial collage layout is based on a binary tree, where each region is strictly adjacent to others and occupies the entire canvas."
+    },
+    {
+      "start": "00:05:16.00",
+      "end": "00:05:32.00",
+      "text": "However, as illustrated on the right, the size and aspect ratios of the input screenshots may not exactly match the collage regions, where the remaining black regions should be assigned for some element to form the overall alignment collage layout."
+    },
+    {
+      "start": "00:05:32.00",
+      "end": "00:05:43.00",
+      "text": "Therefore, given an initial collage layout, we add size noise to each region to simulate complex input scenarios encountered in the real world."
+    },
+    {
+      "start": "00:05:43.00",
+      "end": "00:05:57.00",
+      "text": "As introduced above, the cognitive coherence layout should align the logical order of screenshots with the human reading order, which can help users to understand the information continuously, rather than in a disjointed manner."
+    },
+    {
+      "start": "00:05:57.00",
+      "end": "00:06:05.00",
+      "text": "In other words, the screenshots should be arranged in logical order along the collage regions in human preferred reading order."
+    },
+    {
+      "start": "00:06:05.00",
+      "end": "00:06:23.00",
+      "text": "Given the readability first layout only considers aspect ratio and size of each screenshot, our collage-noter introduces the following layout adjustment strategies to rearrange the layout to a both visual and cognitive appealing result."
+    },
+    {
+      "start": "00:06:23.00",
+      "end": "00:06:38.00",
+      "text": "First, tree-based order adjustment strategy. As illustrated with purple dotted arrows in figure on the top, humans tend to process the collage regions row by row from top left to right down."
+    },
+    {
+      "start": "00:06:38.00",
+      "end": "00:06:57.00",
+      "text": "Since directly mapping screenshots to their corresponding reading regions will cause visual distortion, a binary collage tree is first refactored from the generated layout, where inner nodes represent vertical or horizontal placements, and leaf nodes indicate corresponding screenshots."
+    },
+    {
+      "start": "00:06:57.00",
+      "end": "00:07:02.00",
+      "text": "Then, we assign the reading priority order to each node."
+    },
+    {
+      "start": "00:07:02.00",
+      "end": "00:07:22.00",
+      "text": "Then, the readability first collage tree is refined layer by layer in a bottom-up manner, iteratively ensuring that higher priority nodes become the left children, which arranges these nodes further to the left and above in the collage layout, making them more accessible to readers following the reading order."
+    },
+    {
+      "start": "00:07:22.00",
+      "end": "00:07:38.00",
+      "text": "To further reduce user's effort in finding the correct logical order of screenshots, we propose the alignment aware grouping adjustment strategy, which is inspired by the Gestalt cognitive principle that humans tend to perceive adjacent elements as a whole."
+    },
+    {
+      "start": "00:07:38.00",
+      "end": "00:07:51.00",
+      "text": "By changing the alignment direction of screenshots, the visual grouping will be aroused where humans tend to first notice the adjacent elements, and thus F pattern reading trajectories are changed."
+    },
+    {
+      "start": "00:07:51.00",
+      "end": "00:07:59.00",
+      "text": "Both qualitative and quantitative comparisons verify that our model outperforms the baseline methods overall metrics,"
+    },
+    {
+      "start": "00:07:59.00",
+      "end": "00:08:07.00",
+      "text": "and it is obvious to see that deep learning based methods achieve the fast responses, which can greatly improve the user experience."
+    },
+    {
+      "start": "00:08:07.00",
+      "end": "00:08:10.00",
+      "text": "More experiment results could be found in the paper."
+    },
+    {
+      "start": "00:08:10.00",
+      "end": "00:08:12.00",
+      "text": "Thanks for listening."
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+00:00:00.00 --> 00:00:16.00  Hi everyone. Welcome to the presentation of the paper "Causal Strategic and Combined Responsibility Attribution in Situation Calculus Concurrent Game Structures." My name is Shakil Khan, and this is a joint work with Mohammad Hosein Karimean and Yves Lesperance.
+00:00:16.00 --> 00:00:30.00  Okay, so let's start with the motivation for this work. As you know, responsibility is a key concept in accountable decision-making. Another important notion in multi-agent systems is that of actual causation, which involves figuring out the causes of an observed effect from a given history of actions.
+00:00:30.00 --> 00:00:55.00  Note that responsibility and actual causality are closely related. Despite this, while there's been a lot of work on formalizing responsibility from various perspectives, the connection between responsibility and actual causes has yet to be studied. To deal with this, in this paper, we propose a formalization of causal responsibility in a synchronous concurrent game-theoretic framework.
+00:00:55.00 --> 00:01:20.00  Here, by causal responsibility, I mean responsibility due to actual causal contribution. We also formalize various notions of strategic responsibility found in the literature, and we show that causal and strategic notions of responsibility are extensionally distinct.
+00:01:20.00 --> 00:01:40.00  Okay, so while doing this, we also proposed a formalization of actual cause in concurrent game-theoretic frameworks. We show that our formalization is free from common problems such as preemption and over-determination, etc., and finally we study some interesting properties of responsibility, including that of persistence.
+00:01:40.00 --> 00:02:15.00  So, our base framework, as I mentioned, for this work is the Situation Calculus Concurrent Game Structures, which is a first-order extension of concurrent game structures that also incorporates a SitCalc-like action theory to specify how agent moves change fluents and address the frame problem by doing this. So, in this framework, we have a finite set of n agents. So, there is just one action type, called a tick action, and that action essentially takes a move argument for each of these agents. So, thus it kind of represents the joint move of the grand coalition.
+00:02:15.00 --> 00:02:45.00  And the situation basically changes when these tick actions happen. So, a situation calculus style basic action theory determines how these fluents change, as I mentioned. Okay, so now our first contribution of this paper is a formalization of actual causation in SCSGs. So, for this, we adapted our previous work on actual causation in ordinary situation calculus to define joint moves or tick actions as causes.
+00:02:45.00 --> 00:03:22.00  We also identify causal chains that involve both direct and indirect causes as observed effects. However, note that in synchronous concurrent domains, since causes are tick actions, and since these tick actions involve moves by all agents, besides the relevant moves, a cause might include also irrelevant moves by other agents. Moreover, in these domains, there may be more than one subset of moves that are sufficient to cause the effect. So, we show in this paper how one can further refine the causal chain to come up with a set of minimal moves causal chains, where these irrelevant moves are replaced by dummy weight actions.
+00:03:22.00 --> 00:03:37.00  So, we show that our solution basically works well in that it does not suffer from the usual problems that formalizations of actual causes suffer from, such as preemption and over-determination.
+00:03:37.00 --> 00:04:15.00  So, our second contribution is a uniform framework for formalizing strategic responsibility and a novel definition of causal responsibility, that is, responsibility due to actual causal contribution. So, if you remember, in the literature, there are two main views of strategic responsibility that can be found. So, first, counterfactual-based passive responsibility, which kind of postulates that an agent is responsible for an effect if and only if they could have acted otherwise to avoid the effect. Secondly, we also have Stit-based Stit logic-based active responsibility, which says that an agent is responsible for an effect if they force the effect through their actions.
+00:04:15.00 --> 00:05:01.00  Now, others have also identified two variants of passive responsibility based on whether the reasoning about it...
+00:05:00.00 --> 00:05:02.00  occurs before or after the outcome, so
+00:05:03.00 --> 00:05:07.00  basically passive responsibility anticipation is future-looking
+00:05:08.00 --> 00:05:12.00  and the reasoning happens after - before the effect is occurred,
+00:05:13.00 --> 00:05:18.00  while passive responsibility attribution is retrospective notion.
+00:05:19.00 --> 00:05:23.00  So we redefined all of these notions in SCSGS,
+00:05:23.00 --> 00:05:27.00  but we also extended them to work for coalition of agents.
+00:05:28.00 --> 00:05:30.00  Okay, so I'm going to
+00:05:31.00 --> 00:05:34.00  skip these definitions as they are closely related to the
+00:05:35.00 --> 00:05:38.00  ones that can be found in the literature.
+00:05:39.00 --> 00:05:42.00  Okay, so on top of this, we also
+00:05:43.00 --> 00:05:46.00  proposed a notion of causal responsibility.
+00:05:47.00 --> 00:05:50.00  Since the notion of actual causation is a retrospective notion,
+00:05:51.00 --> 00:05:54.00  causal responsibility is also an ex post or retrospective notion.
+00:05:55.00 --> 00:05:58.00  So we say that a coalition C is causally responsible for an effect
+00:05:58.00 --> 00:06:04.00  Phi in some situation s if and only if there is a minimal moves causal chain
+00:06:04.00 --> 00:06:08.00  in which all of the agents in the coalition causally contributed,
+00:06:09.00 --> 00:06:12.00  that is they made a relevant move that caused this effect.
+00:06:13.00 --> 00:06:18.00  We also define a combined notion of causal and strategic responsibility,
+00:06:18.00 --> 00:06:21.00  we call it combined responsibility.
+00:06:22.00 --> 00:06:25.00  And we prove that causal responsibility cannot really be reduced to
+00:06:26.00 --> 00:06:29.00  strategic responsibility, and then we also study some interesting properties
+00:06:30.00 --> 00:06:33.00  of responsibility, including that of persistence.
+00:06:34.00 --> 00:06:38.00  So in the next few minutes let me give you an example to
+00:06:39.00 --> 00:06:42.00  make this more concrete. So,
+00:06:43.00 --> 00:06:47.00  now consider a domain where you have four agents,
+00:06:48.00 --> 00:06:51.00  two killers called killer 1 and killer 2, a waiter, and a guard.
+00:06:52.00 --> 00:06:55.00  There are four possible moves that can be performed by these agents,
+00:06:56.00 --> 00:06:58.00  by some of these agents. So,
+00:06:59.00 --> 00:07:04.00  the killer 1 and killer 2 can poison some drink with 50 percent lethal strength.
+00:07:05.00 --> 00:07:09.00  Killer 2 can serve the drink to the victim, and waiter
+00:07:09.00 --> 00:07:13.00  can also serve the drink to the victim, so these are the moves that they can perform.
+00:07:14.00 --> 00:07:17.00  The guard could have intervened serving the drink
+00:07:18.00 --> 00:07:22.00  and thus they could have stopped this delivery of the drink to the victim.
+00:07:23.00 --> 00:07:26.00  And all other agents can
+00:07:27.00 --> 00:07:30.00  also perform the irrelevant move other, which is like
+00:07:31.00 --> 00:07:34.00  eating an ice cream or something irrelevant.
+00:07:35.00 --> 00:07:38.00  Now the outcome that we're interested in is murder attempted,
+00:07:39.00 --> 00:07:42.00  which becomes true if the drink is 100 percent poisoned,
+00:07:43.00 --> 00:07:47.00  that is both killers deliver by poisoning the drink,
+00:07:48.00 --> 00:07:51.00  and then it's served without the guard intervening.
+00:07:52.00 --> 00:07:55.00  So if the guard intervenes then the murder attempted fails.
+00:07:56.00 --> 00:07:58.00  So the agents
+00:07:59.00 --> 00:08:02.00  must also have some strategies if you want to deal with
+00:08:03.00 --> 00:08:06.00  strategic responsibility. So,
+00:08:07.00 --> 00:08:10.00  this table shows their strategies.
+00:08:11.00 --> 00:08:14.00  So we will only consider strategies up to three ticks
+00:08:15.00 --> 00:08:17.00  or three time points.
+00:08:18.00 --> 00:08:22.00  So this table basically shows the strategies for each individual agent, okay?
+00:08:23.00 --> 00:08:27.00  Killer 1's strategy is to poison in the first tick,
+00:08:28.00 --> 00:08:32.00  in the second tick does the other or the irrelevant move,
+00:08:33.00 --> 00:08:35.00  and also in the third tick do the irrelevant move.
+00:08:36.00 --> 00:08:39.00  Killer 2's strategy is to poison in the first tick,
+00:08:40.00 --> 00:08:43.00  do other in the second tick, and in the third tick
+00:08:44.00 --> 00:08:48.00  if the poison is not delivered yet, it is going to serve the poison
+00:08:49.00 --> 00:08:52.00  to the or serve the drink to the victim,
+00:08:53.00 --> 00:08:55.00  otherwise it will just perform other.
+00:08:56.00 --> 00:08:59.00  The waiter strategy is to perform other in the first tick,
+00:09:00.00 --> 00:09:03.00  serve the drink in the second tick, and other in the third tick as well.
+00:09:04.00 --> 00:09:07.00  And the guard is a lazy one and its strategy
+00:09:08.00 --> 00:09:11.00  is to just perform other in all possible ticks.
+00:09:12.00 --> 00:09:15.00  So what actually happened in the real world is that
+00:09:16.00 --> 00:09:19.00  in the first tick both killers poisoned the drink,
+00:09:20.00 --> 00:09:23.00  and others just performed other moves.
+00:09:24.00 --> 00:09:27.00  In the second tick the waiter served the drink,
+00:09:28.00 --> 00:09:31.00  and in the third tick everyone performed other moves, okay?
+00:09:32.00 --> 00:09:35.00  So basically the murder attempt happened,
+00:09:36.00 --> 00:09:39.00  and we would like to figure out the responsibility
+00:09:40.00 --> 00:09:43.00  of these agents or coalitions of agents
+00:09:44.00 --> 00:09:47.00  with respect to these the strategies that you saw in the previous slide.
+00:09:48.00 --> 00:09:51.00  So we can show that the coalition of Killer 1 and Killer 2
+00:09:52.00 --> 00:09:55.00  are passively responsible because
+00:09:56.00 --> 00:09:59.00  they could have done otherwise, they could have not poisoned the drink
+00:09:59.00 --> 00:10:00.00  and thus they could have stopped this delivery.
+00:10:00.00 --> 00:10:04.00  and the guard is also passively responsible because the guard could have stopped
+00:10:04.00 --> 00:10:08.00  by intervening but they chose not to do so.
+00:10:08.00 --> 00:10:13.00  However, note that this passive responsibility attribution does not really
+00:10:13.00 --> 00:10:18.00  show their causal contribution towards this effect.
+00:10:18.00 --> 00:10:22.00  While if you, if you talk about causal responsibility
+00:10:22.00 --> 00:10:27.00  you can see that the killer 1 and killer 2 are causally responsible
+00:10:27.00 --> 00:10:30.00  because their actions brought about the effect
+00:10:30.00 --> 00:10:34.00  while the waiter is also causally responsible
+00:10:34.00 --> 00:10:39.00  although the waiter is not combinedly responsible because the waiter
+00:10:39.00 --> 00:10:43.00  is more of a innocent bystander here.
+00:10:43.00 --> 00:10:48.00  Their causal contribution does not come with a strategic intent.
+00:10:48.00 --> 00:10:53.00  So thus you can see that this new notion of responsibility is quite different from
+00:10:53.00 --> 00:10:57.00  previously studied passive notions of responsibility.
+00:10:57.00 --> 00:11:03.00  So to summarize in this paper we proposed this novel notion of causal responsibility
+00:11:03.00 --> 00:11:07.00  and while doing so we also talked about formalized
+00:11:07.00 --> 00:11:13.00  actual causation in situation calculus concurrent game structures.
+00:11:13.00 --> 00:11:18.00  Currently we are studying how knowledge can affect
+00:11:18.00 --> 00:11:21.00  or or lack of knowledge or incomplete knowledge can affect responsibility of agents.
+00:11:21.00 --> 00:11:24.00  Thank you so much.

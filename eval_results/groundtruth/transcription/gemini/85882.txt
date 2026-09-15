@@ -1,0 +1,23 @@
+0:00 – 0:13: Hello. My name is Eleni and I'm one of the authors of the work of Towards Trustworthy Summarization of Cardiovascular Articles: A Factuality-and-Uncertainty-Aware Biomedical LLM Approach.
+
+0:13 – 0:30: The motivations of our work was to to investigate the fact that there are many scientific publications recently, and that it's very necessary to avoid any incorrect medical concepts and advices.
+
+0:30 – 0:43: LLMs are ideal for generating abstractive summaries that highlight key information, but there's a problem that summaries can have hallucinations in them.
+
+0:43 – 0:57: Our thought was to investigate whether a simpler, token-level uncertainty estimation could help estimate further in biomedicine.
+
+0:57 – 1:12: The results of our work were was at first to investigate to compare different models and using different metrics. Some of them were factuality and some of them uncertainty.
+
+1:12 – 1:26: The results showed that most of the models were not helped as much from fine-tuning, even though we use it in the future experiments to keep the added information.
+
+1:26 – 1:33: And it's also shown that Qwen models were the ones that were performed the best.
+
+1:33 – 1:53: Also about investigating different decoding strategies, such as greedy search, top-k, and top-p sampling, it was noticed that sampling methods generated the most trustworthy summaries, especially considering token entropy.
+
+1:53 – 2:09: And also, I would like to mention here that we attempted to test the correlation between the two types of metrics, and it was shown that they don't correlate as we thought we would.
+
+2:09 – 2:24: But that fact could be tested using more datasets. I'm just telling it without any slides because it should be updated in our work.
+
+2:24 – 2:34: The acknowledgements of our paper were some of the people that helped us conduct experiments, etc.
+
+2:34 – 2:40: Thank you for your attention.

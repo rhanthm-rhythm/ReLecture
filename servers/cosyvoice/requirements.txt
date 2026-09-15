@@ -1,0 +1,5 @@
+flask>=3.0
+torch>=2.0
+torchaudio>=2.0
+# CosyVoice must be installed from source: https://github.com/FunAudioLLM/CosyVoice
+# Follow the CosyVoice installation guide before running this server

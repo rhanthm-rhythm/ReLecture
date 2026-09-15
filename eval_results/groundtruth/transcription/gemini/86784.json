@@ -1,0 +1,545 @@
+{
+  "video": "data/videos/86784.mp4",
+  "model": "gemini-3-flash-preview",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 607.510011,
+  "chunks": 3,
+  "raw_text": "00:00:00 --> 00:00:02 Hello, everyone.\n00:00:02 --> 00:00:04 Thank you for being here.\n00:00:04 --> 00:00:07 My name is Leeheng Yu from the University of Science and Technology of China.\n00:00:07 --> 00:00:13 Today, I am truly honored to present our latest research, \"Rethinking Crystal Symmetry Prediction: A Decoupled Perspective\".\n00:00:13 --> 00:00:23 In this work, we address a fundamental flaw in how AI is currently applied to crystallography and propose a new framework that aligns deep learning with actual chemical intuition.\n00:00:23 --> 00:00:26 I will guide you through our presentation in four parts.\n00:00:26 --> 00:00:31 First, our motivation and the specific problem we identified.\n00:00:31 --> 00:00:34 Second, the methodology of our XRD-Decoupler framework.\n00:00:34 --> 00:00:38 Third, our comprehensive experimental results.\n00:00:38 --> 00:00:41 And finally, the conclusion and future outlook.\n00:00:41 --> 00:00:44 Let's start with the motivation.\n00:00:44 --> 00:00:52 As many of you in this field know, space group determination is the crucial first step in the structural analysis of crystalline materials.\n00:00:52 --> 00:00:56 It forms the foundation for understanding material properties.\n00:00:56 --> 00:01:04 Recently, we've seen AI showing great potential in automating this process using powder X-ray diffraction data, or PXRD.\n00:01:04 --> 00:01:08 It promises speed and efficiency.\n00:01:08 --> 00:01:13 However, in our research, we identified a critical flaw.\n00:01:13 --> 00:01:21 Existing deep learning models often ignore fundamental chemical rules. They tend to treat this task purely as a data-driven pattern recognition problem...\n00:01:21 --> 00:01:25 ...without truly understanding the hierarchical nature of the underlying chemistry.\n00:01:25 --> 00:01:29 This leads to predictions that are often chemically implausible.\n00:01:29 --> 00:01:34 We define this specific flaw as the Sub-Property Confusion problem, or SPC.\n00:01:34 --> 00:01:37 To understand this, please take a look at the figure on this slide.\n00:01:37 --> 00:01:45 Space groups are not just independent, isolated labels. They share underlying sub-properties, specifically crystal systems, Bravais lattices, and point groups.\n00:01:45 --> 00:01:49 These are hierarchical relationships.\n00:01:49 --> 00:01:54 Let me give you a concrete example to illustrate why current models fail.\n00:01:54 --> 00:01:58 Consider the space groups I4 and I-4.\n00:01:58 --> 00:02:04 These two groups share the exact same body-centered lattice type.\n00:02:04 --> 00:02:09 On the other hand, I4 and P4 share the same point group type.\n00:02:09 --> 00:02:13 This creates a web of overlapping features.\n00:02:13 --> 00:02:19 Existing state-of-the-art models like XRD-Mamba shown here easily get confused between these groups.\n00:02:19 --> 00:02:22 Why does this happen?\n00:02:22 --> 00:02:28 Because they fail to distinguish which features belong to the lattice and which specific features belong to the point group.\n00:02:28 --> 00:02:33 They treat the input signal as a mixed bag, leading to highly unreliable predictions.\n00:02:33 --> 00:02:37 So, we asked ourselves, what are the root causes?\n00:02:37 --> 00:02:39 We identified three main culprits.\n00:02:39 --> 00:02:42 First is chemical ignorance.\n00:02:42 --> 00:02:50 Standard models process data sequentially, lacking the hierarchical reasoning and chemical intuition that a human expert would naturally use.\n00:02:50 --> 00:02:53 Second is biased learning.\n00:02:53 --> 00:03:00 We found that models tend to take shortcuts during training. They prioritize easier-to-learn features like distinct lattice types...\n00:03:00 --> 00:03:04 ...while neglecting the finer, more subtle details required for precise space group classification.\n00:03:04 --> 00:03:07 And third is feature overlap.\n00:03:07 --> 00:03:14 The PXRD features of related sub-properties are intrinsically similar, making them incredibly hard to disentangle without explicit, structured guidance.\n00:03:14 --> 00:03:18 To address these challenges, we propose XRD-Decoupler.\n00:03:18 --> 00:03:22 This is a framework designed from a decoupled perspective.\n00:03:22 --> 00:03:26 Instead of using a traditional black-box approach, we try to imitate the thinking process of a chemist.\n00:03:26 --> 00:03:32 Our framework introduces two main innovations to solve the SPC problem.\n00:03:32 --> 00:03:38 First, hierarchical PXRD pattern learning, or HPSL, for better, more granular feature extraction.\n00:03:38 --> 00:03:44 And second, super-class guided optimization to explicitly decouple the confusion.\n00:03:44 --> 00:03:48 Let's dive deeper into the architecture.\n00:03:48 --> 00:03:52 Think about how a human expert analyzes a spectrum.\n00:03:52 --> 00:03:56 They don't just look at it one way. They look at it in two ways:\n00:03:56 --> 00:04:00 ...broadly at the overall shape and closely at specific subtle peaks.\n00:04:00 --> 00:04:04 We implemented this exact dual-view approach in our model.\n00:04:04 --> 00:04:08 On the top left, we have the local pattern module.\n00:04:08 --> 00:04:14 This module is designed to focus on fine-grained details. Specifically, it captures the correlations between adjacent diffraction peaks...\n00:04:14 --> 00:04:18 ...which is critical for identifying subtle symmetry differences.\n00:04:18 --> 00:04:23 We don't just feed raw data; we transform diffraction angles into sine values and concatenate them with intensity to enrich the feature space.\n00:04:23 --> 00:04:27 On the bottom left, we have the global pattern module.\n00:04:27 --> 00:04:29 Here, we take a different approach.\n00:04:29 --> 00:04:34 We segment the spectrum into patches and use attention blocks.\n00:04:34 --> 00:04:40 This allows the model to capture long-range dependencies and global structural patterns that might span across the entire spectrum.\n00:04:40 --> 00:04:47 Finally, these two distinct streams, local and global, are concatenated to form a comprehensive, robust representation.\n00:04:47 --> 00:04:52 Next is our core contribution: super-class guided optimization.\n00:04:52 --> 00:04:58 To truly solve the confusion problem, we realized we need to guide the learning process.\n\n00:00:00 --> 00:00:06  We shouldn't just train the model to predict the space group label directly. That is too difficult given the feature overlap.\n00:00:07 --> 00:00:18  Instead, we introduce multi-dimensional crystal symmetry information, specifically crystal systems, Bravais lattices, and point groups as what we call superclasses.\n00:00:18 --> 00:00:27  We use these superclasses as auxiliary supervision signals. By doing this, we explicitly force the model to learn features that are discriminative for each specific property.\n00:00:28 --> 00:00:36  For instance, we guide the model to maximize the difference in mutual information between the sample representation and the true versus confused labels.\n00:00:36 --> 00:00:43  This effectively decouples the entangled information, ensuring the prediction aligns with valid chemical rules.\n00:00:44 --> 00:00:51  However, there is a catch when training such a complex model. A simple linear combination of losses often leads to optimization bias.\n00:00:51 --> 00:00:59  As shown in the graph here, if we just sum the losses, the model learns simple tasks like lattice type very quickly because they are easier.\n00:00:59 --> 00:01:04  But it ignores the harder, more complex tasks.\n00:01:05 --> 00:01:12  To fix this, we formulate the training as a multi-objective optimization problem.\n00:01:12 --> 00:01:19  We utilize the Frank-Wolfe algorithm to dynamically adjust the gradient weights during training.\n00:01:19 --> 00:01:28  This allows us to find a Pareto-optimal solution, ensuring that all symmetry tasks, both the easy ones and the difficult ones, are learned simultaneously and balanced effectively.\n00:01:28 --> 00:01:34  Now, let's move on to the experiments to see how this performs in practice.\n00:01:34 --> 00:01:39  We utilized the large-scale CCDC-MOF dataset, which contains over 280,000 samples.\n00:01:40 --> 00:01:50  To ensure a fair and rigorous evaluation, we use the half-split approach. Crucially, we also created a special MOF-balanced subset to strictly evaluate performance under class imbalance, which is a common and serious issue in this field.\n00:01:51 --> 00:02:00  Here are our main results. Please refer to the table. You can see XRDDecoupler in the bottom row compared against state-of-the-art baselines like XRDMamba and RC-Net.\n00:02:00 --> 00:02:09  On the standard MOF dataset, we achieved a top 1% accuracy of 80.09%. This is a massive improvement over the previous best.\n00:02:10 --> 00:02:17  Looking at the top 5 accuracy, we reached an impressive 96.26%, showing that the correct answer is almost always within our model's top predictions.\n00:02:17 --> 00:02:24  But more importantly, look at the MOF-balanced dataset on the right side of the table.\n00:02:25 --> 00:02:33  This is the harder test. Our lead here is even more significant, outperforming XRDMamba by over 10% in accuracy.\n00:02:34 --> 00:02:44  Furthermore, we validated our model's generalization capability on out-of-domain datasets like CoRE MOF and inorganic data, where it continued to excel.\n00:02:44 --> 00:02:54  This essentially proves that our decoupled perspective is highly effective, not just on standard data, but in difficult, imbalanced, and diverse scenarios.\n00:02:54 --> 00:03:00  We also conducted a detailed ablation study to validate our individual components. We wanted to know what really mattered.\n00:03:01 --> 00:03:08  First, replacing the standard encoder with our hierarchical learner, HPSL, gave a substantial accuracy boost.\n00:03:09 --> 00:03:14  Second, adding the superclass-guided optimization further improved the performance.\n00:03:15 --> 00:03:22  This confirms that neither component is redundant; both the hierarchical architecture and the chemical guidance are essential for the success of our framework.\n00:03:22 --> 00:03:30  Now, to prove that our model actually decoupled the information as we claimed, we visualized the classifier weights. This is crucial for interpretability.\n00:03:30 --> 00:03:39  In the heatmap shown on the slide, darker colors indicate higher dependency. You can clearly see that different tasks rely on different features.\n00:03:39 --> 00:03:45  For example, Bravais lattice prediction relies heavily on the global embedding.\n00:03:46 --> 00:03:59  In contrast, specific space group details require more from the local embedding. This confirms our model is making decisions based on the complementary roles of global and local features, imitating the reasoning of a human expert.\n00:04:00 --> 00:04:06  Finally, we visualized the attention mechanism to see where the model is literally looking.\n00:04:06 --> 00:04:12  The local module focuses intensely on variations between adjacent peaks, capturing geometric details.\n00:04:13 --> 00:04:19  The global module prioritizes high-intensity regions, capturing the macrostructure.\n00:04:19 --> 00:04:24  This further validates that our hierarchical design works exactly as intended.\n00:04:25 --> 00:04:31  To summarize our contributions, first, we are the first to systematically analyze the sub-property confusion or SPC problem in this field.\n00:04:32 --> 00:04:37  Second, we introduced superclass guidance to incorporate chemical knowledge directly into the optimization process.\n00:04:38 --> 00:04:44  Third, we proposed a hierarchical learner model that explicitly models both local and global pattern information.\n00:04:45 --> 00:04:51  And finally, XRDDecoupler achieves state-of-the-art performance with high interpretability and strong generalization.\n00:04:52 --> 00:04:57  We believe this decoupled perspective opens a promising new direction for AI in material science.\n00:04:57 --> 00:05:01  Thank you very much for your attention. Our code is available on GitHub, and I'm happy to take any questions.\n\n00:00:00 --> 00:00:01 I am\n00:00:01 --> 00:00:02 now happy\n00:00:02 --> 00:00:04 to take any\n00:00:04 --> 00:00:05 questions you\n00:00:05 --> 00:00:07 may have.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:02.00",
+      "text": "Hello, everyone."
+    },
+    {
+      "start": "00:00:02.00",
+      "end": "00:00:04.00",
+      "text": "Thank you for being here."
+    },
+    {
+      "start": "00:00:04.00",
+      "end": "00:00:07.00",
+      "text": "My name is Leeheng Yu from the University of Science and Technology of China."
+    },
+    {
+      "start": "00:00:07.00",
+      "end": "00:00:13.00",
+      "text": "Today, I am truly honored to present our latest research, \"Rethinking Crystal Symmetry Prediction: A Decoupled Perspective\"."
+    },
+    {
+      "start": "00:00:13.00",
+      "end": "00:00:23.00",
+      "text": "In this work, we address a fundamental flaw in how AI is currently applied to crystallography and propose a new framework that aligns deep learning with actual chemical intuition."
+    },
+    {
+      "start": "00:00:23.00",
+      "end": "00:00:26.00",
+      "text": "I will guide you through our presentation in four parts."
+    },
+    {
+      "start": "00:00:26.00",
+      "end": "00:00:31.00",
+      "text": "First, our motivation and the specific problem we identified."
+    },
+    {
+      "start": "00:00:31.00",
+      "end": "00:00:34.00",
+      "text": "Second, the methodology of our XRD-Decoupler framework."
+    },
+    {
+      "start": "00:00:34.00",
+      "end": "00:00:38.00",
+      "text": "Third, our comprehensive experimental results."
+    },
+    {
+      "start": "00:00:38.00",
+      "end": "00:00:41.00",
+      "text": "And finally, the conclusion and future outlook."
+    },
+    {
+      "start": "00:00:41.00",
+      "end": "00:00:44.00",
+      "text": "Let's start with the motivation."
+    },
+    {
+      "start": "00:00:44.00",
+      "end": "00:00:52.00",
+      "text": "As many of you in this field know, space group determination is the crucial first step in the structural analysis of crystalline materials."
+    },
+    {
+      "start": "00:00:52.00",
+      "end": "00:00:56.00",
+      "text": "It forms the foundation for understanding material properties."
+    },
+    {
+      "start": "00:00:56.00",
+      "end": "00:01:04.00",
+      "text": "Recently, we've seen AI showing great potential in automating this process using powder X-ray diffraction data, or PXRD."
+    },
+    {
+      "start": "00:01:04.00",
+      "end": "00:01:08.00",
+      "text": "It promises speed and efficiency."
+    },
+    {
+      "start": "00:01:08.00",
+      "end": "00:01:13.00",
+      "text": "However, in our research, we identified a critical flaw."
+    },
+    {
+      "start": "00:01:13.00",
+      "end": "00:01:21.00",
+      "text": "Existing deep learning models often ignore fundamental chemical rules. They tend to treat this task purely as a data-driven pattern recognition problem..."
+    },
+    {
+      "start": "00:01:21.00",
+      "end": "00:01:25.00",
+      "text": "...without truly understanding the hierarchical nature of the underlying chemistry."
+    },
+    {
+      "start": "00:01:25.00",
+      "end": "00:01:29.00",
+      "text": "This leads to predictions that are often chemically implausible."
+    },
+    {
+      "start": "00:01:29.00",
+      "end": "00:01:34.00",
+      "text": "We define this specific flaw as the Sub-Property Confusion problem, or SPC."
+    },
+    {
+      "start": "00:01:34.00",
+      "end": "00:01:37.00",
+      "text": "To understand this, please take a look at the figure on this slide."
+    },
+    {
+      "start": "00:01:37.00",
+      "end": "00:01:45.00",
+      "text": "Space groups are not just independent, isolated labels. They share underlying sub-properties, specifically crystal systems, Bravais lattices, and point groups."
+    },
+    {
+      "start": "00:01:45.00",
+      "end": "00:01:49.00",
+      "text": "These are hierarchical relationships."
+    },
+    {
+      "start": "00:01:49.00",
+      "end": "00:01:54.00",
+      "text": "Let me give you a concrete example to illustrate why current models fail."
+    },
+    {
+      "start": "00:01:54.00",
+      "end": "00:01:58.00",
+      "text": "Consider the space groups I4 and I-4."
+    },
+    {
+      "start": "00:01:58.00",
+      "end": "00:02:04.00",
+      "text": "These two groups share the exact same body-centered lattice type."
+    },
+    {
+      "start": "00:02:04.00",
+      "end": "00:02:09.00",
+      "text": "On the other hand, I4 and P4 share the same point group type."
+    },
+    {
+      "start": "00:02:09.00",
+      "end": "00:02:13.00",
+      "text": "This creates a web of overlapping features."
+    },
+    {
+      "start": "00:02:13.00",
+      "end": "00:02:19.00",
+      "text": "Existing state-of-the-art models like XRD-Mamba shown here easily get confused between these groups."
+    },
+    {
+      "start": "00:02:19.00",
+      "end": "00:02:22.00",
+      "text": "Why does this happen?"
+    },
+    {
+      "start": "00:02:22.00",
+      "end": "00:02:28.00",
+      "text": "Because they fail to distinguish which features belong to the lattice and which specific features belong to the point group."
+    },
+    {
+      "start": "00:02:28.00",
+      "end": "00:02:33.00",
+      "text": "They treat the input signal as a mixed bag, leading to highly unreliable predictions."
+    },
+    {
+      "start": "00:02:33.00",
+      "end": "00:02:37.00",
+      "text": "So, we asked ourselves, what are the root causes?"
+    },
+    {
+      "start": "00:02:37.00",
+      "end": "00:02:39.00",
+      "text": "We identified three main culprits."
+    },
+    {
+      "start": "00:02:39.00",
+      "end": "00:02:42.00",
+      "text": "First is chemical ignorance."
+    },
+    {
+      "start": "00:02:42.00",
+      "end": "00:02:50.00",
+      "text": "Standard models process data sequentially, lacking the hierarchical reasoning and chemical intuition that a human expert would naturally use."
+    },
+    {
+      "start": "00:02:50.00",
+      "end": "00:02:53.00",
+      "text": "Second is biased learning."
+    },
+    {
+      "start": "00:02:53.00",
+      "end": "00:03:00.00",
+      "text": "We found that models tend to take shortcuts during training. They prioritize easier-to-learn features like distinct lattice types..."
+    },
+    {
+      "start": "00:03:00.00",
+      "end": "00:03:04.00",
+      "text": "...while neglecting the finer, more subtle details required for precise space group classification."
+    },
+    {
+      "start": "00:03:04.00",
+      "end": "00:03:07.00",
+      "text": "And third is feature overlap."
+    },
+    {
+      "start": "00:03:07.00",
+      "end": "00:03:14.00",
+      "text": "The PXRD features of related sub-properties are intrinsically similar, making them incredibly hard to disentangle without explicit, structured guidance."
+    },
+    {
+      "start": "00:03:14.00",
+      "end": "00:03:18.00",
+      "text": "To address these challenges, we propose XRD-Decoupler."
+    },
+    {
+      "start": "00:03:18.00",
+      "end": "00:03:22.00",
+      "text": "This is a framework designed from a decoupled perspective."
+    },
+    {
+      "start": "00:03:22.00",
+      "end": "00:03:26.00",
+      "text": "Instead of using a traditional black-box approach, we try to imitate the thinking process of a chemist."
+    },
+    {
+      "start": "00:03:26.00",
+      "end": "00:03:32.00",
+      "text": "Our framework introduces two main innovations to solve the SPC problem."
+    },
+    {
+      "start": "00:03:32.00",
+      "end": "00:03:38.00",
+      "text": "First, hierarchical PXRD pattern learning, or HPSL, for better, more granular feature extraction."
+    },
+    {
+      "start": "00:03:38.00",
+      "end": "00:03:44.00",
+      "text": "And second, super-class guided optimization to explicitly decouple the confusion."
+    },
+    {
+      "start": "00:03:44.00",
+      "end": "00:03:48.00",
+      "text": "Let's dive deeper into the architecture."
+    },
+    {
+      "start": "00:03:48.00",
+      "end": "00:03:52.00",
+      "text": "Think about how a human expert analyzes a spectrum."
+    },
+    {
+      "start": "00:03:52.00",
+      "end": "00:03:56.00",
+      "text": "They don't just look at it one way. They look at it in two ways:"
+    },
+    {
+      "start": "00:03:56.00",
+      "end": "00:04:00.00",
+      "text": "...broadly at the overall shape and closely at specific subtle peaks."
+    },
+    {
+      "start": "00:04:00.00",
+      "end": "00:04:04.00",
+      "text": "We implemented this exact dual-view approach in our model."
+    },
+    {
+      "start": "00:04:04.00",
+      "end": "00:04:08.00",
+      "text": "On the top left, we have the local pattern module."
+    },
+    {
+      "start": "00:04:08.00",
+      "end": "00:04:14.00",
+      "text": "This module is designed to focus on fine-grained details. Specifically, it captures the correlations between adjacent diffraction peaks..."
+    },
+    {
+      "start": "00:04:14.00",
+      "end": "00:04:18.00",
+      "text": "...which is critical for identifying subtle symmetry differences."
+    },
+    {
+      "start": "00:04:18.00",
+      "end": "00:04:23.00",
+      "text": "We don't just feed raw data; we transform diffraction angles into sine values and concatenate them with intensity to enrich the feature space."
+    },
+    {
+      "start": "00:04:23.00",
+      "end": "00:04:27.00",
+      "text": "On the bottom left, we have the global pattern module."
+    },
+    {
+      "start": "00:04:27.00",
+      "end": "00:04:29.00",
+      "text": "Here, we take a different approach."
+    },
+    {
+      "start": "00:04:29.00",
+      "end": "00:04:34.00",
+      "text": "We segment the spectrum into patches and use attention blocks."
+    },
+    {
+      "start": "00:04:34.00",
+      "end": "00:04:40.00",
+      "text": "This allows the model to capture long-range dependencies and global structural patterns that might span across the entire spectrum."
+    },
+    {
+      "start": "00:04:40.00",
+      "end": "00:04:47.00",
+      "text": "Finally, these two distinct streams, local and global, are concatenated to form a comprehensive, robust representation."
+    },
+    {
+      "start": "00:04:47.00",
+      "end": "00:04:52.00",
+      "text": "Next is our core contribution: super-class guided optimization."
+    },
+    {
+      "start": "00:04:52.00",
+      "end": "00:04:58.00",
+      "text": "To truly solve the confusion problem, we realized we need to guide the learning process."
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:06.00",
+      "text": "We shouldn't just train the model to predict the space group label directly. That is too difficult given the feature overlap."
+    },
+    {
+      "start": "00:05:07.00",
+      "end": "00:05:18.00",
+      "text": "Instead, we introduce multi-dimensional crystal symmetry information, specifically crystal systems, Bravais lattices, and point groups as what we call superclasses."
+    },
+    {
+      "start": "00:05:18.00",
+      "end": "00:05:27.00",
+      "text": "We use these superclasses as auxiliary supervision signals. By doing this, we explicitly force the model to learn features that are discriminative for each specific property."
+    },
+    {
+      "start": "00:05:28.00",
+      "end": "00:05:36.00",
+      "text": "For instance, we guide the model to maximize the difference in mutual information between the sample representation and the true versus confused labels."
+    },
+    {
+      "start": "00:05:36.00",
+      "end": "00:05:43.00",
+      "text": "This effectively decouples the entangled information, ensuring the prediction aligns with valid chemical rules."
+    },
+    {
+      "start": "00:05:44.00",
+      "end": "00:05:51.00",
+      "text": "However, there is a catch when training such a complex model. A simple linear combination of losses often leads to optimization bias."
+    },
+    {
+      "start": "00:05:51.00",
+      "end": "00:05:59.00",
+      "text": "As shown in the graph here, if we just sum the losses, the model learns simple tasks like lattice type very quickly because they are easier."
+    },
+    {
+      "start": "00:05:59.00",
+      "end": "00:06:04.00",
+      "text": "But it ignores the harder, more complex tasks."
+    },
+    {
+      "start": "00:06:05.00",
+      "end": "00:06:12.00",
+      "text": "To fix this, we formulate the training as a multi-objective optimization problem."
+    },
+    {
+      "start": "00:06:12.00",
+      "end": "00:06:19.00",
+      "text": "We utilize the Frank-Wolfe algorithm to dynamically adjust the gradient weights during training."
+    },
+    {
+      "start": "00:06:19.00",
+      "end": "00:06:28.00",
+      "text": "This allows us to find a Pareto-optimal solution, ensuring that all symmetry tasks, both the easy ones and the difficult ones, are learned simultaneously and balanced effectively."
+    },
+    {
+      "start": "00:06:28.00",
+      "end": "00:06:34.00",
+      "text": "Now, let's move on to the experiments to see how this performs in practice."
+    },
+    {
+      "start": "00:06:34.00",
+      "end": "00:06:39.00",
+      "text": "We utilized the large-scale CCDC-MOF dataset, which contains over 280,000 samples."
+    },
+    {
+      "start": "00:06:40.00",
+      "end": "00:06:50.00",
+      "text": "To ensure a fair and rigorous evaluation, we use the half-split approach. Crucially, we also created a special MOF-balanced subset to strictly evaluate performance under class imbalance, which is a common and serious issue in this field."
+    },
+    {
+      "start": "00:06:51.00",
+      "end": "00:07:00.00",
+      "text": "Here are our main results. Please refer to the table. You can see XRDDecoupler in the bottom row compared against state-of-the-art baselines like XRDMamba and RC-Net."
+    },
+    {
+      "start": "00:07:00.00",
+      "end": "00:07:09.00",
+      "text": "On the standard MOF dataset, we achieved a top 1% accuracy of 80.09%. This is a massive improvement over the previous best."
+    },
+    {
+      "start": "00:07:10.00",
+      "end": "00:07:17.00",
+      "text": "Looking at the top 5 accuracy, we reached an impressive 96.26%, showing that the correct answer is almost always within our model's top predictions."
+    },
+    {
+      "start": "00:07:17.00",
+      "end": "00:07:24.00",
+      "text": "But more importantly, look at the MOF-balanced dataset on the right side of the table."
+    },
+    {
+      "start": "00:07:25.00",
+      "end": "00:07:33.00",
+      "text": "This is the harder test. Our lead here is even more significant, outperforming XRDMamba by over 10% in accuracy."
+    },
+    {
+      "start": "00:07:34.00",
+      "end": "00:07:44.00",
+      "text": "Furthermore, we validated our model's generalization capability on out-of-domain datasets like CoRE MOF and inorganic data, where it continued to excel."
+    },
+    {
+      "start": "00:07:44.00",
+      "end": "00:07:54.00",
+      "text": "This essentially proves that our decoupled perspective is highly effective, not just on standard data, but in difficult, imbalanced, and diverse scenarios."
+    },
+    {
+      "start": "00:07:54.00",
+      "end": "00:08:00.00",
+      "text": "We also conducted a detailed ablation study to validate our individual components. We wanted to know what really mattered."
+    },
+    {
+      "start": "00:08:01.00",
+      "end": "00:08:08.00",
+      "text": "First, replacing the standard encoder with our hierarchical learner, HPSL, gave a substantial accuracy boost."
+    },
+    {
+      "start": "00:08:09.00",
+      "end": "00:08:14.00",
+      "text": "Second, adding the superclass-guided optimization further improved the performance."
+    },
+    {
+      "start": "00:08:15.00",
+      "end": "00:08:22.00",
+      "text": "This confirms that neither component is redundant; both the hierarchical architecture and the chemical guidance are essential for the success of our framework."
+    },
+    {
+      "start": "00:08:22.00",
+      "end": "00:08:30.00",
+      "text": "Now, to prove that our model actually decoupled the information as we claimed, we visualized the classifier weights. This is crucial for interpretability."
+    },
+    {
+      "start": "00:08:30.00",
+      "end": "00:08:39.00",
+      "text": "In the heatmap shown on the slide, darker colors indicate higher dependency. You can clearly see that different tasks rely on different features."
+    },
+    {
+      "start": "00:08:39.00",
+      "end": "00:08:45.00",
+      "text": "For example, Bravais lattice prediction relies heavily on the global embedding."
+    },
+    {
+      "start": "00:08:46.00",
+      "end": "00:08:59.00",
+      "text": "In contrast, specific space group details require more from the local embedding. This confirms our model is making decisions based on the complementary roles of global and local features, imitating the reasoning of a human expert."
+    },
+    {
+      "start": "00:09:00.00",
+      "end": "00:09:06.00",
+      "text": "Finally, we visualized the attention mechanism to see where the model is literally looking."
+    },
+    {
+      "start": "00:09:06.00",
+      "end": "00:09:12.00",
+      "text": "The local module focuses intensely on variations between adjacent peaks, capturing geometric details."
+    },
+    {
+      "start": "00:09:13.00",
+      "end": "00:09:19.00",
+      "text": "The global module prioritizes high-intensity regions, capturing the macrostructure."
+    },
+    {
+      "start": "00:09:19.00",
+      "end": "00:09:24.00",
+      "text": "This further validates that our hierarchical design works exactly as intended."
+    },
+    {
+      "start": "00:09:25.00",
+      "end": "00:09:31.00",
+      "text": "To summarize our contributions, first, we are the first to systematically analyze the sub-property confusion or SPC problem in this field."
+    },
+    {
+      "start": "00:09:32.00",
+      "end": "00:09:37.00",
+      "text": "Second, we introduced superclass guidance to incorporate chemical knowledge directly into the optimization process."
+    },
+    {
+      "start": "00:09:38.00",
+      "end": "00:09:44.00",
+      "text": "Third, we proposed a hierarchical learner model that explicitly models both local and global pattern information."
+    },
+    {
+      "start": "00:09:45.00",
+      "end": "00:09:51.00",
+      "text": "And finally, XRDDecoupler achieves state-of-the-art performance with high interpretability and strong generalization."
+    },
+    {
+      "start": "00:09:52.00",
+      "end": "00:09:57.00",
+      "text": "We believe this decoupled perspective opens a promising new direction for AI in material science."
+    },
+    {
+      "start": "00:09:57.00",
+      "end": "00:10:01.00",
+      "text": "Thank you very much for your attention. Our code is available on GitHub, and I'm happy to take any questions."
+    },
+    {
+      "start": "00:10:00.00",
+      "end": "00:10:01.00",
+      "text": "I am"
+    },
+    {
+      "start": "00:10:01.00",
+      "end": "00:10:02.00",
+      "text": "now happy"
+    },
+    {
+      "start": "00:10:02.00",
+      "end": "00:10:04.00",
+      "text": "to take any"
+    },
+    {
+      "start": "00:10:04.00",
+      "end": "00:10:05.00",
+      "text": "questions you"
+    },
+    {
+      "start": "00:10:05.00",
+      "end": "00:10:07.00",
+      "text": "may have."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+flask>=3.0
+torch>=2.0
+# Install the Qwen3-TTS model and inference code per the model card
+# The server wraps it via Flask and exposes POST /generate and GET /health

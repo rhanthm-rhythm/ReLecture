@@ -1,0 +1,31 @@
+00:00:00.00 --> 00:00:03.00  Everybody ready? Let's start. Okay.
+00:00:03.00 --> 00:00:07.00  Today I will be here to present our paper...
+00:00:07.00 --> 00:00:11.00  ...submitted to AAAI on embodied visual navigation.
+00:00:11.00 --> 00:00:17.00  FLONA: Floor-plan-guided embodied visual navigation.
+00:00:17.00 --> 00:00:23.00  So navigation is essential for embodiments.
+00:00:23.00 --> 00:00:31.00  Common types of embodied navigation can be categorized into four types based on the given target: point-based, image-based, object-based, and language-based navigation.
+00:00:31.00 --> 00:00:40.00  Most work do not make use of an easily accessible and stable geometric information, floor plans.
+00:00:40.00 --> 00:00:46.00  As a result, they tend to spend more time navigating in unknown environments.
+00:00:46.00 --> 00:00:54.00  However, humans are able to utilize such abstract information to assist in navigation.
+00:00:54.00 --> 00:01:03.00  So we aim to let floor plans assist in navigation. In this work, we propose a novel navigation task, namely floor plan navigation, which is FLONA.
+00:01:03.00 --> 00:01:17.00  For benchmarking, we collected 20,000 navigation sequences across 117 scenes in the iGibson simulator.
+00:01:17.00 --> 00:01:26.00  Additionally, we propose a diffusion-policy-based framework, FLODIFF, to complete the FLONA task.
+00:01:26.00 --> 00:01:43.00  The FLONA task requires the embodied agent to navigate from the starting point to the specified target given an RGB observation, a target point coordinate, and a floor plan.
+00:01:43.00 --> 00:02:00.00  Additionally, we collected data from 117 scenes in iGibson, with 67 scenes used for training and 50 for testing. Each scene's dataset includes a floor plan, a traversable map, and multiple collision-free navigation sequences.
+00:02:00.00 --> 00:02:11.00  So this is the statistics of our dataset. We propose the FLODIFF framework to tackle the FLONA task.
+00:02:11.00 --> 00:02:30.00  The input consists of four consecutive RGB observations, a floor plan, and a target point coordinate, while the output is a series of navigation waypoints.
+00:02:30.00 --> 00:02:53.00  FLODIFF has two versions: Loc-FLODIFF and Naive-FLODIFF. The first one requires an additionally additional localization module to provide the current pose, whereas Naive-FLODIFF trains a network for localization.
+00:02:53.00 --> 00:03:04.00  So FLODIFF first encodes the four images and the floor plan separately, then utilizes a self-attention mechanism to obtain the context code.
+00:03:04.00 --> 00:03:54.00  Loc-FLODIFF consists of two networks: one for diffusion-based denoising conditioning on the current pose, context code, and target position; the other for estimating the shortest path distance, taking the current pose, context code, and target position as input.
+00:03:54.00 --> 00:04:09.00  Both networks are trained using MSE loss with a balancing parameter lambda 3. During training, lambda 3 is set to 1.001.
+00:04:09.00 --> 00:04:36.00  So compared to Loc-FLODIFF, Naive-FLODIFF includes an additional network for pose estimation, which takes the context code as input and outputs the current pose. The training process uses parameters lambda 1 and lambda 2 to balance the three MSE losses.
+00:04:36.00 --> 00:05:00.00  For the environments, we test five baselines in 50 test scenes, with each scene containing 10 start-target point pairs. The FLODIFF-based baselines are trained for five epochs on an RTX 3090.
+00:05:00.00 --> 00:05:16.00  The orientation steps are set to 10, and the horizon is set to 32. Our primary evaluation metrics are success rate and success weighted path length.
+00:05:17.00 --> 00:05:36.00  F3 means using F3-Loc for localization, and GT means using GT pose. And here we use F3-Loc with pre-trained weight from the original paper. As shown in the table, Lock-FlowDiff achieved the best performance.
+00:05:37.00 --> 00:05:54.00  By comparing Lock-FlowDiff and Naive-FlowDiff, it is evident that Lock-FlowDiff performs better, suggesting that decoupling the localization module benefits navigation.
+00:05:55.00 --> 00:06:21.00  So, by comparing Lock-A and Lock-FlowDiff with Lock-A and Lock-FlowDiff GT, we can observe that FlowDiff’s performance depends on localization accuracy.
+00:06:22.00 --> 00:06:59.00  By comparing Lock-A F3 and Lock-A GT with Lock-FlowDiff F3 and Lock-FlowDiff GT, we can see that FlowDiff outperforms explicit planning. This indicates that FlowDiff learns navigable paths and obstacle information from RGB observation, enabling effective planning and obstacle avoidance.
+00:07:00.00 --> 00:07:26.00  And we also conducted some qualitative analysis in the bottom-left feature. The robot is given different target points from the same initial position, and it successfully plans different paths, demonstrating its planning capabilities.
+00:07:27.00 --> 00:08:04.00  So, in the bottom-right feature, the yellow cycle represents poses with added noise. The yellow line indicates the navigation paths generated by Lock-FlowDiff under noisy localization, and the red line shows the paths planned by A*. It can be observed that despite the noisy localization, Lock-FlowDiff still produces free paths, whereas A* generates incorrect plans due to localization errors.
+00:08:05.00 --> 00:08:54.00  We also conducted real-world experiments with Lock-FlowDiff. The model was deployed on an NVIDIA Jetson AGX Orin, and localization was obtained using a Lidar-based odometry system. The predicted waypoints were converted into linear and angular commands using a PD controller for execution. Notably, to reduce the sim-to-real gap, we pre-scanned the environment and imported into iGibson.
+00:08:55.00 --> 00:09:04.00  Here are two videos of the real-world experiment.

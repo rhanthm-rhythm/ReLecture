@@ -1,0 +1,4 @@
+flask>=3.0
+torch>=2.0
+torchaudio>=2.0
+chatterbox-tts

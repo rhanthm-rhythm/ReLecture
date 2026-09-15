@@ -1,0 +1,90 @@
+00:00:00.00 --> 00:00:02.00  Thank you everybody. Thanks for being here.
+00:00:02.00 --> 00:00:08.00  I'm Lea, I'm a PhD student at Lyon University and working for the nuclear safety and radioprotection authority.
+00:00:08.00 --> 00:00:15.00  And today I'm going to talk about the impact of ionizing radiation on reproductive processes in Fukushima tree frogs,
+00:00:15.00 --> 00:00:18.00  from a transcriptomic approach to functional insights.
+00:00:18.00 --> 00:00:20.00  So first, a bit of context.
+00:00:20.00 --> 00:00:27.00  In 1986 and in 2011, major nuclear accidents occurred in Chernobyl and in Fukushima.
+00:00:27.00 --> 00:00:32.00  And they released a large amount of radionuclides into the environment.
+00:00:32.00 --> 00:00:37.00  And nowadays, the wild fauna who live in these areas are still exposed to ionizing radiation.
+00:00:37.00 --> 00:00:44.00  And we know that ionizing radiation prolonged exposure can trigger oxidative stress
+00:00:44.00 --> 00:00:50.00  and can also have a direct impact on nuclear DNA and on mitochondrial DNA,
+00:00:50.00 --> 00:00:54.00  which may affect individual physiology.
+00:00:54.00 --> 00:00:59.00  And for this work we decided to focus on reproduction because of course it's of major importance for local population viability
+00:00:59.00 --> 00:01:03.00  and it's also especially radiosensitive.
+00:01:03.00 --> 00:01:08.00  The studies focusing on reproduction in Fukushima are scarce and the results are sometimes contradictory.
+00:01:08.00 --> 00:01:14.00  For example, the bull and the cattle don't show any impact on ionizing radiation on reproduction,
+00:01:14.00 --> 00:01:21.00  but two studies focusing on mouse and raccoons found DNA lesion in male germ cells,
+00:01:21.00 --> 00:01:27.00  enhanced spermatogenesis, down-regulation of genes which were involved in sperm motility and morphogenesis and so on.
+00:01:27.00 --> 00:01:31.00  And for the laboratory, the results are kind of the same for lots of different species,
+00:01:31.00 --> 00:01:37.00  with decreased in the number of embryos produced, a delay in brood side release,
+00:01:37.00 --> 00:01:42.00  and a reduced number of mitotic cells and quality of sperm.
+00:01:42.00 --> 00:01:47.00  And the most important here is that these effects increased over generation.
+00:01:47.00 --> 00:01:54.00  So for the second generation, you have more effects than for the first one and at a radioactive dose rate which is lower.
+00:01:54.00 --> 00:02:01.00  And for the first part, we decided to focus on molecular ecology because it allows us to investigate the biological processes
+00:02:01.00 --> 00:02:07.00  activated in response to specific environmental conditions and can provide an early warning of toxic effects.
+00:02:07.00 --> 00:02:13.00  So the objective was to determine the effect of long-term radiocontamination on tree frogs' primary sexual traits
+00:02:13.00 --> 00:02:17.00  using both an untargeted approach and targeted analysis.
+00:02:17.00 --> 00:02:22.00  And so first, why do we study tree frogs? First, they are both terrestrial and aquatic,
+00:02:22.00 --> 00:02:25.00  so they can be contaminated by both ways.
+00:02:25.00 --> 00:02:30.00  They also have a low dispersion, so it's easier to estimate radioactive total dose rate for them.
+00:02:30.00 --> 00:02:35.00  And they have a skin which is very permeable to pollutants.
+00:02:35.00 --> 00:02:43.00  So in 2022, we went to Japan to the Fukushima prefecture to collect male Dryophytes japonicus tree frogs during their breeding seasons,
+00:02:43.00 --> 00:02:49.00  and we did that along a contamination gradient. So you can see here blue points that are considered as control sites,
+00:02:49.00 --> 00:02:54.00  and there, more red is the point, more contaminated is the site.
+00:02:54.00 --> 00:02:59.00  And we came back in 2024 and to do the same, to collect more tree frogs.
+00:02:59.00 --> 00:03:06.00  So we were able to estimate their individual total dose rate, so ITDR, for all tree frogs.
+00:03:06.00 --> 00:03:11.00  And we can see there the tree frogs from the control sites and it's the same, like more red is the point, more contaminated is the tree frog.
+00:03:11.00 --> 00:03:19.00  What we can see here is that some of the most exposed tree frogs are around 6 microgray per hour.
+00:05:00.00 --> 00:05:14.00  value of 10 microgray per hour, saying that below this value 95% of the ecosystem should be protected. So we are well below this value.
+00:05:15.00 --> 00:05:37.00  Okay, so first we did a transcriptomic analysis. We began with sequencing. We did RNA sequencing on the testes of the tree frogs. So first, isolating RNA, converting them into cDNA, amplifying them, sequencing them, and mapping the sequence read to the transcriptome.
+00:05:38.00 --> 00:06:04.00  And we used two different pipelines to analyze the data. So the first one was gene correlation network analysis, WGCNA, which is used to identify modules of highly correlated genes and to explore their relationship within each other and with the external sample traits. So for us, it's the radioactive dose.
+00:06:05.00 --> 00:06:21.00  And we used another tool which is Drumic, which is used to model concentration dependent responses and to identify significant trends and estimate effect concentrations.
+00:06:22.00 --> 00:06:30.00  For the 2024 tree frogs, we measured the sperm motility with computer assisted sperm analysis tool.
+00:06:31.00 --> 00:06:45.00  And so we have the percentage of sperm motility and the percentage of progressive sperm motility because there's a difference between a sperm just like moving the head or a sperm really moving forward.
+00:06:46.00 --> 00:07:11.00  We also analyzed the sperm concentration and we took into account the testis mass of the individuals and we observed sperm morphology by transmission electron microscopy, but I'm not going to show you the results today because it's still in process.
+00:07:12.00 --> 00:07:32.00  Okay, so first for the WGCNA gene correlation analysis, we started with 9,285 contigs, and which were divided in 20 modules.
+00:07:33.00 --> 00:08:00.00  And eight of the modules were significantly correlated with the radioactive dose of our tree frogs. And we did a gene ontology enrichment analysis and here are the results for the biological processes for the different modules that were correlated to our interest trait.
+00:08:01.00 --> 00:08:22.00  And we focused on the two most enriched modules. So the first one was the turquoise one, and we could see for example protein polyubiquitination, also sister chromatid segregation and regulation of chromosome organization.
+00:08:23.00 --> 00:08:55.00  And for the brown module, we could see a lot of different GO terms about motility, cilium movement, and the axoneme. So we could highlight hub genes, so they are highly connected genes within a module, and they are strongly associated with both other module genes and the radioactive dose.
+00:08:56.00 --> 00:09:29.00  And for the module, so the turquoise one, we could highlighted CAT7, which is a catalytic subunit of histone acetyltransferase complex, which is involved in protein ubiquitination and also DAR1 which is involved in apoptosis and NF-BP1 which is a regulator of immune signaling.
+00:09:30.00 --> 00:10:00.00  And for the brown modules, all the hub genes were about, so male fertility and sperm motility with the flagella assembly. Okay, so for the Drumic analysis, we started with the same 9,285 contigs and 1,301 contigs were successfully modeled with Drumic with a BMD. So BMD is a benchmark dose, so it's basically the lowest dose where you can see a significant modulation of the signal. We did also gene ontology enrichment.
+00:10:00.00 --> 00:10:05.00  We found 64 GO terms and we could establish a sensitivity curve.
+00:10:05.00 --> 00:10:09.00  So this is that one for biological processes.
+00:10:10.00 --> 00:10:15.00  So what you can see here, the different biological processes and their radio-sensitivity.
+00:10:15.00 --> 00:10:21.00  So there, it's the benchmark dose, so for example
+00:10:22.00 --> 00:10:30.00  these ones were the more radio-active sensitivity with one microgray per hour.
+00:10:30.00 --> 00:10:33.00  And there are about also sister chromatid segregation.
+00:10:34.00 --> 00:10:41.00  We found also a lot of GO terms about endoplasmic reticulum.
+00:10:42.00 --> 00:10:48.00  One GO term about toxin transport, which were genes involved in oxidative stress.
+00:10:49.00 --> 00:10:53.00  Genes about mRNA and finally a GO term about motile cilium assembly.
+00:10:59.00 --> 00:11:05.00  So for the sperm parameters, we couldn't see any significant impact of the radioactive dose on sperm motility.
+00:11:06.00 --> 00:11:14.00  Even when accounting for covariates such as the age of the individuals or the mass of the gonads.
+00:11:15.00 --> 00:11:21.00  But we could see a decrease of a sperm concentration with the radioactive dose.
+00:11:25.00 --> 00:11:29.00  Okay, so we could see different pathways impacted by the radioactive dose.
+00:11:29.00 --> 00:11:34.00  One of them was sperm motility. For transcriptomic analysis we saw hub genes which were deregulated with the radioactive dose.
+00:11:34.00 --> 00:11:39.00  And the benchmark dose was at four microgray per hour.
+00:11:40.00 --> 00:11:49.00  For the functional analysis there was no significant impact. So we thought maybe this discrepancy may reflect a compensatory regulatory mechanism.
+00:11:50.00 --> 00:11:58.00  Or maybe an insufficient dose rate levels to induce functional alterations because the 2024 tree frogs were less contaminated than the 2022.
+00:11:59.00 --> 00:12:04.00  We saw also pathways about sister chromatid segregation and chromosome organization for the transcriptomic analysis which were deregulated below with a BMD from 1 microgray per hour.
+00:12:05.00 --> 00:12:09.00  But and for the functional analysis we saw a decrease of sperm concentration so our hypothesis here is that there's a potential disruption in germ cell division.
+00:12:10.00 --> 00:12:18.00  Which may result in a decrease sperm production and we also saw some signs of DNA damage response and oxidative stress with genes involved in double strand breaks.
+00:12:19.00 --> 00:12:27.00  Base excision repair and protein ubiquitination and these effects are not rare when we are talking about ionizing radiation.
+00:12:28.00 --> 00:12:32.00  These effects have been reported many times and involved in single strand breaks increase reduced sperm motility.
+00:12:33.00 --> 00:12:40.00  Higher sperm DNA fragmentation and that are effects can be transmitted over generations.
+00:12:41.00 --> 00:12:50.00  So the conclusion here is that inhabiting an area with ionizing radiation exposure can affect multiple biological pathways in wild tree frogs.
+00:12:51.00 --> 00:13:05.00  So I would like to thank you all and thanks for all the collaborators of this big tree frog Fukushima project. Thank you.
+00:14:05.00 --> 00:14:12.00  Thank you for a fascinating talk. I was wondering your populations are pretty geographically spread.
+00:14:13.00 --> 00:14:20.00  Are there other habitat conditions that may affect biological reproduction rather than ionizing radiation in those frogs?
+00:14:21.00 --> 00:14:27.00  Yes, it's a big deal when we are working on the field and to deal with lot of covariates.
+00:14:28.00 --> 00:14:36.00  This is also why in 2024 we tried to reduce the distance between the sites but for this analysis we took into account the haplogroups of the different individuals.
+00:14:37.00 --> 00:14:45.00  Because we are in an area where they can be quite genetic variation.
+00:14:46.00 --> 00:14:55.00  So yeah. [Applause]
+00:15:00.00 --> 00:15:02.00  distances. So we took that into the
+00:15:02.00 --> 00:15:05.00  into the analysis.
+00:15:05.00 --> 00:15:07.00  We also looked at, for example,
+00:15:07.00 --> 00:15:10.00  if the temperature can have an impact on
+00:15:10.00 --> 00:15:13.00  the genetic expression,
+00:15:13.00 --> 00:15:16.00  which wasn't the case.
+00:15:16.00 --> 00:15:18.00  So, yeah. That's all.
+00:15:18.00 --> 00:15:23.00  [silence]
+00:15:23.00 --> 00:15:26.00  Okay, thank you very much.

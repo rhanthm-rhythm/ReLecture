@@ -1,0 +1,70 @@
+{
+  "video": "data/videos/85882.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 163.0,
+  "chunks": 1,
+  "raw_text": "00:00:00 --> 00:00:13\nHello. My name is Eleni and I'm one of the authors of the work of Towards Trustworthy Summarization of Cardiovascular Articles: A Factuality-and-Uncertainty-Aware Biomedical LLM Approach.\n\n00:00:13 --> 00:00:30\nThe motivations of our work was to to investigate the fact that there are many scientific publications recently, and that it's very necessary to avoid any incorrect medical concepts and advices.\n\n00:00:30 --> 00:00:43\nLLMs are ideal for generating abstractive summaries that highlight key information, but there's a problem that summaries can have hallucinations in them.\n\n00:00:43 --> 00:00:57\nOur thought was to investigate whether a simpler, token-level uncertainty estimation could help estimate further in biomedicine.\n\n00:00:57 --> 00:01:12\nThe results of our work were was at first to investigate to compare different models and using different metrics. Some of them were factuality and some of them uncertainty.\n\n00:01:12 --> 00:01:26\nThe results showed that most of the models were not helped as much from fine-tuning, even though we use it in the future experiments to keep the added information.\n\n00:01:26 --> 00:01:33\nAnd it's also shown that Qwen models were the ones that were performed the best.\n\n00:01:33 --> 00:01:53\nAlso about investigating different decoding strategies, such as greedy search, top-k, and top-p sampling, it was noticed that sampling methods generated the most trustworthy summaries, especially considering token entropy.\n\n00:01:53 --> 00:02:09\nAnd also, I would like to mention here that we attempted to test the correlation between the two types of metrics, and it was shown that they don't correlate as we thought we would.\n\n00:02:09 --> 00:02:24\nBut that fact could be tested using more datasets. I'm just telling it without any slides because it should be updated in our work.\n\n00:02:24 --> 00:02:34\nThe acknowledgements of our paper were some of the people that helped us conduct experiments, etc.\n\n00:02:34 --> 00:02:40\nThank you for your attention.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:13.00",
+      "text": "Hello. My name is Eleni and I'm one of the authors of the work of Towards Trustworthy Summarization of Cardiovascular Articles: A Factuality-and-Uncertainty-Aware Biomedical LLM Approach."
+    },
+    {
+      "start": "00:00:13.00",
+      "end": "00:00:30.00",
+      "text": "The motivations of our work was to to investigate the fact that there are many scientific publications recently, and that it's very necessary to avoid any incorrect medical concepts and advices."
+    },
+    {
+      "start": "00:00:30.00",
+      "end": "00:00:43.00",
+      "text": "LLMs are ideal for generating abstractive summaries that highlight key information, but there's a problem that summaries can have hallucinations in them."
+    },
+    {
+      "start": "00:00:43.00",
+      "end": "00:00:57.00",
+      "text": "Our thought was to investigate whether a simpler, token-level uncertainty estimation could help estimate further in biomedicine."
+    },
+    {
+      "start": "00:00:57.00",
+      "end": "00:01:12.00",
+      "text": "The results of our work were was at first to investigate to compare different models and using different metrics. Some of them were factuality and some of them uncertainty."
+    },
+    {
+      "start": "00:01:12.00",
+      "end": "00:01:26.00",
+      "text": "The results showed that most of the models were not helped as much from fine-tuning, even though we use it in the future experiments to keep the added information."
+    },
+    {
+      "start": "00:01:26.00",
+      "end": "00:01:33.00",
+      "text": "And it's also shown that Qwen models were the ones that were performed the best."
+    },
+    {
+      "start": "00:01:33.00",
+      "end": "00:01:53.00",
+      "text": "Also about investigating different decoding strategies, such as greedy search, top-k, and top-p sampling, it was noticed that sampling methods generated the most trustworthy summaries, especially considering token entropy."
+    },
+    {
+      "start": "00:01:53.00",
+      "end": "00:02:09.00",
+      "text": "And also, I would like to mention here that we attempted to test the correlation between the two types of metrics, and it was shown that they don't correlate as we thought we would."
+    },
+    {
+      "start": "00:02:09.00",
+      "end": "00:02:24.00",
+      "text": "But that fact could be tested using more datasets. I'm just telling it without any slides because it should be updated in our work."
+    },
+    {
+      "start": "00:02:24.00",
+      "end": "00:02:34.00",
+      "text": "The acknowledgements of our paper were some of the people that helped us conduct experiments, etc."
+    },
+    {
+      "start": "00:02:34.00",
+      "end": "00:02:40.00",
+      "text": "Thank you for your attention."
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+00:00:00.00 --> 00:00:02.00  Hello everyone, I'm Kang-Yi Wu.
+00:00:02.00 --> 00:00:07.00  I'm sorry to inform you that I'm the proxy presenter of this paper.
+00:00:07.00 --> 00:00:15.00  So, if you have any detailed questions after my report, I'd recommend you to just email the authors and contact them.
+00:00:15.00 --> 00:00:23.00  I have put the emails and their QR code at the end of this PowerPoint.
+00:00:23.00 --> 00:00:25.00  Okay let's start.
+00:00:25.00 --> 00:00:30.00  This paper named "Enhancing Multi-Robot Semantic Navigation through Multi-Modal Chain of Thought Scoring Collaboration."
+00:00:30.00 --> 00:00:35.00  First, I will introduce the core challenges and research background of multi-robot semantic navigation.
+00:00:35.00 --> 00:00:46.00  In unknown environments, multiple robots need to quickly share environmental information such as global semantic maps and based on this, select exploration frontiers and plan this collision-free paths.
+00:00:46.00 --> 00:00:54.00  For example, when two robots simultaneously detect the same target, how can we avoid redundant exploration or path collisions?
+00:00:54.00 --> 00:01:05.00  This is precisely the starting point of this work. How to enable multi-robot systems to collaboratively reason like humans through multi-modal chain of thought and lightweight communication mechanisms, efficiently balancing exploration and backtracking.
+00:01:05.00 --> 00:01:12.00  Let's now dive deeper into the technical challenges that inspired this work.
+00:01:12.00 --> 00:01:19.00  Traditional centralized methods rely on a single model to process all robots' observations and histories.
+00:01:19.00 --> 00:01:28.00  While straightforward, this approach becomes a bottleneck as environmental complexity grows, which severely limits scalability and efficiency.
+00:01:28.00 --> 00:01:34.00  Second, decentralized strategies alleviate the decision burden by assigning individual models to each robot.
+00:01:34.00 --> 00:01:43.00  However, frequent communication between robots, such as sharing raw visual data or historical paths, leads to significant latency and overhead, undermining real-time collaboration.
+00:01:43.00 --> 00:01:50.00  Third, existing visual language models struggle with reliability in complex indoor scenes.
+00:01:50.00 --> 00:02:00.00  Ambiguous viewpoints like repetitive textures or occluded areas often mislead navigation decisions.
+00:02:00.00 --> 00:02:08.00  For instance, a robot might prioritize exploring a cluttered corner over a critical doorway, wasting time and resources.
+00:02:08.00 --> 00:02:16.00  And end-to-end training methods like reinforcement learning offer adaptability but require massive datasets and intricate reward engineering.
+00:02:16.00 --> 00:02:24.00  While they improve continuously, deploying them in unseen environments is challenging.
+00:02:24.00 --> 00:02:34.00  And modular approaches fall into two categories: centralized planning ensures coordinated actions but suffers from heavy computational loads.
+00:02:34.00 --> 00:02:44.00  For example, a single model processing all robots' observations becomes impractical in large-scale environments.
+00:02:44.00 --> 00:02:51.00  And decentralized planning enables independent reasoning but incurs high communication costs.
+00:02:51.00 --> 00:02:59.00  Robots sharing raw data like depth maps or trajectories face significant delays.
+00:02:59.00 --> 00:03:03.00  This is where this work innovates.
+00:03:03.00 --> 00:03:08.00  By leveraging visual language models, it replaces raw data exchange...
+00:03:08.00 --> 00:03:11.00  ...sorry.
+00:03:11.00 --> 00:03:19.00  By leveraging visual language models, it replaces raw data exchange with probabilistic scoring.
+00:03:19.00 --> 00:03:26.00  Robots evaluate exploration value through lightweight semantic reasoning.
+00:03:26.00 --> 00:03:32.00  For instance, prioritizing a hallway leading to multiple rooms over a dead-end corner.
+00:03:32.00 --> 00:03:37.00  And now, let's dive into how this approach operates in practice.
+00:03:37.00 --> 00:03:44.00  At each time step, every robot collects observations: an RGB-D image, semantic map, depth data, and its pose.
+00:03:44.00 --> 00:03:51.00  These inputs are processed by visual foundation models to extract critical information.
+00:03:51.00 --> 00:03:58.00  Simultaneously, semantic mapping aggregates all robots' observations into a unified global map.
+00:03:58.00 --> 00:04:05.00  This map highlights explored areas, obstacles, and frontier points like the hallway ahead or the kitchen corner...
+00:04:05.00 --> 00:04:08.00  ...and to guide collaborative decisions.
+00:04:08.00 --> 00:04:11.00  Why is this crucial?
+00:04:11.00 --> 00:04:19.00  By converting raw sensor data into interpretable semantic cues, robots avoid sharing heavy visual streams.
+00:04:19.00 --> 00:04:26.00  Instead, they exchange lightweight probabilistic scores, thus reducing communication overhead.
+00:05:00.00 --> 00:05:03.00  while maintaining this situational awareness.
+00:05:04.00 --> 00:05:07.00  And, this model, short for M-CoCoNav,
+00:05:08.00 --> 00:05:12.00  it uses a visual perception module to enable intelligent exploration decisions.
+00:05:13.00 --> 00:05:17.00  Each robot combines its scene view, like a kitchen image,
+00:05:18.00 --> 00:05:22.00  with structured textual prompts processed by VLMs.
+00:05:23.00 --> 00:05:26.00  For example, a prompt might ask: Is there a refrigerator visible?
+00:05:27.00 --> 00:05:31.00  If so, where is it located relative to the robot? Then, we calculate the exploration score, which is short for ES.
+00:05:32.00 --> 00:05:36.00  The VLM's textual analysis is merged with object detection data.
+00:05:37.00 --> 00:05:41.00  The ES quantifies whether a scene is worth exploring.
+00:05:42.00 --> 00:05:45.00  For instance, a high refrigerator confidence boosts the ES,
+00:05:46.00 --> 00:05:50.00  directing robots to prioritize kitchens for global navigation.
+00:05:51.00 --> 00:05:53.00  Crucially, this reasoning is interpretable.
+00:05:54.00 --> 00:05:56.00  We can trace decisions back to VLM outputs and object detections,
+00:05:57.00 --> 00:06:00.00  ensuring this transparency.
+00:06:01.00 --> 00:06:04.00  And now let's discuss how robots dynamically balance exploration
+00:06:05.00 --> 00:06:07.00  and back-tracking using global semantic maps.
+00:06:08.00 --> 00:06:11.00  First, the judgment module evaluates exploration potential.
+00:06:12.00 --> 00:06:14.00  At each step, robots receive a perception output
+00:06:15.00 --> 00:06:17.00  and integrate it with history node data.
+00:06:18.00 --> 00:06:21.00  The judgment score combines these inputs through a VLM-guided formula.
+00:06:22.00 --> 00:06:25.00  Next, we compute the horizontal field of view score.
+00:06:26.00 --> 00:06:28.00  This score weighs exploration trends.
+00:06:29.00 --> 00:06:33.00  For instance, a hallway with a high judgment score would dominate over a low-score corner, guiding robots to prioritize promising frontiers.
+00:06:34.00 --> 00:06:38.00  By synchronizing scores across robots via the global map, we minimize redundant exploration and prepare for the subsequent computation of the history score.
+00:06:39.00 --> 00:06:43.00  And at this cross-image multi-modal reasoning stage, each robot's M-CoCoNav planner evaluates potential long-term goals,
+00:06:44.00 --> 00:06:47.00  like frontiers A, B, C or D, by synthesizing two critical inputs: current position and history scores.
+00:06:48.00 --> 00:06:52.00  History scores is the data from all robots' past explorations.
+00:06:53.00 --> 00:06:57.00  VLM's evaluation of suitable long-term navigation goals depends on the current position of robots and the history scores of all robots' history nodes.
+00:06:58.00 --> 00:07:02.00  By unifying multi-modal reasoning across robots' perspectives, we avoid conflicts, like two robots targeting the same hallway,
+00:07:03.00 --> 00:07:07.00  and ensure efficient coverage of unexplored areas.
+00:07:08.00 --> 00:07:11.00  And now let's address how M-CoCoNav tackles two critical navigation challenges: continuity and collision avoidance.
+00:07:12.00 --> 00:07:16.00  First, is continuity of exploration.
+00:07:17.00 --> 00:07:20.00  Once a robot selects a long-term goal, like navigating to a frontier,
+00:07:21.00 --> 00:07:23.00  it must persistently advance towards it.
+00:07:24.00 --> 00:07:27.00  But what if the robot got stuck? Our logical analysis module monitors progress.
+00:07:28.00 --> 00:07:32.00  For example, if a robot hasn't moved closer to its goal in 25 steps, it triggers a re-evaluation,
+00:07:33.00 --> 00:07:35.00  ensuring exploration isn't wasted on unreachable areas.
+00:07:36.00 --> 00:07:41.00  Second, collision checks use real-time depth data and the global semantic map to avoid conflicts with obstacles.
+00:07:42.00 --> 00:07:46.00  Using the fast marching method, which is short for FMM,
+00:07:47.00 --> 00:07:50.00  robots dynamically compute optimal paths.
+00:07:51.00 --> 00:07:54.00  Imagine a robot encountering a sudden obstacle, FMM updates the path, smoothly steering around it
+00:07:55.00 --> 00:07:58.00  while maintaining progress towards the goal.
+00:07:59.00 --> 00:08:02.00  And, here is the experiments. So, to validate M-CoCoNav, we conducted
+00:08:03.00 --> 00:08:06.00  large-scale evaluations on two real-world data-sets: MH3D with a thousand episodes
+00:08:07.00 --> 00:08:10.00  across 36 scenes and six object categories, and MP3D with 2,195 episodes
+00:08:11.00 --> 00:08:14.00  spanning 11 scenes with 21 categories, reflecting more cluttered environments.
+00:08:15.00 --> 00:08:18.00  Our metrics include success rate, which is the percentage of successful episodes
+00:08:19.00 --> 00:08:22.00  out of the total number of episodes, and SPL, the inverse ratio of the path length
+00:08:23.00 --> 00:08:26.00  to the optimal path length weighted by the success rate.
+00:08:27.00 --> 00:08:31.00  And, our approach outperforms all baselines across both data-sets, showcasing its superiority
+00:08:32.00 --> 00:08:35.00  in zero-shot multi-robot navigation. And, on HM3D, M-CoCoNav achieves 0.3...
+00:10:00.00 --> 00:10:03.00  M-CoCoNav achieves 0.387 SPL and 0.716 SR.
+00:10:03.00 --> 00:10:07.00  This gap widens with ground truth segmentation where M-CoCoNav hits 0.872 SR proving its robustness in cluster scenes.
+00:10:07.00 --> 00:10:11.00  On MP3D, M-CoCoNav scores 0.334 SPL and 0.568 SR, outperforming random sampling by 5.3% SPL and 13.3% SR.
+00:10:11.00 --> 00:10:15.00  Notably, these gains come despite MP3D's lower 3D scan quality, highlighting this framework's adaptability.
+00:10:15.00 --> 00:10:19.00  And the number of robots and semantic accuracy are the key factors affecting the efficiency of navigation.
+00:10:19.00 --> 00:10:23.00  First, scaling with more robots with predictive segmentation adding robots improves success rates.
+00:10:23.00 --> 00:10:27.00  As can be seen in this table from 0.634 SR, which is one robot, to 0.720 SR which is three robots.
+00:10:27.00 --> 00:10:31.00  However, navigation time, which you can see in the third column, navigation time surged by this 45%.
+00:10:31.00 --> 00:10:35.00  This highlights a key trade-off, more robots boost coverage but strain coordination.
+00:10:35.00 --> 00:10:39.00  Second, semantic accuracy is critical, GT-Seg improves the SPL by 56% for three robots...
+00:10:39.00 --> 00:10:43.00  proving that precise object recognition is vital for efficient navigation.
+00:10:43.00 --> 00:10:47.00  MP3D's lower 3D scan quality further underscores this dependency.
+00:10:47.00 --> 00:10:51.00  Then we illustrate the navigation process of two robots performing the "find the TV" task.
+00:10:51.00 --> 00:10:55.00  We can see that with the help of M-CoCoNav the robots successfully cooperate and find the target object.
+00:10:55.00 --> 00:10:59.00  And our contribution can be summarized as: first, we design an innovative planning framework...
+00:10:59.00 --> 01:13:03.00  enables local small-scale VLM's to guide multiple robots through unknown environments for efficient exploration decision.
+00:13:03.00 --> 01:17:07.00  Second, our proposed cross-image multimodal CoT facilitates robot's understanding of high-level information...
+00:17:07.00 --> 01:21:11.00  from different images and enables semantic information sharing among robots.
+00:11:11.00 --> 01:25:15.00  Third, evaluations on MP3D and HM3D demonstrate the superiority of this M-CoCoNav.
+00:15:15.00 --> 01:29:19.00  Thanks for your listening and I put the contact of the authors here. If you have any detailed questions you can contact them. Thank you.

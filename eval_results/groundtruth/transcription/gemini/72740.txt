@@ -1,0 +1,525 @@
+00:00:00.00 --> 00:00:02.00  line process monitoring for laser welding applications
+00:00:03.00 --> 00:00:05.00  and for powder bed fusion technologies
+00:00:06.00 --> 00:00:08.00  and he will be doing this using directional reflection measurements
+00:00:09.00 --> 00:00:12.00  and he's specifically interested also in the laser material interaction dynamics
+00:00:13.00 --> 00:00:15.00  and studying this with this technology that he will present today.
+00:00:16.00 --> 00:00:18.00  So I would give the floor to Moritz.
+00:00:19.00 --> 00:00:20.00  All right, thank you for this introduction.
+00:00:21.00 --> 00:00:23.00  As mentioned, yes, my name is Moritz Wittema
+00:00:24.00 --> 00:00:26.00  and I'm going to present to you my latest findings
+00:00:27.00 --> 00:00:30.00  in regards of directional process monitoring with directional reflection monitoring.
+00:00:31.00 --> 00:00:33.00  All right, let's start right into the motivation of my research.
+00:00:34.00 --> 00:00:36.00  It's mostly based on the fact that when you currently want to develop a new laser-based process
+00:00:37.00 --> 00:00:39.00  you either have the chance of buying the parameters that suit your requirements
+00:00:40.00 --> 00:00:42.00  and they're bound to deliver at least reasonable results
+00:00:43.00 --> 00:00:45.00  but if they're not available or you can't spend the money, you develop them yourself.
+00:00:46.00 --> 00:00:48.00  And if you develop them yourself, you usually start off with multiple experiments
+00:00:49.00 --> 00:00:51.00  where then you test the resulting specimens for the density, for the surface roughness and so on
+00:00:52.00 --> 00:00:54.00  and based on those results, you conduct further experiments
+00:00:55.00 --> 00:00:58.00  to narrow down continuously to the right parameter you actually want to have.
+00:00:59.00 --> 00:01:01.00  And this is very labor intensive and time consuming
+00:01:02.00 --> 00:01:04.00  as most of you probably have experienced it yourself
+00:01:05.00 --> 00:01:07.00  and this is why I'm focusing on replacing this ex-situ specimen testing
+00:01:08.00 --> 00:01:12.00  which is the most time consuming part of this endeavor
+00:01:13.00 --> 00:01:16.00  by in-situ process monitoring.
+00:01:17.00 --> 00:01:18.00  And this in turn would reduce the time of each iteration
+00:01:19.00 --> 00:01:21.00  and then as a whole accelerate the process development.
+00:01:22.00 --> 00:01:25.00  And the question there is what monitoring technique to use for this goal
+00:01:26.00 --> 00:01:28.00  and this is mostly based on the different challenges that come with different monitoring techniques.
+00:01:29.00 --> 00:01:32.00  Just because you do have a very fast process in powder bed fusion
+00:01:33.00 --> 00:01:35.00  or in laser welding, we do need a very high measuring frequency
+00:01:36.00 --> 00:01:39.00  to have valuable results.
+00:01:40.00 --> 00:01:42.00  And this means that we do acquire quite a lot of data
+00:01:43.00 --> 00:01:45.00  and especially for data heavy approaches such as optical or camera based monitoring
+00:01:46.00 --> 00:01:48.00  it becomes very difficult to analyze this data reasonably fast.
+00:01:49.00 --> 00:01:52.00  Another issue is for a lot of techniques that the signal to noise ratio isn't very good
+00:01:53.00 --> 00:01:55.00  for example for optical coherence tomography or acoustic measurements
+00:01:56.00 --> 00:01:59.00  you do require quite extensive post-processing to enrich the quality of the data.
+00:02:00.00 --> 00:02:03.00  And then lastly, as soon as you do want to have absolute monitoring data
+00:02:04.00 --> 00:02:07.00  meaning you want absolute temperatures for example, you always have to have a calibration
+00:02:08.00 --> 00:02:11.00  before your actual measurement to deliver this accuracy
+00:02:12.00 --> 00:02:14.00  and the calibration often needs to be repeated sometimes even before every experiment.
+00:02:15.00 --> 00:02:17.00  And this led us to reflection monitoring
+00:02:18.00 --> 00:02:20.00  because reflection monitoring delivers one-dimensional data, one analog signal
+00:02:21.00 --> 00:02:23.00  in a very high quality and in a robust way.
+00:02:24.00 --> 00:02:26.00  And the groundwork for this was already laid in 2016 by Trapp et al.
+00:02:27.00 --> 00:02:29.00  when they discovered a distinct change in the absorption in their reflection monitoring
+00:02:30.00 --> 00:02:32.00  that appeared when traversing regimes from conduction to keyhole monitoring.
+00:02:33.00 --> 00:02:36.00  And then later in 2022 we used those results
+00:02:37.00 --> 00:02:39.00  and repeated them but with a fully integrated in-situ monitoring system
+00:02:40.00 --> 00:02:42.00  that doesn't require any calibration. It's very robust in its measurement.
+00:02:43.00 --> 00:02:45.00  And then lastly in 2023 Huang et al. published one step further
+00:02:46.00 --> 00:02:48.00  when they introduced this system for a directional reflection monitoring
+00:02:49.00 --> 00:02:51.00  meaning they can see where the reflection actually goes after the interaction.
+00:02:52.00 --> 00:02:55.00  But at this stage it is very limited in their measuring area, measuring range
+00:02:56.00 --> 00:02:59.00  and also does require quite a lot of calibration to deliver results.
+00:03:00.00 --> 00:03:02.00  So our goal here is to find a reflection monitoring system that's calibration-less
+00:03:03.00 --> 00:03:05.00  has a wide measuring area, does not pose any restrictions to the process
+00:03:06.00 --> 00:03:09.00  and still is directional.
+00:03:10.00 --> 00:03:12.00  And for this, in this particular investigation, we looked at two different geometries
+00:03:13.00 --> 00:03:15.00  for capturing the reflection in the process.
+00:03:16.00 --> 00:03:18.00  The one on the left is based on an integrating sphere, it's by now a pretty established geometry
+00:03:19.00 --> 00:03:22.00  for different research endeavors
+00:03:23.00 --> 00:03:26.00  and it is quite an aperture at the top and the bottom
+00:03:27.00 --> 00:03:29.00  where the laser propagates through the sphere prior to the interaction
+00:03:30.00 --> 00:03:32.00  and then it captures the reflection that's straight back up.
+00:03:33.00 --> 00:03:35.00  And additionally to this
+00:05:00.00 --> 00:05:05.00  this video developed and then investigated a different geometry based here on two different
+00:05:05.00 --> 00:05:10.00  parabolic shapes a small one so it's basically a satellite dish
+00:05:10.00 --> 00:05:14.00  and it also captures and integrates the reflection
+00:05:14.00 --> 00:05:18.00  depending on where it's actually positioned in the chamber
+00:05:18.00 --> 00:05:23.00  and both of with both geometries you do sample them at 20 kilohertz
+00:05:23.00 --> 00:05:28.00  and isolate the actual laser from other reflections or other radiations
+00:05:28.00 --> 00:05:33.00  and the main difference is how we can position them just because the laser has to propagate through the sphere
+00:05:33.00 --> 00:05:38.00  it is limited to the very center and only allows a small measuring area in the
+00:05:38.00 --> 00:05:43.00  size of the bottom aperture of the sphere while with the dish
+00:05:43.00 --> 00:05:48.00  we can position it pretty much anywhere and we decide went here for four instances surrounding the working area as you can see right here
+00:05:48.00 --> 00:05:53.00  um with the four green positions and that in turn changed the
+00:05:53.00 --> 00:05:58.00  the experiments we can were able to conduct with those geometries the sphere only with the sphere
+00:05:58.00 --> 00:06:03.00  we only did one scan pattern comprised of 15 melt tracks in 50 watts steps
+00:06:03.00 --> 00:06:08.00  because we are interested in the development of the reflection over an increase in laser power
+00:06:08.00 --> 00:06:13.00  and with the satellite dishes we were able to conduct the same scan pattern 95 times
+00:06:13.00 --> 00:06:18.00  around the working area so now much wider area and for both of them it was at 800 millimeters per second
+00:06:18.00 --> 00:06:23.00  with an 175 micrometer gaussian spot and it was on 316L plates
+00:06:23.00 --> 00:06:28.00  after the experiments we referenced the signal to the laser power so we don't just get
+00:06:28.00 --> 00:06:33.00  arbitrary reflections but a quotient of reflectivity in relation to the laser power
+00:06:33.00 --> 00:06:38.00  and then per melt track we um we basically compressed all the data to one
+00:06:38.00 --> 00:06:43.00  statistical description as you can see here in the box plot so median percentile ranges and outliers
+00:06:43.00 --> 00:06:48.00  and the results from those experiments we're gonna look at the integrating sphere results first
+00:06:48.00 --> 00:06:53.00  so you can see here the sphere signal on the y-axis over the laser power on the x-axis
+00:06:53.00 --> 00:06:58.00  and it starts off with a relatively high reflection with low powers and a high standard deviation which then drops down to
+00:06:58.00 --> 00:07:03.00  low low low reflections and low standard deviations
+00:07:03.00 --> 00:07:08.00  and they are this is a for us at least a very familiar pattern by now we had multiple publications on this pattern
+00:07:08.00 --> 00:07:13.00  and in a nutshell the important thing is that right at the jump from high to low reflections we this
+00:07:13.00 --> 00:07:18.00  correlates to the onset of vapor formation so the start start when a vapor depression starts to form
+00:07:18.00 --> 00:07:23.00  and our dish signals here's all four median or all four signals comprised to one median signal so all positions
+00:07:23.00 --> 00:07:28.00  um starts rather low and then increases at the same threshold as the sphere signal drops
+00:07:28.00 --> 00:07:33.00  and so does the standard deviation and this obviously is a very different behavior as we've seen before even though it also has a very character-characteristic
+00:07:33.00 --> 00:07:38.00  characteristic feature right at the threshold but to investigate this further we do did
+00:07:38.00 --> 00:07:43.00  look at the four individual signals of the
+00:07:43.00 --> 00:07:48.00  of the dish and there you can see they start off all relatively similar with a with a
+00:07:48.00 --> 00:07:53.00  low reflectivity a rather low standard deviation and right at the threshold the ones on the left jump significantly higher up than the ones on the right
+00:07:53.00 --> 00:07:58.00  and the main difference between those positions here or the position of the dishes in the chamber it is
+00:07:58.00 --> 00:08:03.00  is relative position towards the scan direction so here we go from left to right
+00:08:03.00 --> 00:08:08.00  and we have so we have a difference between left and right and to validate this claim so the the influence of the scan direction
+00:08:08.00 --> 00:08:13.00  is the reason for this behavior we conducted the same experiments with reverse scan direction and there you can see also our
+00:08:13.00 --> 00:08:18.00  signal behavior or position dependent signal behavior changes now we have the high jump on the right so again in the rear
+00:08:18.00 --> 00:08:23.00  of the scan direction instead of the left as you can see at the top what we just looked at
+00:08:23.00 --> 00:08:28.00  and these results in combination with the our previous results of the integrating sphere led us to the conclusion
+00:08:28.00 --> 00:08:33.00  that what's happening here is that right at the threshold obviously where vapor formation happens we do start to have a vapor depression
+00:08:33.00 --> 00:08:38.00  this changes the surface topography of our of our plates or process zone meaning that suddenly the
+00:08:38.00 --> 00:08:43.00  interaction zone is not flat anymore but it is inclined this shifts the predominant reflection direction from
+00:10:00.00 --> 00:10:05.00  from the from straight back up towards the back meaning that while the integrating sphere
+00:10:05.00 --> 00:10:11.00  has a drop in reflection when this shifts towards the back the satellite or satellite dishes
+00:10:11.00 --> 00:10:16.00  in the rear do have an increase in reflection meaning on all also with this new parabolic dish design
+00:10:16.00 --> 00:10:23.00  we can also detect the point of vapor depression formation so this threshold and but theoretically
+00:10:23.00 --> 00:10:28.00  we can do it over the whole working area because we're not limited in any way so this was obviously the next step
+00:10:28.00 --> 00:10:33.00  we looked at all 95 patterns that are within this working area and you can see here two distinct groups
+00:10:33.00 --> 00:10:39.00  we have the one that i called here in green that coincide with the behavior we just looked at so we do have a
+00:10:39.00 --> 00:10:46.00  jump in the rear satellites at the vapor depression formation but the ones in yellow and i've only shown one
+00:10:46.00 --> 00:10:52.00  individual example here at the top does have a very erratic signal behavior so all yellow all
+00:10:52.00 --> 00:10:58.00  scan patterns that are here marked in yellow do have a very different behavior and no one is the and not
+00:10:58.00 --> 00:11:03.00  one is the same and the reason for this is that the small parabolic shape of our satellite dish
+00:11:03.00 --> 00:11:09.00  does not just act as an integrating partner so the signal is integrated between the big and the small
+00:11:09.00 --> 00:11:14.00  the big and the small parabolic shape but it also shields the diode or the fiber inlet which leads to the
+00:11:14.00 --> 00:11:21.00  diode from direct reflections so the most of the reflections can enter the diode without prior
+00:11:21.00 --> 00:11:26.00  integration but obviously this is only in the area that is shielded by the baffle which is here shown as
+00:11:26.00 --> 00:11:31.00  or the projection of this area is shown on in green here the fiber we're using does have a wider
+00:11:31.00 --> 00:11:37.00  acceptance angle than we do have a baffle angle so this means we have scan patterns that lie outside our
+00:11:37.00 --> 00:11:43.00  baffled area but inside our acceptance area and this means that at this point we don't have any integration
+00:11:43.00 --> 00:11:49.00  leading to a erratic signal behavior and even though this seems like a very big limitation on our
+00:11:49.00 --> 00:11:54.00  measuring area it also means we know exactly why this is the case
+00:11:54.00 --> 00:11:59.00  and it's also very easy to change the shape of our dishes just because we do print them in-house with
+00:11:59.00 --> 00:12:05.00  with a powder bed fusion method of plastics i think it's pa pa12 and so we can just enlarge the bottom
+00:12:05.00 --> 00:12:12.00  the bottom parabolic shape to tailor the measuring area where we want it to go for different
+00:12:12.00 --> 00:12:18.00  applications for example right now we're trying to implement this in a different machine a different setup
+00:12:18.00 --> 00:12:23.00  so this means we have to redesign it for this case so the conclusion here is that we have with those parabolic
+00:12:23.00 --> 00:12:29.00  or with our new satellite dish collectors a way to integrate our signal which is in a different shape
+00:12:29.00 --> 00:12:35.00  than our normal integrating spheres and they allow us to measure the reflections over a wide area
+00:12:35.00 --> 00:12:40.00  depending on the baffle area and with this we can detect the onset of vapor formation and maybe just
+00:12:40.00 --> 00:12:46.00  as a last thought here why is this even important there's a lot of literature out there that shows us
+00:12:46.00 --> 00:12:51.00  that the sweet spot for powder bed fusion lies somewhere between keyhole mode so right at the
+00:12:51.00 --> 00:12:57.00  onset of vapor depression so this would give us a way to have our parameters set and this is also our
+00:12:57.00 --> 00:13:03.00  the outlook that the next stage would be to do the same measurement for
+00:13:03.00 --> 00:13:09.00  multi-layer experiments on complex shapes so simply put in normal powder bed fusion jobs
+00:13:09.00 --> 00:13:15.00  and also at the same time of measurement fuse them with metadata to then in the end give us a digital
+00:13:15.00 --> 00:13:22.00  shadow of the part based on this reflection data that can in in the end help us in quality assurance
+00:13:22.00 --> 00:13:26.00  and process evaluation
+00:13:26.00 --> 00:13:31.00  so thank you for your attention i'm looking forward to any discussion that might follow
+00:13:31.00 --> 00:13:36.00  yeah
+00:13:36.00 --> 00:13:42.00  thank you moritz for the nice presentation i would like to ask the audience to ask questions
+00:13:42.00 --> 00:13:48.00  uh thank you for the talk um i'm just curious what consideration do you give polarization in this
+00:13:48.00 --> 00:13:54.00  measurement because you've got a randomly
+00:15:00.00 --> 00:15:10.00  polarized beam from the laser so you don't know the state and of course that's going to inflect the or affect the reflection.
+00:15:10.00 --> 00:15:31.00  Um, we personally never considered the polarization just because the as in the state of the art as I shown, in those experiments the polarization seemed to have no effect in this kind of measurement. So we went from that point on and just never looked any deeper into polarization or the effect of polarization.
+00:15:37.00 --> 00:15:42.00  Additional questions for our speaker?
+00:15:42.00 --> 00:15:51.00  I was wondering if you have now those powder bed fusion machines with multiple laser systems, what would be the impact of this on your system?
+00:15:51.00 --> 00:16:22.00  It depends on if they do irradiate the working area at the same time. We cannot distinguish between different process zones just because it only gives us an insight into the overall reflection in our process chamber, so meaning with two process zones they would overlap. Of course you could if they're split apart as because to enlarge the area you can have multiple sets and there would need to be an investigation but as soon as they work right at the within the area at the same time we couldn't do any differentiation.
+00:16:23.00 --> 00:16:30.00  Could you give us a ballpark figure of how big your system is and how big this parabolic...
+00:16:30.00 --> 00:16:45.00  Right at the beginning we do have some there you go. So our process chamber or the working area is around 150 to 130 millimeters and every dish is around 120 millimeters in size. So this I think one of the big challenges with larger working areas would be to have also the an reasonable amount of height in the chamber to position them at a near to 45 degree as because as soon as they get too low down obviously the reflection has to be pivoted quite a lot to still be detected.
+00:16:45.00 --> 00:16:53.00  Okay then I would like to thank you for your talk once again. My pleasure.
+00:16:53.00 --> 00:17:08.00  Then I would like to ask to Dr. Marvin Klein to come on the stage and there will be a short hiccup because he will be connecting his computer in the meantime. So Dr. Marvin Klein is working as a consultant at the Intelligent Optical Systems company and he's specifically working in the group of laser ultrasonic products.
+00:17:08.00 --> 00:17:22.00  He has quite some experience in laser ultrasonics, he has more than 70 published papers on the topic and also he has 16 issued patents in the domain.
+00:17:22.00 --> 00:17:35.00  So today he will be giving us a talk regarding the inline defect detection by using laser ultrasonics and this specifically for the additive manufacturing industry. So it's not only for powder bed fusion but it goes further as he has mentioned during the initial talk that I had with him.
+00:17:35.00 --> 00:17:40.00  So we will wait for a number of seconds for the smart technical intervention. Then we can start.
+00:20:00.00 --> 00:21:17.00  (music)
+00:21:17.00 --> 00:21:21.00  Thank you Mr. Presider. My name is Marvin Klein,
+00:21:21.00 --> 00:21:25.00  and I'm very pleased to make this presentation.
+00:21:25.00 --> 00:21:28.00  I'll just turn on my pointer.
+00:21:28.00 --> 00:21:31.00  So, I'm a member of the Laser Ultrasonics Products Group
+00:21:31.00 --> 00:21:34.00  at Intelligent Optical Systems.
+00:21:34.00 --> 00:21:36.00  So, in my presentation,
+00:21:36.00 --> 00:21:39.00  I'd like to contrast some of the issues associated with
+00:21:39.00 --> 00:21:42.00  current monitoring techniques. I'm not an expert,
+00:21:42.00 --> 00:21:45.00  so I'm going to give you kind of a high-level thing
+00:21:45.00 --> 00:21:48.00  and I invite comments later on.
+00:21:48.00 --> 00:21:52.00  But given those issues, our proposed solution is
+00:21:52.00 --> 00:21:56.00  laser ultrasonic testing. And it's particularly suitable
+00:21:56.00 --> 00:22:00.00  for builds by laser powder bed fusion, and I'll talk about that.
+00:22:00.00 --> 00:22:03.00  And then, an integration of our system onto a powder bed fusion machine.
+00:22:03.00 --> 00:22:07.00  And finally, other applications of laser ultrasonic testing,
+00:22:07.00 --> 00:22:10.00  of which there are many interesting industrial ones.
+00:22:10.00 --> 00:22:13.00  So, current qualification techniques.
+00:22:13.00 --> 00:22:16.00  In this session, and I'm sure many others,
+00:22:16.00 --> 00:22:19.00  people are talking about process monitoring and control,
+00:22:19.00 --> 00:22:22.00  melt pool, or whatever other techniques are being used.
+00:22:22.00 --> 00:22:25.00  I'm sure they can set the process parameters very carefully,
+00:22:25.00 --> 00:22:28.00  but it seems to me they still require a predictive algorithm
+00:22:28.00 --> 00:22:32.00  with uncertain performance, especially for defects.
+00:22:32.00 --> 00:22:35.00  Do they know where defects are, and what is their size and position?
+00:22:35.00 --> 00:22:38.00  And we can do all of that with laser ultrasonic testing.
+00:22:38.00 --> 00:22:41.00  Post-process CT scans, I think people understand
+00:22:41.00 --> 00:22:45.00  that it's really not a production technique.
+00:22:45.00 --> 00:22:48.00  So, with laser ultrasonics, we have
+00:22:48.00 --> 00:22:51.00  a direct readout of defects in real time,
+00:22:51.00 --> 00:22:54.00  and I mean their depth and position in real time.
+00:22:54.00 --> 00:22:57.00  And then of course, enables ideally corrective action
+00:22:57.00 --> 00:23:00.00  to either cure the defects or scrap the part.
+00:23:00.00 --> 00:23:03.00  So laser ultrasonic testing is a form of ultrasonic,
+00:23:03.00 --> 00:23:07.00  conventional ultrasonic testing, except now
+00:23:07.00 --> 00:23:10.00  we're using lasers on the surface of the target, no transducer.
+00:23:10.00 --> 00:23:13.00  You start off here with a pulse YAG laser,
+00:23:13.00 --> 00:23:16.00  delivered through a fiber, and focused here on the surface.
+00:23:16.00 --> 00:23:20.00  This focused beam in turn generates ultrasonic waves
+00:23:20.00 --> 00:23:23.00  inside the part. And one or more of these waves scatter
+00:23:23.00 --> 00:23:26.00  from some defect, and return here to the surface
+00:23:26.00 --> 00:23:29.00  where you see the green beam. At the surface,
+00:23:29.00 --> 00:23:32.00  there's a very small surface displacement.
+00:23:32.00 --> 00:23:35.00  And so it creates a phase modulation
+00:23:35.00 --> 00:23:38.00  of this green beam when you collect it back.
+00:23:38.00 --> 00:23:41.00  You have a demodulator here to convert it to an analog signal.
+00:23:41.00 --> 00:23:44.00  So, that's it in brief, and I'm happy
+00:23:44.00 --> 00:23:47.00  to answer more questions as the talk goes on.
+00:23:47.00 --> 00:23:51.00  Well, laser ultrasonic testing, first of all, as I said
+00:23:51.00 --> 00:25:00.00  (music)
+00:25:00.00 --> 00:25:06.00  We were just using two lasers on the surface, so as you can imagine, this enables testing of parts that are hot
+00:25:06.00 --> 00:25:11.00  or moving or both. Something that couldn't be done, sorry, with conventional transducers.
+00:25:11.00 --> 00:25:16.00  We can do inspection on a layer-by-layer basis of AM parts.
+00:25:16.00 --> 00:25:22.00  And the data displays are similar if anybody works with transducer ultrasonics.
+00:25:22.00 --> 00:25:28.00  So we're hoping to avoid, in the ideal case, the need for process monitoring
+00:25:28.00 --> 00:25:32.00  because now we're actually seeing what's produced and not predicting it.
+00:25:32.00 --> 00:25:37.00  And of course, post-process CT, not appropriate.
+00:25:37.00 --> 00:25:43.00  So, as I was saying, laser ultrasonic testing functions effectively at targets at high temperature,
+00:25:43.00 --> 00:25:49.00  moving and rough surfaces. We have a very small laser spot on the surface,
+00:25:49.00 --> 00:25:54.00  200 microns, and that enables actually the testing of very small materials,
+00:25:54.00 --> 00:25:58.00  very small samples, excuse me. And finally, the bandwidth is high enough to be sensitive to really small defects.
+00:25:58.00 --> 00:26:05.00  So here again is the generation beam. It's a pulsed YAG beam at 1.06 microns.
+00:26:05.00 --> 00:26:10.00  And when the beam is incident on the surface, it's energetic and it causes a little bit of ablation.
+00:26:10.00 --> 00:26:16.00  And that in turn, the recoil from all the ejected material, produces actually very strong ultrasonic waves.
+00:26:16.00 --> 00:26:21.00  And they're omnidirectional. They're in the full range here.
+00:26:21.00 --> 00:26:26.00  And so they can really interrogate defects or features most anywhere in the range of the beams.
+00:26:26.00 --> 00:26:31.00  And one of them, in particular, scatters from a defect, and the scattered light arrives here at the surface.
+00:26:31.00 --> 00:26:38.00  And I mentioned that there's a very small but measurable surface displacement when the wave arrives.
+00:26:38.00 --> 00:26:43.00  So our detection beam is incident on the surface, but we also collect the reflected beam backward,
+00:26:43.00 --> 00:26:48.00  which is now phase-modulated and we in turn demodulate it later on.
+00:26:48.00 --> 00:26:54.00  So here's an experiment in which we take a completed powder bed fusion bar.
+00:26:54.00 --> 00:26:59.00  The surface is as created, there's no machining or anything on this surface.
+00:26:59.00 --> 00:27:04.00  And as a test, we've made artificial defects using EDM side-drilled holes.
+00:27:04.00 --> 00:27:09.00  So holes from the side going most or all the way through with sizes down to about 300 micrometers.
+00:27:09.00 --> 00:27:14.00  Now, how do we scan? We have two beams here, generation and detection,
+00:27:14.00 --> 00:27:19.00  and they are scanned in tandem along this direction, which is the build direction.
+00:27:19.00 --> 00:27:24.00  So the beams move together in tandem. And I'll explain here now at the bottom
+00:27:24.00 --> 00:27:29.00  a little bit more about how that works. The generation beam produces an ultrasonic wave,
+00:27:29.00 --> 00:27:34.00  it scatters from, in this case, a side-drilled hole and returns to the surface right here
+00:27:34.00 --> 00:27:39.00  and where, as I said, it's processed. But the important thing is that we maintain the beam separation as we scan.
+00:27:39.00 --> 00:27:44.00  And the result is a very dramatic feature that you'll see in the raw data in a few slides down from here.
+00:27:44.00 --> 00:27:49.00  So we tested two bars with side-drilled EDM holes.
+00:27:49.00 --> 00:27:54.00  They're a little hard to see in the photo, but this is a schematic cross-section.
+00:27:54.00 --> 00:27:59.00  They're all 1 millimeter deep and they had five different sizes from about 300 microns, I think, to 1 or 1 and a half millimeters.
+00:27:59.00 --> 00:28:04.00  And we have both Ti-64 and Inconel 718.
+00:28:04.00 --> 00:28:09.00  And so once again, these two beams that I showed before are being scanned in this direction along the surface.
+00:28:09.00 --> 00:28:14.00  So this is the resulting data display. This is the raw data
+00:28:14.00 --> 00:28:19.00  and it may be not particularly known by people in the audience, so I'll take a second to try to explain it.
+00:30:00.00 --> 00:30:04.00  Conventional transducer ultrasound is the normal data display.
+00:30:04.00 --> 00:30:10.00  So at every position, here's position on the vertical scale.
+00:30:10.00 --> 00:30:14.00  As we're scanning along here at every position, we acquire a temporal signal.
+00:30:14.00 --> 00:30:18.00  And we plot the temporal signal in gray scale.
+00:30:18.00 --> 00:30:23.00  And we move to the next position, we acquire another temporal signal.
+00:30:23.00 --> 00:30:28.00  And we move along with small enough steps that this looks continuous.
+00:30:28.00 --> 00:30:32.00  And we get these very dramatic hyperbolas associated with each of the side-drilled holes.
+00:30:32.00 --> 00:30:37.00  And in fact, hyperbolas are the shape that is unique to this measurement technique.
+00:30:37.00 --> 00:30:43.00  And it makes it easier or easier to do signal processing because you recognize these features from everything else on the screen.
+00:30:54.00 --> 00:31:03.00  So now this, the first one was Ti-64, this one is Inconel 718.
+00:31:03.00 --> 00:31:07.00  And again, we get these hyperbolas, but Inconel is a more scattering material.
+00:31:07.00 --> 00:31:13.00  The waves scatter more and so we don't have the signal-to-noise that we had before.
+00:31:13.00 --> 00:31:18.00  But it's still enough to recognize these unique features, which once again go from 300 microns in this case to 900 microns.
+00:31:23.00 --> 00:31:28.00  Now that kind of image is not suitable for a machine operator, we know that.
+00:31:28.00 --> 00:31:34.00  A machine operator wants an interpretation, a process of this image into something more recognizable.
+00:31:34.00 --> 00:31:38.00  So the first step is to do a cross-section. This happens to be a simulation for clarity purposes.
+00:31:38.00 --> 00:31:43.00  But in this case, you have a cross-section, and now you see in this case one, two, three, four defects at three different depths from about a half millimeter to four millimeters.
+00:31:43.00 --> 00:31:49.00  And so this is much more evocative, and from the position of this defect, you can get its depth and its position with pretty high accuracy.
+00:31:53.00 --> 00:31:58.00  And even this may not be satisfactory because the operator doesn't want to look at a whole series of cross-sections as your inspection scan proceeds.
+00:31:58.00 --> 00:32:04.00  So what they really want is something I don't have to show here, but it's some sort of a display along the scan where defects are marked in such a way as to alert the operator.
+00:32:04.00 --> 00:32:10.00  And possibly create a red flag, but in any case, the characteristics are visible without having to look at a cross-section.
+00:32:10.00 --> 00:32:13.00  So I want to make that point, this should be entirely automated.
+00:32:13.00 --> 00:32:21.00  So integration onto a machine, we've done some demos at a company called Arktos in Dayton, Ohio.
+00:32:21.00 --> 00:32:27.00  And the way we scan powder bed fusion samples is to mount our probe on the spreader arm.
+00:32:27.00 --> 00:32:33.00  So the spreader arm itself scans the probe in one axis.
+00:32:33.00 --> 00:32:38.00  And we put a one-dimensional stage on top of the spreader arm to create the second scan axis.
+00:32:38.00 --> 00:32:44.00  So we foresee at least in principle a two-step operation.
+00:32:44.00 --> 00:32:50.00  The first step would be a profilometer, some other kind of imaging system for height variation.
+00:32:50.00 --> 00:32:55.00  And we scan the surface and identify features of interest which frequently can be bumps.
+00:32:55.00 --> 00:33:00.00  Subsurface defects are frequently, if not all the time, characterized by small but measurable bumps on the surface.
+00:33:00.00 --> 00:33:06.00  So once they're identified, they create a region of interest, and then we are scanning only within that region of interest.
+00:33:06.00 --> 00:33:13.00  Not the whole pattern, the laser pattern, if possible. We want to speed up the process to only look at regions of interest.
+00:33:13.00 --> 00:33:19.00  Now the measurement head, I'm going to show the actual one in the next photo, but this is an enlargement of a very similar one to what we actually use in our experiments.
+00:33:19.00 --> 00:33:22.00  And you can see this is six centimeters, excuse me, six millimeters.
+00:35:00.00 --> 00:35:03.00  long, 4 mm wide and about 3 mm high
+00:35:03.00 --> 00:35:06.00  with the beam directed out this aperture and we have
+00:35:06.00 --> 00:35:11.00  the two delivery fibers, this one for the pulsed
+00:35:11.00 --> 00:35:15.00  YAG laser and this one for the CW detection
+00:35:15.00 --> 00:35:19.00  laser. So again, this can be very
+00:35:19.00 --> 00:35:23.00  compact. Now here it is mounted on a PBF
+00:35:23.00 --> 00:35:28.00  machine, here's our probe, again with similar
+00:35:28.00 --> 00:35:32.00  size with the two delivery fibers. Now the beams are
+00:35:32.00 --> 00:35:37.00  directed downward onto the surface and you have
+00:35:37.00 --> 00:35:41.00  as usual the generation and detection beam and
+00:35:41.00 --> 00:35:46.00  in this case they're scanning a completed build there's an
+00:35:46.00 --> 00:35:51.00  array here and once again we have two axis
+00:35:51.00 --> 00:35:55.00  of motion, we have a scan, excuse me, a stage on top
+00:35:55.00 --> 00:36:00.00  of the spreader arm and then the motion of the spreader arm
+00:36:00.00 --> 00:36:04.00  itself. So in conclusion we think that laser ultrasonic
+00:36:04.00 --> 00:36:09.00  testing can be useful for inline inspection
+00:36:09.00 --> 00:36:14.00  I want to emphasize this is actual inspection not
+00:36:14.00 --> 00:36:18.00  predictive information, we actually find what's
+00:36:18.00 --> 00:36:23.00  really there by way of defects and we can do it
+00:36:23.00 --> 00:36:27.00  inline or almost inline. And what I mean by that is for
+00:36:27.00 --> 00:36:32.00  powder bed fusion the layers are so thin that we think
+00:36:32.00 --> 00:36:37.00  we only need to scan every 3, 4, 5, or 6 layers,
+00:36:37.00 --> 00:36:43.00  not every single layer. And so we've done testing
+00:36:43.00 --> 00:36:47.00  with powder bed fusion but we also think that
+00:36:47.00 --> 00:36:52.00  this technique applies equally well to directed
+00:36:52.00 --> 00:36:57.00  energy deposition, wire fed and other kinds of builds
+00:36:57.00 --> 00:37:02.00  that people are now developing. And so we think
+00:37:02.00 --> 00:37:07.00  that laser ultrasonic testing has a benefit over
+00:37:07.00 --> 00:37:11.00  say melt pool monitoring looking at the melt pool
+00:37:11.00 --> 00:37:15.00  and using a predictive algorithm. I'm repeating myself,
+00:37:15.00 --> 00:37:21.00  we're finding the actual defects as they appear.
+00:37:21.00 --> 00:37:25.00  I also wanted to take a minute or two to talk
+00:37:25.00 --> 00:37:30.00  about other applications of laser ultrasonic testing
+00:37:30.00 --> 00:37:35.00  and in fact there are many. AM is only one part
+00:37:35.00 --> 00:37:39.00  of the general processes that laser ultrasonic can
+00:37:39.00 --> 00:37:44.00  be used to test. Some of which we've done and others
+00:37:44.00 --> 00:37:49.00  are on our roadmap. So, laser welds, we can
+00:37:49.00 --> 00:37:53.00  monitor defects in laser welds and other kinds
+00:37:53.00 --> 00:37:58.00  of welds inline immediately following the melt
+00:37:58.00 --> 00:38:03.00  laser, we can look for defects and the part can
+00:38:03.00 --> 00:38:07.00  be hot when we do it. Friction stir welds,
+00:38:07.00 --> 00:38:11.00  we've actually done a lot of work on them.
+00:38:11.00 --> 00:38:16.00  So if anyone here is interested in friction stir welds
+00:38:16.00 --> 00:38:21.00  actually we can talk about that and interesting
+00:38:21.00 --> 00:38:26.00  you'll see a photo in a second pipeline girth
+00:38:26.00 --> 00:38:31.00  welds. So that's a sample of the weld applications
+00:38:31.00 --> 00:38:36.00  but then there are others that also may be
+00:38:36.00 --> 00:38:41.00  interesting, for example we've studied the
+00:38:41.00 --> 00:38:45.00  testing the inspection of stress corrosion cracks,
+00:38:45.00 --> 00:38:49.00  something important in oil-gas pipelines and
+00:38:49.00 --> 00:38:54.00  in nuclear fuel canisters. And so wall
+00:38:54.00 --> 00:38:58.00  thickness oh here's interesting, screening of
+00:38:58.00 --> 00:39:02.00  sub-millimeter chip capacitors, we can inspect
+00:39:02.00 --> 00:39:07.00  one by one parts that are sub-millimeter.
+00:39:07.00 --> 00:39:12.00  Load measurement in fasteners, adhesive spread,
+00:39:12.00 --> 00:39:17.00  and here are just some photos and then I'll complete
+00:39:17.00 --> 00:39:22.00  the talk. Here is a friction stir weld situation
+00:39:22.00 --> 00:39:27.00  where you have long profiles, 7-meter profiles,
+00:39:27.00 --> 00:39:32.00  that are butt-welded together one by one, side by
+00:39:32.00 --> 00:39:37.00  side, to make a panel and we've done real time
+00:39:37.00 --> 00:39:42.00  inspection. So our measurement head follows
+00:39:42.00 --> 00:39:46.00  the weld tool by about a foot and is inspecting
+00:39:46.00 --> 00:39:51.00  in line. This is a girth weld setup using
+00:39:51.00 --> 00:39:56.00  laser arc and our measurement probe is just
+00:39:56.00 --> 00:40:01.00  behind and the two move together to perform the weld.
+00:40:00.00 --> 00:40:03.00  ...all the way around. Seamless tube wall thickness. Here's an important one, we've integrated our probe into a thin crawler...
+00:40:03.00 --> 00:40:07.00  ...it's shown here and it's intended for scanning of stress corrosion cracks on the walls...
+00:40:07.00 --> 00:40:10.00  ...of spent fuel canisters. So, spent fuel rod canisters is an important question in nuclear utilities.
+00:40:10.00 --> 00:40:13.00  So okay, that completes my presentation and thank you for your attention.
+00:40:13.00 --> 00:40:16.00  We have time for just one question, so does the audience have any questions for our speaker?
+00:40:16.00 --> 00:40:19.00  Thank you for your interesting presentation. I have a question on...
+00:40:19.00 --> 00:40:23.00  ...you mentioned what is very interesting anyway, so the scattering of the microstructure which can generate some noise I mean...
+00:40:23.00 --> 00:40:27.00  ...with some difficulty to check to have the signals coming from the defects. However, our defects are usually also smaller than expected in...
+00:40:27.00 --> 00:40:31.00  ...but anyway, but I have another question concerning the surface roughness because we have made this kind of experiments...
+00:40:31.00 --> 00:40:34.00  ...and surface roughness in LPBF can be sometimes tricky.
+00:40:34.00 --> 00:40:37.00  Well, interestingly, as we tested many different types of surfaces as-built, as-hot, we have not yet found a problem...
+00:40:37.00 --> 00:40:40.00  ...we have not yet found a problem that affects the accuracy of our measurement. It's impervious almost to surface roughness, almost.
+00:40:40.00 --> 00:40:43.00  But I have literature with me and I'm happy to talk at the end of the session.
+00:40:43.00 --> 00:40:47.00  Okay and I would like to thank the speaker once again and then I would like to invite Dr. Ing. Hans-Joachim Rohde on the stage.
+00:40:47.00 --> 00:40:50.00  Hans-Joachim Rohde has a PhD from the University of Stuttgart.
+00:40:50.00 --> 00:40:54.00  He completed his doctorate in combination with LASAG in Switzerland in cooperation with the University of Stuttgart.
+00:40:54.00 --> 00:40:57.00  He has quite some expertise in CO2 lasers also, but today he will provide us a talk regarding the development in diagnostic mirrors...
+00:40:57.00 --> 00:41:00.00  ...for monitoring in the laser additive manufacturing process. So, I would give the floor to Hans-Joachim.
+00:41:00.00 --> 01:43:07.00  Thank you very much for the kind introduction. Good afternoon everybody.
+00:43:07.00 --> 01:43:10.00  So, my name is Hans-Joachim Rohde and I am from Laser Components and I welcome you to my presentation of...
+00:43:10.00 --> 01:43:13.00  ...development in diagnostic mirrors for monitoring the laser additive manufacturing process.
+00:43:13.00 --> 01:43:17.00  And as you heard as the introduction I've worked before for laser companies and laser machine manufacturers...
+00:43:17.00 --> 01:43:20.00  ...so I have used a lot of optics during my time and know Laser Components always since thirty years as a supplier...
+00:43:20.00 --> 01:43:23.00  ...and I would like to give you with this presentation a little bit a view on the parameters which we have to deal with...
+00:43:23.00 --> 01:43:27.00  ...during the laser optics manufacturing. And then I would like to introduce shortly Laser Components.
+00:43:27.00 --> 01:43:30.00  Laser Components was founded 1984 and since then we're producing several different products which is showing in this slide.
+00:43:30.00 --> 01:43:33.00  So the first product is here, see a laser diodes from this manufacturing Canada...
+00:43:33.00 --> 01:43:37.00  ...then see sensors which are manufactured in Phoenix, Arizona, and the other things laser modules, photon counters...
+00:43:37.00 --> 01:43:40.00  ...fiber optics and laser optics are manufactured in Olching close to Munich.
+00:43:40.00 --> 01:43:43.00  My topic is as a product manager is fiber optics and laser optics, and laser optics as you can see we manufacturing these since 1986.
+00:43:43.00 --> 01:43:47.00  Today we are around 250 people and around 160 are in Olching located.
+00:43:47.00 --> 01:43:50.00  Shortly something about our production methods, so we have in principle three techniques: E-beam, Plasma Ion Assisted Deposition...
+00:43:50.00 --> 01:43:54.00  ...and Ion Beam Sputtering. Shortly little bit about Plasma Ion Assisted Deposition.
+00:45:00.00 --> 00:45:31.00  It's more or less an E-beam technique with an additional plasma source, which provides a better homogeneity of the coating and also reducing, for example, here the coating temperature. So with E-beam it's much higher. We can use metallic and oxidic targets here, and we have several holders here up here for the rotation of the substrate. And at the end, one of the properties is with this coating technique you have less water molecules in your coating.
+00:45:31.00 --> 00:46:05.00  The other one, ion beam sputtering, in this case we use an ion beam source with either xenon or other gases. We have a two-zone target zone here, which we can move quite quickly, so that we can use two different materials. And also here we using metallic and oxidic targets. The calotte is rotating as well as with the ion assisted deposition process, and the film formation will be happening up here.
+00:46:05.00 --> 00:46:40.00  A comparison a little bit about the three techniques. So E-beam is of course one of the oldest ones, has the highest growth rate, but as well also the roughest surface. So it's typical this pole, let's say coating layer thickness. And on the other hand, it has a low layer tension but a relatively high optical absorption.
+00:46:40.00 --> 00:47:04.00  The other one is the plasma ion assisted deposition. In this case we have a high to medium growth rate, so similar to E-beam but a little bit less, but a higher layer tension and also higher optical losses in that case. But the surface is even still let's say rough, but it's much smoother than E-beam and it's more dense in comparison to E-beam.
+00:47:04.00 --> 00:47:46.00  And the last one is then IBS. Here we have the lowest growth rate. That means also that the most cost-effective coating technique. On the other hand we can do the most complex coatings with this technique. It has low optical losses but a very high let's say layer tension of the optics. And the coating surface is very, very dense in comparison to all other things. Nevertheless, each technique has its own specialty. For example, with E-beam we still manufacturing today the Gaussian mirrors.
+00:47:46.00 --> 00:48:26.00  Typical optics in the process, I think all of you know that. Of course we have protection glasses, we have processing lenses, we have these diagnostic mirrors, we have beam splitters and maybe also at the beginning collimating lenses which collimate the beam. And all these optics, what you see is that they are transmissive optics, that means absorption is a very important factor for these optics. So if you optimize the absorption then you have less thermal load and better properties at the end for your process and also for the diagnostics. And that's exactly that what we have now in the last 12 months investigated a little bit more intensively.
+00:48:26.00 --> 00:49:08.00  So one of these things is for the process ion deposition process, so for PIAD, we have reduced the gas flow because originally the machine supplier said to us we have to use 30 square cubic centimeters oxygen gas flow. But in the meantime we have reduced that and we have found out that we can reduce massively the absorption behavior of one layer. So which causes then really that we come down here up to three or two ppm absorption with this technique for wavelengths at 1064, yeah. And this is done here for hafnia. Next slide I show you then for tantal.
+00:49:08.00 --> 00:49:36.00  Of course one of the things is what happens with the damage threshold, with the LIDT? What I can say up to now, what we have shown our investigation is that with this reduction we have still the same damage threshold. So we reduce only really the absorption of the coating layers, which is of course a good advantage for the optical properties.
+00:49:36.00 --> 00:50:01.00  And the same is for tantal, even so that tantal has already a very low absorption in general, but also here we could reduce this down to 0.5 ppm absorption per thickness of the layer. And as you see similar values, so we come from down from 30 and below 10 or even close to 0.5 ppm.
+00:50:00.00 --> 00:50:05.00  between 5 and 10 we have then more or less the best stable results.
+00:50:05.00 --> 00:50:10.00  Of course we will do some more investigations also what does it mean for the rest of the machine parameters
+00:50:10.00 --> 00:50:15.00  and also for other wavelengths, but for the moment, for example one of these let's say parameters
+00:50:15.00 --> 00:50:20.00  which we can use now for the modern production of optics is to reduce the oxygen flow.
+00:50:20.00 --> 00:50:25.00  Of course it also saves us oxygen consumption.
+00:50:25.00 --> 00:50:30.00  Another thing is then we have had a challenge to solve for a customer
+00:50:30.00 --> 00:50:35.00  which we has an existing processing head and we have then checked with him together
+00:50:35.00 --> 00:50:40.00  the possibilities to reduce the absorption of the optical elements.
+00:50:40.00 --> 00:50:45.00  And here in comparison to a protection window which is... the blue line is... oops... wrong... the blue line is the original one
+00:50:45.00 --> 00:50:50.00  and then we have used different materials with one coating type at 12 kilowatt laser power
+00:50:50.00 --> 00:50:55.00  and you can see we can reduce more than 50% with different materials
+00:50:55.00 --> 00:51:00.00  in comparison to the original window which was mounted into the head.
+00:51:00.00 --> 00:51:05.00  So the thermal load is really defined by the different materials
+00:51:05.00 --> 00:51:10.00  and you can really reduce this for the materials and accordingly have a really certain order of materials
+00:51:10.00 --> 00:51:15.00  So number 1, 2, and 3, it means this material have always the same same thing.
+00:51:15.00 --> 00:51:20.00  So we tested this also at 8 kilowatt, 4 kilowatt, 2 kilowatt, 1 kilowatt and 0.5 kilowatt.
+00:51:20.00 --> 00:51:25.00  The difference is that of course the curves are going closer to each other
+00:51:25.00 --> 00:51:30.00  because the difference is not so dramatic with lower powers than with let's say with 12 kilowatt.
+00:51:30.00 --> 00:51:35.00  And then we changed different coating layers.
+00:51:35.00 --> 00:51:40.00  So in this case again the standard window and then the same material as this one
+00:51:40.00 --> 00:51:45.00  but with a different number of coating layers.
+00:51:45.00 --> 00:51:50.00  And you can see there is at the end a minimum where we can achieve the lowest absorption.
+00:51:50.00 --> 00:51:55.00  So the temperature difference is then here the lowest value.
+00:51:55.00 --> 00:52:00.00  So it's really so that when you make different coating of number of layers
+00:52:00.00 --> 00:52:05.00  then you can optimize this at the end for an optic which has really then the lowest absorption
+00:52:05.00 --> 00:52:10.00  in that case for the same material and same thickness and everything
+00:52:10.00 --> 00:52:15.00  for this kind of power level at 12 kilowatt and 1064 nanometer.
+00:52:15.00 --> 00:52:20.00  So you can see that it's important to know which kind of material together with the right coating
+00:52:20.00 --> 00:52:25.00  you can really reduce here the absorption behavior very much.
+00:52:25.00 --> 00:52:30.00  And then another... we have another possibility: so we can also we call it pre- and post-processing.
+00:52:30.00 --> 00:52:35.00  So pre- means that for example we can use optics with different polishing grades.
+00:52:35.00 --> 00:52:40.00  This has an influence. Cleaning has an influence beforehand.
+00:52:40.00 --> 00:52:45.00  Also cleaning in the machine for example due to plasma we can also treat the surface
+00:52:45.00 --> 00:52:50.00  and this can also influence the absorption of the optics.
+00:52:50.00 --> 00:52:55.00  And post-processing is for example again cleaning and for example then later on I show you then annealing of the optics after the coating process.
+00:52:55.00 --> 00:53:00.00  And also here you see for the 8 kilowatt and also for 4, 2 and 1 kilowatt
+00:53:00.00 --> 00:53:05.00  that here... oops... that here with and without we have an improvement of the thermal.
+00:53:05.00 --> 00:53:10.00  It's not much but you can achieve a certain value.
+00:53:10.00 --> 00:53:15.00  The same is also for here for the other material we have this distance here.
+00:53:15.00 --> 00:53:20.00  So you can really do the pre- and post-processing, you can again improve the absorption behavior of the optics
+00:53:20.00 --> 00:53:25.00  which is then of course then at the end with this technique you have then at the end
+00:53:25.00 --> 00:53:30.00  with coating material and this pre- and post-processing you have then the optimized optical behavior of the optics.
+00:53:30.00 --> 00:53:35.00  But it's sometimes not so easy when we have made then the tests with the 12 kilowatt power level
+00:53:35.00 --> 00:53:40.00  it does not show this behavior. So there all the pre- and post-processing samples are slightly higher than without.
+00:53:40.00 --> 00:53:45.00  So you can see that not everything is now finally investigated.
+00:53:45.00 --> 00:53:50.00  So we have still to do something here and to see why is that so
+00:53:50.00 --> 00:53:55.00  but in this case as you see the not processed samples are lower than the processed sample in this case.
+00:53:55.00 --> 00:54:00.00  We do not know as I said at the moment if it's due to the post-process or pre-process
+00:54:00.00 --> 00:54:05.00  but we will investigate this further as well as for more power levels or higher power levels up to 30 kilowatt.
+00:54:05.00 --> 00:54:10.00  As I said one of the post-processing things is annealing.
+00:54:10.00 --> 00:54:15.00  Here you have only a sample for that how we can change here the transmission
+00:54:15.00 --> 00:54:20.00  or at the end the absorption of this optic at a wavelength of 2900 nanometer.
+00:55:00.00 --> 00:55:04.00  14 nanometers. As you see, with this annealing we can increase it from close to, let's say, 95.8
+00:55:04.00 --> 00:55:09.00  over 99%. So it's a 3% increase only that we are, after the coating process, we anneal these optics.
+00:55:09.00 --> 00:55:15.00  Also with that, you can learn that all these things are really influence at the end of the
+00:55:15.00 --> 00:55:20.00  performance of your optics. Another thing is then I mentioned before, not the number of coating layers,
+00:55:20.00 --> 00:55:25.00  but also the coating design. So we started a new technique called quantum nanolaminates.
+00:55:25.00 --> 00:55:30.00  So what we are doing is we have then typical dielectric coating here with hafnium and silicon
+00:55:30.00 --> 00:55:35.00  oxide and we substitute one of these hafnium layer by a layer which is existing out of very,
+00:55:35.00 --> 00:55:40.00  very thin alternative layers of hafnium and silicon oxide. So thin means they are in
+00:55:40.00 --> 00:55:45.00  nanometer range, 1 nanometer, half a nanometer, so depending on how many layers we are doing here.
+00:55:45.00 --> 00:55:50.00  And this influencing as well the optical properties of the optics, which we can see in the next
+00:55:50.00 --> 00:55:55.00  slide, for example, for UV. So what we have done, we have substitute one of these layers as shown
+00:55:55.00 --> 00:56:00.00  in the previous slide, and what you see here now, is the red line. So we achieve an 205 nanometer.
+00:56:00.00 --> 00:56:05.00  We are still below 2% absorption in comparison to a normal coating which is already at six
+00:56:05.00 --> 00:56:10.00  or 8% absorption. So also with this technique, you can then change the properties of your optics
+00:56:10.00 --> 00:56:15.00  and optimize it really for your process. Diagnostic mirrors, as you have seen before,
+00:56:15.00 --> 00:56:20.00  we have diagnostic mirrors which can be transmissive. That's one of the first one, it's only an example
+00:56:20.00 --> 00:56:25.00  because we do almost all our optics, we do it really customized to the need of our customers.
+00:56:25.00 --> 00:56:30.00  But here you can see, for example, one mirror which we have optimized with all these parameters
+00:56:30.00 --> 00:56:35.00  before, with annealing, with special coating techniques and layer numbers. So we have
+00:56:35.00 --> 00:56:40.00  then very, very low reflection or transmissive, absorption here for the laser wavelengths
+00:56:40.00 --> 00:56:45.00  and for the diagnostic we have a high reflection of 99.5% of the diagnostic wavelengths.
+00:56:45.00 --> 00:56:50.00  And also you see that we have also to taken care about polarization sometimes. So depending on
+00:56:50.00 --> 00:56:55.00  that, we can optimize our mirrors for this diagnostic purpose. Another possibility of course
+00:56:55.00 --> 00:57:00.00  is that you use not transmissive optics for your laser, you're using a reflecting. So in
+00:57:00.00 --> 00:57:05.00  this case, the laser beam, parallel beam, are coming here, reflected down to the process area,
+00:57:05.00 --> 00:57:10.00  and the reflected process wavelengths are coming up and going through this mirror. But
+00:57:10.00 --> 00:57:15.00  nevertheless also here, transmissive is a topic because we want to have of course large
+00:57:15.00 --> 00:57:20.00  signals here. So when the light is only, let's say, a low level, but still we want to have maximum
+00:57:20.00 --> 00:57:25.00  out of there to achieve then also the right monitoring. One of these challenges also of these
+00:57:25.00 --> 00:57:30.00  mirrors is, for example, that the laser wavelengths is very close to the diagnostic
+00:57:30.00 --> 00:57:35.00  wavelengths, which is then of course not an easy design to achieve something like that in this case.
+00:57:35.00 --> 00:57:40.00  and it's very much to optimize all these things to have an at the end an optimized mirror for the
+00:57:40.00 --> 00:57:45.00  process monitoring. So I'm already at the end of my presentation. I hope I can show you a little
+00:57:45.00 --> 00:57:50.00  bit that we have also in optics a very high number of parameters which we can deal with, which we can
+00:57:50.00 --> 00:57:55.00  optimize it. I've shown you here the material is one of these things, the pre-processing like
+00:57:55.00 --> 00:58:00.00  polishing and cleaning, the coating design itself, as well as post-processing e.g. annealing
+00:58:00.00 --> 00:58:05.00  things. Of course the separation of the individual processes helps us to define the correct
+00:58:05.00 --> 00:58:10.00  procedures for complex diagnostic mirrors in the future. So that's the reason why we have started
+00:58:10.00 --> 00:58:15.00  with simple, let's say windows to analyze these, what is the best material, what is the best coating
+00:58:15.00 --> 00:58:20.00  for low absorption that we can later on can use this knowledge to optimize then the diagnostic mirrors.
+00:58:20.00 --> 00:58:25.00  And as well this deep process understanding helps us to find the right action for the complex
+00:58:25.00 --> 00:58:30.00  diagnostic mirrors in the future. So we will investigate this further on also in relation,
+00:58:30.00 --> 00:58:35.00  of course, to damage threshold. And as you have seen, new technology like the quantum nanolayers
+00:58:35.00 --> 00:58:40.00  open new design paths for future products. Thank you for your attention and I would like
+00:58:40.00 --> 00:58:45.00  also to say that we have a booth or table here at 5:30 it's table number nine. So if you have
+00:58:45.00 --> 00:58:49.00  any question later on, you're really welcome. Thank you.
+01:00:00.00 --> 01:00:05.00  Please, come to our table and we can discuss further on this. Thank you very much.
+01:00:05.00 --> 01:00:10.00  Thank you Hans-Joerg for this very nice presentation.
+01:00:10.00 --> 01:00:15.00  I think we have still time for two short questions. Yes?
+01:00:15.00 --> 01:00:20.00  [Music]
+01:00:20.00 --> 01:00:25.00  A very good presentation, thank you. I'm just curious with the pre and post-processing
+01:00:25.00 --> 01:00:30.00  that you do to get the improved performance, what's the additional relative cost
+01:00:30.00 --> 01:00:35.00  you know, to that, to achieve that?
+01:00:35.00 --> 01:00:40.00  Yes of course, that's it's one of these factors. For example for the post-processing it depends of course
+01:00:40.00 --> 01:00:45.00  how long we have to anneal and which temperature. So in one example it was shown that
+01:00:45.00 --> 01:00:50.00  at 700 degrees Celsius but we don't have to for example to anneal all these optics at 700, some of only
+01:00:50.00 --> 01:00:55.00  annealed at 400 and then of course it's the time which also then but it's an add-on cost of course,
+01:00:55.00 --> 01:01:00.00  it's an additional handling cost something could happen also with your optics. There is
+01:01:00.00 --> 01:01:05.00  a plus of cost, yes. But if it improves your optical features, it is worth to do so because when you would like to have
+01:01:05.00 --> 01:01:10.00  very low absorption, that means very, very thermal load, means very less thermal
+01:01:10.00 --> 01:01:15.00  focus shift then it's worth to do it at the end. But of course it's different depending on the time and temperature.
+01:01:15.00 --> 01:01:20.00  A last question from the audience? Okay.
+01:01:20.00 --> 01:01:25.00  [Music]
+01:01:25.00 --> 01:01:30.00  [Music]
+01:01:30.00 --> 01:01:35.00  Hans-Joerg, thank you for the great presentation. Now I have a question regarding the nanolaminates.
+01:01:35.00 --> 01:01:40.00  If we add the nanolaminates, does that mean we are adding more layers
+01:01:40.00 --> 01:01:45.00  to the coating? Or is that... No, the total coating thickness as shown in the picture
+01:01:45.00 --> 01:01:50.00  is exactly the same. The thickness is the same, but you have more layers.
+01:01:50.00 --> 01:01:55.00  The total thickness is the same, but you have more layers. And yeah we have more layers when you say, but we
+01:01:55.00 --> 01:02:00.00  call this as one layer, one layer of quantum-nanolaminate. So even that this one layer of
+01:02:00.00 --> 01:02:05.00  quantum-nanolaminate consists out of for example 14, 18 layers.
+01:02:05.00 --> 01:02:10.00  Okay. So my question is if we have more layers in quantity,
+01:02:10.00 --> 01:02:15.00  wouldn't that be adding tension to the substrate?
+01:02:15.00 --> 01:02:20.00  No, in that case not now. This is no change in that case, there's no additional tension on that
+01:02:20.00 --> 01:02:25.00  because they are so thin, these quantum-nanolayers. Okay, alright.
+01:02:25.00 --> 01:02:30.00  There's no add-on in that case. But of course it's changing for example the damage threshold, so that way we are testing.
+01:02:30.00 --> 01:02:35.00  So we will have another presentation on the Photonics West regarding that that we investigated further on
+01:02:35.00 --> 01:02:40.00  these things regarding also damage threshold and other wavelengths.
+01:02:40.00 --> 01:02:45.00  Okay, then I would like to thank the four speakers of the Session 6 as the last time
+01:02:45.00 --> 01:02:50.00  and I would like to invite everybody for the coffee break then afterwards here. Okay. Thank you.

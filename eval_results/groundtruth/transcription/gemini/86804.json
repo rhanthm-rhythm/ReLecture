@@ -1,0 +1,195 @@
+{
+  "video": "data/videos/86804.mp4",
+  "model": "gemini-3-flash-preview",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 575.511377,
+  "chunks": 2,
+  "raw_text": "Of course! Here is a timestamped transcription of the provided video:\n\n00:00 --> 00:09 Hi everyone, I'm Eric and today I'll be talking about Slidebot, a multi-agent framework for generating informative and reliable presentation slides.\n\n00:10 --> 00:20 Slides are one of the most common teaching tools, but generating good slides is hard. It requires a combination of several things:\n\n00:21 --> 00:30 an effective instructional structure, such as a strong visual and textual layout or explanation style, while also providing appropriate factual content that is accurate, relevant, and sourceable.\n\n00:31 --> 00:44 For LLMs, they often generate such material using their internal or parametric knowledge, which can be unreliable and result in inaccurate information. Failing to meet this criteria can lead to poor educational outcomes for students.\n\n00:45 --> 00:53 For a bit of background, let's briefly talk about cognitive load theory, or CLT, and cognitive theory of multimedia learning, or CTML. \n\n00:54 --> 01:03 These two theories of learning essentially focus on presenting information in a way that is easily digestible to the audience. \n\n01:04 --> 01:14 Because learners have limited working memory, poor slide design, such as those with cluttered text, misaligned visuals, or unfocused content, can increase the cognitive load on the audience, \n\n01:15 --> 01:28 leading to reduced learning outcomes. Therefore, effective slides will emphasize key concepts, align text and visuals, and avoid redundant information to reduce the extraneous load on the learner and improve learning outcomes.\n\n01:29 --> 01:37 Next, I'd like to briefly introduce retrieval augmented generation, or RAG. \n\n01:38 --> 01:46 When LLMs rely on their internal parametric knowledge, their outputs can be outdated, incomplete, or incorrect, known as a hallucination. \n\n01:47 --> 01:57 To combat this, RAG provides information from verifiable external sources, such as textbooks or research articles, to ground content and enhance explanations and topic coverage while providing explicit citations.\n\n01:58 --> 02:08 This figure shows the high-level agentic architecture of Slidebot. The system contains four AI agents working together with the instructor to go from a topic to a completed presentation:\n\n02:09 --> 02:18 the retriever, the code generator, the enhancer, and a central moderator. \n\n02:19 --> 02:28 Once the system receives a topic, the first step is content retrieval, where the retriever agent obtains informative content regarding the given topic. \n\n02:29 --> 02:38 Next is the slide draft generation. Language models tend to struggle to produce coherent text layout and visual structure all simultaneously. \n\n02:39 --> 02:46 Therefore, we instead leverage modern LLM strengths in code generation to bridge this gap by using the code generator agent to provide code that, when compiled, produces a completed draft of a presentation. \n\n02:47 --> 02:58 The last step is presentation enhancement, where an enhancer agent adds additional features to the presentation, such as visual elements or instructor comments, before returning the completed presentation to the instructor. \n\n02:59 --> 03:12 This modular design is intentionally made in such a way that allows details, such as the specific models, agents, or features, all to be adjusted and tailored to the given task.\n\n03:13 --> 03:22 First, I'll provide a bit more detail on the retriever module. \n\n03:23 --> 03:32 In this section, our goal is to use RAG to generate sourceable, informative content. This has two steps. First is the search feature. We define two main methods of searching based on the target corpus. \n\n03:33 --> 03:40 For novel, expert-level information, we identify relevant research papers using the arXiv API. \n\n03:41 --> 03:51 For information more tailored to classroom settings, we use BM25, a probabilistic ranking algorithm that can find relevant passages within textbooks. Once relevant texts have been selected, the retriever agent will summarize the information and send it back to the moderator for further planning and generation.\n\n03:52 --> 04:02 Next is the slide draft generation phase. \n\n04:03 --> 04:12 In this step, we use the retrieved content to construct a completed presentation draft. \n\n04:13 --> 04:22 First, the moderator constructs the slide plan based on the information provided by following a predefined structural guide that embeds CLT and CTML principles. \n\n04:23 --> 04:32 The plan will specify slide headers, key facts and explanations, and provide corresponding citations for each slide. \n\n04:33 --> 04:42 The code generator uses this plan to create a full presentation using the Beamer package within LaTeX. If you're unfamiliar, LaTeX is a popular markup language for typesetting documents often used in academia for its precision and flexibility, while Beamer is a package developed within LaTeX that is specialized for constructing slide presentations.\n\n04:43 --> 04:51 With this draft, our last step is presentation enhancement. \n\n04:52 --> 05:01 Here, our goal is to provide finishing touches to the generated slide draft. The moderator identifies slides that would benefit from visual elements such as diagrams, charts, or formulas to enhance adherence to cognitive load theory principles.\n\nHopefully, this is helpful!\n\n00:00:00 --> 00:00:25 Once identified, the enhancer will generate those visuals using pre-written figure macros, while additionally inserting instructor-view only comments. These can be things like prompts for elaboration, warnings about potential misconceptions, or suggestions for additional visual aids. Once this is accomplished, the final presentation is sent back to the instructor who can freely edit or ask for revisions.\n\n00:00:25 --> 00:00:53 Here's a slide taken from a presentation generated by SlideBot about manifold learning, a fairly complex topic within AI. As you can see, it provides clear, structured information extracted from a relevant research article obtained by the retriever agent. An additional figure and embedded comment have also been added by the enhancer agent, providing additional clarity or a point of discussion that the instructor can potentially utilize.\n\n00:00:53 --> 00:01:32 In comparison, the slide on the left is generated directly by prompting the model to generate LaTeX code for a presentation on manifold learning, while the slide on the right is generated by Microsoft Copilot through PowerPoint. In both, the explanations provided are broad, unfocused, or unspecific. Additionally, images can be hallucinated or code errors can occur resulting in missing images, as seen in the slide on the left. Copilot's image is distracting and unrelated to the topic, adding unnecessary cognitive load to the learner.\n\n00:01:32 --> 00:01:53 To evaluate our approach, we structure our evaluation around three core pillars: informativeness, measuring the clarity, accuracy, and breadth of information; reliability, measuring the trustworthiness and output consistency of generated slides; and practicality, the real-world usability and alignment with teacher needs.\n\n00:01:53 --> 00:02:40 We compare SlideBot implemented with GPT-4o mini against Microsoft Copilot and direct generation on undergraduate to graduate level topics within AI or biomedicine. We use the mini variant to ensure a model size will not provide a significant benefit to SlideBot. We additionally survey two groups. We ask students within the domain to rate presentations based on the explanation style, their parent credibility, structure and flow, and overall suitability, factors that are essential for student learning outcomes and can easily be measured by students.\n\n00:02:40 --> 00:03:10 We survey domain experts such as graduate students or professors within the field to evaluate more technical details such as the conceptual accuracy, topic coverage, and instructor utility. Here are the results for our first study between SlideBot and Copilot with clear rows measured by students and shaded rows measured by domain experts. The variability metric within reliability captures the difference in the average overall suitability score between the best and worst rated presentations for each method. Lower scores are preferred in that category as it indicates a more consistent output quality. As shown, SlideBot consistently and significantly outperforms Copilot in all metrics.\n\n00:03:10 --> 00:03:55 Our next study measures two things: the importance of retrieved content on informativeness, and whether SlideBot provides benefits regardless of model size. While topic coverage remains highly scored in all settings, when the model is provided additional context by the retriever agent, conceptual accuracy increases significantly compared to direct generation despite the size of the model. Interestingly, model size appeared to have little to no effect on our results, with GPT-4o mini with context having a slightly higher conceptual accuracy score than the full-size variant. We hypothesize that the limited parametric knowledge within GPT-4o mini means it relies more heavily on the retrieved content, adhering more closely to it.\n\n00:03:55 --> 00:04:38 In conclusion, slide generation is a complex challenge from a pedagogical and factual standpoint. Our solution, SlideBot, is a multi-agent framework that grounds content with retrieved information through RAG, enforces a structure that implements CLT and CTML principles, producing customizable LaTeX slides, and providing significant gains across informativeness, reliability, and practicality as a direct result of our architecture. Overall, we find that generated educational content benefits significantly from structure and grounding through a framework like ours.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:09.00",
+      "text": "Hi everyone, I'm Eric and today I'll be talking about Slidebot, a multi-agent framework for generating informative and reliable presentation slides."
+    },
+    {
+      "start": "00:00:10.00",
+      "end": "00:00:20.00",
+      "text": "Slides are one of the most common teaching tools, but generating good slides is hard. It requires a combination of several things:"
+    },
+    {
+      "start": "00:00:21.00",
+      "end": "00:00:30.00",
+      "text": "an effective instructional structure, such as a strong visual and textual layout or explanation style, while also providing appropriate factual content that is accurate, relevant, and sourceable."
+    },
+    {
+      "start": "00:00:31.00",
+      "end": "00:00:44.00",
+      "text": "For LLMs, they often generate such material using their internal or parametric knowledge, which can be unreliable and result in inaccurate information. Failing to meet this criteria can lead to poor educational outcomes for students."
+    },
+    {
+      "start": "00:00:45.00",
+      "end": "00:00:53.00",
+      "text": "For a bit of background, let's briefly talk about cognitive load theory, or CLT, and cognitive theory of multimedia learning, or CTML."
+    },
+    {
+      "start": "00:00:54.00",
+      "end": "00:01:03.00",
+      "text": "These two theories of learning essentially focus on presenting information in a way that is easily digestible to the audience."
+    },
+    {
+      "start": "00:01:04.00",
+      "end": "00:01:14.00",
+      "text": "Because learners have limited working memory, poor slide design, such as those with cluttered text, misaligned visuals, or unfocused content, can increase the cognitive load on the audience,"
+    },
+    {
+      "start": "00:01:15.00",
+      "end": "00:01:28.00",
+      "text": "leading to reduced learning outcomes. Therefore, effective slides will emphasize key concepts, align text and visuals, and avoid redundant information to reduce the extraneous load on the learner and improve learning outcomes."
+    },
+    {
+      "start": "00:01:29.00",
+      "end": "00:01:37.00",
+      "text": "Next, I'd like to briefly introduce retrieval augmented generation, or RAG."
+    },
+    {
+      "start": "00:01:38.00",
+      "end": "00:01:46.00",
+      "text": "When LLMs rely on their internal parametric knowledge, their outputs can be outdated, incomplete, or incorrect, known as a hallucination."
+    },
+    {
+      "start": "00:01:47.00",
+      "end": "00:01:57.00",
+      "text": "To combat this, RAG provides information from verifiable external sources, such as textbooks or research articles, to ground content and enhance explanations and topic coverage while providing explicit citations."
+    },
+    {
+      "start": "00:01:58.00",
+      "end": "00:02:08.00",
+      "text": "This figure shows the high-level agentic architecture of Slidebot. The system contains four AI agents working together with the instructor to go from a topic to a completed presentation:"
+    },
+    {
+      "start": "00:02:09.00",
+      "end": "00:02:18.00",
+      "text": "the retriever, the code generator, the enhancer, and a central moderator."
+    },
+    {
+      "start": "00:02:19.00",
+      "end": "00:02:28.00",
+      "text": "Once the system receives a topic, the first step is content retrieval, where the retriever agent obtains informative content regarding the given topic."
+    },
+    {
+      "start": "00:02:29.00",
+      "end": "00:02:38.00",
+      "text": "Next is the slide draft generation. Language models tend to struggle to produce coherent text layout and visual structure all simultaneously."
+    },
+    {
+      "start": "00:02:39.00",
+      "end": "00:02:46.00",
+      "text": "Therefore, we instead leverage modern LLM strengths in code generation to bridge this gap by using the code generator agent to provide code that, when compiled, produces a completed draft of a presentation."
+    },
+    {
+      "start": "00:02:47.00",
+      "end": "00:02:58.00",
+      "text": "The last step is presentation enhancement, where an enhancer agent adds additional features to the presentation, such as visual elements or instructor comments, before returning the completed presentation to the instructor."
+    },
+    {
+      "start": "00:02:59.00",
+      "end": "00:03:12.00",
+      "text": "This modular design is intentionally made in such a way that allows details, such as the specific models, agents, or features, all to be adjusted and tailored to the given task."
+    },
+    {
+      "start": "00:03:13.00",
+      "end": "00:03:22.00",
+      "text": "First, I'll provide a bit more detail on the retriever module."
+    },
+    {
+      "start": "00:03:23.00",
+      "end": "00:03:32.00",
+      "text": "In this section, our goal is to use RAG to generate sourceable, informative content. This has two steps. First is the search feature. We define two main methods of searching based on the target corpus."
+    },
+    {
+      "start": "00:03:33.00",
+      "end": "00:03:40.00",
+      "text": "For novel, expert-level information, we identify relevant research papers using the arXiv API."
+    },
+    {
+      "start": "00:03:41.00",
+      "end": "00:03:51.00",
+      "text": "For information more tailored to classroom settings, we use BM25, a probabilistic ranking algorithm that can find relevant passages within textbooks. Once relevant texts have been selected, the retriever agent will summarize the information and send it back to the moderator for further planning and generation."
+    },
+    {
+      "start": "00:03:52.00",
+      "end": "00:04:02.00",
+      "text": "Next is the slide draft generation phase."
+    },
+    {
+      "start": "00:04:03.00",
+      "end": "00:04:12.00",
+      "text": "In this step, we use the retrieved content to construct a completed presentation draft."
+    },
+    {
+      "start": "00:04:13.00",
+      "end": "00:04:22.00",
+      "text": "First, the moderator constructs the slide plan based on the information provided by following a predefined structural guide that embeds CLT and CTML principles."
+    },
+    {
+      "start": "00:04:23.00",
+      "end": "00:04:32.00",
+      "text": "The plan will specify slide headers, key facts and explanations, and provide corresponding citations for each slide."
+    },
+    {
+      "start": "00:04:33.00",
+      "end": "00:04:42.00",
+      "text": "The code generator uses this plan to create a full presentation using the Beamer package within LaTeX. If you're unfamiliar, LaTeX is a popular markup language for typesetting documents often used in academia for its precision and flexibility, while Beamer is a package developed within LaTeX that is specialized for constructing slide presentations."
+    },
+    {
+      "start": "00:04:43.00",
+      "end": "00:04:51.00",
+      "text": "With this draft, our last step is presentation enhancement."
+    },
+    {
+      "start": "00:04:52.00",
+      "end": "00:05:01.00",
+      "text": "Here, our goal is to provide finishing touches to the generated slide draft. The moderator identifies slides that would benefit from visual elements such as diagrams, charts, or formulas to enhance adherence to cognitive load theory principles.\n\nHopefully, this is helpful!"
+    },
+    {
+      "start": "00:05:00.00",
+      "end": "00:05:25.00",
+      "text": "Once identified, the enhancer will generate those visuals using pre-written figure macros, while additionally inserting instructor-view only comments. These can be things like prompts for elaboration, warnings about potential misconceptions, or suggestions for additional visual aids. Once this is accomplished, the final presentation is sent back to the instructor who can freely edit or ask for revisions."
+    },
+    {
+      "start": "00:05:25.00",
+      "end": "00:05:53.00",
+      "text": "Here's a slide taken from a presentation generated by SlideBot about manifold learning, a fairly complex topic within AI. As you can see, it provides clear, structured information extracted from a relevant research article obtained by the retriever agent. An additional figure and embedded comment have also been added by the enhancer agent, providing additional clarity or a point of discussion that the instructor can potentially utilize."
+    },
+    {
+      "start": "00:05:53.00",
+      "end": "00:06:32.00",
+      "text": "In comparison, the slide on the left is generated directly by prompting the model to generate LaTeX code for a presentation on manifold learning, while the slide on the right is generated by Microsoft Copilot through PowerPoint. In both, the explanations provided are broad, unfocused, or unspecific. Additionally, images can be hallucinated or code errors can occur resulting in missing images, as seen in the slide on the left. Copilot's image is distracting and unrelated to the topic, adding unnecessary cognitive load to the learner."
+    },
+    {
+      "start": "00:06:32.00",
+      "end": "00:06:53.00",
+      "text": "To evaluate our approach, we structure our evaluation around three core pillars: informativeness, measuring the clarity, accuracy, and breadth of information; reliability, measuring the trustworthiness and output consistency of generated slides; and practicality, the real-world usability and alignment with teacher needs."
+    },
+    {
+      "start": "00:06:53.00",
+      "end": "00:07:40.00",
+      "text": "We compare SlideBot implemented with GPT-4o mini against Microsoft Copilot and direct generation on undergraduate to graduate level topics within AI or biomedicine. We use the mini variant to ensure a model size will not provide a significant benefit to SlideBot. We additionally survey two groups. We ask students within the domain to rate presentations based on the explanation style, their parent credibility, structure and flow, and overall suitability, factors that are essential for student learning outcomes and can easily be measured by students."
+    },
+    {
+      "start": "00:07:40.00",
+      "end": "00:08:10.00",
+      "text": "We survey domain experts such as graduate students or professors within the field to evaluate more technical details such as the conceptual accuracy, topic coverage, and instructor utility. Here are the results for our first study between SlideBot and Copilot with clear rows measured by students and shaded rows measured by domain experts. The variability metric within reliability captures the difference in the average overall suitability score between the best and worst rated presentations for each method. Lower scores are preferred in that category as it indicates a more consistent output quality. As shown, SlideBot consistently and significantly outperforms Copilot in all metrics."
+    },
+    {
+      "start": "00:08:10.00",
+      "end": "00:08:55.00",
+      "text": "Our next study measures two things: the importance of retrieved content on informativeness, and whether SlideBot provides benefits regardless of model size. While topic coverage remains highly scored in all settings, when the model is provided additional context by the retriever agent, conceptual accuracy increases significantly compared to direct generation despite the size of the model. Interestingly, model size appeared to have little to no effect on our results, with GPT-4o mini with context having a slightly higher conceptual accuracy score than the full-size variant. We hypothesize that the limited parametric knowledge within GPT-4o mini means it relies more heavily on the retrieved content, adhering more closely to it."
+    },
+    {
+      "start": "00:08:55.00",
+      "end": "00:09:38.00",
+      "text": "In conclusion, slide generation is a complex challenge from a pedagogical and factual standpoint. Our solution, SlideBot, is a multi-agent framework that grounds content with retrieved information through RAG, enforces a structure that implements CLT and CTML principles, producing customizable LaTeX slides, and providing significant gains across informativeness, reliability, and practicality as a direct result of our architecture. Overall, we find that generated educational content benefits significantly from structure and grounding through a framework like ours."
+    }
+  ]
+}

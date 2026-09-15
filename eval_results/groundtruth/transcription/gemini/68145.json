@@ -1,0 +1,75 @@
+{
+  "video": "data/videos/68145.mp4",
+  "model": "gemini-3.6-flash",
+  "prompt": "Give me the timestamped transcription of this video. Format every line as:  HH:MM:SS --> HH:MM:SS  <text>",
+  "duration": 261.0,
+  "chunks": 1,
+  "raw_text": "00:00:00 --> 00:00:08\nI am going to be talking about some work I did as part of a postdoc position with Thibaud Gruber at the University of Geneva.\n\n00:00:08 --> 00:00:19\nAnd we were looking at overimitation, which is the imitation of perceivably causally unnecessary actions.\n\n00:00:19 --> 00:00:38\nAnd this is a fairly well-studied phenomenon, and we know already that several social factors can influence rates of overimitation, including model familiarity, group membership, and also the presence or absence of the experimenter or the person who demonstrated those causally unnecessary actions.\n\n00:00:38 --> 00:00:50\nAnd what we wanted to look at was whether there was any influence of the emotional valence of a previous interaction on whether or not children overimitated.\n\n00:00:50 --> 00:01:02\nSo we set up this experiment. We did this at the local Natural History Museum in Lausanne in Switzerland, and we tested children aged four to 12 years.\n\n00:01:02 --> 00:01:30\nAnd children who took part firstly participated in a warm-up. And this warm-up was either positive—so they had a few minutes of conversation with a lovely, friendly researcher who asked them about their day, they then did a warm-up activity, and during that activity the researcher continued to offer positive feedback, um, continued to engage them in conversation, and was just basically really lovely.\n\n00:01:30 --> 00:01:53\nOr they took part in our neutral condition. In which case, at the start of this warm-up, the researcher told them that she had some work to do, gave them a book to read, and ignored them for five minutes. Uh, they then had to do the same warm-up activity, but instead of giving nice, positive, friendly feedback, uh, she just reminded them how much time they had left.\n\n00:01:53 --> 00:02:06\nSo after this warm-up phase, uh, children then took part in the test phase. And for this, we had two different overimitation tasks which you can see in the photos. So we had a hook task and a box task.\n\n00:02:06 --> 00:02:16\nAnd the demonstrator for these was either the same person who'd done that warm-up with them, or it was a new, unfamiliar researcher.\n\n00:02:16 --> 00:03:04\nAnd this is what we found. Uh, so just to explain this graph, basically children could either overimitate on both of our tasks, on the box task only, on the hook task only, or they could overimitate on neither task. And in the kind of pinky colors you can see the unfamiliar condition, so this is where the demonstrator was someone new. And in the kind of blue colors you can see the familiar condition, so this is where, uh, the demonstrator was the same person who'd done the warm-up. And then in orange and blue at the bottom of the bars you've got the positive warm-up condition, and at the top of the bars you've got the neutral warm-up condition.\n\n00:03:04 --> 00:03:17\nUh, and so the basic takeaway from this, when we ran this through a multinomial model, there was no effect of the emotional valence of that warm-up. So it didn't matter if they'd had the positive or the neutral warm-up.\n\n00:03:17 --> 00:03:38\nBut what did make a difference was whether they had the familiar or unfamiliar, uh, demonstrator. So 40% of children in the condition where they had an unfamiliar demonstrator didn't overimitate on either of our tasks, and that was only around 23%, uh, in the condition where they had a familiar demonstrator.\n\n00:03:38 --> 00:04:18\nSo in conclusion, model familiarity influenced overimitation in this task, but the emotional valence of those prior interactions did not. We still have more video coding to do, uh, to look in more detail at what happened during those warm-up conversations. Um, there was a lot of variation in how children respond to having several minutes of conversation with a new adult. Um, and so we're going to look at that in more detail and maybe have a more nuanced view of this in the future. Thank you.",
+  "segments": [
+    {
+      "start": "00:00:00.00",
+      "end": "00:00:08.00",
+      "text": "I am going to be talking about some work I did as part of a postdoc position with Thibaud Gruber at the University of Geneva."
+    },
+    {
+      "start": "00:00:08.00",
+      "end": "00:00:19.00",
+      "text": "And we were looking at overimitation, which is the imitation of perceivably causally unnecessary actions."
+    },
+    {
+      "start": "00:00:19.00",
+      "end": "00:00:38.00",
+      "text": "And this is a fairly well-studied phenomenon, and we know already that several social factors can influence rates of overimitation, including model familiarity, group membership, and also the presence or absence of the experimenter or the person who demonstrated those causally unnecessary actions."
+    },
+    {
+      "start": "00:00:38.00",
+      "end": "00:00:50.00",
+      "text": "And what we wanted to look at was whether there was any influence of the emotional valence of a previous interaction on whether or not children overimitated."
+    },
+    {
+      "start": "00:00:50.00",
+      "end": "00:01:02.00",
+      "text": "So we set up this experiment. We did this at the local Natural History Museum in Lausanne in Switzerland, and we tested children aged four to 12 years."
+    },
+    {
+      "start": "00:01:02.00",
+      "end": "00:01:30.00",
+      "text": "And children who took part firstly participated in a warm-up. And this warm-up was either positive—so they had a few minutes of conversation with a lovely, friendly researcher who asked them about their day, they then did a warm-up activity, and during that activity the researcher continued to offer positive feedback, um, continued to engage them in conversation, and was just basically really lovely."
+    },
+    {
+      "start": "00:01:30.00",
+      "end": "00:01:53.00",
+      "text": "Or they took part in our neutral condition. In which case, at the start of this warm-up, the researcher told them that she had some work to do, gave them a book to read, and ignored them for five minutes. Uh, they then had to do the same warm-up activity, but instead of giving nice, positive, friendly feedback, uh, she just reminded them how much time they had left."
+    },
+    {
+      "start": "00:01:53.00",
+      "end": "00:02:06.00",
+      "text": "So after this warm-up phase, uh, children then took part in the test phase. And for this, we had two different overimitation tasks which you can see in the photos. So we had a hook task and a box task."
+    },
+    {
+      "start": "00:02:06.00",
+      "end": "00:02:16.00",
+      "text": "And the demonstrator for these was either the same person who'd done that warm-up with them, or it was a new, unfamiliar researcher."
+    },
+    {
+      "start": "00:02:16.00",
+      "end": "00:03:04.00",
+      "text": "And this is what we found. Uh, so just to explain this graph, basically children could either overimitate on both of our tasks, on the box task only, on the hook task only, or they could overimitate on neither task. And in the kind of pinky colors you can see the unfamiliar condition, so this is where the demonstrator was someone new. And in the kind of blue colors you can see the familiar condition, so this is where, uh, the demonstrator was the same person who'd done the warm-up. And then in orange and blue at the bottom of the bars you've got the positive warm-up condition, and at the top of the bars you've got the neutral warm-up condition."
+    },
+    {
+      "start": "00:03:04.00",
+      "end": "00:03:17.00",
+      "text": "Uh, and so the basic takeaway from this, when we ran this through a multinomial model, there was no effect of the emotional valence of that warm-up. So it didn't matter if they'd had the positive or the neutral warm-up."
+    },
+    {
+      "start": "00:03:17.00",
+      "end": "00:03:38.00",
+      "text": "But what did make a difference was whether they had the familiar or unfamiliar, uh, demonstrator. So 40% of children in the condition where they had an unfamiliar demonstrator didn't overimitate on either of our tasks, and that was only around 23%, uh, in the condition where they had a familiar demonstrator."
+    },
+    {
+      "start": "00:03:38.00",
+      "end": "00:04:18.00",
+      "text": "So in conclusion, model familiarity influenced overimitation in this task, but the emotional valence of those prior interactions did not. We still have more video coding to do, uh, to look in more detail at what happened during those warm-up conversations. Um, there was a lot of variation in how children respond to having several minutes of conversation with a new adult. Um, and so we're going to look at that in more detail and maybe have a more nuanced view of this in the future. Thank you."
+    }
+  ]
+}
