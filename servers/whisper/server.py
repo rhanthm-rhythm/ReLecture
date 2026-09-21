@@ -15,11 +15,18 @@ import tempfile
 import threading
 
 from flask import Flask, jsonify, request
+import torch
 
 app = Flask(__name__)
 _model = None
 _lock = threading.Lock()
 _model_name = os.getenv("WHISPER_MODEL", "large-v3")
+
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+print(f"[Whisper] PyTorch device: {DEVICE}", flush=True)
+if DEVICE == "cuda":
+    print(f"[Whisper] GPU: {torch.cuda.get_device_name(0)}", flush=True)
+    print(f"[Whisper] VRAM: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB", flush=True)
 
 
 def get_model():
@@ -27,7 +34,6 @@ def get_model():
     if _model is None:
         with _lock:
             if _model is None:
-                import torch
                 # torch>=2.6 defaults weights_only=True, which breaks
                 # whisper's checkpoint loading — force the old behavior.
                 _orig_load = torch.load
@@ -35,7 +41,7 @@ def get_model():
                     *a, **{**k, "weights_only": False}
                 )
                 import whisper
-                _model = whisper.load_model(_model_name)
+                _model = whisper.load_model(_model_name, device=DEVICE)
                 torch.load = _orig_load
     return _model
 

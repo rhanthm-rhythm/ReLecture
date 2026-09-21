@@ -16,6 +16,9 @@ dependencies = [
     "gradio>=4.0",
 ]
 
+[project.optional-dependencies]
+eval = ["resemblyzer", "speechmos", "soundfile", "jiwer>=3.0"]
+
 [project.scripts]
 relecture = "relecture.cli:main"
 

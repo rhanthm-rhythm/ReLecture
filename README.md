@@ -172,8 +172,7 @@ Apache 2.0. See [LICENSE](LICENSE).
 
 ```bibtex
 @inproceedings{do2027relecture,
-  title     = {{ReLecture}: A Manifest-Driven Pipeline for Audience-Adaptive
-               Lecture Re-Narration with Voice Cloning},
+  title     = {{ReLecture}: Adapting Recorded Lectures for Different Audiences},
   author    = {Do, Nha and Hanafi, Abdelrahman and Vu, Thang},
   booktitle = {Proceedings of the 18th Conference of the European Chapter of
                the Association for Computational Linguistics: System Demonstrations},
