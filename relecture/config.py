@@ -18,11 +18,11 @@ def _maybe_use_local_ca_bundle() -> None:
     On networks with TLS-inspecting proxies (e.g. corporate firewalls),
     Windows may trust the intercepting root CA while Python's bundled
     `certifi` store does not, causing SSL errors when calling hosted APIs
-    (Nebius, etc.). If `.certs/mas-tts-ca-bundle.pem` exists (certifi's
+    (Nebius, etc.). If `.certs/relecture-ca-bundle.pem` exists (certifi's
     public roots + the local corporate root, see servers/whisper docs),
     point `SSL_CERT_FILE`/`REQUESTS_CA_BUNDLE` at it unless already set.
     """
-    bundle = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".certs", "mas-tts-ca-bundle.pem")
+    bundle = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".certs", "relecture-ca-bundle.pem")
     if os.path.isfile(bundle):
         os.environ.setdefault("SSL_CERT_FILE", bundle)
         os.environ.setdefault("REQUESTS_CA_BUNDLE", bundle)

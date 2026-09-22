@@ -29,6 +29,7 @@ eval_result/
 *.mp4
 *.wav
 !assets/narrator_voice.wav
+!voice.wav
 
 # Data (downloaded videos)
 data/videos/

@@ -43,6 +43,12 @@ uv run python -m relecture run \
 uv run python -m relecture ui
 ```
 
+The evaluation metrics (WER, UTMOS, speaker similarity, duration expansion ratio) have heavier dependencies (PyTorch, resemblyzer, etc.) that should be installed in a separate virtual environment to avoid conflicts with the base pipeline:
+
+```bash
+pip install -e ".[eval]"
+```
+
 ## Services
 
 Start the services needed by your configuration before running the pipeline.
@@ -151,7 +157,6 @@ tests/                  Offline unit tests and optional live server tests
 case_study/             Case study configurations
 data/                   Dataset video links and download tooling
 assets/                 Narrator voice sample for visual-accessibility mode
-eval_results/           Ground-truth transcriptions for evaluation
 ```
 
 ## Testing
@@ -171,12 +176,10 @@ Apache 2.0. See [LICENSE](LICENSE).
 ## Citation
 
 ```bibtex
-@inproceedings{do2027relecture,
-  title     = {{ReLecture}: Adapting Recorded Lectures for Different Audiences},
-  author    = {Do, Nha and Hanafi, Abdelrahman and Vu, Thang},
-  booktitle = {Proceedings of the 18th Conference of the European Chapter of
-               the Association for Computational Linguistics: System Demonstrations},
-  year      = {2027},
-  publisher = {Association for Computational Linguistics},
+@unpublished{do2025relecture,
+  title  = {{ReLecture}: Adapting Recorded Lectures for Different Audiences},
+  author = {Do, Nha and Hanafi, Abdelrahman and Vu, Thang},
+  year   = {2026},
+  note   = {Submitted to EACL 2027 System Demonstrations},
 }
 ```
